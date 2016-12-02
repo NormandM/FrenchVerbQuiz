@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E91EAC81DF1CA1E008F39A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAC71DF1CA1E008F39A9 /* AppDelegate.swift */; };
+		8E91EACA1DF1CA1E008F39A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAC91DF1CA1E008F39A9 /* ViewController.swift */; };
+		8E91EACD1DF1CA1E008F39A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E91EACB1DF1CA1E008F39A9 /* Main.storyboard */; };
+		8E91EACF1DF1CA1E008F39A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E91EACE1DF1CA1E008F39A9 /* Assets.xcassets */; };
+		8E91EAD21DF1CA1E008F39A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E91EAD01DF1CA1E008F39A9 /* LaunchScreen.storyboard */; };
+		8E91EADD1DF1CA1E008F39A9 /* French_Verbs_QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EADC1DF1CA1E008F39A9 /* French_Verbs_QuizTests.swift */; };
+		8E91EAE81DF1CA1E008F39A9 /* French_Verbs_QuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAE71DF1CA1E008F39A9 /* French_Verbs_QuizUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E91EAD91DF1CA1E008F39A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E91EABC1DF1CA1E008F39A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E91EAC31DF1CA1E008F39A9;
+			remoteInfo = "French Verbs Quiz";
+		};
+		8E91EAE41DF1CA1E008F39A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E91EABC1DF1CA1E008F39A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E91EAC31DF1CA1E008F39A9;
+			remoteInfo = "French Verbs Quiz";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E91EAC41DF1CA1E008F39A9 /* French Verbs Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "French Verbs Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E91EAC71DF1CA1E008F39A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E91EAC91DF1CA1E008F39A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E91EACC1DF1CA1E008F39A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E91EACE1DF1CA1E008F39A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E91EAD11DF1CA1E008F39A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E91EAD31DF1CA1E008F39A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E91EAD81DF1CA1E008F39A9 /* French Verbs QuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "French Verbs QuizTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E91EADC1DF1CA1E008F39A9 /* French_Verbs_QuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = French_Verbs_QuizTests.swift; sourceTree = "<group>"; };
+		8E91EADE1DF1CA1E008F39A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E91EAE31DF1CA1E008F39A9 /* French Verbs QuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "French Verbs QuizUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E91EAE71DF1CA1E008F39A9 /* French_Verbs_QuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = French_Verbs_QuizUITests.swift; sourceTree = "<group>"; };
+		8E91EAE91DF1CA1E008F39A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E91EAC11DF1CA1E008F39A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E91EAD51DF1CA1E008F39A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E91EAE01DF1CA1E008F39A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E91EABB1DF1CA1E008F39A9 = {
+			isa = PBXGroup;
+			children = (
+				8E91EAC61DF1CA1E008F39A9 /* French Verbs Quiz */,
+				8E91EADB1DF1CA1E008F39A9 /* French Verbs QuizTests */,
+				8E91EAE61DF1CA1E008F39A9 /* French Verbs QuizUITests */,
+				8E91EAC51DF1CA1E008F39A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E91EAC51DF1CA1E008F39A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E91EAC41DF1CA1E008F39A9 /* French Verbs Quiz.app */,
+				8E91EAD81DF1CA1E008F39A9 /* French Verbs QuizTests.xctest */,
+				8E91EAE31DF1CA1E008F39A9 /* French Verbs QuizUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E91EAC61DF1CA1E008F39A9 /* French Verbs Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				8E91EAC71DF1CA1E008F39A9 /* AppDelegate.swift */,
+				8E91EAC91DF1CA1E008F39A9 /* ViewController.swift */,
+				8E91EACB1DF1CA1E008F39A9 /* Main.storyboard */,
+				8E91EACE1DF1CA1E008F39A9 /* Assets.xcassets */,
+				8E91EAD01DF1CA1E008F39A9 /* LaunchScreen.storyboard */,
+				8E91EAD31DF1CA1E008F39A9 /* Info.plist */,
+			);
+			path = "French Verbs Quiz";
+			sourceTree = "<group>";
+		};
+		8E91EADB1DF1CA1E008F39A9 /* French Verbs QuizTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E91EADC1DF1CA1E008F39A9 /* French_Verbs_QuizTests.swift */,
+				8E91EADE1DF1CA1E008F39A9 /* Info.plist */,
+			);
+			path = "French Verbs QuizTests";
+			sourceTree = "<group>";
+		};
+		8E91EAE61DF1CA1E008F39A9 /* French Verbs QuizUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8E91EAE71DF1CA1E008F39A9 /* French_Verbs_QuizUITests.swift */,
+				8E91EAE91DF1CA1E008F39A9 /* Info.plist */,
+			);
+			path = "French Verbs QuizUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E91EAC31DF1CA1E008F39A9 /* French Verbs Quiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E91EAEC1DF1CA1E008F39A9 /* Build configuration list for PBXNativeTarget "French Verbs Quiz" */;
+			buildPhases = (
+				8E91EAC01DF1CA1E008F39A9 /* Sources */,
+				8E91EAC11DF1CA1E008F39A9 /* Frameworks */,
+				8E91EAC21DF1CA1E008F39A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "French Verbs Quiz";
+			productName = "French Verbs Quiz";
+			productReference = 8E91EAC41DF1CA1E008F39A9 /* French Verbs Quiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E91EAD71DF1CA1E008F39A9 /* French Verbs QuizTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E91EAEF1DF1CA1E008F39A9 /* Build configuration list for PBXNativeTarget "French Verbs QuizTests" */;
+			buildPhases = (
+				8E91EAD41DF1CA1E008F39A9 /* Sources */,
+				8E91EAD51DF1CA1E008F39A9 /* Frameworks */,
+				8E91EAD61DF1CA1E008F39A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E91EADA1DF1CA1E008F39A9 /* PBXTargetDependency */,
+			);
+			name = "French Verbs QuizTests";
+			productName = "French Verbs QuizTests";
+			productReference = 8E91EAD81DF1CA1E008F39A9 /* French Verbs QuizTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8E91EAE21DF1CA1E008F39A9 /* French Verbs QuizUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E91EAF21DF1CA1E008F39A9 /* Build configuration list for PBXNativeTarget "French Verbs QuizUITests" */;
+			buildPhases = (
+				8E91EADF1DF1CA1E008F39A9 /* Sources */,
+				8E91EAE01DF1CA1E008F39A9 /* Frameworks */,
+				8E91EAE11DF1CA1E008F39A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E91EAE51DF1CA1E008F39A9 /* PBXTargetDependency */,
+			);
+			name = "French Verbs QuizUITests";
+			productName = "French Verbs QuizUITests";
+			productReference = 8E91EAE31DF1CA1E008F39A9 /* French Verbs QuizUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E91EABC1DF1CA1E008F39A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Normand Martin";
+				TargetAttributes = {
+					8E91EAC31DF1CA1E008F39A9 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = X6D769Z7F4;
+						ProvisioningStyle = Automatic;
+					};
+					8E91EAD71DF1CA1E008F39A9 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = X6D769Z7F4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8E91EAC31DF1CA1E008F39A9;
+					};
+					8E91EAE21DF1CA1E008F39A9 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = X6D769Z7F4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8E91EAC31DF1CA1E008F39A9;
+					};
+				};
+			};
+			buildConfigurationList = 8E91EABF1DF1CA1E008F39A9 /* Build configuration list for PBXProject "French Verbs Quiz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E91EABB1DF1CA1E008F39A9;
+			productRefGroup = 8E91EAC51DF1CA1E008F39A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E91EAC31DF1CA1E008F39A9 /* French Verbs Quiz */,
+				8E91EAD71DF1CA1E008F39A9 /* French Verbs QuizTests */,
+				8E91EAE21DF1CA1E008F39A9 /* French Verbs QuizUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E91EAC21DF1CA1E008F39A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E91EAD21DF1CA1E008F39A9 /* LaunchScreen.storyboard in Resources */,
+				8E91EACF1DF1CA1E008F39A9 /* Assets.xcassets in Resources */,
+				8E91EACD1DF1CA1E008F39A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E91EAD61DF1CA1E008F39A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E91EAE11DF1CA1E008F39A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E91EAC01DF1CA1E008F39A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E91EACA1DF1CA1E008F39A9 /* ViewController.swift in Sources */,
+				8E91EAC81DF1CA1E008F39A9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E91EAD41DF1CA1E008F39A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E91EADD1DF1CA1E008F39A9 /* French_Verbs_QuizTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E91EADF1DF1CA1E008F39A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E91EAE81DF1CA1E008F39A9 /* French_Verbs_QuizUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E91EADA1DF1CA1E008F39A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E91EAC31DF1CA1E008F39A9 /* French Verbs Quiz */;
+			targetProxy = 8E91EAD91DF1CA1E008F39A9 /* PBXContainerItemProxy */;
+		};
+		8E91EAE51DF1CA1E008F39A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E91EAC31DF1CA1E008F39A9 /* French Verbs Quiz */;
+			targetProxy = 8E91EAE41DF1CA1E008F39A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E91EACB1DF1CA1E008F39A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E91EACC1DF1CA1E008F39A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E91EAD01DF1CA1E008F39A9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E91EAD11DF1CA1E008F39A9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E91EAEA1DF1CA1E008F39A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E91EAEB1DF1CA1E008F39A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E91EAED1DF1CA1E008F39A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X6D769Z7F4;
+				INFOPLIST_FILE = "French Verbs Quiz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NM.French-Verbs-Quiz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8E91EAEE1DF1CA1E008F39A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X6D769Z7F4;
+				INFOPLIST_FILE = "French Verbs Quiz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NM.French-Verbs-Quiz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8E91EAF01DF1CA1E008F39A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = X6D769Z7F4;
+				INFOPLIST_FILE = "French Verbs QuizTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NM.French-Verbs-QuizTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/French Verbs Quiz.app/French Verbs Quiz";
+			};
+			name = Debug;
+		};
+		8E91EAF11DF1CA1E008F39A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = X6D769Z7F4;
+				INFOPLIST_FILE = "French Verbs QuizTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NM.French-Verbs-QuizTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/French Verbs Quiz.app/French Verbs Quiz";
+			};
+			name = Release;
+		};
+		8E91EAF31DF1CA1E008F39A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = X6D769Z7F4;
+				INFOPLIST_FILE = "French Verbs QuizUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NM.French-Verbs-QuizUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "French Verbs Quiz";
+			};
+			name = Debug;
+		};
+		8E91EAF41DF1CA1E008F39A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = X6D769Z7F4;
+				INFOPLIST_FILE = "French Verbs QuizUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "NM.French-Verbs-QuizUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "French Verbs Quiz";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E91EABF1DF1CA1E008F39A9 /* Build configuration list for PBXProject "French Verbs Quiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E91EAEA1DF1CA1E008F39A9 /* Debug */,
+				8E91EAEB1DF1CA1E008F39A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E91EAEC1DF1CA1E008F39A9 /* Build configuration list for PBXNativeTarget "French Verbs Quiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E91EAED1DF1CA1E008F39A9 /* Debug */,
+				8E91EAEE1DF1CA1E008F39A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8E91EAEF1DF1CA1E008F39A9 /* Build configuration list for PBXNativeTarget "French Verbs QuizTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E91EAF01DF1CA1E008F39A9 /* Debug */,
+				8E91EAF11DF1CA1E008F39A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8E91EAF21DF1CA1E008F39A9 /* Build configuration list for PBXNativeTarget "French Verbs QuizUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E91EAF31DF1CA1E008F39A9 /* Debug */,
+				8E91EAF41DF1CA1E008F39A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E91EABC1DF1CA1E008F39A9 /* Project object */;
+}
