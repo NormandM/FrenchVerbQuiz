@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8E91EAC31DF1CA1E008F39A9"
+               BuildableName = "French Verbs Quiz.app"
+               BlueprintName = "French Verbs Quiz"
+               ReferencedContainer = "container:French Verbs Quiz.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8E91EAD71DF1CA1E008F39A9"
+               BuildableName = "French Verbs QuizTests.xctest"
+               BlueprintName = "French Verbs QuizTests"
+               ReferencedContainer = "container:French Verbs Quiz.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8E91EAE21DF1CA1E008F39A9"
+               BuildableName = "French Verbs QuizUITests.xctest"
+               BlueprintName = "French Verbs QuizUITests"
+               ReferencedContainer = "container:French Verbs Quiz.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8E91EAC31DF1CA1E008F39A9"
+            BuildableName = "French Verbs Quiz.app"
+            BlueprintName = "French Verbs Quiz"
+            ReferencedContainer = "container:French Verbs Quiz.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8E91EAC31DF1CA1E008F39A9"
+            BuildableName = "French Verbs Quiz.app"
+            BlueprintName = "French Verbs Quiz"
+            ReferencedContainer = "container:French Verbs Quiz.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8E91EAC31DF1CA1E008F39A9"
+            BuildableName = "French Verbs Quiz.app"
+            BlueprintName = "French Verbs Quiz"
+            ReferencedContainer = "container:French Verbs Quiz.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
