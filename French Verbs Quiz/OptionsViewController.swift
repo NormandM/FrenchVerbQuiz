@@ -10,7 +10,6 @@ import UIKit
 
 class OptionsViewController: UIViewController {
     var arrayVerbe: [[String]] = []
-    let noItem: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +38,10 @@ class OptionsViewController: UIViewController {
             let controller = segue.destination as! QuizOptionsController
             controller.arrayVerbe = arrayVerbe
         }
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+
 
     }
 

@@ -25,6 +25,7 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
     var arrayVerbe: [[String]] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Choisissez le verbe à conjuguer."
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
