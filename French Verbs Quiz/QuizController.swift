@@ -48,8 +48,16 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     @IBOutlet weak var reponse: UITextField!
     @IBOutlet weak var barreProgression: UIProgressView!
     
+    let screenSize: CGRect = UIScreen.main.bounds
+    @IBOutlet weak var masterConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tempsConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        masterConstraint.constant = 0.10 * screenSize.height
+        tempsConstraint.constant = 0.10 * screenSize.height
+        
         self.title = "Répondez à la question."
         barreProgression.progress = 0.0
         selectionQuestion()

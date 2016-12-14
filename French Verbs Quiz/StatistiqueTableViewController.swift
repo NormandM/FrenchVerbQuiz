@@ -57,7 +57,7 @@ class StatistiqueTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Pourcentage de réussites par temps."
+        self.title = "Statistiques du Quiz"
         populateData()
  
      }

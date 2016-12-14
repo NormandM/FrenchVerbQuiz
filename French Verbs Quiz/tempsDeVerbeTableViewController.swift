@@ -28,7 +28,7 @@ class tempsDeVerbeTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "\(verbeInfinitif): choisissez le temps."
+        self.title = "Choisissez le temps"
 
      }
 

@@ -28,7 +28,7 @@ class QuizOptionsController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Choisissez les temps pour le Quiz"
+        self.title = "Choisissez les temps"
 
     }
 

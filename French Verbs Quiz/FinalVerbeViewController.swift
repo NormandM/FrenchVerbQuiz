@@ -29,11 +29,15 @@ class FinalVerbeViewController: UIViewController {
     @IBOutlet weak var fifth: UILabel!
     @IBOutlet weak var sixth: UILabel!
     
+    @IBOutlet weak var masterConstraint: NSLayoutConstraint!
+    let screenSize: CGRect = UIScreen.main.bounds
     
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Verbe conjugué."
+        self.title = "Verbe conjugué"
+        masterConstraint.constant = 0.08 * screenSize.height
         var n = 0
         for verb in arrayVerbe{
             if verb[0] == selectionVerbe[1].lowercased() && verb[1] == selectionVerbe[2] && verb[2] == selectionVerbe[0]{

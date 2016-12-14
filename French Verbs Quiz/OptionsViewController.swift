@@ -12,7 +12,7 @@ class OptionsViewController: UIViewController {
     var arrayVerbe: [[String]] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Choisissez une option"
         if let plistPath = Bundle.main.path(forResource: "frenchVerbsList", ofType: "plist"),
             let verbArray = NSArray(contentsOfFile: plistPath){
             arrayVerbe = verbArray as! [[String]]
