@@ -48,9 +48,11 @@ class FinalVerbeViewController: UIViewController {
         }
 
         let verbeFrancais = VerbeFrancais(verbArray: arrayVerbe, n: noItem)
-        infinitif.text = verbeFrancais.verbe
-        mode.text = verbeFrancais.mode
-        temps.text = verbeFrancais.temps
+      
+        let helper = Helper()
+        infinitif.text = helper.capitalize(word: verbeFrancais.verbe)
+        mode.text = helper.capitalize(word: verbeFrancais.mode)
+        temps.text = helper.capitalize(word: verbeFrancais.temps)  
         premier.text = verbeFrancais.premier
         deuxieme.text = verbeFrancais.deuxieme
         troisieme.text = verbeFrancais.troisieme

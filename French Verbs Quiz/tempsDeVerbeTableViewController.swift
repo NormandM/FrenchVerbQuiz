@@ -57,8 +57,8 @@ class tempsDeVerbeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        cell.textLabel!.text = self.item[indexPath.section][indexPath.row]
+        let helper = Helper()
+        cell.textLabel!.text = helper.capitalize(word: self.item[indexPath.section][indexPath.row]) 
         return cell
         
      }
@@ -90,7 +90,6 @@ class tempsDeVerbeTableViewController: UITableViewController {
                 let controller = segue.destination as! FinalVerbeViewController
                 controller.selectionVerbe = verbeTotal
                 controller.arrayVerbe = arrayVerbe
-                print(verbeTotal)
             }
             
             

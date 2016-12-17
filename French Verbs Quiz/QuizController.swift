@@ -28,6 +28,8 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     var soundURL: NSURL?
     var soundID:SystemSoundID = 0
     var didSave: Bool = false
+    var contexte: String = ""
+    var explication: String = ""
 
     let dataController = DataController.sharedInstance
     let managedObjectContext = DataController.sharedInstance.managedObjectContext
@@ -105,6 +107,9 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         reponse.text = ""
         
     }
+    @IBAction func exemple(_ sender: Any) {
+        showAlert()
+    }
 
     
 /////////////////////////////////////
@@ -171,13 +176,13 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
                 noPersonne = 5
             }
         }
-        
+
         let verbeFrancais = VerbeFrancais(verbArray: arrayVerbe, n: noItem)
         let personneVerbe = Personne(verbArray: verbeFrancais)
-        
-        verbe.text = verbeFrancais.verbe
-        mode.text = verbeFrancais.mode
-        temps.text = verbeFrancais.temps
+        let helper = Helper()
+        verbe.text = helper.capitalize(word: verbeFrancais.verbe)  
+        mode.text = helper.capitalize(word: verbeFrancais.mode)
+        temps.text = helper.capitalize(word: verbeFrancais.temps)
         bonneReponse.text = ""
         
         if noPersonne == 1{
@@ -209,6 +214,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
             reponseBonne = verbeFrancais.troisieme
             personne.text = personneVerbe.third
         }
+        
     }
 
     func evaluationReponse(){
@@ -282,5 +288,21 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         progress = progressInt / 10
         barreProgression.progress = progress
     }
+    func showAlert () {
+        let verbeFrancais = VerbeFrancais(verbArray: arrayVerbe, n: noItem)
+        let contexteVerbe = ContexteVerbe(verbArray: verbeFrancais)
+        let alertController = UIAlertController(title: contexteVerbe.contexte[0], message: contexteVerbe.contexte[1], preferredStyle: .actionSheet)
+        alertController.popoverPresentationController?.sourceView = self.view
+        alertController.popoverPresentationController?.sourceRect = verbe.frame
+        
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: dismissAlert)
+        alertController.addAction(okAction)
+        
+        present(alertController, animated: true, completion: nil)
+   }
+    func dismissAlert(_ sender: UIAlertAction) {
+        
+    }
+
 
 }

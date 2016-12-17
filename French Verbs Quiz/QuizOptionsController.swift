@@ -111,6 +111,7 @@ class QuizOptionsController: UITableViewController {
             let controller = segue.destination as! QuizController
             controller.arraySelection = arraySelection
             controller.arrayVerbe = arrayVerbe
+            print(arraySelection)
             
         }
     }
@@ -131,7 +132,6 @@ class QuizOptionsController: UITableViewController {
     @IBAction func OK(_ sender: UIBarButtonItem) {
         var i = 0
         i = arraySelection.count
-        print(i)
         if i == 0{
             showAlert()
         }else{
