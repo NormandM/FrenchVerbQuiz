@@ -85,8 +85,9 @@ class StatistiqueTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let helper = Helper()
-        cell.textLabel!.text = helper.capitalize(word: self.itemFinal[indexPath.section][indexPath.row])
+        //let helper = Helper()
+        //cell.textLabel!.text = helper.capitalize(word: self.itemFinal[indexPath.section][indexPath.row])
+        cell.textLabel?.text = self.itemFinal[indexPath.section][indexPath.row]
         return cell
     }
 //////////////////////////////////////
@@ -226,7 +227,6 @@ class StatistiqueTableViewController: UITableViewController {
             }
             
         }
-        
         indicatifprésentP = "présent: " + pourcentage(bonne: indicatifprésentB, mauvaise: indicatifprésentM)
         indicatifimparfaitP = "imparfait: " + pourcentage(bonne: indicatifimparfaitB, mauvaise: indicatifimparfaitM)
         indicatifpassécomposéP = "passé composé: " + pourcentage(bonne: indicatifpassécomposéB, mauvaise: indicatifpassécomposéM)
@@ -253,7 +253,7 @@ class StatistiqueTableViewController: UITableViewController {
         if (bonne + mauvaise) != 0 {
             result = String(round (Double(bonne) / Double(bonne + mauvaise) * 100)) + "%"
         }else{
-            result = "_%"
+            result = "_"
         }
         return result
     }

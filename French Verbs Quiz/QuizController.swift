@@ -30,6 +30,9 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     var didSave: Bool = false
     var contexte: String = ""
     var explication: String = ""
+    var verbeFinal: String = ""
+    var modeFinal: String = ""
+    var tempsFinal: String = ""
 
     let dataController = DataController.sharedInstance
     let managedObjectContext = DataController.sharedInstance.managedObjectContext
@@ -49,6 +52,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     @IBOutlet weak var bonneReponse: UILabel!
     @IBOutlet weak var reponse: UITextField!
     @IBOutlet weak var barreProgression: UIProgressView!
+    @IBOutlet weak var checkButton: UIButton!
     
     let screenSize: CGRect = UIScreen.main.bounds
     @IBOutlet weak var masterConstraint: NSLayoutConstraint!
@@ -56,7 +60,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         masterConstraint.constant = 0.10 * screenSize.height
         tempsConstraint.constant = 0.10 * screenSize.height
         
@@ -69,6 +72,31 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
             print("Error fetching Item objects: \(error.localizedDescription), \(error.userInfo)")
         }
     }
+    // the 3 next function moves the KeyBoards when keyboard appears or hides
+ 
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            if UIDevice.current.userInterfaceIdiom == .pad && (UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight){
+            animateViewMoving(true, moveValue: 50)
+            }
+        }
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            if UIDevice.current.userInterfaceIdiom == .pad && (UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight){
+            animateViewMoving(false, moveValue: 50)
+            }
+        }
+        func animateViewMoving (_ up:Bool, moveValue :CGFloat){
+            let movementDuration:TimeInterval = 0.3
+            let movement:CGFloat = ( up ? -moveValue : moveValue)
+            UIView.beginAnimations( "animateView", context: nil)
+            UIView.setAnimationBeginsFromCurrentState(true)
+            UIView.setAnimationDuration(movementDuration )
+            self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
+            UIView.commitAnimations()
+        }
+
+
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -90,11 +118,17 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         selectionQuestion()
         bonneReponse.text = ""
         reponse.text = ""
+        checkButton.isEnabled = true
+        reponse.isEnabled = true
     }
 
     @IBAction func check(_ sender: UIButton) {
         evaluationReponse()
         reponse.resignFirstResponder()
+        checkButton.isEnabled = false
+        checkButton.setTitleColor(UIColor.gray, for: .disabled)
+        reponse.isEnabled = false
+
     }
     
     
@@ -176,13 +210,20 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
                 noPersonne = 5
             }
         }
+        if verbeFinal == "falloir" || verbeFinal == "pleuvoir"{
+            noPersonne = 3
+        }
 
         let verbeFrancais = VerbeFrancais(verbArray: arrayVerbe, n: noItem)
         let personneVerbe = Personne(verbArray: verbeFrancais)
+        verbeFinal = verbeFrancais.verbe
+        modeFinal = verbeFrancais.mode
+        tempsFinal = verbeFrancais.temps
         let helper = Helper()
-        verbe.text = helper.capitalize(word: verbeFrancais.verbe)  
-        mode.text = helper.capitalize(word: verbeFrancais.mode)
-        temps.text = helper.capitalize(word: verbeFrancais.temps)
+        verbe.text = helper.capitalize(word: verbeFinal)
+        mode.text = helper.capitalize(word: modeFinal)
+        temps.text = helper.capitalize(word: tempsFinal)
+    
         bonneReponse.text = ""
         
         if noPersonne == 1{
@@ -233,12 +274,11 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
                     didSave = true
                 }
             }
-            print(didSave)
             if didSave == false {
                 let itemVerbe = NSEntityDescription.insertNewObject(forEntityName: "ItemVerbe", into: dataController.managedObjectContext) as! ItemVerbe
-                itemVerbe.verbeInfinitif = verbe.text
-                itemVerbe.tempsVerbe = temps.text
-                itemVerbe.modeVerbe = mode.text
+                itemVerbe.verbeInfinitif = verbeFinal
+                itemVerbe.tempsVerbe = tempsFinal
+                itemVerbe.modeVerbe = modeFinal
                 itemVerbe.bonneReponse = itemVerbe.bonneReponse + 1
             }
             dataController.saveContext()
@@ -255,9 +295,9 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
             }
             if didSave == false {
                 let itemVerbe = NSEntityDescription.insertNewObject(forEntityName: "ItemVerbe", into: dataController.managedObjectContext) as! ItemVerbe
-                itemVerbe.verbeInfinitif = verbe.text
-                itemVerbe.tempsVerbe = temps.text
-                itemVerbe.modeVerbe = mode.text
+                itemVerbe.verbeInfinitif = verbeFinal
+                itemVerbe.tempsVerbe = tempsFinal
+                itemVerbe.modeVerbe = modeFinal
                 itemVerbe.mauvaiseReponse = itemVerbe.mauvaiseReponse + 1
                 
             }
@@ -280,6 +320,10 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     func textFieldShouldReturn(_ reponse: UITextField) -> Bool {
         evaluationReponse()
         reponse.resignFirstResponder()
+        checkButton.isEnabled = false
+        checkButton.setTitleColor(UIColor.gray, for: .disabled)
+        reponse.isEnabled = false
+        
         return true
         
     }

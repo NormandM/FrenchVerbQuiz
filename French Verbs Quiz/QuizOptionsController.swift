@@ -60,7 +60,8 @@ class QuizOptionsController: UITableViewController {
     // Next code is to enable checks for each cell selected
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel!.text = self.item[indexPath.section][indexPath.row]
+        let helper = Helper()
+        cell.textLabel!.text = helper.capitalize(word: self.item[indexPath.section][indexPath.row])
         cell.selectionStyle = .none
         configure(cell, forRowAtIndexPath: indexPath)
         return cell
@@ -111,7 +112,6 @@ class QuizOptionsController: UITableViewController {
             let controller = segue.destination as! QuizController
             controller.arraySelection = arraySelection
             controller.arrayVerbe = arrayVerbe
-            print(arraySelection)
             
         }
     }

@@ -38,6 +38,7 @@ class OptionsViewController: UIViewController {
             let controller = segue.destination as! QuizOptionsController
             controller.arrayVerbe = arrayVerbe
         }
+
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
@@ -46,4 +47,6 @@ class OptionsViewController: UIViewController {
     }
 
 
+    
+    
 }
