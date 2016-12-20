@@ -16,7 +16,7 @@ class QuizOptionsController: UITableViewController {
     var arr: NSMutableArray = []
 
     let sectionListe = ["INDICATIF", "SUBJONCTIF", "CONDITIONNEL", "IMPÉRATIF"]
-    let item = [["présent", "imparfait", "passé composé", "futur simple", "passé simple", "plus-que-parfait", "futur antérieur", "passé antérieur"], ["présent ", "passé ", "imparfait ", "plus-que-parfait "], ["présent  ", "passé  "], ["présent   ", "passé   "]]
+    let item = [["Présent", "Imparfait", "Passé composé", "Futur simple", "Passé simple", "Plus-que-parfait", "Futur antérieur", "Passé antérieur"], ["Présent ", "Passé ", "Imparfait ", "Plus-que-parfait "], ["Présent  ", "Passé  "], ["Présent   ", "Passé   "]]
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
         header.contentView.backgroundColor = UIColor(red: 151/255, green: 156/255, blue: 159/255, alpha: 1.0) //make the background color light blue
@@ -60,8 +60,8 @@ class QuizOptionsController: UITableViewController {
     // Next code is to enable checks for each cell selected
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let helper = Helper()
-        cell.textLabel!.text = helper.capitalize(word: self.item[indexPath.section][indexPath.row])
+        //let helper = Helper()
+        cell.textLabel!.text = self.item[indexPath.section][indexPath.row]
         cell.selectionStyle = .none
         configure(cell, forRowAtIndexPath: indexPath)
         return cell

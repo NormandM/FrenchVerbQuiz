@@ -103,43 +103,43 @@ struct ContexteVerbe {
     let verbArray: VerbeFrancais
     var contexte: [String] {
         if verbArray.mode == "indicatif"{
-            if verbArray.temps == "présent"{
+            if verbArray.temps == "Présent"{
                 return ["Maintenant, nous 'devons' attendre l’autobus.", "Un exemple avec 'devoir'."]
-            }else if verbArray.temps == "imparfait"{
+            }else if verbArray.temps == "Imparfait"{
                 return ["Il 'allait' tous les jours au même endroit.", "Un exemple avec 'aller'."]
-            }else if verbArray.temps == "passé composé"{
+            }else if verbArray.temps == "Passé composé"{
                 return ["Ce matin, je suis allé chez le coiffeur", "Un exemple avec 'aller'."]
-            }else if verbArray.temps == "futur simple"{
+            }else if verbArray.temps == "Futur simple"{
                 return ["Demain, nous 'irons' à la campagne.", "Un exemple avec 'aller'."]
-            }else if verbArray.temps == "passé simple"{
+            }else if verbArray.temps == "Passé simple"{
                 return ["Il 'arriva' à l’improviste et je fus surpris de le voir.", "Un exemple avec 'arriver'. *Note: le passé simple est utiliser en littérature, presque pas oralement"]
-            }else if verbArray.temps == "plus-que-parfait"{
+            }else if verbArray.temps == "Plus-que-parfait"{
                 return ["Si j’avais su, j’'aurais étudié' plus longtemps.", "Un exemple avec 'étudier'."]
-            }else if verbArray.temps == "futur antérieur"{
+            }else if verbArray.temps == "Futur antérieur"{
                 return ["Cette année 'aura été' un échec.", "Un exemple avec 'être'."]
-            }else if verbArray.temps == "passé antérieur"{
+            }else if verbArray.temps == "Passé antérieur"{
                 return ["Dès qu’il 'eut fini' le spectacle il quitta la scène.", "Un exemple avec 'finir'."]
             }
         }else if verbArray.mode == "subjonctif"{
-            if verbArray.temps == "passé"{
+            if verbArray.temps == "Passé"{
                 return ["Je n’ai pas aimé qu’il 'soit parti'.", "Un exemple avec 'partir'."]
-            }else if verbArray.temps == "présent"{
+            }else if verbArray.temps == "Présent"{
                 return ["Je veux que ce soit une règle", "Un exemple avec 'être'."]
-            }else if verbArray.temps == "imparfait"{
+            }else if verbArray.temps == "Imparfait"{
                 return ["Il voulu qu’il 'allât' à l’université.", "Un exemple avec 'aller.  *Note: ce temps de verbe n'est pas utilisé oralement"]
-            }else if verbArray.temps == "plus-que-parfait"{
+            }else if verbArray.temps == "Plus-que-parfait"{
                 return ["Il eut été bien que j''eusse su' cela avant", "Un exemple avec 'savoir'. *Note: ce temps de verbe n'est pas utilisé oralement"]
             }
         }else if verbArray.mode == "conditionnel"{
-            if verbArray.temps == "présent"{
+            if verbArray.temps == "Présent"{
                 return ["Nous 'serions' heureux que vous veniez avec nous.", "Un exemple avec 'être'."]
-            }else if verbArray.temps == "passé"{
+            }else if verbArray.temps == "Passé"{
                 return ["Si tu avais écouté les conseils tu 'aurais réussi'.", "Un exemple avec 'réussir'."]
             }
-        }else if verbArray.mode == "impératif"{
+        }else if verbArray.mode == "Impératif"{
             if verbArray.temps == "présent"{
                 return ["'Viens' avec nous.", "Un exemple avec 'venir'."]
-            }else if verbArray.temps == "passé"{
+            }else if verbArray.temps == "Passé"{
                 return ["'Ayez fini' vos devoirs à temps.", "Un exemple avec 'finir'."]
             }
 

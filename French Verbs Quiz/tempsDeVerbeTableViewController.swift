@@ -17,7 +17,7 @@ class tempsDeVerbeTableViewController: UITableViewController {
     
     
     let sectionListe = ["INDICATIF", "SUBJONCTIF", "CONDITIONNEL", "IMPÉRATIF"]
-    let item = [["présent", "imparfait", "passé composé", "futur simple", "passé simple", "plus-que-parfait", "futur antérieur", "passé antérieur"], ["présent", "passé", "imparfait", "plus-que-parfait"], ["présent", "passé"], ["présent", "passé"]]
+    let item = [["Présent", "Imparfait", "Passé composé", "Futur simple", "Passé simple", "Plus-que-parfait", "Futur antérieur", "Passé antérieur"], ["Présent", "Passé", "Imparfait", "Plus-que-parfait"], ["Présent", "Passé"], ["Présent", "Passé"]]
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView

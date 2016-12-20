@@ -23,27 +23,27 @@ class StatistiqueTableViewController: UITableViewController {
     }()
     
     let sectionListe = ["INDICATIF", "SUBJONCTIF", "CONDITIONNEL", "IMPÉRATIF"]
-    let itemInitial = [["présent", "imparfait", "passé composé", "futur simple", "passé simple", "plus-que-parfait", "futur antérieur", "passé antérieur"], ["présent", "passé", "imparfait", "plus-que-parfait"], ["présent", "passé"], ["présent", "passé"]]
+    let itemInitial = [["Présent", "Imparfait", "Passé composé", "Futur simple", "Passé simple", "Plus-que-parfait", "Futur antérieur", "Passé antérieur"], ["Présent", "Passé", "Imparfait", "Plus-que-parfait"], ["Présent", "Passé"], ["Présent", "Passé"]]
 
     var items: [ItemVerbe] = []
 
     enum TempsDeVerbe: String {
-        case présent = "indicatifprésent"
-        case imparfait = "indicatifimparfait"
-        case passé = "indicatifpassé composé"
-        case passéSimple = "indicatifpassé simple"
-        case passéAntérieur = "indicatifpassé antérieur"
-        case futurSimple = "indicatiffutur simple"
-        case plusQueParfait = "indicatifplus-que-parfait"
-        case futurAntérieur = "indicatiffutur antérieur"
-        case subjonctifPrésent = "subjonctifprésent"
-        case subjonctifPassé = "subjonctifpassé"
-        case subjonctifImparfait = "subjonctifimparfait"
-        case subjonctifPlusQueParfait = "subjonctifplus-que-parfait"
-        case conditionnelPrésent = "conditionnelprésent"
-        case conditionnelPassé = "conditionnelpassé"
-        case impératifPrésent = "impératifprésent"
-        case impératifPassé = "impératifpassé"
+        case présent = "indicatifPrésent"
+        case imparfait = "indicatifImparfait"
+        case passé = "indicatifPassé composé"
+        case passéSimple = "indicatifPassé simple"
+        case passéAntérieur = "indicatifPassé antérieur"
+        case futurSimple = "indicatifFutur simple"
+        case plusQueParfait = "indicatifPlus-que-parfait"
+        case futurAntérieur = "indicatifFutur antérieur"
+        case subjonctifPrésent = "subjonctifPrésent"
+        case subjonctifPassé = "subjonctifPassé"
+        case subjonctifImparfait = "subjonctifImparfait"
+        case subjonctifPlusQueParfait = "subjonctifPlus-que-parfait"
+        case conditionnelPrésent = "conditionnelPrésent"
+        case conditionnelPassé = "conditionnelPassé"
+        case impératifPrésent = "impératifPrésent"
+        case impératifPassé = "impératifPassé"
     
     }
     
@@ -227,22 +227,22 @@ class StatistiqueTableViewController: UITableViewController {
             }
             
         }
-        indicatifprésentP = "présent: " + pourcentage(bonne: indicatifprésentB, mauvaise: indicatifprésentM)
-        indicatifimparfaitP = "imparfait: " + pourcentage(bonne: indicatifimparfaitB, mauvaise: indicatifimparfaitM)
-        indicatifpassécomposéP = "passé composé: " + pourcentage(bonne: indicatifpassécomposéB, mauvaise: indicatifpassécomposéM)
-        indicatifpassésimpleP = "passé simple: " + pourcentage(bonne: indicatifpassésimpleB, mauvaise: indicatifpassésimpleM)
-        indicatifpasséantérieurP = "passé antérieur: " + pourcentage(bonne: indicatifpasséantérieurB, mauvaise: indicatifpasséantérieurM)
-        indicatiffutursimpleP = "futur simple: " + pourcentage(bonne: indicatiffutursimpleB, mauvaise: indicatiffutursimpleM)
-        indicatifplusqueparfaitP = "plus-que-parfait: " + pourcentage(bonne: indicatifplusqueparfaitB, mauvaise: indicatifplusqueparfaitM)
-        indicatiffuturantérieurP = "futur antérieur: " + pourcentage(bonne: indicatiffuturantérieurB, mauvaise: indicatiffuturantérieurM)
-        subjonctifprésentP = "présent: " + pourcentage(bonne: subjonctifprésentB, mauvaise: subjonctifprésentM)
-        subjonctifpasséP = "passé: " + pourcentage(bonne: subjonctifpasséB, mauvaise: subjonctifpasséM)
-        subjonctifimparfaitP = "imparfait: " + pourcentage(bonne: subjonctifimparfaitB, mauvaise: subjonctifimparfaitM)
-        subjonctifplusqueparfaitP = "plus-que-parfait: " + pourcentage(bonne: subjonctifplusqueparfaitB, mauvaise: subjonctifplusqueparfaitM)
-        conditionnelprésentP = "présent: " + pourcentage(bonne: conditionnelprésentB, mauvaise: conditionnelprésentM)
-        conditionnelpasséP = "passé: " + pourcentage(bonne: conditionnelpasséB, mauvaise: conditionnelpasséM)
-        impératifprésentP = "présent: " + pourcentage(bonne: impératifprésentB, mauvaise: impératifprésentM)
-        impératifpasséP = "passé: " + pourcentage(bonne: impératifpasséB, mauvaise: impératifpasséM)
+        indicatifprésentP = "Présent: " + pourcentage(bonne: indicatifprésentB, mauvaise: indicatifprésentM)
+        indicatifimparfaitP = "Imparfait: " + pourcentage(bonne: indicatifimparfaitB, mauvaise: indicatifimparfaitM)
+        indicatifpassécomposéP = "Passé composé: " + pourcentage(bonne: indicatifpassécomposéB, mauvaise: indicatifpassécomposéM)
+        indicatifpassésimpleP = "Passé simple: " + pourcentage(bonne: indicatifpassésimpleB, mauvaise: indicatifpassésimpleM)
+        indicatifpasséantérieurP = "Passé antérieur: " + pourcentage(bonne: indicatifpasséantérieurB, mauvaise: indicatifpasséantérieurM)
+        indicatiffutursimpleP = "Futur simple: " + pourcentage(bonne: indicatiffutursimpleB, mauvaise: indicatiffutursimpleM)
+        indicatifplusqueparfaitP = "Plus-que-parfait: " + pourcentage(bonne: indicatifplusqueparfaitB, mauvaise: indicatifplusqueparfaitM)
+        indicatiffuturantérieurP = "Futur antérieur: " + pourcentage(bonne: indicatiffuturantérieurB, mauvaise: indicatiffuturantérieurM)
+        subjonctifprésentP = "Présent: " + pourcentage(bonne: subjonctifprésentB, mauvaise: subjonctifprésentM)
+        subjonctifpasséP = "Passé: " + pourcentage(bonne: subjonctifpasséB, mauvaise: subjonctifpasséM)
+        subjonctifimparfaitP = "Imparfait: " + pourcentage(bonne: subjonctifimparfaitB, mauvaise: subjonctifimparfaitM)
+        subjonctifplusqueparfaitP = "Plus-que-parfait: " + pourcentage(bonne: subjonctifplusqueparfaitB, mauvaise: subjonctifplusqueparfaitM)
+        conditionnelprésentP = "Présent: " + pourcentage(bonne: conditionnelprésentB, mauvaise: conditionnelprésentM)
+        conditionnelpasséP = "Passé: " + pourcentage(bonne: conditionnelpasséB, mauvaise: conditionnelpasséM)
+        impératifprésentP = "Présent: " + pourcentage(bonne: impératifprésentB, mauvaise: impératifprésentM)
+        impératifpasséP = "Passé: " + pourcentage(bonne: impératifpasséB, mauvaise: impératifpasséM)
         
         itemFinal = [[indicatifprésentP, indicatifimparfaitP, indicatifpassécomposéP, indicatiffutursimpleP, indicatifpassésimpleP, indicatifplusqueparfaitP, indicatiffuturantérieurP, indicatifpasséantérieurP], [subjonctifprésentP, subjonctifpasséP, subjonctifimparfaitP, subjonctifplusqueparfaitP, subjonctifplusqueparfaitP], [conditionnelprésentP, conditionnelpasséP], [impératifprésentP, impératifpasséP]]
 

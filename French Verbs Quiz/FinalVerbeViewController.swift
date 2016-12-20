@@ -61,12 +61,22 @@ class FinalVerbeViewController: UIViewController {
         sixieme.text = verbeFrancais.sixieme
         
         let personneVerbe = Personne(verbArray: verbeFrancais)
-        first.text = personneVerbe.first
-        second.text = personneVerbe.second
-        third.text = personneVerbe.third
-        fourth.text = personneVerbe.fourth
-        fifth.text = personneVerbe.fifth
-        sixth.text = personneVerbe.sixth
+        if verbeFrancais.verbe == "pleuvoir" || verbeFrancais.verbe == "falloir" {
+            first.text = "   "
+            second.text = "  "
+            third.text = personneVerbe.third
+            fourth.text = "  "
+            fifth.text = "  "
+            sixth.text = "  "
+        }else{
+            first.text = personneVerbe.first
+            second.text = personneVerbe.second
+            third.text = personneVerbe.third
+            fourth.text = personneVerbe.fourth
+            fifth.text = personneVerbe.fifth
+            sixth.text = personneVerbe.sixth
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

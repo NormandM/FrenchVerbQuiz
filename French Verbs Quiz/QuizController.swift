@@ -139,6 +139,9 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         barreProgression.progress = 0.0
         bonneReponse.text = ""
         reponse.text = ""
+        checkButton.isEnabled = true
+        reponse.isEnabled = true
+        selectionQuestion()
         
     }
     @IBAction func exemple(_ sender: Any) {
@@ -194,6 +197,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
             n = n + 1
             
         }
+
         var noPossiblePersonne = 0
         if modeChoisi == "impératif"{
             noPossiblePersonne = 3
@@ -210,9 +214,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
                 noPersonne = 5
             }
         }
-        if verbeFinal == "falloir" || verbeFinal == "pleuvoir"{
-            noPersonne = 3
-        }
+
 
         let verbeFrancais = VerbeFrancais(verbArray: arrayVerbe, n: noItem)
         let personneVerbe = Personne(verbArray: verbeFrancais)
@@ -225,7 +227,9 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         temps.text = helper.capitalize(word: tempsFinal)
     
         bonneReponse.text = ""
-        
+        if verbeFinal == "pleuvoir" || verbeFinal == "falloir" {
+            noPersonne = 3
+        }
         if noPersonne == 1{
             choixPersonne = "premier"
             reponseBonne = verbeFrancais.premier
@@ -250,10 +254,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
             choixPersonne = "sixieme"
             reponseBonne = verbeFrancais.sixieme
             personne.text = personneVerbe.sixth
-        }else if verbeFrancais.verbe == "falloir" || verbeFrancais.verbe == "pleuvoir"{
-            choixPersonne = "troisieme"
-            reponseBonne = verbeFrancais.troisieme
-            personne.text = personneVerbe.third
         }
         
     }
