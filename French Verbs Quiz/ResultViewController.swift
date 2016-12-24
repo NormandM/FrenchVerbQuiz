@@ -24,7 +24,7 @@ class ResultViewController: UIViewController {
         if goodResponse == 10{
             message.text = "Parfait! "
         }else if goodResponse == 9 ||  goodResponse == 8 || goodResponse == 7{
-            message.text = "Ça va bien!"
+            message.text = "Très bien!"
         }else{
             message.text = "Essayez à nouveau!"
         }
