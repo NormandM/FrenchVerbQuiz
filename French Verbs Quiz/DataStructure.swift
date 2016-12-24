@@ -112,7 +112,7 @@ struct ContexteVerbe {
             }else if verbArray.temps == "Futur simple"{
                 return ["Demain, nous 'irons' à la campagne.", "Un exemple avec 'aller'."]
             }else if verbArray.temps == "Passé simple"{
-                return ["Il 'arriva' à l’improviste et je fus surpris de le voir.", "Un exemple avec 'arriver'. *Note: le passé simple est utiliser en littérature, presque pas oralement"]
+                return ["Il 'arriva' à l’improviste et je fus surpris de le voir.", "Un exemple avec 'arriver'. *Note: le passé simple est utilisé en littérature mais très peu oralement"]
             }else if verbArray.temps == "Plus-que-parfait"{
                 return ["Si j’avais su, j’'aurais étudié' plus longtemps.", "Un exemple avec 'étudier'."]
             }else if verbArray.temps == "Futur antérieur"{
@@ -136,8 +136,8 @@ struct ContexteVerbe {
             }else if verbArray.temps == "Passé"{
                 return ["Si tu avais écouté les conseils tu 'aurais réussi'.", "Un exemple avec 'réussir'."]
             }
-        }else if verbArray.mode == "Impératif"{
-            if verbArray.temps == "présent"{
+        }else if verbArray.mode == "impératif"{
+            if verbArray.temps == "Présent"{
                 return ["'Viens' avec nous.", "Un exemple avec 'venir'."]
             }else if verbArray.temps == "Passé"{
                 return ["'Ayez fini' vos devoirs à temps.", "Un exemple avec 'finir'."]

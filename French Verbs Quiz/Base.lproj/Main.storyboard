@@ -130,6 +130,9 @@
                     </tableView>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="remettreAZero" destination="h1t-EE-4G1" id="gUy-Hy-cgi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogb-Nd-ZkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -574,7 +577,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qu'ils" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="em7-Ij-VU1">
-                                <rect key="frame" x="68.666666666666657" y="525.66666666666663" width="79" height="24"/>
+                                <rect key="frame" x="68.666666666666657" y="525.66666666666663" width="78.999999999999972" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

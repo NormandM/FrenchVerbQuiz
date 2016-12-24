@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 class StatistiqueTableViewController: UITableViewController {
+    @IBOutlet weak var remettreAZero: UIBarButtonItem!
     
     var itemFinal: [[String]] = []
     
@@ -85,8 +86,7 @@ class StatistiqueTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        //let helper = Helper()
-        //cell.textLabel!.text = helper.capitalize(word: self.itemFinal[indexPath.section][indexPath.row])
+ 
         cell.textLabel?.text = self.itemFinal[indexPath.section][indexPath.row]
         return cell
     }
@@ -95,6 +95,7 @@ class StatistiqueTableViewController: UITableViewController {
 //////////////////////////////////////
 
      @IBAction func remettreAZero(_ sender: UIBarButtonItem) {
+        remettreAZero.tintColor = UIColor.black
         do {
             let items = try managedObjectContext.fetch(fetchRequest) as! [NSManagedObject]
             

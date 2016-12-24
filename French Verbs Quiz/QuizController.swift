@@ -337,7 +337,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         let contexteVerbe = ContexteVerbe(verbArray: verbeFrancais)
         let alertController = UIAlertController(title: contexteVerbe.contexte[0], message: contexteVerbe.contexte[1], preferredStyle: .actionSheet)
         alertController.popoverPresentationController?.sourceView = self.view
-        alertController.popoverPresentationController?.sourceRect = verbe.frame
+        alertController.popoverPresentationController?.sourceRect = temps.frame
         
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: dismissAlert)
         alertController.addAction(okAction)
