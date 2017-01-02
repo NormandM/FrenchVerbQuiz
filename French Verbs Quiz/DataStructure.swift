@@ -114,7 +114,7 @@ struct ContexteVerbe {
             }else if verbArray.temps == "Passé simple"{
                 return ["Il 'arriva' à l’improviste et je fus surpris de le voir.", "Un exemple avec 'arriver'. *Note: le passé simple est utilisé en littérature mais très peu oralement"]
             }else if verbArray.temps == "Plus-que-parfait"{
-                return ["Si j’avais su, j’'aurais étudié' plus longtemps.", "Un exemple avec 'étudier'."]
+                return ["Si j’'avais su', j’aurais étudié plus longtemps.", "Un exemple avec 'savoir'."]
             }else if verbArray.temps == "Futur antérieur"{
                 return ["Cette année 'aura été' un échec.", "Un exemple avec 'être'."]
             }else if verbArray.temps == "Passé antérieur"{

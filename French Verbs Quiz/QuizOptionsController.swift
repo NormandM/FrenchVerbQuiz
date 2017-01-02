@@ -118,7 +118,7 @@ class QuizOptionsController: UITableViewController {
     func showAlert () {
         let alertController = UIAlertController(title: "If faut choisir au moins un temps de verbe.", message: nil, preferredStyle: .actionSheet)
         alertController.popoverPresentationController?.sourceView = self.view
-        alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 0)
+        alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
         
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: dismissAlert)
         alertController.addAction(okAction)
