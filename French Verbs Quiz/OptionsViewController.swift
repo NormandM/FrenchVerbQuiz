@@ -43,10 +43,7 @@ class OptionsViewController: UIViewController {
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
 
-
     }
 
-
-    
     
 }

@@ -13,6 +13,7 @@ import CoreData
 class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     var arrayVerbe: [[String]] = []
     var arraySelection: [String] = []
+    var verbeInfinitif: String = ""
     var infinitifVerb: Int = 0
     var listeVerbe: [String] = []
     var verbeChoisi: String = ""
@@ -33,7 +34,8 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     var verbeFinal: String = ""
     var modeFinal: String = ""
     var tempsFinal: String = ""
-
+    var fenetre = UserDefaults.standard.bool(forKey: "fenetre")
+    var testCompltete = UserDefaults.standard.bool(forKey: "testCompltete")
     let dataController = DataController.sharedInstance
     let managedObjectContext = DataController.sharedInstance.managedObjectContext
     lazy var fetchRequest: NSFetchRequest<NSFetchRequestResult> = {
@@ -62,7 +64,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         super.viewDidLoad()
         masterConstraint.constant = 0.10 * screenSize.height
         tempsConstraint.constant = 0.10 * screenSize.height
-        
+        testCompltete = false
         self.title = "Répondez à la question."
         barreProgression.progress = 0.0
         selectionQuestion()
@@ -94,14 +96,13 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
             UIView.commitAnimations()
         }
 
-
-    
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        if testCompltete == true && fenetre == false {
+            showAlert4()
+        }
     }
+
+
     
 // MARK: NAVIGATION
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -186,6 +187,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         let noDeverbe = listeVerbe.count
         let indexVerbeChoisi = Int(arc4random_uniform(UInt32(noDeverbe)))
         verbeChoisi = listeVerbe[indexVerbeChoisi]
+        if verbeInfinitif != "Tous les verbes" {verbeChoisi = verbeInfinitif}
         n = 0
         
         //Selecting person for question
@@ -314,7 +316,11 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         
         progressClaculation()
         if progressInt == 10.0 {
-            performSegue(withIdentifier: "showResult", sender: nil)
+            let when = DispatchTime.now() + 1.5 // change 2 to desired number of seconds
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.performSegue(withIdentifier: "showResult", sender: nil)
+            }
+            
         }
     }
     func textFieldShouldReturn(_ reponse: UITextField) -> Bool {
@@ -347,6 +353,30 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     func dismissAlert(_ sender: UIAlertAction) {
         
     }
+    func showAlert4 () {
+        
+        let alert = UIAlertController(title: "Verbes Français Quiz", message: "Votre opinion est importante pour améliorer l’application. Vos commentaires seraient appréciés.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "D'accord ", style: UIAlertActionStyle.default, handler:{(alert: UIAlertAction!) in self.rateApp(appId: "id1189770403") { success in
+            print("RateApp \(success)")
+            }}))
+        alert.addAction(UIAlertAction(title: "Pas maintenant", style: UIAlertActionStyle.default, handler: nil))
+        //self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Ne plus me montrer cette fenêtre", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.fenetre = true; UserDefaults.standard.set(self.fenetre, forKey: "fenetre") }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    func rateApp(appId: String, completion: @escaping ((_ success: Bool)->())) {
+        guard let url = URL(string : "itms-apps://itunes.apple.com/app/" + appId) else {
+            completion(false)
+            return
+        }
+        guard #available(iOS 10, *) else {
+            completion(UIApplication.shared.openURL(url))
+            return
+        }
+        UIApplication.shared.open(url, options: [:], completionHandler: completion)
+    }
+    
+
 
 
 }

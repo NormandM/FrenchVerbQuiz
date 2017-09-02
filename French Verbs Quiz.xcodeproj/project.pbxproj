@@ -28,6 +28,7 @@
 		8E91EAF81DF1D047008F39A9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAF71DF1D047008F39A9 /* OptionsViewController.swift */; };
 		8E91EAFC1DF1D43A008F39A9 /* frenchVerbsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E91EAFB1DF1D43A008F39A9 /* frenchVerbsList.plist */; };
 		8E91EAFE1DF1D88A008F39A9 /* DataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAFD1DF1D88A008F39A9 /* DataStructure.swift */; };
+		8E9482621F5B265200D1F68F /* SpecificVerbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		8E91EAF71DF1D047008F39A9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		8E91EAFB1DF1D43A008F39A9 /* frenchVerbsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frenchVerbsList.plist; sourceTree = "<group>"; };
 		8E91EAFD1DF1D88A008F39A9 /* DataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructure.swift; sourceTree = "<group>"; };
+		8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificVerbViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				8E91EACB1DF1CA1E008F39A9 /* Main.storyboard */,
+				8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */,
 				8E91EAFB1DF1D43A008F39A9 /* frenchVerbsList.plist */,
 				8E91EAFD1DF1D88A008F39A9 /* DataStructure.swift */,
 				8E91EAF71DF1D047008F39A9 /* OptionsViewController.swift */,
@@ -327,6 +330,7 @@
 				8E020A671DFC8DCB0075B180 /* VerbesFrancais.xcdatamodeld in Sources */,
 				8E91EAF81DF1D047008F39A9 /* OptionsViewController.swift in Sources */,
 				8E7FC96F1DFB03D3005C397B /* ResultViewController.swift in Sources */,
+				8E9482621F5B265200D1F68F /* SpecificVerbViewController.swift in Sources */,
 				8E020A771DFDCBF90075B180 /* ItemVerbe+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

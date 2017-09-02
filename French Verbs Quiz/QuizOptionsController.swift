@@ -11,6 +11,7 @@ import UIKit
 class QuizOptionsController: UITableViewController {
     var arrayVerbe: [[String]] = []
     var arraySelection: [String] = []
+    var verbeInfinitif: String = ""
     var refIndexPath = [IndexPath]()
     var selectedTimeVerbes = NSMutableSet()
     var arr: NSMutableArray = []
@@ -102,17 +103,25 @@ class QuizOptionsController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         if segue.identifier == "showQuestionFinal"{
-            
-            
+            verbeInfinitif = "Tous les verbes"
             let backItem = UIBarButtonItem()
             backItem.title = ""
             navigationItem.backBarButtonItem = backItem
-            
             let controller = segue.destination as! QuizController
             controller.arraySelection = arraySelection
             controller.arrayVerbe = arrayVerbe
+            controller.verbeInfinitif = verbeInfinitif
             
+        }
+        if segue.identifier == "showSpecificVerb"{
+            let backItem = UIBarButtonItem()
+            backItem.title = ""
+            navigationItem.backBarButtonItem = backItem
+            let controller = segue.destination as! SpecificVerbViewController
+            controller.arraySelection = arraySelection
+            controller.arrayVerbe = arrayVerbe
         }
     }
     func showAlert () {
@@ -125,9 +134,27 @@ class QuizOptionsController: UITableViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-    func dismissAlert(_ sender: UIAlertAction) {
+    func showAlert4 () {
         
+        let alert = UIAlertController(title: "Verbes Français Quiz", message: "Choisissez une option", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Tous les verbes", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.tousLesverbesAction()}))
+        alert.addAction(UIAlertAction(title: "Spécifier un Verbe", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.specifierUnVerbe()}))
+ 
+        self.present(alert, animated: true, completion: nil)
     }
+    func tousLesverbesAction() {
+        performSegue(withIdentifier: "showQuestionFinal", sender: UIBarButtonItem.self)
+    }
+    func specifierUnVerbe() {
+        performSegue(withIdentifier: "showSpecificVerb", sender: UIBarButtonItem.self)
+
+    }
+    
+    func dismissAlert(_ sender: UIAlertAction) {
+    
+    }
+    
 
     @IBAction func OK(_ sender: UIBarButtonItem) {
         var i = 0
@@ -135,7 +162,8 @@ class QuizOptionsController: UITableViewController {
         if i == 0{
             showAlert()
         }else{
-            performSegue(withIdentifier: "showQuestionFinal", sender: UIBarButtonItem.self)
+            showAlert4()
+            //performSegue(withIdentifier: "showQuestionFinal", sender: UIBarButtonItem.self)
         }
 
     }
