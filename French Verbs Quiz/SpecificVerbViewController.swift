@@ -15,6 +15,8 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     var nomSection: String = ""
     var leTemps: String = ""
     var verbeTotal = ["", "", ""]
+    var verbeChoisiSet = NSMutableSet()
+    var verbChoisiArray: [String] = []
     
     var arrayVerbe: [[String]] = []
     var arraySelection: [String] = []
@@ -35,6 +37,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(showQuiz))
         let i = arrayVerbe.count
         while randomVerb < i {
             let allVerbs = VerbeFrancais(verbArray: arrayVerbe, n: randomVerb)
@@ -84,10 +87,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -103,12 +103,54 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as UITableViewCell;
         if(searchActive){
             cell.textLabel?.text = filtered[indexPath.row]
+            
         } else {
             cell.textLabel?.text = listeVerbe[indexPath.row];
         }
-        
+        cell.selectionStyle = .none
+        configure(cell, forRowAtIndexPath: indexPath)
+
         return cell;
     }
+  
+
+    func configure(_ cell: UITableViewCell, forRowAtIndexPath indexPath: IndexPath) {
+        if verbeChoisiSet.contains(indexPath) {
+
+            // selected
+            cell.accessoryType = .checkmark
+
+        }
+        else {
+            // not selected
+            cell.accessoryType = .none
+        }
+        
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let cell2 = tableView.cellForRow(at: indexPath)!
+        if verbeChoisiSet.contains(indexPath) {
+            // deselect
+            verbeChoisiSet.remove(indexPath)
+            
+            if let text = cell2.textLabel?.text, let n = verbChoisiArray.index(of: text){
+                verbChoisiArray.remove(at: n)
+            }
+            
+        }
+        else {
+            // select
+            verbeChoisiSet.add(indexPath)
+            verbChoisiArray.append((cell2.textLabel?.text)!)
+            //arraySelection.append(listeVerbe[indexPath.row])
+        }
+        let cell = tableView.cellForRow(at: indexPath)!
+        configure(cell, forRowAtIndexPath: indexPath)
+        print(verbeChoisiSet)
+        print(verbChoisiArray)
+    }
+
     
     
     
@@ -127,6 +169,9 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
                 
             }
         }
+    }
+    func showQuiz() {
+        performSegue(withIdentifier: "showQuiz", sender: Any?.self)
     }
     
     
