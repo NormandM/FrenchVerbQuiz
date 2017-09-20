@@ -7,18 +7,14 @@
 //
 
 import UIKit
+import Foundation
 import AudioToolbox
 import CoreData
 
 class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     var arrayVerbe: [[String]] = []
     var arraySelection: [String] = []
-    var verbeInfinitif: String = ""
-    var infinitifVerb: Int = 0
-    var listeVerbe: [String] = []
-    var verbeChoisi: String = ""
-    var tempsChoisi: String = ""
-    var modeChoisi: String = ""
+    var verbeInfinitif: [String] = []
     var noPersonne: Int = 0
     var noItem: Int = 0
     var choixPersonne: String = ""
@@ -29,8 +25,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     var soundURL: NSURL?
     var soundID:SystemSoundID = 0
     var didSave: Bool = false
-    var contexte: String = ""
-    var explication: String = ""
     var verbeFinal: String = ""
     var modeFinal: String = ""
     var tempsFinal: String = ""
@@ -42,7 +36,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         let request  = NSFetchRequest<NSFetchRequestResult>(entityName: ItemVerbe.identifier)
         let sortDescriptor = NSSortDescriptor(key: "verbeInfinitif", ascending: true)
         request.sortDescriptors = [sortDescriptor]
-        
         return request
     }()
     
@@ -154,112 +147,39 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
 // MARK: ALL FUNCTIONS
 /////////////////////////////////////
     func selectionQuestion(){
-        // Selecting verb tense
-        let noTempsChoisi = arraySelection.count
-        let indexTempsChoisi = Int(arc4random_uniform(UInt32(noTempsChoisi)))
-        tempsChoisi = arraySelection[indexTempsChoisi]
-        var n = 0
-        while tempsChoisi.characters.last == " "{
-            tempsChoisi = String(tempsChoisi.characters.dropLast(1))
-            n = n + 1
-        }
-        if n == 0 {
-            modeChoisi = "indicatif"
-        }else if n == 1{
-            modeChoisi = "subjonctif"
-        }else if n == 2{
-            modeChoisi = "conditionnel"
-        }else if n == 3{
-            modeChoisi = "impératif"
-        }
-        
-        //Selecting verb for question
-        let i = arrayVerbe.count
-        while infinitifVerb < i {
-            let allVerbs = VerbeFrancais(verbArray: arrayVerbe, n: infinitifVerb)
-            if modeChoisi == "impératif" && (allVerbs.verbe == "pouvoir" || allVerbs.verbe == "vouloir" || allVerbs.verbe == "devoir" || allVerbs.verbe == "falloir" || allVerbs.verbe == "pleuvoir" || allVerbs.verbe == "valoir") {
-                // not appending
-            }else{
-                listeVerbe.append(allVerbs.verbe)
-            }
-            infinitifVerb = infinitifVerb + 16
-        }
-        let noDeverbe = listeVerbe.count
-        let indexVerbeChoisi = Int(arc4random_uniform(UInt32(noDeverbe)))
-        verbeChoisi = listeVerbe[indexVerbeChoisi]
-        if verbeInfinitif != "Tous les verbes" {verbeChoisi = verbeInfinitif}
-        n = 0
-        
-        //Selecting person for question
-        for verb in arrayVerbe {
-            if verb[0] == modeChoisi && verb[1] == tempsChoisi && verb[2] == verbeChoisi{
-                noItem = n
-                break
-            }
-            n = n + 1
+        if verbeInfinitif != ["Tous les verbes"] {
+            let selection = Selection()
+            let choixTempsEtMode = selection.questionSpecifique(arraySelection: arraySelection, arrayVerbe: arrayVerbe, verbeInfinitif: verbeInfinitif)
+            verbe.text = choixTempsEtMode[0] as? String
+            mode.text = choixTempsEtMode[1] as? String
+            temps.text = choixTempsEtMode[2] as? String
+            noPersonne = choixTempsEtMode[3] as! Int
+            let personneVerbe = choixTempsEtMode[5] as! PersonneTrie
             
-        }
-
-        var noPossiblePersonne = 0
-        if modeChoisi == "impératif"{
-            noPossiblePersonne = 3
-        }else{
-            noPossiblePersonne = 6
-        }
-        noPersonne = Int(arc4random_uniform(UInt32(noPossiblePersonne))) + 1
-        if modeChoisi == "impératif"{
-            if noPersonne == 1 {
-                noPersonne = 2
-            }else if noPersonne == 2 {
-                noPersonne = 4
-            }else if noPersonne == 3 {
-                noPersonne = 5
+            bonneReponse.text = ""
+            if verbeFinal == "pleuvoir" || verbeFinal == "falloir" {
+                noPersonne = 3
             }
+            let question = Question()
+            let questionFinale = question.finaleSpecifique(noPersonne: noPersonne, personneVerbe: personneVerbe)
+            choixPersonne = questionFinale[0]
+            personne.text = questionFinale[1]
+            reponseBonne = choixTempsEtMode[4] as! String
+        }else{
+            let selection = Selection()
+            let choixTempsEtMode = selection.questionAleatoire(arraySelection: arraySelection, arrayVerbe: arrayVerbe)
+                if verbeFinal == "pleuvoir" || verbeFinal == "falloir" {
+                    noPersonne = 3
+                }
+            verbe.text = choixTempsEtMode[0] as? String
+            mode.text = choixTempsEtMode[1] as? String
+            temps.text = choixTempsEtMode[2] as? String
+            bonneReponse.text = ""
+            choixPersonne = choixTempsEtMode[3] as! String
+            personne.text = choixTempsEtMode[4] as? String
+            reponseBonne = choixTempsEtMode[5] as! String
         }
-
-
-        let verbeFrancais = VerbeFrancais(verbArray: arrayVerbe, n: noItem)
-        let personneVerbe = Personne(verbArray: verbeFrancais)
-        verbeFinal = verbeFrancais.verbe
-        modeFinal = verbeFrancais.mode
-        tempsFinal = verbeFrancais.temps
-        let helper = Helper()
-        verbe.text = helper.capitalize(word: verbeFinal)
-        mode.text = helper.capitalize(word: modeFinal)
-        temps.text = helper.capitalize(word: tempsFinal)
-    
-        bonneReponse.text = ""
-        if verbeFinal == "pleuvoir" || verbeFinal == "falloir" {
-            noPersonne = 3
-        }
-        if noPersonne == 1{
-            choixPersonne = "premier"
-            reponseBonne = verbeFrancais.premier
-            personne.text = personneVerbe.first
-        }else if noPersonne == 2 {
-            choixPersonne = "deuxieme"
-            reponseBonne = verbeFrancais.deuxieme
-            personne.text = personneVerbe.second
-        }else if noPersonne == 3 {
-            choixPersonne = "troisieme"
-            reponseBonne = verbeFrancais.troisieme
-            personne.text = personneVerbe.third
-        }else if noPersonne == 4 {
-            choixPersonne = "quatrieme"
-            reponseBonne = verbeFrancais.quatrieme
-            personne.text = personneVerbe.fourth
-        }else if noPersonne == 5 {
-            choixPersonne = "cinquieme"
-            reponseBonne = verbeFrancais.cinquieme
-            personne.text = personneVerbe.fifth
-        }else if noPersonne == 6 {
-            choixPersonne = "sixieme"
-            reponseBonne = verbeFrancais.sixieme
-            personne.text = personneVerbe.sixth
-        }
-        
     }
-
     func evaluationReponse(){
         if reponse.text == reponseBonne{
             goodResponse = goodResponse + 1
@@ -292,8 +212,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
                     item.mauvaiseReponse = item.mauvaiseReponse + 1
                     didSave = true
                 }
-                
-                
             }
             if didSave == false {
                 let itemVerbe = NSEntityDescription.insertNewObject(forEntityName: "ItemVerbe", into: dataController.managedObjectContext) as! ItemVerbe
@@ -301,9 +219,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
                 itemVerbe.tempsVerbe = tempsFinal
                 itemVerbe.modeVerbe = modeFinal
                 itemVerbe.mauvaiseReponse = itemVerbe.mauvaiseReponse + 1
-                
             }
-            
             dataController.saveContext()
             bonneReponse.text = reponseBonne
             bonneReponse.textColor = UIColor(red: 255/255, green: 17/255, blue: 93/255, alpha: 1.0)
@@ -311,7 +227,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
             soundURL = NSURL(fileURLWithPath: filePath!)
             AudioServicesCreateSystemSoundID(soundURL!, &soundID)
             AudioServicesPlaySystemSound(soundID)
-            
         }
         
         progressClaculation()
@@ -320,7 +235,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
             DispatchQueue.main.asyncAfter(deadline: when) {
                 self.performSegue(withIdentifier: "showResult", sender: nil)
             }
-            
         }
     }
     func textFieldShouldReturn(_ reponse: UITextField) -> Bool {
@@ -329,9 +243,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         checkButton.isEnabled = false
         checkButton.setTitleColor(UIColor.gray, for: .disabled)
         reponse.isEnabled = false
-        
         return true
-        
     }
     func progressClaculation() {
         progressInt = progressInt + 1
@@ -344,10 +256,8 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         let alertController = UIAlertController(title: contexteVerbe.contexte[0], message: contexteVerbe.contexte[1], preferredStyle: .actionSheet)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = temps.frame
-        
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: dismissAlert)
         alertController.addAction(okAction)
-        
         present(alertController, animated: true, completion: nil)
    }
     func dismissAlert(_ sender: UIAlertAction) {
@@ -375,8 +285,4 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         }
         UIApplication.shared.open(url, options: [:], completionHandler: completion)
     }
-    
-
-
-
 }

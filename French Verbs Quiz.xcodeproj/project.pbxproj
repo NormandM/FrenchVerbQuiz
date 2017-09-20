@@ -29,6 +29,9 @@
 		8E91EAFC1DF1D43A008F39A9 /* frenchVerbsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E91EAFB1DF1D43A008F39A9 /* frenchVerbsList.plist */; };
 		8E91EAFE1DF1D88A008F39A9 /* DataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAFD1DF1D88A008F39A9 /* DataStructure.swift */; };
 		8E9482621F5B265200D1F68F /* SpecificVerbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */; };
+		8EC812FF1F6C70D50052F901 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC812FE1F6C70D50052F901 /* RandomNumberGenerator.swift */; };
+		8EC813021F717E590052F901 /* SelectionQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC813011F717E590052F901 /* SelectionQuestion.swift */; };
+		8EC813041F71C2220052F901 /* QuestionFinale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC813031F71C2220052F901 /* QuestionFinale.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		8E91EAFB1DF1D43A008F39A9 /* frenchVerbsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frenchVerbsList.plist; sourceTree = "<group>"; };
 		8E91EAFD1DF1D88A008F39A9 /* DataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructure.swift; sourceTree = "<group>"; };
 		8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificVerbViewController.swift; sourceTree = "<group>"; };
+		8EC812FE1F6C70D50052F901 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
+		8EC813011F717E590052F901 /* SelectionQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionQuestion.swift; sourceTree = "<group>"; };
+		8EC813031F71C2220052F901 /* QuestionFinale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionFinale.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,7 @@
 		8E91EAC61DF1CA1E008F39A9 /* French Verbs Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				8EC813001F717E140052F901 /* Quiz Controller */,
 				8E91EACB1DF1CA1E008F39A9 /* Main.storyboard */,
 				8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */,
 				8E91EAFB1DF1D43A008F39A9 /* frenchVerbsList.plist */,
@@ -145,7 +152,6 @@
 				8E517D881DF2631E00EA5087 /* tempsDeVerbeTableViewController.swift */,
 				8E517D8A1DF3513300EA5087 /* FinalVerbeViewController.swift */,
 				8E517D8C1DF471EA00EA5087 /* QuizOptionsController.swift */,
-				8E517D8E1DF487ED00EA5087 /* QuizController.swift */,
 				8E7FC96E1DFB03D3005C397B /* ResultViewController.swift */,
 				8E020A781DFDE8FE0075B180 /* StatistiqueTableViewController.swift */,
 				8E91EAC71DF1CA1E008F39A9 /* AppDelegate.swift */,
@@ -156,6 +162,7 @@
 				8E020A651DFC8DCB0075B180 /* VerbesFrancais.xcdatamodeld */,
 				8E020A751DFDCBF90075B180 /* ItemVerbe+CoreDataProperties.swift */,
 				8E020A741DFDCBF90075B180 /* ItemVerbe+CoreDataClass.swift */,
+				8EC812FE1F6C70D50052F901 /* RandomNumberGenerator.swift */,
 			);
 			path = "French Verbs Quiz";
 			sourceTree = "<group>";
@@ -176,6 +183,16 @@
 				8E91EAE91DF1CA1E008F39A9 /* Info.plist */,
 			);
 			path = "French Verbs QuizUITests";
+			sourceTree = "<group>";
+		};
+		8EC813001F717E140052F901 /* Quiz Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E517D8E1DF487ED00EA5087 /* QuizController.swift */,
+				8EC813011F717E590052F901 /* SelectionQuestion.swift */,
+				8EC813031F71C2220052F901 /* QuestionFinale.swift */,
+			);
+			name = "Quiz Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,12 +335,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC813021F717E590052F901 /* SelectionQuestion.swift in Sources */,
 				8E91EAFE1DF1D88A008F39A9 /* DataStructure.swift in Sources */,
 				8E020A791DFDE8FE0075B180 /* StatistiqueTableViewController.swift in Sources */,
+				8EC812FF1F6C70D50052F901 /* RandomNumberGenerator.swift in Sources */,
 				8E020A761DFDCBF90075B180 /* ItemVerbe+CoreDataClass.swift in Sources */,
 				8E517D871DF1F63E00EA5087 /* VerbListViewController.swift in Sources */,
 				8E517D8B1DF3513300EA5087 /* FinalVerbeViewController.swift in Sources */,
 				8E517D891DF2631E00EA5087 /* tempsDeVerbeTableViewController.swift in Sources */,
+				8EC813041F71C2220052F901 /* QuestionFinale.swift in Sources */,
 				8E517D8F1DF487ED00EA5087 /* QuizController.swift in Sources */,
 				8E91EAC81DF1CA1E008F39A9 /* AppDelegate.swift in Sources */,
 				8E517D8D1DF471EA00EA5087 /* QuizOptionsController.swift in Sources */,

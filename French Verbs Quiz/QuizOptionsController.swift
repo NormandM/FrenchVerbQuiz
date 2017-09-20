@@ -11,7 +11,7 @@ import UIKit
 class QuizOptionsController: UITableViewController {
     var arrayVerbe: [[String]] = []
     var arraySelection: [String] = []
-    var verbeInfinitif: String = ""
+    var verbeInfinitif: [String] = []
     var refIndexPath = [IndexPath]()
     var selectedTimeVerbes = NSMutableSet()
     var arr: NSMutableArray = []
@@ -105,7 +105,7 @@ class QuizOptionsController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if segue.identifier == "showQuestionFinal"{
-            verbeInfinitif = "Tous les verbes"
+            verbeInfinitif = ["Tous les verbes"]
             let backItem = UIBarButtonItem()
             backItem.title = ""
             navigationItem.backBarButtonItem = backItem

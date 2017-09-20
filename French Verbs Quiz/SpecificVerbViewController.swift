@@ -10,26 +10,17 @@ import UIKit
 
 class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     var randomVerb: Int = 0
+    var arrayFilter: [Any] = []
     var listeVerbe: [String] = []
+    var listeVerbeAny: [[Any]] = []
     var verbeInfinitif: String = ""
-    var nomSection: String = ""
-    var leTemps: String = ""
-    var verbeTotal = ["", "", ""]
-    var verbeChoisiSet = NSMutableSet()
-    var verbChoisiArray: [String] = []
-    
     var arrayVerbe: [[String]] = []
     var arraySelection: [String] = []
+    var verbesChoisi: [String] = []
     
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
-   
-    
-    var searchActive : Bool = false
-    var filtered:[String] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,131 +40,116 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         }
         listeVerbe = listeVerbe.sorted(by: alpha)
         
-        
-        
-        // Do any additional setup after loading the view.
+        var n = 0
+        for verbe in listeVerbe {
+            
+            listeVerbeAny.append([verbe, false, n])
+            
+            n = n + 1
+        }
+
     }
     // Setting up the searchBar active: Ttrue/False
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchActive = true;
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    //Filtering with search text
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filtered = listeVerbe.filter({ (text) -> Bool in
-            let tmp: NSString = text as NSString
-            let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
-            return range.location != NSNotFound
-        })
-        if(filtered.count == 0){
-            searchActive = false;
-        } else {
-            searchActive = true;
+        
+        // filter array with string that start with searchText
+        self.arrayFilter = listeVerbeAny.filter{
+            if let pos = ($0[0] as! String).lowercased().range(of: searchText.lowercased()) {
+                return (pos.lowerBound == ($0[0] as! String).startIndex)
+            }
+            return false
         }
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
-    
-    
-    
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(searchActive) {
-            return filtered.count
-        }
-        return listeVerbe.count;
+        // #warning Incomplete implementation, return the number of rows
+        return self.searchBar.text == "" ? self.listeVerbeAny.count : self.arrayFilter.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as UITableViewCell;
-        if(searchActive){
-            cell.textLabel?.text = filtered[indexPath.row]
-            
-        } else {
-            cell.textLabel?.text = listeVerbe[indexPath.row];
-        }
-        cell.selectionStyle = .none
-        configure(cell, forRowAtIndexPath: indexPath)
-
-        return cell;
-    }
-  
-
-    func configure(_ cell: UITableViewCell, forRowAtIndexPath indexPath: IndexPath) {
-        if verbeChoisiSet.contains(indexPath) {
-
-            // selected
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let lista = self.searchBar.text == "" ? self.listeVerbeAny : self.arrayFilter
+        let cellAnyArray = lista[indexPath.row] as! [Any]
+        let cellText = cellAnyArray[0] as! String
+        cell.textLabel?.text = cellText
+        // check cell based on second field
+        let cellCheck = cellAnyArray[1] as! Bool
+        if cellCheck{
             cell.accessoryType = .checkmark
-
-        }
-        else {
-            // not selected
+        }else{
             cell.accessoryType = .none
         }
         
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let cell2 = tableView.cellForRow(at: indexPath)!
-        if verbeChoisiSet.contains(indexPath) {
-            // deselect
-            verbeChoisiSet.remove(indexPath)
-            
-            if let text = cell2.textLabel?.text, let n = verbChoisiArray.index(of: text){
-                verbChoisiArray.remove(at: n)
-            }
-            
-        }
-        else {
-            // select
-            verbeChoisiSet.add(indexPath)
-            verbChoisiArray.append((cell2.textLabel?.text)!)
-            //arraySelection.append(listeVerbe[indexPath.row])
-        }
-        let cell = tableView.cellForRow(at: indexPath)!
-        configure(cell, forRowAtIndexPath: indexPath)
-        print(verbeChoisiSet)
-        print(verbChoisiArray)
+        return cell
     }
 
     
-    
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showQuiz"{
-            if let indexPath = self.tableView.indexPathForSelectedRow, let verbeChoisi = tableView.cellForRow(at: indexPath)?.textLabel?.text {
-                let backItem = UIBarButtonItem()
-                backItem.title = ""
-                navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
-                let controller = segue.destination as! QuizController
-                controller.arrayVerbe = arrayVerbe
-                controller.arraySelection = arraySelection
-                controller.verbeInfinitif = verbeChoisi
-                
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        verbesChoisi = []
+        var lista = self.searchBar.text == "" ? self.listeVerbeAny : self.arrayFilter
+        let idAnyArray = lista[indexPath.row] as! [Any]
+        let id = idAnyArray[2] as! Int
+        // invert the value of checked
+        self.listeVerbeAny[id][1] = !(listeVerbeAny[id][1] as! Bool)
+        lista = self.searchBar.text == "" ? self.listeVerbeAny : self.arrayFilter
+        let cellAnyArray = lista[indexPath.row] as! [Any]
+        let cellCheck = cellAnyArray[1] as! Bool
+        let cell = tableView.cellForRow(at: indexPath)
+        if cellCheck{
+            cell?.accessoryType = .checkmark
+        }else{
+            cell?.accessoryType = .none
+        }
+        self.searchBar.text! = ""
+        tableView.reloadData()
+    }
+    func choix() {
+        for element in self.listeVerbeAny {
+            if element[1] as! Bool {
+                verbesChoisi.append(element[0] as! String)
             }
         }
+        print(verbesChoisi)
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showQuiz"{
+            let backItem = UIBarButtonItem()
+            backItem.title = ""
+            navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+            let controller = segue.destination as! QuizController
+            controller.arrayVerbe = arrayVerbe
+            controller.arraySelection = arraySelection
+            controller.verbeInfinitif = verbesChoisi
+            
+        }
+    }
+    func showAlert () {
+        let alertController = UIAlertController(title: "If faut choisir au moins un verbe.", message: nil, preferredStyle: .alert)
+        alertController.popoverPresentationController?.sourceView = self.view
+        alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
+        
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: dismissAlert)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    func dismissAlert(_ sender: UIAlertAction) {
+        
     }
     func showQuiz() {
-        performSegue(withIdentifier: "showQuiz", sender: Any?.self)
+        choix()
+        if verbesChoisi.count == 0 {
+            showAlert()
+        }else {
+            performSegue(withIdentifier: "showQuiz", sender: Any?.self)
+        }
+        
     }
-    
-    
-    
+
 }

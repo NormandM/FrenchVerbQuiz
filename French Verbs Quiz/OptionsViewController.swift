@@ -16,6 +16,7 @@ class OptionsViewController: UIViewController {
         if let plistPath = Bundle.main.path(forResource: "frenchVerbsList", ofType: "plist"),
             let verbArray = NSArray(contentsOfFile: plistPath){
             arrayVerbe = verbArray as! [[String]]
+
             
         }
 

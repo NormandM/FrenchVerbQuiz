@@ -36,6 +36,22 @@ struct VerbeFrancais{
         sixieme = verbeChoisi[8]
     }
 }
+struct VerbeTrie {
+    let verbe: String
+    let mode: String
+    let temps: String
+    let verbeConjugue: String
+    let personne: String
+    let n: Int
+    init(allInfoList: [[String]], n: Int){
+        self.n = n
+        mode = allInfoList[n][0]
+        temps = allInfoList[n][1]
+        verbe = allInfoList[n][2]
+        verbeConjugue = allInfoList[n][3]
+        personne = allInfoList[n][4]
+    }
+}
 //////////////////////////////
 //// MARK: Struct to assign the right pronom
 //////////////////////////////
@@ -94,6 +110,89 @@ struct Personne{
             return "ils"
         }
     }
+
+}
+
+struct PersonneTrie {
+    let verbeTrie: VerbeTrie
+    var first: String{
+        var firstReturn = ""
+        if verbeTrie.personne == "1" {
+            let firstLetter = verbeTrie.verbeConjugue.characters.first
+            if firstLetter == "a" || firstLetter == "e" || firstLetter == "i" || firstLetter == "o" || firstLetter == "u" || firstLetter == "é" || firstLetter == "è"{
+                if verbeTrie.mode == "subjonctif"{
+                    firstReturn = "que j'"
+                }else {return "j'"}
+            }else{
+                if verbeTrie.mode == "subjonctif"{
+                    firstReturn = "que je"
+                }else {firstReturn = "je"}
+            }
+        }
+        return firstReturn
+    }
+    var second: String{
+        var secondReturn = ""
+        if verbeTrie.personne == "2" {
+            if verbeTrie.mode == "subjonctif"{
+                secondReturn = "que tu"
+            }else if verbeTrie.mode == "impératif"{
+                secondReturn = "(tu)"
+            }else{
+                secondReturn = "tu"
+            }
+        }
+        return secondReturn
+    }
+    var third: String {
+        var thirdReturn = ""
+        if verbeTrie.personne == "3" {
+            if verbeTrie.mode == "subjonctif"{
+                thirdReturn = "qu'il"
+            }else{
+                thirdReturn = "il"
+            }
+        }
+        return thirdReturn
+    }
+    var fourth: String{
+        var fourthReturn = ""
+        if verbeTrie.personne == "4" {
+            if verbeTrie.mode == "subjonctif"{
+                fourthReturn = "que nous"
+            }else if verbeTrie.mode == "impératif"{
+                fourthReturn = "(nous)"
+            }else{
+                fourthReturn = "nous"
+            }
+        }
+        return fourthReturn
+    }
+    var fifth: String{
+        var fifthReturn = ""
+        if verbeTrie.personne == "5" {
+            if verbeTrie.mode == "subjonctif"{
+                fifthReturn = "que vous"
+            }else if verbeTrie.mode == "impératif"{
+                fifthReturn = "(vous)"
+            }else{
+                fifthReturn = "vous"
+            }
+        }
+        return fifthReturn
+    }
+    var sixth: String {
+        var sixthReturn = ""
+        if verbeTrie.personne == "6" {
+            if verbeTrie.mode == "subjonctif"{
+                sixthReturn = "qu'ils"
+            }else{
+                sixthReturn = "ils"
+            }
+        }
+        return sixthReturn
+    }
+
 
 }
 ////////////////////////////////////
