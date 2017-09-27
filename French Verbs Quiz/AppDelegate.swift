@@ -15,9 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var navigationBarAppearace = UINavigationBar.appearance()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        navigationBarAppearace.tintColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
-        navigationBarAppearace.barTintColor = UIColor(colorLiteralRed: 171/255, green: 203/255, blue: 235/255, alpha: 1.0)
-        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        navigationBarAppearace.tintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        navigationBarAppearace.barTintColor = UIColor(red: 171/255, green: 203/255, blue: 235/255, alpha: 1.0)
+        navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
 
         return true
     }

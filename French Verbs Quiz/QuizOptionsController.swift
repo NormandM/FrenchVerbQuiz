@@ -10,6 +10,7 @@ import UIKit
 
 class QuizOptionsController: UITableViewController {
     var arrayVerbe: [[String]] = []
+    var listeVerbes = [String]()
     var arraySelection: [String] = []
     var verbeInfinitif: [String] = []
     var refIndexPath = [IndexPath]()
@@ -29,6 +30,13 @@ class QuizOptionsController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for array in arrayVerbe {
+            if listeVerbes.contains(array[2]){
+                
+            }else{
+                listeVerbes.append(array[2])
+            }
+        }
         self.title = "Choisissez les temps"
 
     }
@@ -113,6 +121,7 @@ class QuizOptionsController: UITableViewController {
             controller.arraySelection = arraySelection
             controller.arrayVerbe = arrayVerbe
             controller.verbeInfinitif = verbeInfinitif
+            controller.listeVerbe = listeVerbes
             
         }
         if segue.identifier == "showSpecificVerb"{

@@ -13,20 +13,25 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var resultat: UILabel!
     @IBOutlet weak var message: UILabel!
     var testCompltete = UserDefaults.standard.bool(forKey: "testCompltete")    
-    
+    var totalProgress: Int = 0
     var goodResponse: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         testCompltete = true
         UserDefaults.standard.set(self.testCompltete, forKey: "testCompltete")
-        resultat.text = "\(goodResponse)/10"
+        resultat.text = "\(goodResponse)/\(totalProgress)"
+        let result = Double(goodResponse)/Double(totalProgress)
+        let resultPercent = String(round(result*100)) + " %"
+        
         // Do any additional setup after loading the view.
-        if goodResponse == 10{
+        if result == 1.0{
             message.text = "Parfait! "
-        }else if goodResponse == 9 ||  goodResponse == 8 || goodResponse == 7{
-            message.text = "Très bien!"
-        }else{
-            message.text = "Essayez à nouveau!"
+        }else if result < 1 && Double(result) >= 0.75 {
+            message.text = "\(resultPercent) Très bien!"
+        }else if Double(result) >= 0.6 && Double(result) < 0.75 {
+            message.text = "\(resultPercent) Pas Mal!"
+        }else if result >= 0 && Double(result) < 0.6 {
+            message.text = "\(resultPercent) Essayez à nouveau!"
         }
 
     }

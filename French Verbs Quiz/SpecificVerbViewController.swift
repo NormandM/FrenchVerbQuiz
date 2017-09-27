@@ -28,6 +28,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
+       
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(showQuiz))
         let i = arrayVerbe.count
         while randomVerb < i {
@@ -114,7 +115,6 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
                 verbesChoisi.append(element[0] as! String)
             }
         }
-        print(verbesChoisi)
     }
     
     // MARK: - Navigation
@@ -127,6 +127,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
             controller.arrayVerbe = arrayVerbe
             controller.arraySelection = arraySelection
             controller.verbeInfinitif = verbesChoisi
+            controller.listeVerbe = listeVerbe
             
         }
     }
@@ -142,7 +143,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     func dismissAlert(_ sender: UIAlertAction) {
         
     }
-    func showQuiz() {
+    @objc func showQuiz() {
         choix()
         if verbesChoisi.count == 0 {
             showAlert()

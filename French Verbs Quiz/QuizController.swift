@@ -12,9 +12,14 @@ import AudioToolbox
 import CoreData
 
 class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
+    var tempsEtMode = [[String]]()
+    var listeVerbe: [String] = []
     var arrayVerbe: [[String]] = []
     var arraySelection: [String] = []
     var verbeInfinitif: [String] = []
+    var allInfoList: [[String]] = []
+    var indexChoisi: Int = 0
+    var indexDesVerbes: [Int] = []
     var noPersonne: Int = 0
     var noItem: Int = 0
     var choixPersonne: String = ""
@@ -22,6 +27,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     var progress: Float = 0.0
     var progressInt: Float = 0.0
     var goodResponse: Int = 0
+    var totalProgress: Int = 0
     var soundURL: NSURL?
     var soundID:SystemSoundID = 0
     var didSave: Bool = false
@@ -48,7 +54,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     @IBOutlet weak var reponse: UITextField!
     @IBOutlet weak var barreProgression: UIProgressView!
     @IBOutlet weak var checkButton: UIButton!
-    
     let screenSize: CGRect = UIScreen.main.bounds
     @IBOutlet weak var masterConstraint: NSLayoutConstraint!
     @IBOutlet weak var tempsConstraint: NSLayoutConstraint!
@@ -69,12 +74,12 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     }
     // the 3 next function moves the KeyBoards when keyboard appears or hides
  
-        func textFieldDidBeginEditing(_ textField: UITextField) {
+        @objc func textFieldDidBeginEditing(_ textField: UITextField) {
             if UIDevice.current.userInterfaceIdiom == .pad && (UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight){
             animateViewMoving(true, moveValue: 50)
             }
         }
-        func textFieldDidEndEditing(_ textField: UITextField) {
+        @objc func textFieldDidEndEditing(_ textField: UITextField) {
             if UIDevice.current.userInterfaceIdiom == .pad && (UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight){
             animateViewMoving(false, moveValue: 50)
             }
@@ -94,14 +99,20 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
             showAlert4()
         }
     }
-
-
     
 // MARK: NAVIGATION
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showResult" {
             let controller = segue.destination as! ResultViewController
             controller.goodResponse = goodResponse
+            controller.totalProgress = totalProgress
+        }
+        if segue.identifier == "showTempsVerbesChoisis" {
+            let controller = segue.destination as! TempsVerbesChoisisViewController
+            controller.tempsEtMode = tempsEtMode
+            controller.verbeInfinitif = verbeInfinitif
+            controller.listeVerbe = listeVerbe
+
         }
     }
     
@@ -114,18 +125,19 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         reponse.text = ""
         checkButton.isEnabled = true
         reponse.isEnabled = true
+        
     }
 
     @IBAction func check(_ sender: UIButton) {
         evaluationReponse()
+        specificQuiz()
         reponse.resignFirstResponder()
         checkButton.isEnabled = false
         checkButton.setTitleColor(UIColor.gray, for: .disabled)
         reponse.isEnabled = false
 
     }
-    
-    
+
     @IBAction func unwindToLast(segue: UIStoryboardSegue) {
         progressInt = 0.0
         progress = 0.0
@@ -133,10 +145,10 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         barreProgression.progress = 0.0
         bonneReponse.text = ""
         reponse.text = ""
+        indexChoisi = 0
         checkButton.isEnabled = true
         reponse.isEnabled = true
         selectionQuestion()
-        
     }
     @IBAction func exemple(_ sender: Any) {
         showAlert()
@@ -148,14 +160,24 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
 /////////////////////////////////////
     func selectionQuestion(){
         if verbeInfinitif != ["Tous les verbes"] {
-            let selection = Selection()
-            let choixTempsEtMode = selection.questionSpecifique(arraySelection: arraySelection, arrayVerbe: arrayVerbe, verbeInfinitif: verbeInfinitif)
-            verbe.text = choixTempsEtMode[0] as? String
-            mode.text = choixTempsEtMode[1] as? String
-            temps.text = choixTempsEtMode[2] as? String
-            noPersonne = choixTempsEtMode[3] as! Int
-            let personneVerbe = choixTempsEtMode[5] as! PersonneTrie
-            
+            if allInfoList.count == 0{
+                let selection = Selection()
+                let choixTempsEtMode = selection.questionSpecifique(arraySelection: arraySelection, arrayVerbe: arrayVerbe, verbeInfinitif: verbeInfinitif)
+                allInfoList = choixTempsEtMode.0
+                indexDesVerbes = choixTempsEtMode.1
+                tempsEtMode = choixTempsEtMode.2
+            }
+            let verbeTrie = VerbeTrie(allInfoList: allInfoList, n: indexDesVerbes[indexChoisi])
+            let personneVerbe = PersonneTrie(verbeTrie: verbeTrie)
+            verbeFinal = verbeTrie.verbe
+            modeFinal = verbeTrie.mode
+            tempsFinal = verbeTrie.temps
+            noPersonne = Int(verbeTrie.personne)!
+            reponseBonne = verbeTrie.verbeConjugue
+            let helper = Helper()
+            verbe.text = helper.capitalize(word: verbeFinal)
+            mode.text = helper.capitalize(word: modeFinal)
+            temps.text = helper.capitalize(word: tempsFinal)
             bonneReponse.text = ""
             if verbeFinal == "pleuvoir" || verbeFinal == "falloir" {
                 noPersonne = 3
@@ -164,20 +186,24 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
             let questionFinale = question.finaleSpecifique(noPersonne: noPersonne, personneVerbe: personneVerbe)
             choixPersonne = questionFinale[0]
             personne.text = questionFinale[1]
-            reponseBonne = choixTempsEtMode[4] as! String
+            totalProgress = allInfoList.count
+            
         }else{
             let selection = Selection()
+            totalProgress = 10
             let choixTempsEtMode = selection.questionAleatoire(arraySelection: arraySelection, arrayVerbe: arrayVerbe)
                 if verbeFinal == "pleuvoir" || verbeFinal == "falloir" {
                     noPersonne = 3
                 }
-            verbe.text = choixTempsEtMode[0] as? String
-            mode.text = choixTempsEtMode[1] as? String
-            temps.text = choixTempsEtMode[2] as? String
+            let leChoixTempsEtMode = choixTempsEtMode.0
+            tempsEtMode = choixTempsEtMode.1
+            verbe.text = leChoixTempsEtMode[0] as? String
+            mode.text = leChoixTempsEtMode[1] as? String
+            temps.text = leChoixTempsEtMode[2] as? String
             bonneReponse.text = ""
-            choixPersonne = choixTempsEtMode[3] as! String
-            personne.text = choixTempsEtMode[4] as? String
-            reponseBonne = choixTempsEtMode[5] as! String
+            choixPersonne = leChoixTempsEtMode[3] as! String
+            personne.text = leChoixTempsEtMode[4] as? String
+            reponseBonne = leChoixTempsEtMode[5] as! String
         }
     }
     func evaluationReponse(){
@@ -230,30 +256,52 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         }
         
         progressClaculation()
-        if progressInt == 10.0 {
+        if progressInt == Float(totalProgress) {
             let when = DispatchTime.now() + 1.5 // change 2 to desired number of seconds
             DispatchQueue.main.asyncAfter(deadline: when) {
                 self.performSegue(withIdentifier: "showResult", sender: nil)
             }
         }
     }
-    func textFieldShouldReturn(_ reponse: UITextField) -> Bool {
-        evaluationReponse()
+
+    func progressClaculation() {
+        progressInt = progressInt + 1
+        
+        progress = Float(progressInt)/Float(totalProgress)
+        barreProgression.progress = progress
+    }
+    func specificQuiz() {
+        indexChoisi = indexChoisi + 1
+        if indexChoisi == indexDesVerbes.count{
+            print("text Terminé")
+        }
+    }
+    @objc func textFieldShouldReturn(_ reponse: UITextField) -> Bool {
         reponse.resignFirstResponder()
+        specificQuiz()
+        evaluationReponse()
         checkButton.isEnabled = false
         checkButton.setTitleColor(UIColor.gray, for: .disabled)
         reponse.isEnabled = false
         return true
     }
-    func progressClaculation() {
-        progressInt = progressInt + 1
-        progress = progressInt / 10
-        barreProgression.progress = progress
-    }
+    
+// Messages and alerts
     func showAlert () {
-        let verbeFrancais = VerbeFrancais(verbArray: arrayVerbe, n: noItem)
-        let contexteVerbe = ContexteVerbe(verbArray: verbeFrancais)
-        let alertController = UIAlertController(title: contexteVerbe.contexte[0], message: contexteVerbe.contexte[1], preferredStyle: .actionSheet)
+//        let verbeFrancais = VerbeFrancais(verbArray: arrayVerbe, n: noItem)
+//        let contexteVerbe = ContexteVerbe(verbArray: verbeFrancais)
+        var englishVerbe = String()
+        var verbeFinal = String()
+        let frenchToEnglish = FrenchToEnglish()
+        let verbeLowerCase = verbe.text?.lowercased()
+        let dictFrenchEnglish = frenchToEnglish.getDict()
+        if let verbeTexte = verbeLowerCase , let english = dictFrenchEnglish[verbeTexte]{
+            englishVerbe = english
+            verbeFinal = verbeTexte
+        }else{
+            englishVerbe = "La traduction n'est pas disponible"
+        }
+        let alertController = UIAlertController(title: "\(verbeFinal):  \(englishVerbe)", message: nil, preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = temps.frame
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: dismissAlert)

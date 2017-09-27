@@ -10,7 +10,6 @@ import Foundation
 class Selection {
     var noDeverbe = 0
     var indexDesVerbes: [Int] = []
-    var indexChoisi: Int = 0
     var infinitifVerb: Int = 0
     var listeVerbe: [String] = []
     var verbeChoisi: String = ""
@@ -24,14 +23,14 @@ class Selection {
     var modeFinal: String = ""
     var tempsFinal: String = ""
     var tempsEtMode: [[String]] = []
+    var allInfoList: [[String]] = []
 
 // verbes spécifiés
-    func questionSpecifique(arraySelection: [String], arrayVerbe: [[String]], verbeInfinitif: [String]) -> [Any]{
+    func questionSpecifique(arraySelection: [String], arrayVerbe: [[String]], verbeInfinitif: [String]) -> ([[String]],[Int], [[String]]){
         // Selecting verb tense
-        var tempsEtModeChoisi: [Any] = []
         tempsEtMode = choixTempsEtMode(arraySelection: arraySelection)
         listeVerbe = verbeInfinitif
-        var allInfoList: [[String]] = []
+        if allInfoList.count == 0 {
         for arrayVerbes in arrayVerbe {
             if listeVerbe.contains(arrayVerbes[2]){
                 for tempsEtModes in tempsEtMode {
@@ -46,32 +45,16 @@ class Selection {
                 }
             }
         }
-        print(allInfoList)
-        if indexChoisi == 0 {
-            let randomNumber = RandomNumber()
-            noDeverbe = allInfoList.count
-            indexDesVerbes = randomNumber.generate(from: 0, to: noDeverbe - 1, quantity: nil)
+        let randomNumber = RandomNumber()
+        noDeverbe = allInfoList.count
+        indexDesVerbes = randomNumber.generate(from: 0, to: noDeverbe - 1, quantity: nil)
         }
-        print(indexDesVerbes)
-        let verbeTrie = VerbeTrie(allInfoList: allInfoList, n: indexDesVerbes[indexChoisi])
-        let personneVerbe = PersonneTrie(verbeTrie: verbeTrie)
-
-        verbeFinal = verbeTrie.verbe
-        modeFinal = verbeTrie.mode
-        tempsFinal = verbeTrie.temps
-        noPersonne = Int(verbeTrie.personne)!
-        let helper = Helper()
-        tempsEtModeChoisi = [helper.capitalize(word: verbeFinal), helper.capitalize(word: modeFinal), helper.capitalize(word: tempsFinal), noPersonne, verbeTrie.verbeConjugue, personneVerbe]
-        if indexChoisi == indexDesVerbes.count{
-            print("text Terminé")
-        }
-        indexChoisi = indexChoisi + 1
-        return tempsEtModeChoisi
+        return (allInfoList, indexDesVerbes, tempsEtMode)
     }
     
     
 /////////Tous les verbes
-    func questionAleatoire(arraySelection: [String], arrayVerbe: [[String]]) -> [Any]{
+    func questionAleatoire(arraySelection: [String], arrayVerbe: [[String]]) -> ([Any], [[String]]){
             listeVerbe = []
             infinitifVerb = 0
             var tempsEtModeChoisi: [Any] = []
@@ -82,7 +65,6 @@ class Selection {
             modeChoisi = tempsEtMode[indexTempsChoisi][1]
             
             let i = arrayVerbe.count
-            print("i = \(i)")
             while infinitifVerb < i {
                 let allVerbs = VerbeFrancais(verbArray: arrayVerbe, n: infinitifVerb)
                 if modeChoisi == "impératif" && (allVerbs.verbe == "pouvoir" || allVerbs.verbe == "vouloir" || allVerbs.verbe == "devoir" || allVerbs.verbe == "falloir" || allVerbs.verbe == "pleuvoir" || allVerbs.verbe == "valoir") {
@@ -95,7 +77,6 @@ class Selection {
             let noDeverbe = listeVerbe.count
             let indexVerbeChoisi = Int(arc4random_uniform(UInt32(noDeverbe)))
             verbeChoisi = listeVerbe[indexVerbeChoisi]
-            print(verbeChoisi)
             var n = 0
             
             //Selecting person for question
@@ -136,14 +117,12 @@ class Selection {
         
             let helper = Helper()
         tempsEtModeChoisi = [helper.capitalize(word: verbeFinal), helper.capitalize(word: modeFinal), helper.capitalize(word: tempsFinal), choixPersonne, personneChoisi, reponseBonne]
-        return tempsEtModeChoisi
+        return (tempsEtModeChoisi, tempsEtMode)
     }
     func choixTempsEtMode(arraySelection: [String]) -> [[String]]{
-        print(arraySelection)
         for arraySelections in arraySelection{
             var n = 0
             tempsChoisi  = arraySelections
-            print(tempsChoisi)
             while tempsChoisi.characters.last == " "{
                 tempsChoisi = String(tempsChoisi.characters.dropLast(1))
                 n = n + 1

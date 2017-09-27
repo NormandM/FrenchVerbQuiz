@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>abandonner</key>
+	<string>to abandon</string>
+	<key>agir</key>
+	<string>to act</string>
+	<key>aimer</key>
+	<string>to like, to love</string>
+	<key>ajouter</key>
+	<string>to add</string>
+	<key>aller</key>
+	<string>to go</string>
+	<key>apercevoir</key>
+	<string>to see</string>
+	<key>appeler</key>
+	<string>to call</string>
+	<key>apprendre</key>
+	<string>to learn</string>
+	<key>arriver</key>
+	<string>to arrive</string>
+	<key>arrêter</key>
+	<string>to stop</string>
+	<key>attendre</key>
+	<string>to expect, to wait</string>
+	<key>avoir</key>
+	<string>to have</string>
+	<key>boire</key>
+	<string>to drink</string>
+	<key>chanter</key>
+	<string>to sing</string>
+	<key>chercher</key>
+	<string>to seek, to search</string>
+	<key>commencer </key>
+	<string>to start</string>
+	<key>comprendre</key>
+	<string>to understand</string>
+	<key>conduire</key>
+	<string>to drive</string>
+	<key>connaître</key>
+	<string>to know</string>
+	<key>continuer</key>
+	<string>to continue, to carry on</string>
+	<key>coudre</key>
+	<string>to sew
+</string>
+	<key>courir</key>
+	<string>to run</string>
+	<key>couvrir</key>
+	<string>to cover</string>
+	<key>craindre</key>
+	<string>to fear</string>
+	<key>crier</key>
+	<string>to yell, to scream</string>
+	<key>croire</key>
+	<string>to believe</string>
+	<key>demander</key>
+	<string>to request, to ask</string>
+	<key>descendre</key>
+	<string>to go down, to descend</string>
+	<key>devenir</key>
+	<string>to become</string>
+	<key>devoir</key>
+	<string>to have to</string>
+	<key>dire</key>
+	<string>to say</string>
+	<key>donner</key>
+	<string>to give</string>
+	<key>dormir</key>
+	<string>to sleep</string>
+	<key>entendre</key>
+	<string>to hear</string>
+	<key>entrer</key>
+	<string>to enter, to come in</string>
+	<key>envoyer</key>
+	<string>to send</string>
+	<key>exister</key>
+	<string>to exist</string>
+	<key>expliquer</key>
+	<string>to explain</string>
+	<key>faire</key>
+	<string>to do</string>
+	<key>falloir</key>
+	<string>to have to</string>
+	<key>finir</key>
+	<string>to finish</string>
+	<key>fuir</key>
+	<string>to run away, to escape</string>
+	<key>garder</key>
+	<string>to keep</string>
+	<key>grandir</key>
+	<string>to grow</string>
+	<key>jeter</key>
+	<string>to throw</string>
+	<key>jouer</key>
+	<string>to play</string>
+	<key>laisser</key>
+	<string>to let, to leave</string>
+	<key>lancer</key>
+	<string>to throw</string>
+	<key>lever</key>
+	<string>to raise</string>
+	<key>lire</key>
+	<string>to read</string>
+	<key>manger</key>
+	<string>to eat</string>
+	<key>manquer</key>
+	<string>to miss</string>
+	<key>marcher</key>
+	<string>to walk</string>
+	<key>mettre</key>
+	<string>to put</string>
+	<key>monter</key>
+	<string>to ascend</string>
+	<key>montrer</key>
+	<string>to show</string>
+	<key>mourir</key>
+	<string>to die</string>
+	<key>offrir</key>
+	<string>to offer</string>
+	<key>ouvrir</key>
+	<string>to open</string>
+	<key>paraître</key>
+	<string>to look, to seem</string>
+	<key>parler</key>
+	<string>to talk</string>
+	<key>partir</key>
+	<string>to go, to leave</string>
+	<key>passer</key>
+	<string>to pass</string>
+	<key>payer</key>
+	<string>to pay</string>
+	<key>peindre</key>
+	<string>to paint</string>
+	<key>penser</key>
+	<string>to think</string>
+	<key>perdre</key>
+	<string>to lose</string>
+	<key>permettre</key>
+	<string>to allow</string>
+	<key>pleuvoir</key>
+	<string>to rain</string>
+	<key>plier</key>
+	<string>to fold</string>
+	<key>porter</key>
+	<string>to carry</string>
+	<key>pouvoir</key>
+	<string>to be able to, can</string>
+	<key>prendre</key>
+	<string>to take</string>
+	<key>présenter</key>
+	<string>to present</string>
+	<key>quitter</key>
+	<string>to leave</string>
+	<key>rappeler</key>
+	<string>to call back</string>
+	<key>recevoir</key>
+	<string>to receive</string>
+	<key>reconnaître</key>
+	<string>to recognize</string>
+	<key>regarder</key>
+	<string>to watch, to look</string>
+	<key>rendre</key>
+	<string>to return</string>
+	<key>rester</key>
+	<string>to stay</string>
+	<key>retenir</key>
+	<string>to hold back</string>
+	<key>retrouver</key>
+	<string>to find</string>
+	<key>rire</key>
+	<string>to laugh</string>
+	<key>rougir</key>
+	<string>to blush</string>
+	<key>répondre</key>
+	<string>to reply, to answer</string>
+	<key>savoir</key>
+	<string>to know</string>
+	<key>sembler</key>
+	<string>to appear</string>
+	<key>sentir</key>
+	<string>to feel, to smell</string>
+	<key>servir</key>
+	<string>to serve</string>
+	<key>songer</key>
+	<string>to wonder</string>
+	<key>souffrir</key>
+	<string>to suffer</string>
+	<key>sourire</key>
+	<string>to smile</string>
+	<key>suivre</key>
+	<string>to follow</string>
+	<key>tenir</key>
+	<string>to hold</string>
+	<key>tomber</key>
+	<string>to fall</string>
+	<key>tourner</key>
+	<string>to turn</string>
+	<key>trouver</key>
+	<string>to find</string>
+	<key>valoir</key>
+	<string>to be worth</string>
+	<key>vendre</key>
+	<string>to sale</string>
+	<key>venir</key>
+	<string>to come</string>
+	<key>vivre</key>
+	<string>to live</string>
+	<key>voir</key>
+	<string>to see</string>
+	<key>vouloir</key>
+	<string>to want to</string>
+	<key>écouter</key>
+	<string>to listen</string>
+	<key>écrire</key>
+	<string>to write</string>
+	<key>être</key>
+	<string>to be</string>
+</dict>
+</plist>
