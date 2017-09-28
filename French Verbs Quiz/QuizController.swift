@@ -272,9 +272,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     }
     func specificQuiz() {
         indexChoisi = indexChoisi + 1
-        if indexChoisi == indexDesVerbes.count{
-            print("text Terminé")
-        }
     }
     @objc func textFieldShouldReturn(_ reponse: UITextField) -> Bool {
         reponse.resignFirstResponder()
@@ -288,8 +285,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     
 // Messages and alerts
     func showAlert () {
-//        let verbeFrancais = VerbeFrancais(verbArray: arrayVerbe, n: noItem)
-//        let contexteVerbe = ContexteVerbe(verbArray: verbeFrancais)
         var englishVerbe = String()
         var verbeFinal = String()
         let frenchToEnglish = FrenchToEnglish()

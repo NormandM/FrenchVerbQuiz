@@ -148,7 +148,7 @@ class QuizOptionsController: UITableViewController {
         let alert = UIAlertController(title: "Verbes Français Quiz", message: "Choisissez une option", preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(title: "Tous les verbes", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.tousLesverbesAction()}))
-        alert.addAction(UIAlertAction(title: "Spécifier un Verbe", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.specifierUnVerbe()}))
+        alert.addAction(UIAlertAction(title: "Spécifier les Verbes", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.specifierUnVerbe()}))
  
         self.present(alert, animated: true, completion: nil)
     }
