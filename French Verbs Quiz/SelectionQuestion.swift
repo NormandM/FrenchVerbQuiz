@@ -123,8 +123,9 @@ class Selection {
         for arraySelections in arraySelection{
             var n = 0
             tempsChoisi  = arraySelections
-            while tempsChoisi.characters.last == " "{
-                tempsChoisi = String(tempsChoisi.characters.dropLast(1))
+            while tempsChoisi.last == " "{
+                //tempsChoisi = String(tempsChoisi.characters.dropLast(1))
+                tempsChoisi = String(tempsChoisi.dropLast(1))
                 n = n + 1
             }
             switch n {

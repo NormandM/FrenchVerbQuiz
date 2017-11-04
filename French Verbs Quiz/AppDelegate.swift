@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.tintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         navigationBarAppearace.barTintColor = UIColor(red: 171/255, green: 203/255, blue: 235/255, alpha: 1.0)
         navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
-
+        FirebaseApp.configure()
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-1437510869244180/7683732997")
         return true
     }
 

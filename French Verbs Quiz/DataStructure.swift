@@ -58,7 +58,8 @@ struct VerbeTrie {
 struct Personne{
     let verbArray: VerbeFrancais
     var first: String{
-        let firstLetter = verbArray.premier.characters.first
+        //let firstLetter = verbArray.premier.characters.first
+        let firstLetter = verbArray.premier.first
         if firstLetter == "a" || firstLetter == "e" || firstLetter == "i" || firstLetter == "o" || firstLetter == "u" || firstLetter == "é" || firstLetter == "è"{
             if verbArray.mode == "subjonctif"{
                 return "que j'"
@@ -118,7 +119,7 @@ struct PersonneTrie {
     var first: String{
         var firstReturn = ""
         if verbeTrie.personne == "1" {
-            let firstLetter = verbeTrie.verbeConjugue.characters.first
+            let firstLetter = verbeTrie.verbeConjugue.first
             if firstLetter == "a" || firstLetter == "e" || firstLetter == "i" || firstLetter == "o" || firstLetter == "u" || firstLetter == "é" || firstLetter == "è"{
                 if verbeTrie.mode == "subjonctif"{
                     firstReturn = "que j'"
@@ -250,8 +251,8 @@ open class DataController: NSObject {
 ///////////////////////////////
 class Helper {
     func capitalize(word: String) -> (String) {
-        let firstLetter =  String(word.characters.prefix(1)).capitalized
-        let otherLetters = String(word.characters.dropFirst())
+        let firstLetter =  String(word.prefix(1)).capitalized
+        let otherLetters = String(word.dropFirst())
         return(firstLetter + otherLetters)
     }
 }

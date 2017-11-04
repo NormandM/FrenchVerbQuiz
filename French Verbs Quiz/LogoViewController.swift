@@ -34,7 +34,7 @@ class LogoViewController: UIViewController {
     }
     func completionAnimation() {
         let when = DispatchTime.now() + 0.5
-        self.appsLabel2.text = self.appsLabel2.text! + "."
+        //self.appsLabel2.text = self.appsLabel2.text! + "."
 
       
         DispatchQueue.main.asyncAfter(deadline: when + 1) {
@@ -52,9 +52,7 @@ class LogoViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showOption"{
-            //let backItem = UIBarButtonItem()
-            //backItem.title = ""
-            //navigationItem.backBarButtonItem = nil
+
             
         }
     }

@@ -46,6 +46,8 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     }()
     
     var items: [ItemVerbe] = []
+    
+    @IBOutlet weak var autreQuestionLabel: UIBarButtonItem!
     @IBOutlet weak var verbe: UILabel!
     @IBOutlet weak var mode: UILabel!
     @IBOutlet weak var temps: UILabel!
@@ -53,6 +55,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     @IBOutlet weak var bonneReponse: UILabel!
     @IBOutlet weak var reponse: UITextField!
     @IBOutlet weak var barreProgression: UIProgressView!
+    
     @IBOutlet weak var checkButton: UIButton!
     let screenSize: CGRect = UIScreen.main.bounds
     @IBOutlet weak var masterConstraint: NSLayoutConstraint!
@@ -139,6 +142,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     }
 
     @IBAction func unwindToLast(segue: UIStoryboardSegue) {
+        autreQuestionLabel.isEnabled = true
         progressInt = 0.0
         progress = 0.0
         goodResponse = 0
@@ -258,6 +262,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         progressClaculation()
         if progressInt == Float(totalProgress) {
             let when = DispatchTime.now() + 1.5 // change 2 to desired number of seconds
+            autreQuestionLabel.isEnabled = false
             DispatchQueue.main.asyncAfter(deadline: when) {
                 self.performSegue(withIdentifier: "showResult", sender: nil)
             }
