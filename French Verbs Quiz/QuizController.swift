@@ -10,8 +10,9 @@ import UIKit
 import Foundation
 import AudioToolbox
 import CoreData
+import GoogleMobileAds
 
-class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
+class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GADBannerViewDelegate  {
     var tempsEtMode = [[String]]()
     var listeVerbe: [String] = []
     var arrayVerbe: [[String]] = []
@@ -44,6 +45,15 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
         request.sortDescriptors = [sortDescriptor]
         return request
     }()
+    lazy var adBannerView: GADBannerView = {
+        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adBannerView.adUnitID = "ca-app-pub-1437510869244180/7683732997"
+        //adBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adBannerView.delegate = self
+        adBannerView.rootViewController = self
+        return adBannerView
+    }()
+    //let request = GADRequest()
     
     var items: [ItemVerbe] = []
     
@@ -60,9 +70,12 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
     let screenSize: CGRect = UIScreen.main.bounds
     @IBOutlet weak var masterConstraint: NSLayoutConstraint!
     @IBOutlet weak var tempsConstraint: NSLayoutConstraint!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        adBannerView.load(GADRequest())
+        navigationItem.titleView = adBannerView
+        //request.testDevices = [ kGADSimulatorID]
         masterConstraint.constant = 0.10 * screenSize.height
         tempsConstraint.constant = 0.10 * screenSize.height
         testCompltete = false
@@ -162,6 +175,13 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate {
 /////////////////////////////////////
 // MARK: ALL FUNCTIONS
 /////////////////////////////////////
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner loaded successfully")
+    }
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Fail to receive ads")
+        print(error)
+    }
     func selectionQuestion(){
         if verbeInfinitif != ["Tous les verbes"] {
             if allInfoList.count == 0{

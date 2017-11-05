@@ -63,10 +63,13 @@ struct Personne{
         if firstLetter == "a" || firstLetter == "e" || firstLetter == "i" || firstLetter == "o" || firstLetter == "u" || firstLetter == "é" || firstLetter == "è"{
             if verbArray.mode == "subjonctif"{
                 return "que j'"
+
             }else {return "j'"}
         }else{
             if verbArray.mode == "subjonctif"{
                 return "que je"
+            }else if verbArray.mode == "impératif"{
+                return ""
             }else {return "je"}
         }
     }
@@ -82,6 +85,8 @@ struct Personne{
     var third: String {
         if verbArray.mode == "subjonctif"{
             return "qu'il"
+        }else if verbArray.mode == "impératif"{
+            return ""
         }else{
             return "il"
         }
@@ -107,6 +112,8 @@ struct Personne{
     var sixth: String {
         if verbArray.mode == "subjonctif"{
             return "qu'ils"
+        }else if verbArray.mode == "impératif"{
+            return ""
         }else{
             return "ils"
         }
@@ -127,6 +134,8 @@ struct PersonneTrie {
             }else{
                 if verbeTrie.mode == "subjonctif"{
                     firstReturn = "que je"
+                }else if verbeTrie.mode == "impératif"{
+                    firstReturn = ""
                 }else {firstReturn = "je"}
             }
         }
@@ -150,6 +159,8 @@ struct PersonneTrie {
         if verbeTrie.personne == "3" {
             if verbeTrie.mode == "subjonctif"{
                 thirdReturn = "qu'il"
+            }else if verbeTrie.mode == "impératif"{
+                thirdReturn = ""
             }else{
                 thirdReturn = "il"
             }
@@ -187,6 +198,8 @@ struct PersonneTrie {
         if verbeTrie.personne == "6" {
             if verbeTrie.mode == "subjonctif"{
                 sixthReturn = "qu'ils"
+            }else if verbeTrie.mode == "impératif"{
+                sixthReturn = ""
             }else{
                 sixthReturn = "ils"
             }
