@@ -24,7 +24,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Choisissez le verbe"
+        self.title = "Choisissez de 1 à 10 verbes"
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
@@ -132,7 +132,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     func showAlert () {
-        let alertController = UIAlertController(title: "If faut choisir au moins un verbe.", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Choisir au moins 1 verbe et au maximum 10 verbes.", message: nil, preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
         
@@ -145,7 +145,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     }
     @objc func showQuiz() {
         choix()
-        if verbesChoisi.count == 0 {
+        if verbesChoisi.count == 0 || verbesChoisi.count > 10{
             showAlert()
         }else {
             performSegue(withIdentifier: "showQuiz", sender: Any?.self)
