@@ -93,6 +93,7 @@ class Selection {
             }else{
                 noPossiblePersonne = 6
             }
+  
             noPersonne = Int(arc4random_uniform(UInt32(noPossiblePersonne))) + 1
             if modeChoisi == "impératif"{
                 if noPersonne == 1 {
@@ -103,6 +104,9 @@ class Selection {
                     noPersonne = 5
                 }
             }
+        if verbeChoisi == "pleuvoir" || verbeChoisi == "falloir" {
+            noPersonne = 3
+        }
             let question = Question()
         
             let verbeFrancais = VerbeFrancais(verbArray: arrayVerbe, n: noItem)

@@ -110,11 +110,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
             UIView.commitAnimations()
         }
 
-    override func viewDidAppear(_ animated: Bool) {
-        if testCompltete == true && fenetre == false {
-            showAlert4()
-        }
-    }
+
     
 // MARK: NAVIGATION
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -198,14 +194,9 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
             tempsFinal = verbeTrie.temps
             noPersonne = Int(verbeTrie.personne)!
             reponseBonne = verbeTrie.verbeConjugue
-            let helper = Helper()
-            verbe.text = helper.capitalize(word: verbeFinal)
-            mode.text = helper.capitalize(word: modeFinal)
-            temps.text = helper.capitalize(word: tempsFinal)
+
             bonneReponse.text = ""
-            if verbeFinal == "pleuvoir" || verbeFinal == "falloir" {
-                noPersonne = 3
-            }
+
             let question = Question()
             let questionFinale = question.finaleSpecifique(noPersonne: noPersonne, personneVerbe: personneVerbe)
             choixPersonne = questionFinale[0]
@@ -216,19 +207,22 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
             let selection = Selection()
             totalProgress = 10
             let choixTempsEtMode = selection.questionAleatoire(arraySelection: arraySelection, arrayVerbe: arrayVerbe)
-                if verbeFinal == "pleuvoir" || verbeFinal == "falloir" {
-                    noPersonne = 3
-                }
+            
             let leChoixTempsEtMode = choixTempsEtMode.0
             tempsEtMode = choixTempsEtMode.1
-            verbe.text = leChoixTempsEtMode[0] as? String
-            mode.text = leChoixTempsEtMode[1] as? String
-            temps.text = leChoixTempsEtMode[2] as? String
+            verbeFinal = (leChoixTempsEtMode[0] as? String)!
+            modeFinal = (leChoixTempsEtMode[1] as? String)!.lowercased()
+            tempsFinal = (leChoixTempsEtMode[2] as? String)!
             bonneReponse.text = ""
             choixPersonne = leChoixTempsEtMode[3] as! String
             personne.text = leChoixTempsEtMode[4] as? String
             reponseBonne = leChoixTempsEtMode[5] as! String
         }
+
+        let helper = Helper()
+        verbe.text = helper.capitalize(word: verbeFinal)
+        mode.text = helper.capitalize(word: modeFinal)
+        temps.text = helper.capitalize(word: tempsFinal)
     }
     func evaluationReponse(){
         if reponse.text == reponseBonne{
@@ -248,11 +242,13 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
             }
             if didSave == false {
                 let itemVerbe = NSEntityDescription.insertNewObject(forEntityName: "ItemVerbe", into: dataController.managedObjectContext) as! ItemVerbe
+
                 itemVerbe.verbeInfinitif = verbeFinal
                 itemVerbe.tempsVerbe = tempsFinal
                 itemVerbe.modeVerbe = modeFinal
                 itemVerbe.bonneReponse = itemVerbe.bonneReponse + 1
             }
+            
             dataController.saveContext()
             
         }else{
