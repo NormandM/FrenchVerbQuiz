@@ -35,6 +35,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
     var verbeFinal: String = ""
     var modeFinal: String = ""
     var tempsFinal: String = ""
+    var showWindow = false
     var fenetre = UserDefaults.standard.bool(forKey: "fenetre")
     var testCompltete = UserDefaults.standard.bool(forKey: "testCompltete")
     let dataController = DataController.sharedInstance
@@ -48,12 +49,10 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
     lazy var adBannerView: GADBannerView = {
         let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         adBannerView.adUnitID = "ca-app-pub-1437510869244180/7683732997"
-        //adBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         adBannerView.delegate = self
         adBannerView.rootViewController = self
         return adBannerView
     }()
-    //let request = GADRequest()
     
     var items: [ItemVerbe] = []
     
@@ -75,7 +74,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
         super.viewDidLoad()
         adBannerView.load(GADRequest())
         navigationItem.titleView = adBannerView
-        //request.testDevices = [ kGADSimulatorID]
         masterConstraint.constant = 0.10 * screenSize.height
         tempsConstraint.constant = 0.10 * screenSize.height
         testCompltete = false
@@ -87,6 +85,13 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
         }catch let error as NSError {
             print("Error fetching Item objects: \(error.localizedDescription), \(error.userInfo)")
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if showWindow {
+            showAlert4()
+        }
+        showWindow = false
     }
     // the 3 next function moves the KeyBoards when keyboard appears or hides
  
@@ -121,6 +126,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
         }
         if segue.identifier == "showTempsVerbesChoisis" {
             let controller = segue.destination as! TempsVerbesChoisisViewController
+
             controller.tempsEtMode = tempsEtMode
             controller.verbeInfinitif = verbeInfinitif
             controller.listeVerbe = listeVerbe
@@ -162,6 +168,10 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
         checkButton.isEnabled = true
         reponse.isEnabled = true
         selectionQuestion()
+        if fenetre == false {
+            showWindow = true
+        }
+        
     }
     @IBAction func exemple(_ sender: Any) {
         showAlert()
@@ -334,7 +344,6 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
             print("RateApp \(success)")
             }}))
         alert.addAction(UIAlertAction(title: "Pas maintenant", style: UIAlertActionStyle.default, handler: nil))
-        //self.present(alert, animated: true, completion: nil)
         alert.addAction(UIAlertAction(title: "Ne plus me montrer cette fenêtre", style: UIAlertActionStyle.default, handler: {(alert: UIAlertAction!) in self.fenetre = true; UserDefaults.standard.set(self.fenetre, forKey: "fenetre") }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -342,7 +351,7 @@ class QuizController: UIViewController, NSFetchedResultsControllerDelegate,  GAD
         guard let url = URL(string : "itms-apps://itunes.apple.com/app/" + appId) else {
             completion(false)
             return
-        }
+    }
         guard #available(iOS 10, *) else {
             completion(UIApplication.shared.openURL(url))
             return
