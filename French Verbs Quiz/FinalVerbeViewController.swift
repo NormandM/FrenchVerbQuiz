@@ -28,10 +28,9 @@ class FinalVerbeViewController: UIViewController {
     @IBOutlet weak var fourth: UILabel!
     @IBOutlet weak var fifth: UILabel!
     @IBOutlet weak var sixth: UILabel!
-    
     @IBOutlet weak var masterConstraint: NSLayoutConstraint!
     let screenSize: CGRect = UIScreen.main.bounds
-    
+    let fonts = FontsAndConstraintsOptions()
 
     
     override func viewDidLoad() {
@@ -61,7 +60,7 @@ class FinalVerbeViewController: UIViewController {
         sixieme.text = verbeFrancais.sixieme
         
         let personneVerbe = Personne(verbArray: verbeFrancais)
-        if verbeFrancais.verbe == "pleuvoir" || verbeFrancais.verbe == "falloir" {
+        if verbeFrancais.verbe == "pleuvoir" || verbeFrancais.verbe == "falloir" || verbeFrancais.verbe == "neiger" {
             first.text = "   "
             second.text = "  "
             third.text = personneVerbe.third
@@ -77,6 +76,22 @@ class FinalVerbeViewController: UIViewController {
             sixth.text = personneVerbe.sixth
             
         }
+        infinitif.font = fonts.largeBoldFont
+        mode.font = fonts.largeFont
+        temps.font = fonts.largeFont
+        premier.font = fonts.normalItaliqueBoldFont
+        deuxieme.font = fonts.normalItaliqueBoldFont
+        troisieme.font = fonts.normalItaliqueBoldFont
+        quatrieme.font = fonts.normalItaliqueBoldFont
+        cinquieme.font = fonts.normalItaliqueBoldFont
+        sixieme.font = fonts.normalItaliqueBoldFont
+        first.font = fonts.normalFont
+        second.font = fonts.normalFont
+        third.font = fonts.normalFont
+        fourth.font = fonts.normalFont
+        fifth.font = fonts.normalFont
+        sixth.font = fonts.normalFont
+        
     }
 
     override func didReceiveMemoryWarning() {

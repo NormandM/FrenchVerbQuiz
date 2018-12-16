@@ -67,7 +67,7 @@ class Selection {
             let i = arrayVerbe.count
             while infinitifVerb < i {
                 let allVerbs = VerbeFrancais(verbArray: arrayVerbe, n: infinitifVerb)
-                if modeChoisi == "impératif" && (allVerbs.verbe == "pouvoir" || allVerbs.verbe == "vouloir" || allVerbs.verbe == "devoir" || allVerbs.verbe == "falloir" || allVerbs.verbe == "pleuvoir" || allVerbs.verbe == "valoir") {
+                if modeChoisi == "impératif" && (allVerbs.verbe == "pouvoir" || allVerbs.verbe == "vouloir" || allVerbs.verbe == "devoir" || allVerbs.verbe == "falloir" || allVerbs.verbe == "pleuvoir" || allVerbs.verbe == "valoir" || allVerbs.verbe == "extasier" || allVerbs.verbe == "absenter" || allVerbs.verbe == "neiger" || allVerbs.verbe == "évanouir") {
                     // not appending
                 }else{
                     listeVerbe.append(allVerbs.verbe)
@@ -104,7 +104,7 @@ class Selection {
                     noPersonne = 5
                 }
             }
-        if verbeChoisi == "pleuvoir" || verbeChoisi == "falloir" {
+        if verbeChoisi == "pleuvoir" || verbeChoisi == "falloir" ||  verbeChoisi == "neiger"{
             noPersonne = 3
         }
             let question = Question()
@@ -128,7 +128,6 @@ class Selection {
             var n = 0
             tempsChoisi  = arraySelections
             while tempsChoisi.last == " "{
-                //tempsChoisi = String(tempsChoisi.characters.dropLast(1))
                 tempsChoisi = String(tempsChoisi.dropLast(1))
                 n = n + 1
             }

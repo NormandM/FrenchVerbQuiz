@@ -37,6 +37,9 @@ class OptionsViewController: UIViewController {
         }else if segue.identifier == "showQuizOption"{
             let controller = segue.destination as! QuizOptionsController
             controller.arrayVerbe = arrayVerbe
+        }else if segue.identifier == "showContextuelQuizOptionController"{
+            let controller = segue.destination as! ContextuelQuizOptionController
+            controller.arrayVerbe = arrayVerbe
         }
 
         let backItem = UIBarButtonItem()

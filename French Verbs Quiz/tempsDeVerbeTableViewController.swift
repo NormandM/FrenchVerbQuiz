@@ -14,14 +14,14 @@ class tempsDeVerbeTableViewController: UITableViewController {
     var nomSection: String = ""
     var leTemps: String = ""
     var verbeTotal = ["", "", ""]
-    
+    let fontsAndConstraints = FontsAndConstraintsOptions()
     
     let sectionListe = ["INDICATIF", "SUBJONCTIF", "CONDITIONNEL", "IMPÉRATIF"]
     let item = [["Présent", "Imparfait", "Passé composé", "Futur simple", "Passé simple", "Plus-que-parfait", "Futur antérieur", "Passé antérieur"], ["Présent", "Passé", "Imparfait", "Plus-que-parfait"], ["Présent", "Passé"], ["Présent", "Passé"]]
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
-        header.contentView.backgroundColor = UIColor(red: 151/255, green: 156/255, blue: 159/255, alpha: 1.0) //make the background color light blue
+        header.contentView.backgroundColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
         header.textLabel!.textColor = UIColor.white //make the text white
         header.alpha = 1.0 //make the header transparent
         
@@ -58,7 +58,9 @@ class tempsDeVerbeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let helper = Helper()
-        cell.textLabel!.text = helper.capitalize(word: self.item[indexPath.section][indexPath.row]) 
+        cell.textLabel!.text = helper.capitalize(word: self.item[indexPath.section][indexPath.row])
+        cell.textLabel?.textColor = UIColor.black
+        cell.textLabel?.font =  fontsAndConstraints.normalItaliqueBoldFont
         return cell
         
      }

@@ -2527,10 +2527,10 @@
 		<string>Présent</string>
 		<string>pouvoir</string>
 		<string></string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
 		<string></string>
-		<string>-</string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
+		<string>** n'existe pas **</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -2681,10 +2681,10 @@
 		<string>Passé</string>
 		<string>pouvoir</string>
 		<string></string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
 		<string></string>
-		<string>-</string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
+		<string>** n'existe pas **</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -2751,10 +2751,10 @@
 		<string>Présent</string>
 		<string>vouloir</string>
 		<string></string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
 		<string></string>
-		<string>-</string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
+		<string>** n'existe pas **</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -2905,10 +2905,10 @@
 		<string>Passé</string>
 		<string>vouloir</string>
 		<string></string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
 		<string></string>
-		<string>-</string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
+		<string>** n'existe pas **</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -2975,10 +2975,10 @@
 		<string>Présent</string>
 		<string>devoir</string>
 		<string></string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
 		<string></string>
-		<string>-</string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
+		<string>** n'existe pas **</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -3129,10 +3129,10 @@
 		<string>Passé</string>
 		<string>devoir</string>
 		<string></string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
 		<string></string>
-		<string>-</string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
+		<string>** n'existe pas **</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -3199,10 +3199,10 @@
 		<string>Présent</string>
 		<string>falloir</string>
 		<string></string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
 		<string></string>
-		<string>-</string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
+		<string>** n'existe pas **</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -3353,10 +3353,10 @@
 		<string>Passé</string>
 		<string>falloir</string>
 		<string></string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
 		<string></string>
-		<string>-</string>
-		<string>-</string>
+		<string>** n'existe pas **</string>
+		<string>** n'existe pas **</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -11039,10 +11039,10 @@
 		<string>Présent</string>
 		<string>pleuvoir</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -11193,10 +11193,10 @@
 		<string>Passé</string>
 		<string>pleuvoir</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -11487,10 +11487,10 @@
 		<string>Présent</string>
 		<string>valoir</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -22951,7 +22951,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>présenter</string>
+		<string>Présenter</string>
 		<string>présente</string>
 		<string>présentes</string>
 		<string>présente</string>
@@ -24170,12 +24170,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>abattre</string>
-		<string></string>
 		<string>abats</string>
-		<string></string>
 		<string>abattons</string>
 		<string>abattez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -24184,12 +24181,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>abattre</string>
-		<string></string>
 		<string>aie abattu</string>
-		<string></string>
 		<string>ayons abattu</string>
 		<string>ayez abattu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -24394,12 +24388,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>accepter</string>
-		<string></string>
 		<string>accepte</string>
-		<string></string>
 		<string>acceptons</string>
 		<string>acceptez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -24408,12 +24399,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>accepter</string>
-		<string></string>
 		<string>aie accepté</string>
-		<string></string>
 		<string>ayons accepté</string>
 		<string>ayez accepté</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -24618,12 +24606,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>acheter</string>
-		<string></string>
 		<string>achète</string>
-		<string></string>
 		<string>achetons</string>
 		<string>achetez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -24632,12 +24617,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>acheter</string>
-		<string></string>
 		<string>aie acheté</string>
-		<string></string>
 		<string>ayons acheté</string>
 		<string>ayez acheté</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -24842,12 +24824,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>acquérir</string>
-		<string></string>
 		<string>acquiers</string>
-		<string></string>
 		<string>acquérons</string>
 		<string>acquérez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -24856,12 +24835,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>acquérir</string>
-		<string></string>
 		<string>aie acquis</string>
-		<string></string>
 		<string>ayons acquis</string>
 		<string>ayez acquis</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25066,12 +25042,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>annoncer</string>
-		<string></string>
 		<string>annonce</string>
-		<string></string>
 		<string>annonçons</string>
 		<string>annoncez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25080,12 +25053,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>annoncer</string>
-		<string></string>
 		<string>aie annoncé</string>
-		<string></string>
 		<string>ayons annoncé</string>
 		<string>ayez annoncé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25290,12 +25260,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>asseoir</string>
-		<string></string>
 		<string>assois</string>
-		<string></string>
 		<string>assoyons</string>
 		<string>assoyez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25304,12 +25271,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>asseoir</string>
-		<string></string>
 		<string>aie assis</string>
-		<string></string>
 		<string>ayons assis</string>
 		<string>ayez assis</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25317,13 +25281,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Présent</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absente</string>
-		<string>t&apos;absentes</string>
-		<string>s&apos;absente</string>
+		<string>s'absenter</string>
+		<string>m'absente</string>
+		<string>t'absentes</string>
+		<string>s'absente</string>
 		<string>nous absentons</string>
 		<string>vous absentez</string>
-		<string>s&apos;absentent</string>
+		<string>s'absentent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25331,10 +25295,10 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé composé</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me suis absenté</string>
-		<string>t&apos;es absenté</string>
-		<string>s&apos;est absenté</string>
+		<string>t'es absenté</string>
+		<string>s'est absenté</string>
 		<string>nous sommes absentés</string>
 		<string>vous êtes absentés</string>
 		<string>se sont absentés</string>
@@ -25345,13 +25309,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Imparfait</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absentais</string>
-		<string>t&apos;absentais</string>
-		<string>s&apos;absentait</string>
+		<string>s'absenter</string>
+		<string>m'absentais</string>
+		<string>t'absentais</string>
+		<string>s'absentait</string>
 		<string>nous absentions</string>
 		<string>vous absentiez</string>
-		<string>s&apos;absentaient</string>
+		<string>s'absentaient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25359,13 +25323,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;étais absenté</string>
-		<string>t&apos;étais absenté</string>
-		<string>s&apos;était absenté</string>
+		<string>s'absenter</string>
+		<string>m'étais absenté</string>
+		<string>t'étais absenté</string>
+		<string>s'était absenté</string>
 		<string>nous étions absentés</string>
 		<string>vous étiez absentés</string>
-		<string>s&apos;étaient absentés</string>
+		<string>s'étaient absentés</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25373,13 +25337,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé simple</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absentai</string>
-		<string>t&apos;absentas</string>
-		<string>s&apos;absenta</string>
+		<string>s'absenter</string>
+		<string>m'absentai</string>
+		<string>t'absentas</string>
+		<string>s'absenta</string>
 		<string>nous absentâmes</string>
 		<string>vous absentâtes</string>
-		<string>s&apos;absentèrent</string>
+		<string>s'absentèrent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25387,7 +25351,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé antérieur</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me fus absenté</string>
 		<string>te fus absenté</string>
 		<string>se fut absenté</string>
@@ -25401,13 +25365,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur simple</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absenterai</string>
-		<string>t&apos;absenteras</string>
-		<string>s&apos;absentera</string>
+		<string>s'absenter</string>
+		<string>m'absenterai</string>
+		<string>t'absenteras</string>
+		<string>s'absentera</string>
 		<string>nous absenterons</string>
 		<string>vous absenterez</string>
-		<string>s&apos;absenteront</string>
+		<string>s'absenteront</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25415,7 +25379,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur antérieur</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me serai absenté</string>
 		<string>te seras absenté</string>
 		<string>se sera absenté</string>
@@ -25429,13 +25393,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absente</string>
-		<string>t&apos;absentes</string>
-		<string>s&apos;absente</string>
+		<string>s'absenter</string>
+		<string>m'absente</string>
+		<string>t'absentes</string>
+		<string>s'absente</string>
 		<string>nous absentions</string>
 		<string>vous absentiez</string>
-		<string>s&apos;absentent</string>
+		<string>s'absentent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25443,7 +25407,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Passé</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me sois absenté</string>
 		<string>te sois absenté</string>
 		<string>se soit absenté</string>
@@ -25457,13 +25421,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Imparfait</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absentasse</string>
-		<string>t&apos;absentasses</string>
-		<string>s&apos;absentât</string>
+		<string>s'absenter</string>
+		<string>m'absentasse</string>
+		<string>t'absentasses</string>
+		<string>s'absentât</string>
 		<string>nous absentassions</string>
 		<string>vous absentassiez</string>
-		<string>s&apos;absentassent</string>
+		<string>s'absentassent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25471,7 +25435,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me fusse absenté</string>
 		<string>te fusses absenté</string>
 		<string>se fût absenté</string>
@@ -25485,13 +25449,13 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Présent</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absenterais</string>
-		<string>t&apos;absenterais</string>
-		<string>s&apos;absenterait</string>
+		<string>s'absenter</string>
+		<string>m'absenterais</string>
+		<string>t'absenterais</string>
+		<string>s'absenterait</string>
 		<string>nous absenterions</string>
 		<string>vous absenteriez</string>
-		<string>s&apos;absenteraient</string>
+		<string>s'absenteraient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25499,7 +25463,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Passé</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me serais absenté</string>
 		<string>te serais absenté</string>
 		<string>se serait absenté</string>
@@ -25513,13 +25477,10 @@
 	<array>
 		<string>impératif</string>
 		<string>Présent</string>
-		<string>s&apos;absenter</string>
-		<string></string>
+		<string>s'absenter</string>
 		<string>absente-toi</string>
-		<string></string>
 		<string>absentons-nous</string>
 		<string>absentez-vous</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25527,13 +25488,10 @@
 	<array>
 		<string>impératif</string>
 		<string>Passé</string>
-		<string>s&apos;absenter</string>
-		<string></string>
-		<string>-</string>
-		<string></string>
+		<string>s'absenter</string>
 		<string>-</string>
 		<string>-</string>
-		<string></string>
+		<string>-</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25738,12 +25696,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>attendre</string>
-		<string></string>
 		<string>attends</string>
-		<string></string>
 		<string>attendons</string>
 		<string>attendez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25752,12 +25707,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>attendre</string>
-		<string></string>
 		<string>aie attendu</string>
-		<string></string>
 		<string>ayons attendu</string>
 		<string>ayez attendu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25962,12 +25914,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>avouer</string>
-		<string></string>
 		<string>avoue</string>
-		<string></string>
 		<string>avouons</string>
 		<string>avouez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25976,12 +25925,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>avouer</string>
-		<string></string>
 		<string>aie avoué</string>
-		<string></string>
 		<string>ayons avoué</string>
 		<string>ayez avoué</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -26186,12 +26132,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>bâtir</string>
-		<string></string>
 		<string>bâtis</string>
-		<string></string>
 		<string>bâtissons</string>
 		<string>bâtissez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -26200,12 +26143,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>bâtir</string>
-		<string></string>
 		<string>aie bâti</string>
-		<string></string>
 		<string>ayons bâti</string>
 		<string>ayez bâti</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -26410,12 +26350,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>battre</string>
-		<string></string>
 		<string>bats</string>
-		<string></string>
 		<string>battons</string>
 		<string>battez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -26424,12 +26361,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>battre</string>
-		<string></string>
 		<string>aie battu</string>
-		<string></string>
 		<string>ayons battu</string>
 		<string>ayez battu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -26634,12 +26568,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>brancher</string>
-		<string></string>
 		<string>branche</string>
-		<string></string>
 		<string>branchons</string>
 		<string>branchez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -26648,12 +26579,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>brancher</string>
-		<string></string>
 		<string>aie branché</string>
-		<string></string>
 		<string>ayons branché</string>
 		<string>ayez branché</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -26858,12 +26786,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>réveiller</string>
-		<string></string>
 		<string>réveille</string>
-		<string></string>
 		<string>réveillons</string>
 		<string>réveillez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -26872,12 +26797,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>réveiller</string>
-		<string></string>
 		<string>aie réveillé</string>
-		<string></string>
 		<string>ayons réveillé</string>
 		<string>ayez réveillé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -27082,12 +27004,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>cacher</string>
-		<string></string>
 		<string>cache</string>
-		<string></string>
 		<string>cachons</string>
 		<string>cachez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -27096,12 +27015,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>cacher</string>
-		<string></string>
 		<string>aie caché</string>
-		<string></string>
 		<string>ayons caché</string>
 		<string>ayez caché</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -27306,12 +27222,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>chanceler</string>
-		<string></string>
 		<string>chancelle</string>
-		<string></string>
 		<string>chancelons</string>
 		<string>chancelez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -27320,12 +27233,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>chanceler</string>
-		<string></string>
 		<string>aie chancelé</string>
-		<string></string>
 		<string>ayons chancelé</string>
 		<string>ayez chancelé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -27530,12 +27440,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>changer</string>
-		<string></string>
 		<string>change</string>
-		<string></string>
 		<string>changeons</string>
 		<string>changez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -27544,12 +27451,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>changer</string>
-		<string></string>
 		<string>aie changé</string>
-		<string></string>
 		<string>ayons changé</string>
 		<string>ayez changé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -27754,12 +27658,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>chasser</string>
-		<string></string>
 		<string>chasse</string>
-		<string></string>
 		<string>chassons</string>
 		<string>chassez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -27768,12 +27669,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>chasser</string>
-		<string></string>
 		<string>aie chassé</string>
-		<string></string>
 		<string>ayons chassé</string>
 		<string>ayez chassé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -27978,12 +27876,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>choisir</string>
-		<string></string>
 		<string>choisis</string>
-		<string></string>
 		<string>choisissons</string>
 		<string>choisissez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -27992,12 +27887,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>choisir</string>
-		<string></string>
 		<string>aie choisi</string>
-		<string></string>
 		<string>ayons choisi</string>
 		<string>ayez choisi</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -28202,12 +28094,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>concentrer</string>
-		<string></string>
 		<string>concentre</string>
-		<string></string>
 		<string>concentrons</string>
 		<string>concentrez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -28216,12 +28105,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>concentrer</string>
-		<string></string>
 		<string>aie concentré</string>
-		<string></string>
 		<string>ayons concentré</string>
 		<string>ayez concentré</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -28426,12 +28312,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>conclure</string>
-		<string></string>
 		<string>conclus</string>
-		<string></string>
 		<string>concluons</string>
 		<string>concluez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -28440,12 +28323,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>conclure</string>
-		<string></string>
 		<string>aie conclu</string>
-		<string></string>
 		<string>ayons conclu</string>
 		<string>ayez conclu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -28650,12 +28530,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>construire</string>
-		<string></string>
 		<string>construis</string>
-		<string></string>
 		<string>construisons</string>
 		<string>construisez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -28664,12 +28541,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>construire</string>
-		<string></string>
 		<string>aie construit</string>
-		<string></string>
 		<string>ayons construit</string>
 		<string>ayez construit</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -28874,12 +28748,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>consulter</string>
-		<string></string>
 		<string>consulte</string>
-		<string></string>
 		<string>consultons</string>
 		<string>consultez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -28888,12 +28759,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>consulter</string>
-		<string></string>
 		<string>aie consulté</string>
-		<string></string>
 		<string>ayons consulté</string>
 		<string>ayez consulté</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -29098,12 +28966,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>creuser</string>
-		<string></string>
 		<string>creuse</string>
-		<string></string>
 		<string>creusons</string>
 		<string>creusez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -29112,12 +28977,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>creuser</string>
-		<string></string>
 		<string>aie creusé</string>
-		<string></string>
 		<string>ayons creusé</string>
 		<string>ayez creusé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -29322,12 +29184,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>creuser</string>
-		<string></string>
 		<string>cueille</string>
-		<string></string>
 		<string>cueillons</string>
 		<string>cueillez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -29336,12 +29195,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>creuser</string>
-		<string></string>
 		<string>aie cueilli</string>
-		<string></string>
 		<string>ayons cueilli</string>
 		<string>ayez cueilli</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -29546,12 +29402,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>déplacer</string>
-		<string></string>
 		<string>déplace</string>
-		<string></string>
 		<string>déplaçons</string>
 		<string>déplacez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -29560,12 +29413,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>déplacer</string>
-		<string></string>
 		<string>aie déplacé</string>
-		<string></string>
 		<string>ayons déplacé</string>
 		<string>ayez déplacé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -29770,12 +29620,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>danser</string>
-		<string></string>
 		<string>danse</string>
-		<string></string>
 		<string>dansons</string>
 		<string>dansez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -29784,12 +29631,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>danser</string>
-		<string></string>
 		<string>aie dansé</string>
-		<string></string>
 		<string>ayons dansé</string>
 		<string>ayez dansé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -29994,12 +29838,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>décevoir</string>
-		<string></string>
 		<string>déçois</string>
-		<string></string>
 		<string>décevons</string>
 		<string>décevez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -30008,12 +29849,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>décevoir</string>
-		<string></string>
 		<string>aie déçu</string>
-		<string></string>
 		<string>ayons déçu</string>
 		<string>ayez déçu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -30218,12 +30056,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>défendre</string>
-		<string></string>
 		<string>défends</string>
-		<string></string>
 		<string>défendons</string>
 		<string>défendez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -30232,12 +30067,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>défendre</string>
-		<string></string>
 		<string>aie défendu</string>
-		<string></string>
 		<string>ayons défendu</string>
 		<string>ayez défendu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -30442,12 +30274,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>déguster</string>
-		<string></string>
 		<string>déguste</string>
-		<string></string>
 		<string>dégustons</string>
 		<string>dégustez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -30456,12 +30285,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>déguster</string>
-		<string></string>
 		<string>aie dégusté</string>
-		<string></string>
 		<string>ayons dégusté</string>
 		<string>ayez dégusté</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -30666,12 +30492,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>démonter</string>
-		<string></string>
 		<string>démonte</string>
-		<string></string>
 		<string>démontons</string>
 		<string>démontez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -30680,12 +30503,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>démonter</string>
-		<string></string>
 		<string>aie démonté</string>
-		<string></string>
 		<string>ayons démonté</string>
 		<string>ayez démonté</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -30890,12 +30710,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>désirer</string>
-		<string></string>
 		<string>désire</string>
-		<string></string>
 		<string>désirons</string>
 		<string>désirez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -30904,12 +30721,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>désirer</string>
-		<string></string>
 		<string>aie désiré</string>
-		<string></string>
 		<string>ayons désiré</string>
 		<string>ayez désiré</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31114,12 +30928,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>dessiner</string>
-		<string></string>
 		<string>dessine</string>
-		<string></string>
 		<string>dessinons</string>
 		<string>dessinez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31128,12 +30939,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>dessiner</string>
-		<string></string>
 		<string>aie dessiné</string>
-		<string></string>
 		<string>ayons dessiné</string>
 		<string>ayez dessiné</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31338,12 +31146,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>dîner</string>
-		<string></string>
 		<string>dîne</string>
-		<string></string>
 		<string>dînons</string>
 		<string>dînez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31352,12 +31157,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>dîner</string>
-		<string></string>
 		<string>aie dîné</string>
-		<string></string>
 		<string>ayons dîné</string>
 		<string>ayez dîné</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31562,12 +31364,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>disparaître</string>
-		<string></string>
 		<string>disparais</string>
-		<string></string>
 		<string>disparaissons</string>
 		<string>disparaissez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31576,12 +31375,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>disparaître</string>
-		<string></string>
 		<string>aie disparu</string>
-		<string></string>
 		<string>ayons disparu</string>
 		<string>ayez disparu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31786,12 +31582,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>élucider</string>
-		<string></string>
 		<string>élucide</string>
-		<string></string>
 		<string>élucidons</string>
 		<string>élucidez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31800,12 +31593,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>élucider</string>
-		<string></string>
 		<string>aie élucidé</string>
-		<string></string>
 		<string>ayons élucidé</string>
 		<string>ayez élucidé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31813,13 +31603,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Présent</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouis</string>
-		<string>t&apos;évanouis</string>
-		<string>s&apos;évanouit</string>
+		<string>s'évanouir</string>
+		<string>m'évanouis</string>
+		<string>t'évanouis</string>
+		<string>s'évanouit</string>
 		<string>nous évanouissons</string>
 		<string>vous évanouissez</string>
-		<string>s&apos;évanouissent</string>
+		<string>s'évanouissent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31827,10 +31617,10 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé composé</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me suis évanoui</string>
-		<string>t&apos;es évanoui</string>
-		<string>s&apos;est évanoui</string>
+		<string>t'es évanoui</string>
+		<string>s'est évanoui</string>
 		<string>nous sommes évanouis</string>
 		<string>vous êtes évanouis</string>
 		<string>se sont évanouis</string>
@@ -31841,13 +31631,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Imparfait</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouissais</string>
-		<string>t&apos;évanouissais</string>
-		<string>s&apos;évanouissait</string>
+		<string>s'évanouir</string>
+		<string>m'évanouissais</string>
+		<string>t'évanouissais</string>
+		<string>s'évanouissait</string>
 		<string>nous évanouissions</string>
 		<string>vous évanouissiez</string>
-		<string>s&apos;évanouissaient</string>
+		<string>s'évanouissaient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31855,13 +31645,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;étais évanoui</string>
-		<string>t&apos;étais évanoui</string>
-		<string>s&apos;était évanoui</string>
+		<string>s'évanouir</string>
+		<string>m'étais évanoui</string>
+		<string>t'étais évanoui</string>
+		<string>s'était évanoui</string>
 		<string>nous étions évanouis</string>
 		<string>vous étiez évanouis</string>
-		<string>s&apos;étaient évanouis</string>
+		<string>s'étaient évanouis</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31869,13 +31659,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé simple</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouis</string>
-		<string>t&apos;évanouis</string>
-		<string>s&apos;évanouit</string>
+		<string>s'évanouir</string>
+		<string>m'évanouis</string>
+		<string>t'évanouis</string>
+		<string>s'évanouit</string>
 		<string>nous évanouîmes</string>
 		<string>vous évanouîtes</string>
-		<string>s&apos;évanouirent</string>
+		<string>s'évanouirent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31883,7 +31673,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé antérieur</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me fus évanoui</string>
 		<string>te fus évanoui</string>
 		<string>se fut évanoui</string>
@@ -31897,13 +31687,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur simple</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouirai</string>
-		<string>t&apos;évanouiras</string>
-		<string>s&apos;évanouira</string>
+		<string>s'évanouir</string>
+		<string>m'évanouirai</string>
+		<string>t'évanouiras</string>
+		<string>s'évanouira</string>
 		<string>nous évanouirons</string>
 		<string>vous évanouirez</string>
-		<string>s&apos;évanouiront</string>
+		<string>s'évanouiront</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31911,7 +31701,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur antérieur</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me serai évanoui</string>
 		<string>te seras évanoui</string>
 		<string>se sera évanoui</string>
@@ -31925,13 +31715,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouisse</string>
-		<string>t&apos;évanouisses</string>
-		<string>s&apos;évanouisse</string>
+		<string>s'évanouir</string>
+		<string>m'évanouisse</string>
+		<string>t'évanouisses</string>
+		<string>s'évanouisse</string>
 		<string>nous évanouissions</string>
 		<string>vous évanouissiez</string>
-		<string>s&apos;évanouissent</string>
+		<string>s'évanouissent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31939,7 +31729,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Passé</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me sois évanoui</string>
 		<string>te sois évanoui</string>
 		<string>se soit évanoui</string>
@@ -31953,13 +31743,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Imparfait</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouisse</string>
-		<string>t&apos;évanouisses</string>
-		<string>s&apos;évanouît</string>
+		<string>s'évanouir</string>
+		<string>m'évanouisse</string>
+		<string>t'évanouisses</string>
+		<string>s'évanouît</string>
 		<string>nous évanouissions</string>
 		<string>vous évanouissiez</string>
-		<string>s&apos;évanouissent</string>
+		<string>s'évanouissent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31967,7 +31757,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me fusse évanoui</string>
 		<string>te fusses évanoui</string>
 		<string>se fût évanoui</string>
@@ -31981,13 +31771,13 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Présent</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouirais</string>
-		<string>t&apos;évanouirais</string>
-		<string>s&apos;évanouirait</string>
+		<string>s'évanouir</string>
+		<string>m'évanouirais</string>
+		<string>t'évanouirais</string>
+		<string>s'évanouirait</string>
 		<string>nous évanouirions</string>
 		<string>vous évanouiriez</string>
-		<string>s&apos;évanouiraient</string>
+		<string>s'évanouiraient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31995,7 +31785,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Passé</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me serais évanoui</string>
 		<string>te serais évanoui</string>
 		<string>se serait évanoui</string>
@@ -32009,13 +31799,10 @@
 	<array>
 		<string>impératif</string>
 		<string>Présent</string>
-		<string>s&apos;évanouir</string>
-		<string></string>
+		<string>s'évanouir</string>
 		<string>évanouis-toi</string>
-		<string></string>
 		<string>évanouissons-nous</string>
 		<string>évanouissez-vous</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -32023,13 +31810,10 @@
 	<array>
 		<string>impératif</string>
 		<string>Passé</string>
-		<string>s&apos;évanouir</string>
-		<string></string>
-		<string>-</string>
-		<string></string>
+		<string>s'évanouir</string>
 		<string>-</string>
 		<string>-</string>
-		<string></string>
+		<string>-</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -32234,12 +32018,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>embrasser</string>
-		<string></string>
 		<string>embrasse</string>
-		<string></string>
 		<string>embrassons</string>
 		<string>embrassez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -32248,12 +32029,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>embrasser</string>
-		<string></string>
 		<string>aie embrassé</string>
-		<string></string>
 		<string>ayons embrassé</string>
 		<string>ayez embrassé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -32458,12 +32236,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>employer</string>
-		<string></string>
 		<string>emploie</string>
-		<string></string>
 		<string>employons</string>
 		<string>employez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -32472,12 +32247,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>employer</string>
-		<string></string>
 		<string>aie employé</string>
-		<string></string>
 		<string>ayons employé</string>
 		<string>ayez employé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -32682,12 +32454,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>espérer</string>
-		<string></string>
 		<string>espère</string>
-		<string></string>
 		<string>espérons</string>
 		<string>espérez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -32696,12 +32465,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>espérer</string>
-		<string></string>
 		<string>aie espéré</string>
-		<string></string>
 		<string>ayons espéré</string>
 		<string>ayez espéré</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -32906,12 +32672,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>essuyer</string>
-		<string></string>
 		<string>essuie</string>
-		<string></string>
 		<string>essuyons</string>
 		<string>essuyez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -32920,12 +32683,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>essuyer</string>
-		<string></string>
 		<string>aie essuyé</string>
-		<string></string>
 		<string>ayons essuyé</string>
 		<string>ayez essuyé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -33130,12 +32890,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>éteindre</string>
-		<string></string>
 		<string>éteins</string>
-		<string></string>
 		<string>éteignons</string>
 		<string>éteignez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -33144,12 +32901,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>éteindre</string>
-		<string></string>
 		<string>aie éteint</string>
-		<string></string>
 		<string>ayons éteint</string>
 		<string>ayez éteint</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -33354,12 +33108,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>étudier</string>
-		<string></string>
 		<string>étudie</string>
-		<string></string>
 		<string>étudions</string>
 		<string>étudiez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -33368,12 +33119,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>étudier</string>
-		<string></string>
 		<string>aie étudié</string>
-		<string></string>
 		<string>ayons étudié</string>
 		<string>ayez étudié</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -33578,12 +33326,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>éviter</string>
-		<string></string>
 		<string>évite</string>
-		<string></string>
 		<string>évitons</string>
 		<string>évitez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -33592,12 +33337,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>éviter</string>
-		<string></string>
 		<string>aie évité</string>
-		<string></string>
 		<string>ayons évité</string>
 		<string>ayez évité</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -33802,12 +33544,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>examiner</string>
-		<string></string>
 		<string>examine</string>
-		<string></string>
 		<string>examinons</string>
 		<string>examinez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -33816,12 +33555,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>examiner</string>
-		<string></string>
 		<string>aie examiné</string>
-		<string></string>
 		<string>ayons examiné</string>
 		<string>ayez examiné</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34026,12 +33762,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>excuser</string>
-		<string></string>
 		<string>excuse</string>
-		<string></string>
 		<string>excusons</string>
 		<string>excusez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34040,12 +33773,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>excuser</string>
-		<string></string>
 		<string>aie excusé</string>
-		<string></string>
 		<string>ayons excusé</string>
 		<string>ayez excusé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34250,12 +33980,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>exploser</string>
-		<string></string>
 		<string>explose</string>
-		<string></string>
 		<string>explosons</string>
 		<string>explosez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34264,12 +33991,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>exploser</string>
-		<string></string>
 		<string>aie explosé</string>
-		<string></string>
 		<string>ayons explosé</string>
 		<string>ayez explosé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34277,13 +34001,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Présent</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasie</string>
-		<string>t&apos;extasies</string>
-		<string>s&apos;extasie</string>
+		<string>s'extasier</string>
+		<string>m'extasie</string>
+		<string>t'extasies</string>
+		<string>s'extasie</string>
 		<string>nous extasions</string>
 		<string>vous extasiez</string>
-		<string>s&apos;extasient</string>
+		<string>s'extasient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34291,10 +34015,10 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé composé</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me suis extasié</string>
-		<string>t&apos;es extasié</string>
-		<string>s&apos;est extasié</string>
+		<string>t'es extasié</string>
+		<string>s'est extasié</string>
 		<string>nous sommes extasiés</string>
 		<string>vous êtes extasiés</string>
 		<string>se sont extasiés</string>
@@ -34305,13 +34029,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Imparfait</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasiais</string>
-		<string>t&apos;extasiais</string>
-		<string>s&apos;extasiait</string>
+		<string>s'extasier</string>
+		<string>m'extasiais</string>
+		<string>t'extasiais</string>
+		<string>s'extasiait</string>
 		<string>nous extasiions</string>
 		<string>vous extasiiez</string>
-		<string>s&apos;extasiaient</string>
+		<string>s'extasiaient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34319,13 +34043,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;étais extasié</string>
-		<string>t&apos;étais extasié</string>
-		<string>s&apos;était extasié</string>
+		<string>s'extasier</string>
+		<string>m'étais extasié</string>
+		<string>t'étais extasié</string>
+		<string>s'était extasié</string>
 		<string>nous étions extasiés</string>
 		<string>vous étiez extasiés</string>
-		<string>s&apos;étaient extasiés</string>
+		<string>s'étaient extasiés</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34333,13 +34057,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé simple</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasiai</string>
-		<string>t&apos;extasias</string>
-		<string>s&apos;extasia</string>
+		<string>s'extasier</string>
+		<string>m'extasiai</string>
+		<string>t'extasias</string>
+		<string>s'extasia</string>
 		<string>nous extasiâmes</string>
 		<string>vous extasiâtes</string>
-		<string>s&apos;extasièrent</string>
+		<string>s'extasièrent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34347,7 +34071,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé antérieur</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me fus extasié</string>
 		<string>te fus extasié</string>
 		<string>se fut extasié</string>
@@ -34361,13 +34085,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur simple</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasierai</string>
-		<string>t&apos;extasieras</string>
-		<string>s&apos;extasiera</string>
+		<string>s'extasier</string>
+		<string>m'extasierai</string>
+		<string>t'extasieras</string>
+		<string>s'extasiera</string>
 		<string>nous extasierons</string>
 		<string>vous extasierez</string>
-		<string>s&apos;extasieront</string>
+		<string>s'extasieront</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34375,7 +34099,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur antérieur</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me serai extasié</string>
 		<string>te seras extasié</string>
 		<string>se sera extasié</string>
@@ -34389,13 +34113,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasie</string>
-		<string>t&apos;extasies</string>
-		<string>s&apos;extasie</string>
+		<string>s'extasier</string>
+		<string>m'extasie</string>
+		<string>t'extasies</string>
+		<string>s'extasie</string>
 		<string>nous extasiions</string>
 		<string>vous extasiiez</string>
-		<string>s&apos;extasient</string>
+		<string>s'extasient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34403,7 +34127,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Passé</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me sois extasié</string>
 		<string>te sois extasié</string>
 		<string>se soit extasié</string>
@@ -34417,13 +34141,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Imparfait</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasiasse</string>
-		<string>t&apos;extasiasses</string>
-		<string>s&apos;extasiât</string>
+		<string>s'extasier</string>
+		<string>m'extasiasse</string>
+		<string>t'extasiasses</string>
+		<string>s'extasiât</string>
 		<string>nous extasiassions</string>
 		<string>vous extasiassiez</string>
-		<string>s&apos;extasiassent</string>
+		<string>s'extasiassent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34431,7 +34155,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me fusse extasié</string>
 		<string>te fusses extasié</string>
 		<string>se fût extasié</string>
@@ -34445,13 +34169,13 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Présent</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasierais</string>
-		<string>t&apos;extasierais</string>
-		<string>s&apos;extasierait</string>
+		<string>s'extasier</string>
+		<string>m'extasierais</string>
+		<string>t'extasierais</string>
+		<string>s'extasierait</string>
 		<string>nous extasierions</string>
 		<string>vous extasieriez</string>
-		<string>s&apos;extasieraient</string>
+		<string>s'extasieraient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34459,7 +34183,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Passé</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me serais extasié</string>
 		<string>te serais extasié</string>
 		<string>se serait extasié</string>
@@ -34473,13 +34197,10 @@
 	<array>
 		<string>impératif</string>
 		<string>Présent</string>
-		<string>s&apos;extasier</string>
-		<string></string>
+		<string>s'extasier</string>
 		<string>extasie-toi</string>
-		<string></string>
 		<string>extasions-nous</string>
 		<string>extasiez-vous</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34487,13 +34208,10 @@
 	<array>
 		<string>impératif</string>
 		<string>Passé</string>
-		<string>s&apos;extasier</string>
-		<string></string>
-		<string>-</string>
-		<string></string>
+		<string>s'extasier</string>
 		<string>-</string>
 		<string>-</string>
-		<string></string>
+		<string>-</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34698,12 +34416,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>fabriquer</string>
-		<string></string>
 		<string>fabrique</string>
-		<string></string>
 		<string>fabriquons</string>
 		<string>fabriquez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34712,12 +34427,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>fabriquer</string>
-		<string></string>
 		<string>aie fabriqué</string>
-		<string></string>
 		<string>ayons fabriqué</string>
 		<string>ayez fabriqué</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34922,12 +34634,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>fêter</string>
-		<string></string>
 		<string>fête</string>
-		<string></string>
 		<string>fêtons</string>
 		<string>fêtez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34936,12 +34645,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>fêter</string>
-		<string></string>
 		<string>aie fêté</string>
-		<string></string>
 		<string>ayons fêté</string>
 		<string>ayez fêté</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -35146,12 +34852,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>fleurir</string>
-		<string></string>
 		<string>fleuris</string>
-		<string></string>
 		<string>fleurissons</string>
 		<string>fleurissez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -35160,12 +34863,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>fleurir</string>
-		<string></string>
 		<string>aie fleuri</string>
-		<string></string>
 		<string>ayons fleuri</string>
 		<string>ayez fleuri</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -35370,12 +35070,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>grignoter</string>
-		<string></string>
 		<string>grignote</string>
-		<string></string>
 		<string>grignotons</string>
 		<string>grignotez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -35384,12 +35081,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>grignoter</string>
-		<string></string>
 		<string>aie grignoté</string>
-		<string></string>
 		<string>ayons grignoté</string>
 		<string>ayez grignoté</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -35594,12 +35288,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>gagner</string>
-		<string></string>
 		<string>gagne</string>
-		<string></string>
 		<string>gagnons</string>
 		<string>gagnez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -35608,12 +35299,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>gagner</string>
-		<string></string>
 		<string>aie gagné</string>
-		<string></string>
 		<string>ayons gagné</string>
 		<string>ayez gagné</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -35818,12 +35506,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>installer</string>
-		<string></string>
 		<string>installe</string>
-		<string></string>
 		<string>installons</string>
 		<string>installez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -35832,12 +35517,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>installer</string>
-		<string></string>
 		<string>aie installé</string>
-		<string></string>
 		<string>ayons installé</string>
 		<string>ayez installé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -36042,12 +35724,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>intervenir</string>
-		<string></string>
 		<string>interviens</string>
-		<string></string>
 		<string>intervenons</string>
 		<string>intervenez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -36056,12 +35735,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>intervenir</string>
-		<string></string>
 		<string>sois intervenu</string>
-		<string></string>
 		<string>soyons intervenus</string>
 		<string>soyez intervenus</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -36266,12 +35942,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>laver</string>
-		<string></string>
 		<string>lave</string>
-		<string></string>
 		<string>lavons</string>
 		<string>lavez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -36280,12 +35953,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>laver</string>
-		<string></string>
 		<string>aie lavé</string>
-		<string></string>
 		<string>ayons lavé</string>
 		<string>ayez lavé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -36490,12 +36160,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>léguer</string>
-		<string></string>
 		<string>lègue</string>
-		<string></string>
 		<string>léguons</string>
 		<string>léguez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -36504,12 +36171,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>léguer</string>
-		<string></string>
 		<string>aie légué</string>
-		<string></string>
 		<string>ayons légué</string>
 		<string>ayez légué</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -36714,12 +36378,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>maîtriser</string>
-		<string></string>
 		<string>maîtrise</string>
-		<string></string>
 		<string>maîtrisons</string>
 		<string>maîtrisez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -36728,12 +36389,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>maîtriser</string>
-		<string></string>
 		<string>aie maîtrisé</string>
-		<string></string>
 		<string>ayons maîtrisé</string>
 		<string>ayez maîtrisé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -36938,12 +36596,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>mentir</string>
-		<string></string>
 		<string>mens</string>
-		<string></string>
 		<string>mentons</string>
 		<string>mentez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -36952,12 +36607,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>mentir</string>
-		<string></string>
 		<string>aie menti</string>
-		<string></string>
 		<string>ayons menti</string>
 		<string>ayez menti</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -37162,12 +36814,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>modifier</string>
-		<string></string>
 		<string>modifie</string>
-		<string></string>
 		<string>modifions</string>
 		<string>modifiez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -37176,12 +36825,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>modifier</string>
-		<string></string>
 		<string>aie modifié</string>
-		<string></string>
 		<string>ayons modifié</string>
 		<string>ayez modifié</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -37386,12 +37032,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>mordre</string>
-		<string></string>
 		<string>mords</string>
-		<string></string>
 		<string>mordons</string>
 		<string>mordez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -37400,12 +37043,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>mordre</string>
-		<string></string>
 		<string>aie mordu</string>
-		<string></string>
 		<string>ayons mordu</string>
 		<string>ayez mordu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -37610,12 +37250,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>mordre</string>
-		<string></string>
 		<string>mouille</string>
-		<string></string>
 		<string>mouillons</string>
 		<string>mouillez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -37624,12 +37261,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>mordre</string>
-		<string></string>
 		<string>aie mouillé</string>
-		<string></string>
 		<string>ayons mouillé</string>
 		<string>ayez mouillé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -37834,12 +37468,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>neiger</string>
-		<string></string>
-		<string>-</string>
-		<string></string>
 		<string>-</string>
 		<string>-</string>
-		<string></string>
+		<string>-</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -37848,12 +37479,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>neiger</string>
-		<string></string>
-		<string>-</string>
-		<string></string>
 		<string>-</string>
 		<string>-</string>
-		<string></string>
+		<string>-</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -38058,12 +37686,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>observer</string>
-		<string></string>
 		<string>observe</string>
-		<string></string>
 		<string>observons</string>
 		<string>observez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -38072,12 +37697,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>observer</string>
-		<string></string>
 		<string>aie observé</string>
-		<string></string>
 		<string>ayons observé</string>
 		<string>ayez observé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -38282,12 +37904,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>obtenir</string>
-		<string></string>
 		<string>obtiens</string>
-		<string></string>
 		<string>obtenons</string>
 		<string>obtenez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -38296,12 +37915,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>obtenir</string>
-		<string></string>
 		<string>aie obtenu</string>
-		<string></string>
 		<string>ayons obtenu</string>
 		<string>ayez obtenu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -38506,12 +38122,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>organiser</string>
-		<string></string>
 		<string>organise</string>
-		<string></string>
 		<string>organisons</string>
 		<string>organisez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -38520,12 +38133,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>organiser</string>
-		<string></string>
 		<string>aie organisé</string>
-		<string></string>
 		<string>ayons organisé</string>
 		<string>ayez organisé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -38730,12 +38340,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>oublier</string>
-		<string></string>
 		<string>oublie</string>
-		<string></string>
 		<string>oublions</string>
 		<string>oubliez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -38744,12 +38351,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>oublier</string>
-		<string></string>
 		<string>aie oublié</string>
-		<string></string>
 		<string>ayons oublié</string>
 		<string>ayez oublié</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -38954,12 +38558,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>parvenir</string>
-		<string></string>
 		<string>parviens</string>
-		<string></string>
 		<string>parvenons</string>
 		<string>parvenez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -38968,12 +38569,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>parvenir</string>
-		<string></string>
 		<string>sois parvenu</string>
-		<string></string>
 		<string>soyons parvenus</string>
 		<string>soyez parvenus</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -39178,12 +38776,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>planter</string>
-		<string></string>
 		<string>plante</string>
-		<string></string>
 		<string>plantons</string>
 		<string>plantez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -39192,12 +38787,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>planter</string>
-		<string></string>
 		<string>aie planté</string>
-		<string></string>
 		<string>ayons planté</string>
 		<string>ayez planté</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -39402,12 +38994,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>posséder</string>
-		<string></string>
 		<string>possède</string>
-		<string></string>
 		<string>possédons</string>
 		<string>possédez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -39416,12 +39005,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>posséder</string>
-		<string></string>
 		<string>aie possédé</string>
-		<string></string>
 		<string>ayons possédé</string>
 		<string>ayez possédé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -39626,12 +39212,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>prendre</string>
-		<string></string>
 		<string>prends</string>
-		<string></string>
 		<string>prenons</string>
 		<string>prenez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -39640,12 +39223,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>prendre</string>
-		<string></string>
 		<string>aie pris</string>
-		<string></string>
 		<string>ayons pris</string>
 		<string>ayez pris</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -39850,12 +39430,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>prêter</string>
-		<string></string>
 		<string>prête</string>
-		<string></string>
 		<string>prêtons</string>
 		<string>prêtez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -39864,12 +39441,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>prêter</string>
-		<string></string>
 		<string>aie prêté</string>
-		<string></string>
 		<string>ayons prêté</string>
 		<string>ayez prêté</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -40074,12 +39648,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>produire</string>
-		<string></string>
 		<string>produis</string>
-		<string></string>
 		<string>produisons</string>
 		<string>produisez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -40088,12 +39659,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>produire</string>
-		<string></string>
 		<string>aie produit</string>
-		<string></string>
 		<string>ayons produit</string>
 		<string>ayez produit</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -40298,12 +39866,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>plaindre</string>
-		<string></string>
 		<string>plains</string>
-		<string></string>
 		<string>plaignons</string>
 		<string>plaignez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -40312,12 +39877,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>plaindre</string>
-		<string></string>
 		<string>aie plaint</string>
-		<string></string>
 		<string>ayons plaint</string>
 		<string>ayez plaint</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -40522,12 +40084,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>habiller</string>
-		<string></string>
 		<string>habille</string>
-		<string></string>
 		<string>habillons</string>
 		<string>habillez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -40536,12 +40095,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>habiller</string>
-		<string></string>
 		<string>aie habillé</string>
-		<string></string>
 		<string>ayons habillé</string>
 		<string>ayez habillé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -40746,12 +40302,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>inscrire</string>
-		<string></string>
 		<string>inscris</string>
-		<string></string>
 		<string>inscrivons</string>
 		<string>inscrivez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -40760,12 +40313,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>inscrire</string>
-		<string></string>
 		<string>aie inscrit</string>
-		<string></string>
 		<string>ayons inscrit</string>
 		<string>ayez inscrit</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -40970,12 +40520,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>raboter</string>
-		<string></string>
 		<string>rabote</string>
-		<string></string>
 		<string>rabotons</string>
 		<string>rabotez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -40984,12 +40531,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>raboter</string>
-		<string></string>
 		<string>aie raboté</string>
-		<string></string>
 		<string>ayons raboté</string>
 		<string>ayez raboté</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -41194,12 +40738,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>ranger</string>
-		<string></string>
 		<string>range</string>
-		<string></string>
 		<string>rangeons</string>
 		<string>rangez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -41208,12 +40749,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>ranger</string>
-		<string></string>
 		<string>aie rangé</string>
-		<string></string>
 		<string>ayons rangé</string>
 		<string>ayez rangé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -41418,12 +40956,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>rassembler</string>
-		<string></string>
 		<string>rassemble</string>
-		<string></string>
 		<string>rassemblons</string>
 		<string>rassemblez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -41432,12 +40967,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>rassembler</string>
-		<string></string>
 		<string>aie rassemblé</string>
-		<string></string>
 		<string>ayons rassemblé</string>
 		<string>ayez rassemblé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -41642,12 +41174,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>réagir</string>
-		<string></string>
 		<string>réagis</string>
-		<string></string>
 		<string>réagissons</string>
 		<string>réagissez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -41656,12 +41185,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>réagir</string>
-		<string></string>
 		<string>aie réagi</string>
-		<string></string>
 		<string>ayons réagi</string>
 		<string>ayez réagi</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -41866,12 +41392,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>recharger</string>
-		<string></string>
 		<string>recharge</string>
-		<string></string>
 		<string>rechargeons</string>
 		<string>rechargez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -41880,12 +41403,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>recharger</string>
-		<string></string>
 		<string>aie rechargé</string>
-		<string></string>
 		<string>ayons rechargé</string>
 		<string>ayez rechargé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -42090,12 +41610,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>rentrer</string>
-		<string></string>
 		<string>rentre</string>
-		<string></string>
 		<string>rentrons</string>
 		<string>rentrez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -42104,12 +41621,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>rentrer</string>
-		<string></string>
 		<string>sois rentré</string>
-		<string></string>
 		<string>soyons rentrés</string>
 		<string>soyez rentrés</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -42314,12 +41828,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>reprendre</string>
-		<string></string>
 		<string>reprends</string>
-		<string></string>
 		<string>reprenons</string>
 		<string>reprenez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -42328,12 +41839,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>reprendre</string>
-		<string></string>
 		<string>aie repris</string>
-		<string></string>
 		<string>ayons repris</string>
 		<string>ayez repris</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -42538,12 +42046,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>résoudre</string>
-		<string></string>
 		<string>résous</string>
-		<string></string>
 		<string>résolvons</string>
 		<string>résolvez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -42552,12 +42057,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>résoudre</string>
-		<string></string>
 		<string>aie résolu</string>
-		<string></string>
 		<string>ayons résolu</string>
 		<string>ayez résolu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -42762,12 +42264,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>resplendir</string>
-		<string></string>
 		<string>resplendis</string>
-		<string></string>
 		<string>resplendissons</string>
 		<string>resplendissez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -42776,12 +42275,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>resplendir</string>
-		<string></string>
 		<string>aie resplendi</string>
-		<string></string>
 		<string>ayons resplendi</string>
 		<string>ayez resplendi</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -42986,12 +42482,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>rétablir</string>
-		<string></string>
 		<string>rétablis</string>
-		<string></string>
 		<string>rétablissons</string>
 		<string>rétablissez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -43000,12 +42493,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>rétablir</string>
-		<string></string>
 		<string>aie rétabli</string>
-		<string></string>
 		<string>ayons rétabli</string>
 		<string>ayez rétabli</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -43210,12 +42700,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>réussir</string>
-		<string></string>
 		<string>réussis</string>
-		<string></string>
 		<string>réussissons</string>
 		<string>réussissez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -43224,12 +42711,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>réussir</string>
-		<string></string>
 		<string>aie réussi</string>
-		<string></string>
 		<string>ayons réussi</string>
 		<string>ayez réussi</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -43434,12 +42918,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>revenir</string>
-		<string></string>
 		<string>reviens</string>
-		<string></string>
 		<string>revenons</string>
 		<string>revenez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -43448,12 +42929,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>revenir</string>
-		<string></string>
 		<string>sois revenu</string>
-		<string></string>
 		<string>soyons revenus</string>
 		<string>soyez revenus</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -43658,12 +43136,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>skier</string>
-		<string></string>
 		<string>skie</string>
-		<string></string>
 		<string>skions</string>
 		<string>skiez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -43672,12 +43147,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>skier</string>
-		<string></string>
 		<string>aie skié</string>
-		<string></string>
 		<string>ayons skié</string>
 		<string>ayez skié</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -43882,12 +43354,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>sommer</string>
-		<string></string>
 		<string>somme</string>
-		<string></string>
 		<string>sommons</string>
 		<string>sommez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -43896,12 +43365,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>sommer</string>
-		<string></string>
 		<string>aie sommé</string>
-		<string></string>
 		<string>ayons sommé</string>
 		<string>ayez sommé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -44106,12 +43572,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>sortir</string>
-		<string></string>
 		<string>sors</string>
-		<string></string>
 		<string>sortons</string>
 		<string>sortez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -44120,12 +43583,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>sortir</string>
-		<string></string>
 		<string>aie sorti</string>
-		<string></string>
 		<string>ayons sorti</string>
 		<string>ayez sorti</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -44330,12 +43790,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>souffler</string>
-		<string></string>
 		<string>souffle</string>
-		<string></string>
 		<string>soufflons</string>
 		<string>soufflez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -44344,12 +43801,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>souffler</string>
-		<string></string>
 		<string>aie soufflé</string>
-		<string></string>
 		<string>ayons soufflé</string>
 		<string>ayez soufflé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -44554,12 +44008,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>souhaiter</string>
-		<string></string>
 		<string>souhaite</string>
-		<string></string>
 		<string>souhaitons</string>
 		<string>souhaitez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -44568,12 +44019,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>souhaiter</string>
-		<string></string>
 		<string>aie souhaité</string>
-		<string></string>
 		<string>ayons souhaité</string>
 		<string>ayez souhaité</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -44778,12 +44226,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>sucrer</string>
-		<string></string>
 		<string>sucre</string>
-		<string></string>
 		<string>sucrons</string>
 		<string>sucrez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -44792,12 +44237,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>sucrer</string>
-		<string></string>
 		<string>aie sucré</string>
-		<string></string>
 		<string>ayons sucré</string>
 		<string>ayez sucré</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -45002,12 +44444,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>démouler</string>
-		<string></string>
 		<string>démoule</string>
-		<string></string>
 		<string>démoulons</string>
 		<string>démoulez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -45016,12 +44455,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>démouler</string>
-		<string></string>
 		<string>aie démoulé</string>
-		<string></string>
 		<string>ayons démoulé</string>
 		<string>ayez démoulé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -45226,12 +44662,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>baisser</string>
-		<string></string>
 		<string>baisse</string>
-		<string></string>
 		<string>baissons</string>
 		<string>baissez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -45240,12 +44673,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>baisser</string>
-		<string></string>
 		<string>aie baissé</string>
-		<string></string>
 		<string>ayons baissé</string>
 		<string>ayez baissé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -45450,12 +44880,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>terminer</string>
-		<string></string>
 		<string>termine</string>
-		<string></string>
 		<string>terminons</string>
 		<string>terminez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -45464,12 +44891,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>terminer</string>
-		<string></string>
 		<string>aie terminé</string>
-		<string></string>
 		<string>ayons terminé</string>
 		<string>ayez terminé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -45674,12 +45098,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>tondre</string>
-		<string></string>
 		<string>tonds</string>
-		<string></string>
 		<string>tondons</string>
 		<string>tondez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -45688,12 +45109,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>tondre</string>
-		<string></string>
 		<string>aie tondu</string>
-		<string></string>
 		<string>ayons tondu</string>
 		<string>ayez tondu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -45898,12 +45316,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>traduire</string>
-		<string></string>
 		<string>traduis</string>
-		<string></string>
 		<string>traduisons</string>
 		<string>traduisez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -45912,12 +45327,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>traduire</string>
-		<string></string>
 		<string>aie traduit</string>
-		<string></string>
 		<string>ayons traduit</string>
 		<string>ayez traduit</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -46122,12 +45534,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>téléphoner</string>
-		<string></string>
 		<string>téléphone</string>
-		<string></string>
 		<string>téléphonons</string>
 		<string>téléphonez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -46136,12 +45545,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>téléphoner</string>
-		<string></string>
 		<string>aie téléphoné</string>
-		<string></string>
 		<string>ayons téléphoné</string>
 		<string>ayez téléphoné</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -46346,12 +45752,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>vaciller</string>
-		<string></string>
 		<string>vacille</string>
-		<string></string>
 		<string>vacillons</string>
 		<string>vacillez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -46360,12 +45763,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>vaciller</string>
-		<string></string>
 		<string>aie vacillé</string>
-		<string></string>
 		<string>ayons vacillé</string>
 		<string>ayez vacillé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -46570,12 +45970,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>vaincre</string>
-		<string></string>
 		<string>vaincs</string>
-		<string></string>
 		<string>vainquons</string>
 		<string>vainquez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -46584,12 +45981,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>vaincre</string>
-		<string></string>
 		<string>aie vaincu</string>
-		<string></string>
 		<string>ayons vaincu</string>
 		<string>ayez vaincu</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -46794,12 +46188,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>visiter</string>
-		<string></string>
 		<string>visite</string>
-		<string></string>
 		<string>visitons</string>
 		<string>visitez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -46808,12 +46199,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>visiter</string>
-		<string></string>
 		<string>aie visité</string>
-		<string></string>
 		<string>ayons visité</string>
 		<string>ayez visité</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -47018,12 +46406,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>voler</string>
-		<string></string>
 		<string>vole</string>
-		<string></string>
 		<string>volons</string>
 		<string>volez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -47032,12 +46417,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>voler</string>
-		<string></string>
 		<string>aie volé</string>
-		<string></string>
 		<string>ayons volé</string>
 		<string>ayez volé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -47242,12 +46624,9 @@
 		<string>impératif</string>
 		<string>Présent</string>
 		<string>taper</string>
-		<string></string>
 		<string>tape</string>
-		<string></string>
 		<string>tapons</string>
 		<string>tapez</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -47256,12 +46635,9 @@
 		<string>impératif</string>
 		<string>Passé</string>
 		<string>taper</string>
-		<string></string>
 		<string>aie tapé</string>
-		<string></string>
 		<string>ayons tapé</string>
 		<string>ayez tapé</string>
-		<string></string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>

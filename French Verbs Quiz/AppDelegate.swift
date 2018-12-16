@@ -15,11 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var navigationBarAppearace = UINavigationBar.appearance()
-
+    let fontsAndConstraints = FontsAndConstraintsOptions()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         navigationBarAppearace.tintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
-        navigationBarAppearace.barTintColor = UIColor(red: 171/255, green: 203/255, blue: 235/255, alpha: 1.0)
-        navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationBarAppearace.barTintColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
+       // navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.font: fontsAndConstraints.largeBoldFont, NSAttributedStringKey.foregroundColor:UIColor.white]
         FirebaseApp.configure()
         GADMobileAds.configure(withApplicationID: "ca-app-pub-1437510869244180/7683732997")
         return true

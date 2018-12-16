@@ -17,7 +17,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     var arrayVerbe: [[String]] = []
     var arraySelection: [String] = []
     var verbesChoisi: [String] = []
-    
+    let fontsAndConstraints = FontsAndConstraintsOptions()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -68,7 +68,6 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return self.searchBar.text == "" ? self.listeVerbeAny.count : self.arrayFilter.count
     }
     
@@ -76,6 +75,8 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let lista = self.searchBar.text == "" ? self.listeVerbeAny : self.arrayFilter
         let cellAnyArray = lista[indexPath.row] as! [Any]
+        cell.textLabel?.textColor = UIColor.black
+        cell.textLabel?.font =  fontsAndConstraints.normalItaliqueBoldFont
         let cellText = cellAnyArray[0] as! String
         cell.textLabel?.text = cellText
         // check cell based on second field
@@ -123,8 +124,9 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         let selection = Selection()
         let modeEtTemps = selection.choixTempsEtMode(arraySelection: arraySelection)
         for mode in modeEtTemps {
+            
             if mode.contains("impératif"){
-                if verbesChoisi.contains("pouvoir") || verbesChoisi.contains("vouloir") || verbesChoisi.contains("devoir") || verbesChoisi.contains("falloir") || verbesChoisi.contains("pleuvoir") || verbesChoisi.contains("valoir"){
+                if verbesChoisi.contains("pouvoir") || verbesChoisi.contains("vouloir") || verbesChoisi.contains("devoir") || verbesChoisi.contains("falloir") || verbesChoisi.contains("pleuvoir") || verbesChoisi.contains("valoir") || (verbesChoisi.contains("s'extasier") && mode[0] == "Passé") || (verbesChoisi.contains("s'absenter") && mode[0] == "Passé") || verbesChoisi.contains("neiger") || (verbesChoisi.contains("s'évanouir") && mode[0] == "Passé"){
                     showAlertPasDImperatif()
                     okForSegue = false
                 }
@@ -153,7 +155,8 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         present(alertController, animated: true, completion: nil)
     }
     func showAlertPasDImperatif() {
-        let alertController = UIAlertController(title: "Il n'y a pas d'impératif pour ces verbes:", message: "pouvoir, vouloir, devoir, falloir, pleuvoir, valoir. Faites un autre choix", preferredStyle: .alert)
+        
+        let alertController = UIAlertController(title: "Il n'y a pas d'impératif pour ces verbes:", message: "pouvoir, vouloir, devoir, falloir, pleuvoir, valoir, neiger, s'extasier(au passé), s'absenter(au passé), s'évanouir(au passé). Faites un autre choix", preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
         

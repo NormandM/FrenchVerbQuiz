@@ -4,6 +4,14 @@
 <dict>
 	<key>abandonner</key>
 	<string>to abandon</string>
+	<key>abattre</key>
+	<string>to knock down</string>
+	<key>accepter</key>
+	<string>to accept</string>
+	<key>acheter</key>
+	<string>to buy</string>
+	<key>acquérir</key>
+	<string>to acquire</string>
 	<key>agir</key>
 	<string>to act</string>
 	<key>aimer</key>
@@ -12,6 +20,8 @@
 	<string>to add</string>
 	<key>aller</key>
 	<string>to go</string>
+	<key>annoncer</key>
+	<string>to announce</string>
 	<key>apercevoir</key>
 	<string>to see</string>
 	<key>appeler</key>
@@ -22,24 +32,54 @@
 	<string>to arrive</string>
 	<key>arrêter</key>
 	<string>to stop</string>
+	<key>asseoir</key>
+	<string>to seat</string>
 	<key>attendre</key>
 	<string>to expect, to wait</string>
 	<key>avoir</key>
 	<string>to have</string>
+	<key>avouer</key>
+	<string>to confess</string>
+	<key>baisser</key>
+	<string>to lower</string>
+	<key>battre</key>
+	<string>to beat</string>
 	<key>boire</key>
 	<string>to drink</string>
+	<key>brancher</key>
+	<string>to connect</string>
+	<key>bâtir</key>
+	<string>to build</string>
+	<key>cacher</key>
+	<string>to hide</string>
+	<key>chanceler</key>
+	<string>to totter</string>
+	<key>changer</key>
+	<string>to change</string>
 	<key>chanter</key>
 	<string>to sing</string>
+	<key>chasser</key>
+	<string>to hunt</string>
 	<key>chercher</key>
 	<string>to seek, to search</string>
+	<key>choisir</key>
+	<string>to choose</string>
 	<key>commencer </key>
 	<string>to start</string>
 	<key>comprendre</key>
 	<string>to understand</string>
+	<key>concentrer</key>
+	<string>to focus</string>
+	<key>conclure</key>
+	<string>to conclude</string>
 	<key>conduire</key>
 	<string>to drive</string>
 	<key>connaître</key>
 	<string>to know</string>
+	<key>construire</key>
+	<string>to build</string>
+	<key>consulter</key>
+	<string>to consult</string>
 	<key>continuer</key>
 	<string>to continue, to carry on</string>
 	<key>coudre</key>
@@ -51,46 +91,102 @@
 	<string>to cover</string>
 	<key>craindre</key>
 	<string>to fear</string>
+	<key>creuser</key>
+	<string>to dig</string>
 	<key>crier</key>
 	<string>to yell, to scream</string>
 	<key>croire</key>
 	<string>to believe</string>
+	<key>danser</key>
+	<string>to dance</string>
 	<key>demander</key>
 	<string>to request, to ask</string>
 	<key>descendre</key>
 	<string>to go down, to descend</string>
+	<key>dessiner</key>
+	<string>to draw</string>
 	<key>devenir</key>
 	<string>to become</string>
 	<key>devoir</key>
 	<string>to have to</string>
 	<key>dire</key>
 	<string>to say</string>
+	<key>disparaître</key>
+	<string>to disappear</string>
 	<key>donner</key>
 	<string>to give</string>
 	<key>dormir</key>
 	<string>to sleep</string>
+	<key>décevoir</key>
+	<string>to disappoint</string>
+	<key>défendre</key>
+	<string>to defend</string>
+	<key>déguster</key>
+	<string>to savor</string>
+	<key>démonter</key>
+	<string>to dismantle</string>
+	<key>démouler</key>
+	<string>to unmold</string>
+	<key>déplacer</key>
+	<string>to move</string>
+	<key>désirer</key>
+	<string>to desire</string>
+	<key>dîner</key>
+	<string>to dine</string>
+	<key>embrasser</key>
+	<string>to kiss</string>
+	<key>employer</key>
+	<string>to employ</string>
 	<key>entendre</key>
 	<string>to hear</string>
 	<key>entrer</key>
 	<string>to enter, to come in</string>
 	<key>envoyer</key>
 	<string>to send</string>
+	<key>espérer</key>
+	<string>to hope</string>
+	<key>essuyer</key>
+	<string>to wipe</string>
+	<key>examiner</key>
+	<string>to examine</string>
+	<key>excuser</key>
+	<string>to excuse</string>
 	<key>exister</key>
 	<string>to exist</string>
 	<key>expliquer</key>
 	<string>to explain</string>
+	<key>exploser</key>
+	<string>to explode</string>
+	<key>fabriquer</key>
+	<string>to make</string>
 	<key>faire</key>
 	<string>to do</string>
 	<key>falloir</key>
 	<string>to have to</string>
 	<key>finir</key>
 	<string>to finish</string>
+	<key>fleurir</key>
+	<string>to bloom</string>
 	<key>fuir</key>
 	<string>to run away, to escape</string>
+	<key>fêter</key>
+	<string>to celebrate</string>
+	<key>gagner</key>
+	<string>to win</string>
 	<key>garder</key>
 	<string>to keep</string>
 	<key>grandir</key>
 	<string>to grow</string>
+	<key>grignoter</key>
+	<string>to nibble</string>
+	<key>habiller</key>
+	<string>to dress</string>
+	<key>inscrire</key>
+	<string>to inscribe, to enroll</string>
+	<key>installer</key>
+	<string>to install</string>
+	<key>intervenir</key>
+	<string>to intervene</string>
 	<key>jeter</key>
 	<string>to throw</string>
 	<key>jouer</key>
@@ -99,26 +195,48 @@
 	<string>to let, to leave</string>
 	<key>lancer</key>
 	<string>to throw</string>
+	<key>laver</key>
+	<string>to wash</string>
 	<key>lever</key>
 	<string>to raise</string>
 	<key>lire</key>
 	<string>to read</string>
+	<key>léguer</key>
+	<string>to bequeath</string>
 	<key>manger</key>
 	<string>to eat</string>
 	<key>manquer</key>
 	<string>to miss</string>
 	<key>marcher</key>
 	<string>to walk</string>
+	<key>maîtriser</key>
+	<string>to master</string>
+	<key>mentir</key>
+	<string>to lie</string>
 	<key>mettre</key>
 	<string>to put</string>
+	<key>modifier</key>
+	<string>to modify</string>
 	<key>monter</key>
 	<string>to ascend</string>
 	<key>montrer</key>
 	<string>to show</string>
+	<key>mordre</key>
+	<string>to bite</string>
 	<key>mourir</key>
 	<string>to die</string>
+	<key>neiger</key>
+	<string>to snow</string>
+	<key>observer</key>
+	<string>to observe</string>
+	<key>obtenir</key>
+	<string>to get</string>
 	<key>offrir</key>
 	<string>to offer</string>
+	<key>organiser</key>
+	<string>to organize</string>
+	<key>oublier</key>
+	<string>to forget</string>
 	<key>ouvrir</key>
 	<string>to open</string>
 	<key>paraître</key>
@@ -127,6 +245,8 @@
 	<string>to talk</string>
 	<key>partir</key>
 	<string>to go, to leave</string>
+	<key>parvenir</key>
+	<string>to reach</string>
 	<key>passer</key>
 	<string>to pass</string>
 	<key>payer</key>
@@ -139,42 +259,84 @@
 	<string>to lose</string>
 	<key>permettre</key>
 	<string>to allow</string>
+	<key>plaindre</key>
+	<string>to complain</string>
+	<key>planter</key>
+	<string>to plant</string>
 	<key>pleuvoir</key>
 	<string>to rain</string>
 	<key>plier</key>
 	<string>to fold</string>
 	<key>porter</key>
 	<string>to carry</string>
+	<key>posséder</key>
+	<string>to own</string>
 	<key>pouvoir</key>
 	<string>to be able to, can</string>
 	<key>prendre</key>
 	<string>to take</string>
+	<key>produire</key>
+	<string>to produce</string>
 	<key>présenter</key>
 	<string>to present</string>
+	<key>prêter</key>
+	<string>to lend</string>
 	<key>quitter</key>
 	<string>to leave</string>
+	<key>raboter</key>
+	<string>to plane</string>
+	<key>ranger</key>
+	<string>to tidy</string>
 	<key>rappeler</key>
 	<string>to call back</string>
+	<key>rassembler</key>
+	<string>to bring together</string>
 	<key>recevoir</key>
 	<string>to receive</string>
+	<key>recharger</key>
+	<string>to recharge</string>
 	<key>reconnaître</key>
 	<string>to recognize</string>
 	<key>regarder</key>
 	<string>to watch, to look</string>
 	<key>rendre</key>
 	<string>to return</string>
+	<key>rentrer</key>
+	<string>to get in, to return</string>
+	<key>reprendre</key>
+	<string>to resume</string>
+	<key>resplendir</key>
+	<string>to gleam</string>
 	<key>rester</key>
 	<string>to stay</string>
 	<key>retenir</key>
 	<string>to hold back</string>
 	<key>retrouver</key>
 	<string>to find</string>
+	<key>revenir</key>
+	<string>to return</string>
 	<key>rire</key>
 	<string>to laugh</string>
 	<key>rougir</key>
 	<string>to blush</string>
+	<key>réagir</key>
+	<string>to react</string>
 	<key>répondre</key>
 	<string>to reply, to answer</string>
+	<key>résoudre</key>
+	<string>to solve</string>
+	<key>rétablir</key>
+	<string>to restore</string>
+	<key>réussir</key>
+	<string>to succeed</string>
+	<key>réveiller</key>
+	<string>to wake</string>
+	<key>s&apos;absenter</key>
+	<string>to be absent</string>
+	<key>s&apos;extasier</key>
+	<string>to rhapsodize</string>
+	<key>s&apos;évanouir</key>
+	<string>to faint</string>
 	<key>savoir</key>
 	<string>to know</string>
 	<key>sembler</key>
@@ -183,38 +345,76 @@
 	<string>to feel, to smell</string>
 	<key>servir</key>
 	<string>to serve</string>
+	<key>skier</key>
+	<string>to ski</string>
+	<key>sommer</key>
+	<string>to summon</string>
 	<key>songer</key>
 	<string>to wonder</string>
+	<key>sortir</key>
+	<string>to exit</string>
+	<key>souffler</key>
+	<string>to blow</string>
 	<key>souffrir</key>
 	<string>to suffer</string>
+	<key>souhaiter</key>
+	<string>to wish</string>
 	<key>sourire</key>
 	<string>to smile</string>
+	<key>sucrer</key>
+	<string>to sweeten</string>
 	<key>suivre</key>
 	<string>to follow</string>
+	<key>taper</key>
+	<string>to type, to beat</string>
 	<key>tenir</key>
 	<string>to hold</string>
+	<key>terminer</key>
+	<string>to finish</string>
 	<key>tomber</key>
 	<string>to fall</string>
+	<key>tondre</key>
+	<string>to mow</string>
 	<key>tourner</key>
 	<string>to turn</string>
+	<key>traduire</key>
+	<string>to translate</string>
 	<key>trouver</key>
 	<string>to find</string>
+	<key>téléphoner</key>
+	<string>to call</string>
+	<key>vaciller</key>
+	<string>to sway</string>
+	<key>vaincre</key>
+	<string>to overcome, to vanquish</string>
 	<key>valoir</key>
 	<string>to be worth</string>
 	<key>vendre</key>
 	<string>to sale</string>
 	<key>venir</key>
 	<string>to come</string>
+	<key>visiter</key>
+	<string>to visit</string>
 	<key>vivre</key>
 	<string>to live</string>
 	<key>voir</key>
 	<string>to see</string>
+	<key>voler</key>
+	<string>to steal, to fly</string>
 	<key>vouloir</key>
 	<string>to want to</string>
 	<key>écouter</key>
 	<string>to listen</string>
 	<key>écrire</key>
 	<string>to write</string>
+	<key>élucider</key>
+	<string>to elucidate</string>
+	<key>éteindre</key>
+	<string>to switch off, to  extinguish</string>
+	<key>étudier</key>
+	<string>to study</string>
+	<key>éviter</key>
+	<string>to avoid</string>
 	<key>être</key>
 	<string>to be</string>
 </dict>
