@@ -1,0 +1,6 @@
+framework module Pods_French_Verbs_Quiz {
+  umbrella header "Pods-French Verbs Quiz-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -31,7 +31,7 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
-        
+        let Normanf = ""
         let i = arrayVerbe.count
         while randomVerb < i {
             let allVerbs = VerbeFrancais(verbArray: arrayVerbe, n: randomVerb)

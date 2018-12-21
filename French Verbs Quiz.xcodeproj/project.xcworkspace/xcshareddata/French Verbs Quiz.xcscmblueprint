@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5D0A7CB3FAB48C0DA547C295D483F36A3700553E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C6EDD60A775CD8CD09CE059EAB227951A0563DA2" : 9223372036854775807,
+    "5D0A7CB3FAB48C0DA547C295D483F36A3700553E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7F16CE6A-2DAC-4865-B055-061911D58801",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C6EDD60A775CD8CD09CE059EAB227951A0563DA2" : "",
+    "5D0A7CB3FAB48C0DA547C295D483F36A3700553E" : "French%20Verbs%20Quiz\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "French Verbs Quiz",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "French Verbs Quiz.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/NormandM\/FrenchVerbQuiz.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5D0A7CB3FAB48C0DA547C295D483F36A3700553E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/NormandM\/DateTest3.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C6EDD60A775CD8CD09CE059EAB227951A0563DA2"
+    }
+  ]
+}
