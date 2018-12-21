@@ -32,7 +32,6 @@ class ContextuelQuizOptionController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(fontsAndConstraints.screenDeviceDimension)
         for array in arrayVerbe {
             if listeVerbes.contains(array[2]){
                 

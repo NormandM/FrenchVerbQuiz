@@ -14,6 +14,8 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lesTemps: UILabel!
     @IBOutlet weak var lesVerbes: UILabel!
+    @IBOutlet weak var termineButton: UIButton!
+    
     let sectionHeaderTableTemps: String = ""
     let sectionHeaderTableVerbes: String = ""
     var tempsEtMode = [[String]]()
@@ -23,11 +25,11 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
     var temps = [[String]]()
     var verbeInfinitiFinal = [String]()
     let headerLabelTableViewTemps = UILabel()
-    let fontsAndConstraints = FontsAndConstraintsOptions()
+    let fonts = FontsAndConstraintsOptions()
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = "Vos choix pour le Quiz"
-        titleLabel.backgroundColor = UIColor(red: 171/255, green: 203/255, blue: 235/255, alpha: 1.0)
+        titleLabel.backgroundColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
         titleLabel.textColor = UIColor.white
         tableViewTemps.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableViewVerbes.register(UITableViewCell.self, forCellReuseIdentifier: "Cell1")
@@ -68,6 +70,16 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
                 n = n + 1
             }
         }
+
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        titleLabel.font = fonts.largeBoldFont
+        lesTemps.font = fonts.largeFont
+        lesVerbes.font = fonts.largeFont
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        termineButton.layer.cornerRadius = termineButton.frame.height / 2.0
+        termineButton.titleLabel?.font = fonts.normalBoldFont
     }
 
     
@@ -79,20 +91,20 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
         if tableView == self.tableViewVerbes{
             header = "Infinitif"
         }
+        tableView.sectionHeaderHeight = UITableViewAutomaticDimension;
+        tableView.estimatedSectionHeaderHeight = 25
         return header
     }
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
-        header.contentView.backgroundColor = UIColor(red: 151/255, green: 156/255, blue: 159/255, alpha: 1.0) 
+        header.contentView.backgroundColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
         header.textLabel?.textAlignment = .center
         header.textLabel!.textColor = UIColor.white //make the text white
+        header.textLabel?.font = fonts.normalBoldFont
         header.alpha = 1.0 //make the header transparent
         
     }
 
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40.0
-    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count:Int?
         if tableView == self.tableViewTemps {
@@ -116,8 +128,7 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell?
-        cell!.textLabel?.textColor = UIColor.black
-        cell!.textLabel?.font =  fontsAndConstraints.normalItaliqueBoldFont
+ 
         if tableView == self.tableViewTemps {
             cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             cell?.textLabel!.text = temps[indexPath.section][indexPath.row]
@@ -129,6 +140,8 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
             cell?.textLabel!.text = verbeInfinitiFinal[indexPath.row]
             
         }
+        cell!.textLabel?.textColor = UIColor.black
+        cell!.textLabel?.font =  fonts.normalItaliqueBoldFont
         return (cell)!
     }
 

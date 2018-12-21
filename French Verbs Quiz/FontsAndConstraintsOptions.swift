@@ -83,7 +83,7 @@ struct FontsAndConstraintsOptions {
             screenType = .iPad9
             small = UIFont(name: "HelveticaNeue",size: 15.0)!
             smallBold = UIFont(name: "HelveticaNeue-Bold",size: 15.0)!
-            smallItalique = UIFont(name: "HelveticaNeue-Italic",size: 19.0)!
+            smallItalique = UIFont(name: "HelveticaNeue-Italic",size: 15.0)!
             smallItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 15.0)!
             normal = UIFont(name: "HelveticaNeue",size: 24.0)!
             normalBold = UIFont(name: "HelveticaNeue-Bold",size: 24.0)!
@@ -109,10 +109,10 @@ struct FontsAndConstraintsOptions {
             largeItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 32.0)!
         }else if surfaceScreen > 1000000{
             screenType = .iPad12
-            small = UIFont(name: "HelveticaNeue",size: 19.0)!
-            smallBold = UIFont(name: "HelveticaNeue-Bold",size: 19.0)!
-            smallItalique = UIFont(name: "HelveticaNeue-Italic",size: 19.0)!
-            smallItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 19.0)!
+            small = UIFont(name: "HelveticaNeue",size: 22.0)!
+            smallBold = UIFont(name: "HelveticaNeue-Bold",size: 22.0)!
+            smallItalique = UIFont(name: "HelveticaNeue-Italic",size: 22.0)!
+            smallItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 22.0)!
             normal = UIFont(name: "HelveticaNeue",size: 27.0)!
             normalBold = UIFont(name: "HelveticaNeue-Bold",size: 27.0)!
             normalItalique = UIFont(name: "HelveticaNeue-Italic",size: 27.0)!

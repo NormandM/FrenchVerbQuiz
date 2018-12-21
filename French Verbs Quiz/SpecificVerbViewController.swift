@@ -24,7 +24,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Choisissez de 1 à 10 verbes"
+        self.title = "Choisir 1 à 10 verbes"
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
@@ -137,7 +137,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
                 let backItem = UIBarButtonItem()
                 backItem.title = ""
                 navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
-                let controller = segue.destination as! QuizController
+                let controller = segue.destination as! QuizViewController
                 controller.arrayVerbe = arrayVerbe
                 controller.arraySelection = arraySelection
                 controller.verbeInfinitif = verbesChoisi

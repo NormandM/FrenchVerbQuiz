@@ -10,7 +10,7 @@ import UIKit
 class ChoixFacileVerbeConjugue {
     class func verbeConjugue(arrayVerbe: [[String]], infinitif: String, tempsDuVerbe: String, modeDuverbe: String, verbHintButton: [UIButton], hintMenuAction: () -> Void ) {
         var verbeChoisiEtConjugue = [String]()
-        var infinitifMutate = infinitif
+        var infinitifMutate = infinitif.lowercased()
         infinitifMutate = infinitifMutate.removingReflexivePronom()
         hintMenuAction()
         for verb in arrayVerbe{
@@ -24,7 +24,7 @@ class ChoixFacileVerbeConjugue {
                 break
             }
         }
-        if infinitif != infinitifMutate {
+        if(infinitif.caseInsensitiveCompare(infinitifMutate) != .orderedSame){
             verbeChoisiEtConjugue[0] = "me \(verbeChoisiEtConjugue[0])"
             verbeChoisiEtConjugue[1] = "te \(verbeChoisiEtConjugue[1])"
             verbeChoisiEtConjugue[2] = "se \(verbeChoisiEtConjugue[2])"
@@ -36,7 +36,6 @@ class ChoixFacileVerbeConjugue {
         verbeChoisiEtConjugue = Array(Set(verbeChoisiEtConjugue))
         //verbeChoisiEtConjugue.shuffle()
         let noItem = verbeChoisiEtConjugue.count
-        print(noItem)
         switch noItem {
         case 1:
             verbHintButton[0].setTitle(verbeChoisiEtConjugue[0], for: .normal)
@@ -75,7 +74,6 @@ class ChoixFacileVerbeConjugue {
             verbHintButton[3].setTitle(verbeChoisiEtConjugue[3], for: .normal)
             verbHintButton[4].setTitle(verbeChoisiEtConjugue[4], for: .normal)
             verbHintButton[5].isHidden = true
-            print("case 5")
         case 6:
             verbHintButton[0].setTitle(verbeChoisiEtConjugue[0], for: .normal)
             verbHintButton[1].setTitle(verbeChoisiEtConjugue[1], for: .normal)
