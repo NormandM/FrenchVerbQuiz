@@ -24,22 +24,25 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     @IBOutlet weak var verbResponseButton: UIButton!
     @IBOutlet var verbHintButton: [UIButton]!
     let fontAndConstraints = FontsAndConstraintsOptions()
+    var totalProgress: Double = 0
     var textFieldIsActivated = false
     lazy var screenDeviceDimension = fontAndConstraints.screenDeviceDimension
     var rightHintWasSelected = false
-    var progressInt: Float = 0.0
     var modeEtTemps = [[String]]()
     var sentenceArray = [[String]]()
     var selectedSentences = [[String]]()
     var indexSentence = Int()
     var arrayVerbe: [[String]] = []
     var didSave: Bool = false
-    var goodResponse: Int = 0
+    var goodResponse: Double = 0
+    var aideCount = Double()
+    var badRep = Double()
     var reponseBonne: String = ""
     var soundURL: NSURL?
     var soundID:SystemSoundID = 0
     var difficulté = DifficultyLevel.FACILE
     let dataController = DataController.sharedInstance
+    
     let managedObjectContext = DataController.sharedInstance.managedObjectContext
     lazy var fetchRequest: NSFetchRequest<NSFetchRequestResult> = {
         let request  = NSFetchRequest<NSFetchRequestResult>(entityName: ItemVerbe.identifier)
@@ -81,6 +84,7 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     }
     override func viewWillAppear(_ animated: Bool) {
         let fonts = FontsAndConstraintsOptions()
+        
         modeLabel.font = fonts.largeBoldFont
         tempsLabel.font = fonts.largeBoldFont
         suggestionButton.titleLabel?.font = fonts.smallItaliqueBoldFont
@@ -99,7 +103,6 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
 
     }
     @objc func keyBoardWillChange(notification: Notification) {
-        print(textFieldIsActivated)
         let distanceFromTextField = view.frame.size.height - (verbTextField.frame.size.height + verbTextField.frame.origin.y)
         guard let keyBoardRec = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
             return
@@ -174,12 +177,12 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     func evaluationReponse(){
         let sentences = Sentences(selectedSentences: selectedSentences, indexSentence: indexSentence)
         sentenceLabel.textColor = UIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
-        print(verbTextField.text)
-        print(reponseBonne)
-        print(rightHintWasSelected)
         if verbTextField.text == reponseBonne || rightHintWasSelected{
-            progressClaculation()
-            goodResponse = goodResponse + 1
+            if rightHintWasSelected {
+                aideCount = aideCount + 1
+            }else{
+                goodResponse = goodResponse + 1
+            }
             sentenceLabel.attributedText = sentences.attributeBonneReponse
             verbResponseButton.setTitle("Bravo!", for: .disabled)
             let filePath = Bundle.main.path(forResource: "Incoming Text 01", ofType: "wav")
@@ -206,6 +209,7 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
             
         }else{
             didSave = false
+            badRep = badRep + 1
             sentenceLabel.attributedText = sentences.attributeMauvaiseReponse
             for item in items {
                 if item.tempsVerbe == selectedSentences[indexSentence][0] && item.modeVerbe == selectedSentences[indexSentence][1] && item.verbeInfinitif == selectedSentences[indexSentence][4]{
@@ -227,12 +231,21 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
             AudioServicesCreateSystemSoundID(soundURL!, &soundID)
             AudioServicesPlaySystemSound(soundID)
         }
+// to be introduced
+        progressClaculation()
+        if totalProgress == Double(10) {
+            let when = DispatchTime.now() + 1.0 // change 2 to desired number of seconds
+            uneAutreQuestionButton.isEnabled = false
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.performSegue(withIdentifier: "showResult", sender: nil)
+            }
+        }
     }
 
 
     func progressClaculation() {
-        progressInt = progressInt + 1
-        let progress = Float(progressInt)/10.0
+        totalProgress = totalProgress + 1
+        let progress = Float(totalProgress)/10.0
         barreProgression.progress = progress
     }
 
@@ -242,18 +255,30 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
             let controller = segue.destination as! ChoixDeTempsViewController
             controller.tempsEtMode = modeEtTemps
         }
+        if segue.identifier == "showResult" {
+            let wichQuiz = UnwindSegueChoice.toContexteViewController
+            let controller = segue.destination as! ResultViewController
+            controller.goodResponse = goodResponse
+            controller.badResponse = badRep
+            controller.aideCount = aideCount
+            controller.totalProgress = totalProgress
+            controller.wichQuiz = wichQuiz
+            
+        }
+    }
+    @IBAction func unwindToContextuekQuiz(segue: UIStoryboardSegue) {
+        totalProgress = 0.0
+        goodResponse = 0
+        aideCount = 0
+        badRep = 0
+        barreProgression.progress = 0.0
+        print("rewind")
+        selectionAutreQuestion()
     }
     // MARK: Buttons
     @IBAction func uneAutreQuestionButtonPushed(_ sender: UIButton) {
-        sentenceLabel.textColor = UIColor.black
-        checkButton.isEnabled = true
-        verbTextField.isEnabled = true
-        verbTextField.textColor = UIColor.black
-        verbResponseButton.setTitle("Choisir le verbe", for: .disabled)
-        choiceOfSentence()
-        difficulté = .DIFFICILE
-        rightHintWasSelected = false
-        TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: verbTextField, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondAppear)
+        selectionAutreQuestion()
+
     }
     @IBAction func checkButton(_ sender: UIButton) {
         evaluationReponse()
@@ -277,9 +302,9 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     }
     @IBAction func suggestionButtonWasPressed(_ sender: UIButton) {
         difficulté = .FACILE
-        questionInitialisation()
         TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: verbTextField, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondAppear)
         suggestionButton.isEnabled = false
+        questionInitialisation()
         suggestionButton.backgroundColor = UIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
     }
     func questionInitialisation() {
@@ -300,6 +325,19 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
             break
         }
         
+    }
+    func selectionAutreQuestion() {
+        sentenceLabel.textColor = UIColor.black
+        checkButton.isEnabled = true
+        verbTextField.isEnabled = true
+        verbTextField.textColor = UIColor.black
+        verbTextField.text = ""
+        verbResponseButton.setTitle("Choisir le verbe", for: .disabled)
+        uneAutreQuestionButton.isEnabled = true
+        difficulté = .DIFFICILE
+        rightHintWasSelected = false
+        TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: verbTextField, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondAppear)
+        choiceOfSentence()
     }
 }
 extension String {

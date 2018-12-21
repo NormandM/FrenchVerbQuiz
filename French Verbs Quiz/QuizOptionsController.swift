@@ -112,12 +112,12 @@ class QuizOptionsController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if segue.identifier == "showQuestionFinal"{
+        if segue.identifier == "showQuizController"{
             verbeInfinitif = ["Tous les verbes"]
             let backItem = UIBarButtonItem()
             backItem.title = ""
             navigationItem.backBarButtonItem = backItem
-            let controller = segue.destination as! QuizController
+            let controller = segue.destination as! QuizViewController
             controller.arraySelection = arraySelection
             controller.arrayVerbe = arrayVerbe
             controller.verbeInfinitif = verbeInfinitif
@@ -150,7 +150,7 @@ class QuizOptionsController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
     }
     func tousLesverbesAction() {
-        performSegue(withIdentifier: "showQuestionFinal", sender: UIBarButtonItem.self)
+        performSegue(withIdentifier: "showQuizController", sender: UIBarButtonItem.self)
     }
     func specifierUnVerbe() {
         performSegue(withIdentifier: "showSpecificVerb", sender: UIBarButtonItem.self)
