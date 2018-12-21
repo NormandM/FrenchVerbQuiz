@@ -17,7 +17,7 @@ class LogoViewController: UIViewController {
     var soundID:SystemSoundID = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       // comment test
     }
     override func viewDidAppear(_ animated: Bool) {
         let appsLabelFrame  = appsLabel.frame
