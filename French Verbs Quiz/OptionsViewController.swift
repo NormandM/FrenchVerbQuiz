@@ -9,6 +9,12 @@
 import UIKit
 
 class OptionsViewController: UIViewController {
+    @IBOutlet weak var listeDesVerbes: UILabel!
+    @IBOutlet weak var quizDeBase: UILabel!
+    @IBOutlet weak var quizContextuel: UILabel!
+    @IBOutlet weak var statistiques: UILabel!
+    
+    
     var arrayVerbe: [[String]] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +26,13 @@ class OptionsViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:true)
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
+    override func viewWillAppear(_ animated: Bool) {
+        let fonts = FontsAndConstraintsOptions()
+        listeDesVerbes.font = fonts.smallItaliqueBoldFont
+        quizDeBase.font = fonts.smallItaliqueBoldFont
+        quizContextuel.font = fonts.smallItaliqueBoldFont
+        statistiques.font = fonts.smallItaliqueBoldFont
     }
-    
-
-    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

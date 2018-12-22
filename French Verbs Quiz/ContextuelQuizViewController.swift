@@ -67,6 +67,7 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
             sentenceArray = arrayNS as! [[String]]
         }
         for sentences in sentenceArray {
+            print(modeEtTemps)
             for selection in modeEtTemps {
                 if selection[0] == sentences[0] && selection[1] == sentences [1] {
                     selectedSentences.append(sentences)
