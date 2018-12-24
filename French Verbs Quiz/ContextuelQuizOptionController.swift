@@ -26,7 +26,7 @@ class ContextuelQuizOptionController: UITableViewController {
         header.contentView.backgroundColor =  UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
        
         header.textLabel!.textColor = UIColor.white //make the text white
-        header.textLabel?.font = fontsAndConstraints.normalBoldFont
+        header.textLabel?.font = fontsAndConstraints.largeBoldFont
         header.alpha = 1.0 //make the header transparent
         
     }

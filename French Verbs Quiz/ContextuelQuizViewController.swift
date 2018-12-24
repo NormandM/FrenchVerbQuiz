@@ -193,7 +193,12 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
             didSave = false
             for item in items {
                 if item.tempsVerbe == selectedSentences[indexSentence][0] && item.modeVerbe == selectedSentences[indexSentence][1] && item.verbeInfinitif == selectedSentences[indexSentence][4]{
-                    item.bonneReponse = item.bonneReponse + 1
+                   
+                    if rightHintWasSelected {
+                        item.bonneReponseTemps = item.bonneReponseTemps + 1
+                    }else{
+                        item.bonneReponse = item.bonneReponse + 1
+                    }
                     didSave = true
                 }
             }
@@ -203,7 +208,12 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
                 itemVerbe.verbeInfinitif = selectedSentences[indexSentence][4]
                 itemVerbe.tempsVerbe = selectedSentences[indexSentence][0]
                 itemVerbe.modeVerbe = selectedSentences[indexSentence][1]
-                itemVerbe.bonneReponse = itemVerbe.bonneReponse + 1
+                
+                if rightHintWasSelected {
+                    itemVerbe.bonneReponseTemps = itemVerbe.bonneReponseTemps + 1
+                }else{
+                    itemVerbe.bonneReponse = itemVerbe.bonneReponse + 1
+                }
             }
             
             dataController.saveContext()

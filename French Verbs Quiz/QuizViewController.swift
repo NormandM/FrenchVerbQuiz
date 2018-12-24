@@ -327,17 +327,27 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
             didSave = false
             for item in items {
                 if item.tempsVerbe == temps.text && item.modeVerbe == mode.text && item.verbeInfinitif == verbe.text{
-                    item.bonneReponse = item.bonneReponse + 1
+                    if rightHintWasSelected {
+                        item.bonneReponseTemps = item.bonneReponseTemps + 1
+                        
+                    }else{
+                        item.bonneReponse = item.bonneReponse + 1
+                    }
                     didSave = true
                 }
             }
             if didSave == false {
                 let itemVerbe = NSEntityDescription.insertNewObject(forEntityName: "ItemVerbe", into: dataController.managedObjectContext) as! ItemVerbe
-                
                 itemVerbe.verbeInfinitif = verbeFinal
                 itemVerbe.tempsVerbe = tempsFinal
                 itemVerbe.modeVerbe = modeFinal
-                itemVerbe.bonneReponse = itemVerbe.bonneReponse + 1
+                if rightHintWasSelected {
+                    itemVerbe.bonneReponseTemps = itemVerbe.bonneReponseTemps + 1
+                    
+                }else{
+                    itemVerbe.bonneReponse = itemVerbe.bonneReponse + 1
+                }
+                
             }
             
             dataController.saveContext()

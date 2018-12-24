@@ -45,6 +45,7 @@
 		8EB91F1D1FACE72500F18F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EB91F1C1FACE72500F18F3E /* GoogleService-Info.plist */; };
 		8EB91F1F1FACE73A00F18F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EB91F1E1FACE73A00F18F3E /* GoogleService-Info.plist */; };
 		8EB91F211FACE74B00F18F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EB91F201FACE74B00F18F3E /* GoogleService-Info.plist */; };
+		8EBCA0A721D040770029D94F /* StatistiqueViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBCA0A621D040770029D94F /* StatistiqueViewCell.swift */; };
 		8EC812FF1F6C70D50052F901 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC812FE1F6C70D50052F901 /* RandomNumberGenerator.swift */; };
 		8EC813021F717E590052F901 /* SelectionQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC813011F717E590052F901 /* SelectionQuestion.swift */; };
 		8EC813041F71C2220052F901 /* QuestionFinale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC813031F71C2220052F901 /* QuestionFinale.swift */; };
@@ -126,6 +127,7 @@
 		8EB91F1C1FACE72500F18F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EB91F1E1FACE73A00F18F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EB91F201FACE74B00F18F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8EBCA0A621D040770029D94F /* StatistiqueViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatistiqueViewCell.swift; sourceTree = "<group>"; };
 		8EC812FE1F6C70D50052F901 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
 		8EC813011F717E590052F901 /* SelectionQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionQuestion.swift; sourceTree = "<group>"; };
 		8EC813031F71C2220052F901 /* QuestionFinale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionFinale.swift; sourceTree = "<group>"; };
@@ -225,7 +227,7 @@
 				8EA41F01219F6E1C004D4D42 /* ListeDeverbes */,
 				8EC813001F717E140052F901 /* Quiz Controller */,
 				8EA41F03219F6FB2004D4D42 /* ContextuelQuiz */,
-				8E020A781DFDE8FE0075B180 /* StatistiqueTableViewController.swift */,
+				8EBCA0A321D03F3E0029D94F /* StatistiqueView */,
 				8E1741EB21BED25C005DE317 /* FontsAndConstraintsOptions.swift */,
 				8E6949D321BDC26800D6C3B2 /* ScreenDimension.swift */,
 				8E91EACE1DF1CA1E008F39A9 /* Assets.xcassets */,
@@ -294,6 +296,15 @@
 				8ECB6F1E21CD77AC00E60DE3 /* UnwindSegueChoice.swift */,
 			);
 			name = ContextuelQuiz;
+			sourceTree = "<group>";
+		};
+		8EBCA0A321D03F3E0029D94F /* StatistiqueView */ = {
+			isa = PBXGroup;
+			children = (
+				8E020A781DFDE8FE0075B180 /* StatistiqueTableViewController.swift */,
+				8EBCA0A621D040770029D94F /* StatistiqueViewCell.swift */,
+			);
+			name = StatistiqueView;
 			sourceTree = "<group>";
 		};
 		8EC813001F717E140052F901 /* Quiz Controller */ = {
@@ -595,6 +606,7 @@
 				8EA41F00219F6DE0004D4D42 /* ContextuelQuizViewController.swift in Sources */,
 				8E1155B21F7C41E400DB78AF /* LogoViewController.swift in Sources */,
 				8E1741EC21BED25C005DE317 /* FontsAndConstraintsOptions.swift in Sources */,
+				8EBCA0A721D040770029D94F /* StatistiqueViewCell.swift in Sources */,
 				8E517D8B1DF3513300EA5087 /* FinalVerbeViewController.swift in Sources */,
 				8E517D891DF2631E00EA5087 /* tempsDeVerbeTableViewController.swift in Sources */,
 				8EC813041F71C2220052F901 /* QuestionFinale.swift in Sources */,
