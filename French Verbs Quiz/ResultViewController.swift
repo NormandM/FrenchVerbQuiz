@@ -28,8 +28,6 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         testCompltete = true
         UserDefaults.standard.set(self.testCompltete, forKey: "testCompltete")
-        print(goodResponse)
-        print(totalProgress)
         resultat.text = "\(goodResponse + aideCount)/\(totalProgress)"
         let result = Double(goodResponse + aideCount)/Double(totalProgress)
         let resultPercent = String(round(result*100)) + " %"
@@ -62,30 +60,14 @@ class ResultViewController: UIViewController {
         }
     }
     func setupChart() {
-        scoreChart.chartDescription?.enabled = false
-        scoreChart.drawHoleEnabled = false
-        scoreChart.rotationAngle = 0
-        scoreChart.rotationEnabled = false
-        scoreChart.isUserInteractionEnabled = false
-        scoreChart.legend.enabled = false
-        var entries : [PieChartDataEntry] = Array()
-        entries.append(PieChartDataEntry(value: aideCount, label: "Aide"))
-        entries.append(PieChartDataEntry(value: goodResponse, label: "Bon"))
-        entries.append(PieChartDataEntry(value: badResponse, label: "Mal"))
-        let dataSet = PieChartDataSet(values: entries, label: "")
-        let cBon = NSUIColor(displayP3Red: 27/255, green: 95/255, blue: 94/255, alpha: 1.0)
-        let cAide = NSUIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
-        let cMal = NSUIColor(displayP3Red: 218/255, green: 69/255, blue: 49/255, alpha: 1.0)
-        dataSet.colors = [cAide, cBon, cMal]
-        dataSet.drawValuesEnabled = false
-        scoreChart.data = PieChartData(dataSet: dataSet)
-        
+        let entrieBon = goodResponse
+        let entrieMal = badResponse
+        let entrieAide = aideCount
+        let pieChartSetUp = PieChartSetUp(entrieBon: entrieBon, entrieMal: entrieMal, entrieAide: entrieAide, pieChartView: scoreChart)
+        scoreChart.data = pieChartSetUp.piechartData
     }
    
     // MARK: - Navigation
-
-
-
     @IBAction func termine(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         switch wichQuiz {
@@ -94,7 +76,5 @@ class ResultViewController: UIViewController {
         case .toQuizViewController:
             performSegue(withIdentifier: wichQuiz.rawValue, sender: self)
         }
-        
-       
     }
 }

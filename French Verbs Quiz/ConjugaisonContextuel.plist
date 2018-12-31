@@ -293,7 +293,7 @@
 	<array>
 		<string>Imparfait</string>
 		<string>indicatif</string>
-		<string></string>
+		<string>Vous</string>
 		<string>souffliez</string>
 		<string>souffler</string>
 		<string>sur votre soupe pour qu&apos;elle refroidisse.</string>
@@ -512,7 +512,7 @@
 		<string>Ce soir, je</string>
 		<string>traduirai</string>
 		<string>traduire</string>
-		<string>l&apos;exercice de bridg sauf si je m&apos;endors avant.</string>
+		<string>l&apos;exercice de bridge sauf si je m&apos;endors avant.</string>
 	</array>
 	<array>
 		<string>Futur simple</string>
@@ -677,7 +677,7 @@
 	<array>
 		<string>Futur simple</string>
 		<string>indicatif</string>
-		<string> Le présiden</string>
+		<string> Le président</string>
 		<string>élucidera</string>
 		<string>élucider</string>
 		<string> ce point épineux.</string>
@@ -840,7 +840,7 @@
 		<string>En 1986, une centrale nucléaire</string>
 		<string>a explosé</string>
 		<string>exploser</string>
-		<string>a explosé (exploser) en Ukraine. Le réacteur est maintenant emprisonné dans du béton.</string>
+		<string>en Ukraine. Le réacteur est maintenant emprisonné dans du béton.</string>
 	</array>
 	<array>
 		<string>Passé composé</string>
@@ -910,7 +910,7 @@
 		<string>Passé composé</string>
 		<string>indicatif</string>
 		<string>Les habitants</string>
-		<string> ont entendu </string>
+		<string>ont entendu</string>
 		<string>entendre</string>
 		<string>un bruit inquiétant la nuit dernière.</string>
 	</array>
@@ -919,7 +919,7 @@
 		<string>indicatif</string>
 		<string>Ce matin, elle</string>
 		<string>s&apos;est réveillée</string>
-		<string>(se réveiller</string>
+		<string>se réveiller</string>
 		<string>de bonne heure.</string>
 	</array>
 	<array>
@@ -1024,7 +1024,7 @@
 		<string>Tu</string>
 		<string>avais eu</string>
 		<string>avoir</string>
-		<string>un beau portable par ton père.</string>
+		<string>un beau portable de ton père.</string>
 	</array>
 	<array>
 		<string>Plus-que-parfait</string>
@@ -1126,7 +1126,7 @@
 		<string>Plus-que-parfait</string>
 		<string>indicatif</string>
 		<string>Paul, Eloïse et moi</string>
-		<string>étions allés </string>
+		<string>étions allés</string>
 		<string>aller</string>
 		<string>au collège à pied.</string>
 	</array>
@@ -1198,7 +1198,7 @@
 		<string>Plus-que-parfait</string>
 		<string>indicatif</string>
 		<string>L&apos; ingénieur</string>
-		<string>avait fin</string>
+		<string>avait fini</string>
 		<string>finir</string>
 		<string>par trouver son erreur.</string>
 	</array>
@@ -1464,7 +1464,7 @@
 		<string>Quand Julien</string>
 		<string>eut bâti</string>
 		<string>bâtir</string>
-		<string>les mots magiques, la caverne s&apos;ouvrit.</string>
+		<string>les murs de son hangar, il y mit son tracteur.</string>
 	</array>
 	<array>
 		<string>Passé antérieur</string>
@@ -1472,7 +1472,7 @@
 		<string>Quand il</string>
 		<string>eut tondu</string>
 		<string>tondre</string>
-		<string>les murs de son hangar, il y mit son tracteur.</string>
+		<string>la pelouse, monsieur Samy se reposa.</string>
 	</array>
 	<array>
 		<string>Passé antérieur</string>
@@ -1480,7 +1480,7 @@
 		<string>Dès que j&apos;</string>
 		<string>eus reçu</string>
 		<string>recevoir</string>
-		<string>la pelouse, monsieur Samy se reposa.</string>
+		<string>la confirmation de ma demande, je guettai le facteur.</string>
 	</array>
 	<array>
 		<string>Passé antérieur</string>
@@ -1488,7 +1488,7 @@
 		<string>Après que les pompiers </string>
 		<string>eurent contrôlé</string>
 		<string>contrôler</string>
-		<string>la confirmation de ma demande, je guettai le facteur.</string>
+		<string>les extincteurs, ils les mirent en marche.</string>
 	</array>
 	<array>
 		<string>Passé antérieur</string>
@@ -1496,7 +1496,7 @@
 		<string>Lorsque la pelleteuse</string>
 		<string>eut creusé</string>
 		<string>creuser</string>
-		<string>les extincteurs, ils les mirent en marche.</string>
+		<string>la tranchée, les travailleurs posèrent les câbles.</string>
 	</array>
 	<array>
 		<string>Passé antérieur</string>
@@ -1504,7 +1504,7 @@
 		<string>Dès que nous </string>
 		<string>eûmes rassemblé</string>
 		<string>rassembler</string>
-		<string>la tranchée, les travailleurs posèrent les câbles.</string>
+		<string>des indices, nous alertâmes la police.</string>
 	</array>
 	<array>
 		<string>Passé antérieur</string>
@@ -1512,7 +1512,7 @@
 		<string>Après qu&apos; ils</string>
 		<string>eurent sucré</string>
 		<string>sucrer</string>
-		<string>des indices, nous alertâmes la police.</string>
+		<string>leur chocolat au lait, ils le laissèrent refroidir.</string>
 	</array>
 	<array>
 		<string>Passé antérieur</string>
@@ -1520,14 +1520,6 @@
 		<string>Lorsque tu</string>
 		<string>eus maîtrisé</string>
 		<string>maîtriser</string>
-		<string>leur chocolat au lait, ils le laissèrent refroidir.</string>
-	</array>
-	<array>
-		<string>Passé antérieur</string>
-		<string>indicatif</string>
-		<string>Lorsque nous</string>
-		<string>fûmes habillés</string>
-		<string>s&apos;habiller</string>
 		<string>les gestes élémentaires, tu fabriquas quelques paniers.</string>
 	</array>
 	<array>
@@ -1646,7 +1638,7 @@
 		<string>Futur antérieur</string>
 		<string>indicatif</string>
 		<string>Dès que tu</string>
-		<string>auras terminé </string>
+		<string>auras terminé</string>
 		<string>terminer</string>
 		<string>ton travail, tu croiseras les bras.</string>
 	</array>
@@ -2014,7 +2006,7 @@
 		<string>Présent</string>
 		<string>conditionnel</string>
 		<string>Les agriculteurs</string>
-		<string>plaindraient</string>
+		<string>se plaindraient</string>
 		<string>se plaindre</string>
 		<string> si le temps ne s&apos;améliorait pas.</string>
 	</array>
@@ -2165,14 +2157,6 @@
 	<array>
 		<string>Passé</string>
 		<string>conditionnel</string>
-		<string>Le chien ne vous</string>
-		<string>aurait pas mordu</string>
-		<string>ne pas mordre</string>
-		<string>si vous l&apos;aviez laissé tranquille.</string>
-	</array>
-	<array>
-		<string>Passé</string>
-		<string>conditionnel</string>
 		<string>S&apos;il avait été sélectionné, il</string>
 		<string>aurait battu</string>
 		<string>battre</string>
@@ -2230,7 +2214,7 @@
 		<string>Passé</string>
 		<string>conditionnel</string>
 		<string>Mes arbres fruitiers</string>
-		<string>auraient fleuri </string>
+		<string>auraient fleuri</string>
 		<string>fleurir</string>
 		<string>s&apos;il n&apos;avait pas gelé tout le mois.</string>
 	</array>
@@ -2358,7 +2342,7 @@
 		<string>Passé</string>
 		<string>conditionnel</string>
 		<string>À ta place,  j&apos;</string>
-		<string> aurais réagi</string>
+		<string>aurais réagi</string>
 		<string>réagir</string>
 		<string>autrement !</string>
 	</array>
@@ -2749,7 +2733,7 @@
 	<array>
 		<string>Imparfait</string>
 		<string>subjonctif</string>
-		<string>Le père de Paul voulut qu&apos;i</string>
+		<string>Le père de Paul voulut qu&apos;il</string>
 		<string>allât</string>
 		<string>aller</string>
 		<string>puiser de l&apos;eau au puits.</string>
@@ -2941,14 +2925,6 @@
 	<array>
 		<string>Passé</string>
 		<string>subjonctif</string>
-		<string>Nous avons passé un bon week-end bien qu&apos;il</string>
-		<string>n&apos;ait pas fait</string>
-		<string>pas</string>
-		<string>beau.</string>
-	</array>
-	<array>
-		<string>Passé</string>
-		<string>subjonctif</string>
 		<string>Vous resterez ici jusqu&apos;à ce que le dernier invité</string>
 		<string>soit sorti</string>
 		<string>sortir</string>
@@ -2969,14 +2945,6 @@
 		<string>ait fait</string>
 		<string>faire</string>
 		<string>ou pas fait, il sera jugé.</string>
-	</array>
-	<array>
-		<string>Passé</string>
-		<string>subjonctif</string>
-		<string>Je ne crois pas que les enfants</string>
-		<string>aient déjà commencé</string>
-		<string>déjà commencer</string>
-		<string>à sortir de l&apos;école.</string>
 	</array>
 	<array>
 		<string>Passé</string>
@@ -3126,7 +3094,7 @@
 		<string>Passé</string>
 		<string>subjonctif</string>
 		<string>Ça m&apos;étonnerait que nous</string>
-		<string>ayons fini </string>
+		<string>ayons fini</string>
 		<string>finir</string>
 		<string>la construction du stade avant le début des jeux olympiques.</string>
 	</array>
@@ -3145,14 +3113,6 @@
 		<string>aies passé</string>
 		<string>passer</string>
 		<string>l&apos;aspirateur, il reste de la poussière.</string>
-	</array>
-	<array>
-		<string>Passé</string>
-		<string>subjonctif</string>
-		<string>Elle a été peinée qu&apos;ils</string>
-		<string>ne soient pas passés</string>
-		<string>ne pas passer</string>
-		<string>chez elle pour la saluer.</string>
 	</array>
 	<array>
 		<string>Passé</string>

@@ -67,7 +67,6 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
             sentenceArray = arrayNS as! [[String]]
         }
         for sentences in sentenceArray {
-            print(modeEtTemps)
             for selection in modeEtTemps {
                 if selection[0] == sentences[0] && selection[1] == sentences [1] {
                     selectedSentences.append(sentences)
@@ -144,11 +143,12 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     @objc func textFieldShouldReturn(_ reponse: UITextField) -> Bool {
         verbTextField.resignFirstResponder()
         evaluationReponse()
-        checkButton.isEnabled = false
         checkButton.setTitleColor(UIColor.gray, for: .disabled)
-        verbTextField.isEnabled = false
         suggestionButton.isEnabled = false
         suggestionButton.backgroundColor = UIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
+        verbTextField.isHidden = true
+        verbResponseButton.isHidden = false
+        checkButton.isHidden = true
         return true
     }
     func hintMenuActiondissapear() {
@@ -283,7 +283,6 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
         aideCount = 0
         badRep = 0
         barreProgression.progress = 0.0
-        print("rewind")
         selectionAutreQuestion()
     }
     // MARK: Buttons
@@ -331,7 +330,7 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
         sentenceLabel.attributedText = sentences.attributeQuestion
         switch difficulté {
         case .FACILE:
-            ChoixFacileVerbeConjugue.verbeConjugue(arrayVerbe: arrayVerbe, infinitif: infinitif, tempsDuVerbe: tempsDuVerbe, modeDuverbe: modeDuverbe, verbHintButton: verbHintButton, hintMenuAction: hintMenuActiondAppear )
+            ChoixFacileVerbeConjugue.verbeConjugue(arrayVerbe: arrayVerbe, infinitif: infinitif, tempsDuVerbe: tempsDuVerbe, modeDuverbe: modeDuverbe, verbHintButton: verbHintButton, hintMenuAction: hintMenuActiondAppear, reponseBonne: reponseBonne )
         default:
             break
         }

@@ -415,7 +415,25 @@
 	<string>to study</string>
 	<key>éviter</key>
 	<string>to avoid</string>
+	<key>moudre</key>
+	<string>to grind</string>
 	<key>être</key>
 	<string>to be</string>
+	<key>sonner</key>
+	<string>to ring</string>
+	<key>approcher</key>
+	<string>to approach</string>
+	<key>achever</key>
+	<string>to finish</string>
+	<key>mouiller</key>
+	<string>to wet</string>
+	<key>vider</key>
+	<string>to empty</string>
+	<key>tordre</key>
+	<string>to twist</string>
+	<key>atteindre</key>
+	<string>to reach</string>
+	<key>cueillir</key>
+	<string>to gather</string>
 </dict>
 </plist>

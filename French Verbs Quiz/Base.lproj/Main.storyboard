@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Normand martin Logo" translatesAutoresizingMaskIntoConstraints="NO" id="U7f-ry-uQS">
-                                <rect key="frame" x="50.666666666666629" y="197.66666666666666" width="311" height="310.66666666666674"/>
+                                <rect key="frame" x="51.666666666666657" y="197.66666666666666" width="310.66666666666674" height="310.66666666666674"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="U7f-ry-uQS" secondAttribute="height" multiplier="1:1" id="Qgd-IU-KZH"/>
                                 </constraints>
@@ -49,6 +49,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="U6s-8v-2qL" firstAttribute="width" secondItem="U7f-ry-uQS" secondAttribute="width" id="5xe-bJ-YHL"/>
+                            <constraint firstItem="MTc-8J-MaC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Df5-Gl-Sk9" secondAttribute="leading" constant="20" symbolic="YES" id="72H-ge-ifg"/>
                             <constraint firstItem="MTc-8J-MaC" firstAttribute="width" secondItem="U6s-8v-2qL" secondAttribute="width" id="9la-iP-QiU"/>
                             <constraint firstItem="U7f-ry-uQS" firstAttribute="centerX" secondItem="Df5-Gl-Sk9" secondAttribute="centerX" id="CX4-xX-4ve"/>
                             <constraint firstItem="U7f-ry-uQS" firstAttribute="width" secondItem="Df5-Gl-Sk9" secondAttribute="height" multiplier="30:71" id="Eco-5Y-AKc"/>
@@ -57,7 +58,6 @@
                             <constraint firstItem="MTc-8J-MaC" firstAttribute="height" secondItem="U6s-8v-2qL" secondAttribute="height" id="I5G-BA-yp6"/>
                             <constraint firstAttribute="trailing" secondItem="MTc-8J-MaC" secondAttribute="trailing" constant="-190" id="aWl-F6-hcc"/>
                             <constraint firstItem="U6s-8v-2qL" firstAttribute="centerX" secondItem="Df5-Gl-Sk9" secondAttribute="centerX" id="lfI-qv-MQR"/>
-                            <constraint firstItem="MTc-8J-MaC" firstAttribute="leading" secondItem="U7f-ry-uQS" secondAttribute="trailing" constant="-68.666666666666629" id="t31-QH-RrY"/>
                             <constraint firstItem="U6s-8v-2qL" firstAttribute="top" secondItem="U7f-ry-uQS" secondAttribute="bottom" constant="1" id="y8n-vd-WUM"/>
                         </constraints>
                     </view>
@@ -213,20 +213,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7b2-Eq-Mbo">
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="War-k6-hrx">
                             <rect key="frame" x="0.0" y="232" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem style="plain" systemItem="flexibleSpace" id="q26-FZ-BjX"/>
-                                <barButtonItem title="Remettre les statistiques à 0" id="h1t-EE-4G1">
-                                    <connections>
-                                        <action selector="remettreAZero:" destination="0GJ-EO-iYI" id="1BA-IR-56B"/>
-                                    </connections>
-                                </barButtonItem>
-                                <barButtonItem style="plain" systemItem="flexibleSpace" id="Ftp-jW-QUL"/>
-                            </items>
-                            <color key="barTintColor" red="0.6705882353" green="0.79607843140000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
-                        </toolbar>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.1058823529" green="0.37254901959999998" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Remise à 0 des statistiques">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="remettreAZero:" destination="0GJ-EO-iYI" eventType="touchUpInside" id="Wim-Wm-i2a"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="204" id="X5m-qX-J3o" customClass="StatistiqueViewCell" customModule="French_Verbs_Quiz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="204"/>
@@ -236,13 +233,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMS-di-wqn">
-                                            <rect key="frame" x="20.000000000000014" y="91.666666666666671" width="216.33333333333337" height="20.333333333333329"/>
+                                            <rect key="frame" x="19.999999999999996" y="91.666666666666671" width="41.666666666666657" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQ7-71-7Lt" customClass="PieChartView" customModule="Charts">
-                                            <rect key="frame" x="241.33333333333337" y="19" width="165.66666666666663" height="165.66666666666666"/>
+                                            <rect key="frame" x="207" y="10.333333333333329" width="183.33333333333337" height="183"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="OQ7-71-7Lt" secondAttribute="height" multiplier="1:1" id="2hv-bx-eB9"/>
@@ -251,15 +248,13 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="nMS-di-wqn" firstAttribute="leading" secondItem="eYh-nT-aAY" secondAttribute="leadingMargin" id="CfH-kh-yV2"/>
-                                        <constraint firstItem="OQ7-71-7Lt" firstAttribute="leading" secondItem="nMS-di-wqn" secondAttribute="trailing" constant="5" id="Pva-Lg-1G8"/>
-                                        <constraint firstAttribute="trailing" secondItem="OQ7-71-7Lt" secondAttribute="trailing" constant="7" id="a6Y-y6-Tdw"/>
+                                        <constraint firstItem="OQ7-71-7Lt" firstAttribute="leading" secondItem="eYh-nT-aAY" secondAttribute="centerX" id="Tk4-E1-GUv"/>
+                                        <constraint firstItem="OQ7-71-7Lt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nMS-di-wqn" secondAttribute="trailing" constant="8" symbolic="YES" id="VfQ-Xc-ahJ"/>
+                                        <constraint firstItem="OQ7-71-7Lt" firstAttribute="height" secondItem="eYh-nT-aAY" secondAttribute="height" multiplier="0.9" id="fAN-Ag-pCS"/>
                                         <constraint firstItem="nMS-di-wqn" firstAttribute="centerY" secondItem="OQ7-71-7Lt" secondAttribute="centerY" id="hRz-lE-tuf"/>
                                         <constraint firstItem="OQ7-71-7Lt" firstAttribute="centerY" secondItem="eYh-nT-aAY" secondAttribute="centerY" id="pLi-Po-b6V"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <constraints>
-                                    <constraint firstItem="OQ7-71-7Lt" firstAttribute="width" secondItem="X5m-qX-J3o" secondAttribute="width" multiplier="0.4" id="HUl-S9-HwJ"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="labelForCell" destination="nMS-di-wqn" id="zRX-8I-NWZ"/>
                                     <outlet property="viewForCell" destination="OQ7-71-7Lt" id="Qvc-SC-MNp"/>
@@ -274,7 +269,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="remettreAZero" destination="h1t-EE-4G1" id="gUy-Hy-cgi"/>
+                        <outlet property="remiseAZeroButton" destination="War-k6-hrx" id="tNp-KO-UDs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogb-Nd-ZkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1065,13 +1060,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jat-lW-vxg">
-                                <rect key="frame" x="181" y="226.66666666666669" width="52" height="24"/>
+                                <rect key="frame" x="181" y="226.66666666666666" width="52" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinitif" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oA-Ne-o3I">
-                                <rect key="frame" x="172.66666666666666" y="182.66666666666669" width="69" height="26"/>
+                                <rect key="frame" x="172.66666666666666" y="182.66666666666666" width="69" height="26"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

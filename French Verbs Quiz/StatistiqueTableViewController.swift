@@ -13,8 +13,9 @@ import Charts
 class StatistiqueTableViewController: UITableViewController {
    
     
-    @IBOutlet weak var remettreAZero: UIBarButtonItem!
-  
+    
+    @IBOutlet weak var remiseAZeroButton: UIButton!
+    
     
     var itemFinal: [[String]] = []
     var itemForPieChartNumBers = [[(Int, Int, Int)]]()
@@ -68,6 +69,10 @@ class StatistiqueTableViewController: UITableViewController {
         populateData()
  
      }
+    override func viewDidAppear(_ animated: Bool) {
+        remiseAZeroButton.layer.cornerRadius = remiseAZeroButton.frame.height / 2.0
+        remiseAZeroButton.titleLabel?.font = fonts.normalBoldFont
+    }
 
 
     // MARK: - Table view data source
@@ -90,36 +95,24 @@ class StatistiqueTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! StatistiqueViewCell
         cell.labelForCell.font = fonts.normalItaliqueBoldFont
+        cell.labelForCell.textAlignment = .center
         cell.labelForCell.numberOfLines = 0
         cell.labelForCell.text = self.itemFinal[indexPath.section][indexPath.row]
-        cell.viewForCell.chartDescription?.enabled = false
-        cell.viewForCell.drawHoleEnabled = false
-        cell.viewForCell.rotationAngle = 0
-        cell.viewForCell.rotationEnabled = false
-        cell.viewForCell.isUserInteractionEnabled = false
-        cell.viewForCell.legend.enabled = false
-        var entries : [PieChartDataEntry] = Array()
-        entries.append(PieChartDataEntry(value: Double(itemForPieChartNumBers[indexPath.section][indexPath.row].2), label: "Aide"))
-        entries.append(PieChartDataEntry(value: Double(itemForPieChartNumBers[indexPath.section][indexPath.row].0), label: "Bon"))
-        entries.append(PieChartDataEntry(value: Double(itemForPieChartNumBers[indexPath.section][indexPath.row].1), label: "Mal"))
-        let dataSet = PieChartDataSet(values: entries, label: "")
-        let cBon = NSUIColor(displayP3Red: 27/255, green: 95/255, blue: 94/255, alpha: 1.0)
-        let cAide = NSUIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
-        let cMal = NSUIColor(displayP3Red: 218/255, green: 69/255, blue: 49/255, alpha: 1.0)
-        dataSet.colors = [cAide, cBon, cMal]
-        dataSet.drawValuesEnabled = false
-        cell.viewForCell.data = PieChartData(dataSet: dataSet)
+        let entrieBon = Double(itemForPieChartNumBers[indexPath.section][indexPath.row].0)
+        let entrieMal = Double(itemForPieChartNumBers[indexPath.section][indexPath.row].1)
+        let entrieAide = Double(itemForPieChartNumBers[indexPath.section][indexPath.row].2)
+        let pieChartSetUp = PieChartSetUp(entrieBon: entrieBon, entrieMal: entrieMal, entrieAide: entrieAide, pieChartView: cell.viewForCell )
+        cell.viewForCell.data = pieChartSetUp.piechartData
         return cell
     }
 //////////////////////////////////////
 // MARK: All Buttons and actions
 //////////////////////////////////////
 
-     @IBAction func remettreAZero(_ sender: UIBarButtonItem) {
-        remettreAZero.tintColor = UIColor.black
+     @IBAction func remettreAZero(_ sender: UIButton) {
+        remiseAZeroButton.tintColor = UIColor.black
         do {
             let items = try managedObjectContext.fetch(fetchRequest) as! [NSManagedObject]
             
@@ -214,7 +207,6 @@ class StatistiqueTableViewController: UITableViewController {
             print("Error fetching Item objects: \(error.localizedDescription), \(error.userInfo)")
         }
         for item in items {
-            print("ok")
             if let tempVerbe = TempsDeVerbe(rawValue: (item.modeVerbe! + item.tempsVerbe!)){
                 switch tempVerbe {
                 case .présent:
@@ -285,31 +277,78 @@ class StatistiqueTableViewController: UITableViewController {
             }
             
         }
-        indicatifprésentP = "Présent: " + pourcentage(bonne: indicatifprésentB, mauvaise: indicatifprésentM, aide: indicatifprésentA)
-        indicatifimparfaitP = "Imparfait: " + pourcentage(bonne: indicatifimparfaitB, mauvaise: indicatifimparfaitM, aide: indicatifimparfaitA)
-        indicatifpassécomposéP = "Passé composé: " + pourcentage(bonne: indicatifpassécomposéB, mauvaise: indicatifpassécomposéM, aide: indicatifpassécomposéA)
-        indicatifpassésimpleP = "Passé simple: " + pourcentage(bonne: indicatifpassésimpleB, mauvaise: indicatifpassésimpleM, aide: indicatifpassésimpleA)
-        indicatifpasséantérieurP = "Passé antérieur: " + pourcentage(bonne: indicatifpasséantérieurB, mauvaise: indicatifpasséantérieurM, aide: indicatifpasséantérieurA)
-        indicatiffutursimpleP = "Futur simple: " + pourcentage(bonne: indicatiffutursimpleB, mauvaise: indicatiffutursimpleM, aide: indicatiffutursimpleA)
-        indicatifplusqueparfaitP = "Plus-que-parfait: " + pourcentage(bonne: indicatifplusqueparfaitB, mauvaise: indicatifplusqueparfaitM, aide: indicatifplusqueparfaitA)
-        indicatiffuturantérieurP = "Futur antérieur: " + pourcentage(bonne: indicatiffuturantérieurB, mauvaise: indicatiffuturantérieurM, aide: indicatiffuturantérieurA)
-        subjonctifprésentP = "Présent: " + pourcentage(bonne: subjonctifprésentB, mauvaise: subjonctifprésentM, aide: subjonctifprésentA)
-        subjonctifpasséP = "Passé: " + pourcentage(bonne: subjonctifpasséB, mauvaise: subjonctifpasséM, aide: subjonctifpasséA)
-        subjonctifimparfaitP = "Imparfait: " + pourcentage(bonne: subjonctifimparfaitB, mauvaise: subjonctifimparfaitM, aide: subjonctifimparfaitA)
-        subjonctifplusqueparfaitP = "Plus-que-parfait: " + pourcentage(bonne: subjonctifplusqueparfaitB, mauvaise: subjonctifplusqueparfaitM, aide: subjonctifplusqueparfaitA)
-        conditionnelprésentP = "Présent: " + pourcentage(bonne: conditionnelprésentB, mauvaise: conditionnelprésentM, aide: conditionnelprésentA)
-        conditionnelpasséP = "Passé: " + pourcentage(bonne: conditionnelpasséB, mauvaise: conditionnelpasséM, aide: conditionnelpasséA)
-        impératifprésentP = "Présent: " + pourcentage(bonne: impératifprésentB, mauvaise: impératifprésentM, aide: impératifprésentA)
-        impératifpasséP = "Passé: " + pourcentage(bonne: impératifpasséB, mauvaise: impératifpasséM, aide: impératifpasséA)
-        
+        indicatifprésentP = """
+        Présent:
+        \(pourcentage(bonne: indicatifprésentB, mauvaise: indicatifprésentM, aide: indicatifprésentA))
+        """
+        indicatifimparfaitP = """
+        Imparfait:
+        \(pourcentage(bonne: indicatifimparfaitB, mauvaise: indicatifimparfaitM, aide: indicatifimparfaitA))
+        """
+        indicatifpassécomposéP = """
+        Passé composé:
+        \(pourcentage(bonne: indicatifpassécomposéB, mauvaise: indicatifpassécomposéM, aide: indicatifpassécomposéA))
+        """
+        indicatifpassésimpleP = """
+        Passé simple:
+        \(pourcentage(bonne: indicatifpassésimpleB, mauvaise: indicatifpassésimpleM, aide: indicatifpassésimpleA))
+        """
+        indicatifpasséantérieurP = """
+        Passé antérieur:
+        \(pourcentage(bonne: indicatifpasséantérieurB, mauvaise: indicatifpasséantérieurM, aide: indicatifpasséantérieurA))
+        """
+        indicatiffutursimpleP = """
+        Futur simple:
+        \(pourcentage(bonne: indicatiffutursimpleB, mauvaise: indicatiffutursimpleM, aide: indicatiffutursimpleA))
+        """
+        indicatifplusqueparfaitP = """
+        Plus-que-parfait:
+        \(pourcentage(bonne: indicatifplusqueparfaitB, mauvaise: indicatifplusqueparfaitM, aide: indicatifplusqueparfaitA))
+        """
+        indicatiffuturantérieurP = """
+        Futur antérieur:
+        \(pourcentage(bonne: indicatiffuturantérieurB, mauvaise: indicatiffuturantérieurM, aide: indicatiffuturantérieurA))
+        """
+        subjonctifprésentP = """
+        Présent:
+        \(pourcentage(bonne: subjonctifprésentB, mauvaise: subjonctifprésentM, aide: subjonctifprésentA))
+        """
+        subjonctifpasséP = """
+        Passé:
+        \(pourcentage(bonne: subjonctifpasséB, mauvaise: subjonctifpasséM, aide: subjonctifpasséA))
+        """
+        subjonctifimparfaitP = """
+        Imparfait:
+        \(pourcentage(bonne: subjonctifimparfaitB, mauvaise: subjonctifimparfaitM, aide: subjonctifimparfaitA))
+        """
+        subjonctifplusqueparfaitP = """
+        Plus-que-parfait:
+        \(pourcentage(bonne: subjonctifplusqueparfaitB, mauvaise: subjonctifplusqueparfaitM, aide: subjonctifplusqueparfaitA))
+        """
+        conditionnelprésentP = """
+        Présent:
+        \(pourcentage(bonne: conditionnelprésentB, mauvaise: conditionnelprésentM, aide: conditionnelprésentA))
+        """
+        conditionnelpasséP = """
+        Passé:
+        \(pourcentage(bonne: conditionnelpasséB, mauvaise: conditionnelpasséM, aide: conditionnelpasséA))
+        """
+        impératifprésentP = """
+        Présent:
+        \(pourcentage(bonne: impératifprésentB, mauvaise: impératifprésentM, aide: impératifprésentA))
+        """
+        impératifpasséP = """
+        Passé:
+        \(pourcentage(bonne: impératifpasséB, mauvaise: impératifpasséM, aide: impératifpasséA))
+        """
         itemFinal = [[indicatifprésentP, indicatifimparfaitP, indicatifpassécomposéP, indicatiffutursimpleP, indicatifpassésimpleP, indicatifplusqueparfaitP, indicatiffuturantérieurP, indicatifpasséantérieurP], [subjonctifprésentP, subjonctifpasséP, subjonctifimparfaitP, subjonctifplusqueparfaitP, subjonctifplusqueparfaitP], [conditionnelprésentP, conditionnelpasséP], [impératifprésentP, impératifpasséP]]
-        itemForPieChartNumBers = [[(indicatifprésentB, indicatifprésentM, indicatifprésentA), (indicatifimparfaitB, indicatifimparfaitM,indicatifimparfaitA), (indicatifpassécomposéB, indicatifpassécomposéM, indicatifpassécomposéA), (indicatifpassésimpleB, indicatifpassésimpleM, indicatifpassésimpleA), (indicatifpasséantérieurB, indicatifpasséantérieurM, indicatifpasséantérieurA), (indicatiffutursimpleB, indicatiffutursimpleM, indicatiffutursimpleA), (bonne: indicatifplusqueparfaitB, mauvaise: indicatifplusqueparfaitM, aide: indicatifplusqueparfaitA), (bonne: indicatiffuturantérieurB, mauvaise: indicatiffuturantérieurM, aide: indicatiffuturantérieurA)], [(subjonctifprésentB, subjonctifprésentM, subjonctifprésentA), (subjonctifpasséB, mauvaise: subjonctifpasséM, aide: subjonctifpasséA), (subjonctifimparfaitB, subjonctifimparfaitM, subjonctifimparfaitA), (subjonctifplusqueparfaitB, subjonctifplusqueparfaitM, subjonctifplusqueparfaitA)], [(conditionnelprésentB, conditionnelprésentM, conditionnelprésentA), (conditionnelpasséB, conditionnelpasséM, conditionnelpasséA)], [(impératifprésentB, impératifprésentM, impératifprésentA), (impératifpasséB, impératifpasséM, impératifpasséA)]]
+        itemForPieChartNumBers = [[(indicatifprésentB, indicatifprésentM, indicatifprésentA), (indicatifimparfaitB, indicatifimparfaitM,indicatifimparfaitA), (indicatifpassécomposéB, indicatifpassécomposéM, indicatifpassécomposéA), (indicatiffutursimpleB, indicatiffutursimpleM, indicatiffutursimpleA),(indicatifpassésimpleB, indicatifpassésimpleM, indicatifpassésimpleA), (bonne: indicatifplusqueparfaitB, mauvaise: indicatifplusqueparfaitM, aide: indicatifplusqueparfaitA), (bonne: indicatiffuturantérieurB, mauvaise: indicatiffuturantérieurM, aide: indicatiffuturantérieurA), (indicatifpasséantérieurB, indicatifpasséantérieurM, indicatifpasséantérieurA)],  [(subjonctifprésentB, subjonctifprésentM, subjonctifprésentA), (subjonctifpasséB, mauvaise: subjonctifpasséM, aide: subjonctifpasséA), (subjonctifimparfaitB, subjonctifimparfaitM, subjonctifimparfaitA), (subjonctifplusqueparfaitB, subjonctifplusqueparfaitM, subjonctifplusqueparfaitA)], [(conditionnelprésentB, conditionnelprésentM, conditionnelprésentA), (conditionnelpasséB, conditionnelpasséM, conditionnelpasséA)], [(impératifprésentB, impératifprésentM, impératifprésentA), (impératifpasséB, impératifpasséM, impératifpasséA)]]
 
     }
     
     func pourcentage (bonne: Int, mauvaise: Int, aide: Int) -> String{
         var result = ""
-        if (bonne + mauvaise) != 0 {
+        if (bonne + mauvaise + aide) != 0 {
             result = String(round (Double(bonne + aide) / Double(bonne + mauvaise + aide) * 100)) + "%"
         }else{
             result = "_"

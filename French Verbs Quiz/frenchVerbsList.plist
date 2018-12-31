@@ -249,7 +249,7 @@
 		<string>sera</string>
 		<string>serons</string>
 		<string>serez</string>
-		<string>iles seront</string>
+		<string>seront</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -2751,10 +2751,10 @@
 		<string>Présent</string>
 		<string>vouloir</string>
 		<string></string>
-		<string>-</string>
+		<string>veuille</string>
 		<string></string>
-		<string>-</string>
-		<string>-</string>
+		<string>voulons</string>
+		<string>veuillez</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -2905,10 +2905,10 @@
 		<string>Passé</string>
 		<string>vouloir</string>
 		<string></string>
-		<string>-</string>
+		<string>aie voulu</string>
 		<string></string>
-		<string>-</string>
-		<string>-</string>
+		<string>ayons voulu</string>
+		<string>ayez voulu</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -11039,10 +11039,10 @@
 		<string>Présent</string>
 		<string>pleuvoir</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -11193,10 +11193,10 @@
 		<string>Passé</string>
 		<string>pleuvoir</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -11487,10 +11487,10 @@
 		<string>Présent</string>
 		<string>valoir</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
-		<string>n&apos;existe pas</string>
-		<string>n&apos;existe pas</string>
+		<string>n'existe pas</string>
+		<string>n'existe pas</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -25317,13 +25317,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Présent</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absente</string>
-		<string>t&apos;absentes</string>
-		<string>s&apos;absente</string>
+		<string>s'absenter</string>
+		<string>m'absente</string>
+		<string>t'absentes</string>
+		<string>s'absente</string>
 		<string>nous absentons</string>
 		<string>vous absentez</string>
-		<string>s&apos;absentent</string>
+		<string>s'absentent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25331,10 +25331,10 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé composé</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me suis absenté</string>
-		<string>t&apos;es absenté</string>
-		<string>s&apos;est absenté</string>
+		<string>t'es absenté</string>
+		<string>s'est absenté</string>
 		<string>nous sommes absentés</string>
 		<string>vous êtes absentés</string>
 		<string>se sont absentés</string>
@@ -25345,13 +25345,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Imparfait</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absentais</string>
-		<string>t&apos;absentais</string>
-		<string>s&apos;absentait</string>
+		<string>s'absenter</string>
+		<string>m'absentais</string>
+		<string>t'absentais</string>
+		<string>s'absentait</string>
 		<string>nous absentions</string>
 		<string>vous absentiez</string>
-		<string>s&apos;absentaient</string>
+		<string>s'absentaient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25359,13 +25359,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;étais absenté</string>
-		<string>t&apos;étais absenté</string>
-		<string>s&apos;était absenté</string>
+		<string>s'absenter</string>
+		<string>m'étais absenté</string>
+		<string>t'étais absenté</string>
+		<string>s'était absenté</string>
 		<string>nous étions absentés</string>
 		<string>vous étiez absentés</string>
-		<string>s&apos;étaient absentés</string>
+		<string>s'étaient absentés</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25373,13 +25373,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé simple</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absentai</string>
-		<string>t&apos;absentas</string>
-		<string>s&apos;absenta</string>
+		<string>s'absenter</string>
+		<string>m'absentai</string>
+		<string>t'absentas</string>
+		<string>s'absenta</string>
 		<string>nous absentâmes</string>
 		<string>vous absentâtes</string>
-		<string>s&apos;absentèrent</string>
+		<string>s'absentèrent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25387,7 +25387,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé antérieur</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me fus absenté</string>
 		<string>te fus absenté</string>
 		<string>se fut absenté</string>
@@ -25401,13 +25401,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur simple</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absenterai</string>
-		<string>t&apos;absenteras</string>
-		<string>s&apos;absentera</string>
+		<string>s'absenter</string>
+		<string>m'absenterai</string>
+		<string>t'absenteras</string>
+		<string>s'absentera</string>
 		<string>nous absenterons</string>
 		<string>vous absenterez</string>
-		<string>s&apos;absenteront</string>
+		<string>s'absenteront</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25415,7 +25415,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur antérieur</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me serai absenté</string>
 		<string>te seras absenté</string>
 		<string>se sera absenté</string>
@@ -25429,13 +25429,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absente</string>
-		<string>t&apos;absentes</string>
-		<string>s&apos;absente</string>
+		<string>s'absenter</string>
+		<string>m'absente</string>
+		<string>t'absentes</string>
+		<string>s'absente</string>
 		<string>nous absentions</string>
 		<string>vous absentiez</string>
-		<string>s&apos;absentent</string>
+		<string>s'absentent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25443,7 +25443,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Passé</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me sois absenté</string>
 		<string>te sois absenté</string>
 		<string>se soit absenté</string>
@@ -25457,13 +25457,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Imparfait</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absentasse</string>
-		<string>t&apos;absentasses</string>
-		<string>s&apos;absentât</string>
+		<string>s'absenter</string>
+		<string>m'absentasse</string>
+		<string>t'absentasses</string>
+		<string>s'absentât</string>
 		<string>nous absentassions</string>
 		<string>vous absentassiez</string>
-		<string>s&apos;absentassent</string>
+		<string>s'absentassent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25471,7 +25471,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me fusse absenté</string>
 		<string>te fusses absenté</string>
 		<string>se fût absenté</string>
@@ -25485,13 +25485,13 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Présent</string>
-		<string>s&apos;absenter</string>
-		<string>m&apos;absenterais</string>
-		<string>t&apos;absenterais</string>
-		<string>s&apos;absenterait</string>
+		<string>s'absenter</string>
+		<string>m'absenterais</string>
+		<string>t'absenterais</string>
+		<string>s'absenterait</string>
 		<string>nous absenterions</string>
 		<string>vous absenteriez</string>
-		<string>s&apos;absenteraient</string>
+		<string>s'absenteraient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25499,7 +25499,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Passé</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string>me serais absenté</string>
 		<string>te serais absenté</string>
 		<string>se serait absenté</string>
@@ -25513,7 +25513,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Présent</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string></string>
 		<string>absente-toi</string>
 		<string></string>
@@ -25527,7 +25527,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Passé</string>
-		<string>s&apos;absenter</string>
+		<string>s'absenter</string>
 		<string></string>
 		<string>-</string>
 		<string></string>
@@ -29125,7 +29125,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Présent</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>cueille</string>
 		<string>cueilles</string>
 		<string>cueille</string>
@@ -29139,7 +29139,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé composé</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>ai cueilli</string>
 		<string>as cueilli</string>
 		<string>a cueilli</string>
@@ -29153,7 +29153,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Imparfait</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>cueillais</string>
 		<string>cueillais</string>
 		<string>cueillait</string>
@@ -29167,7 +29167,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Plus-que-parfait</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>avais cueilli</string>
 		<string>avais cueilli</string>
 		<string>avait cueilli</string>
@@ -29181,7 +29181,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé simple</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>cueillis</string>
 		<string>cueillis</string>
 		<string>cueillit</string>
@@ -29195,7 +29195,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé antérieur</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>eus cueilli</string>
 		<string>eus cueilli</string>
 		<string>eut cueilli</string>
@@ -29209,7 +29209,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur simple</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>cueillerai</string>
 		<string>cueilleras</string>
 		<string>cueillera</string>
@@ -29223,7 +29223,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur antérieur</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>aurai cueilli</string>
 		<string>auras cueilli</string>
 		<string>aura cueilli</string>
@@ -29237,7 +29237,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>cueille</string>
 		<string>cueilles</string>
 		<string>cueille</string>
@@ -29251,7 +29251,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Passé</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>aie cueilli</string>
 		<string>aies cueilli</string>
 		<string>ait cueilli</string>
@@ -29265,7 +29265,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Imparfait</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>cueillisse</string>
 		<string>cueillisses</string>
 		<string>cueillît</string>
@@ -29279,7 +29279,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Plus-que-parfait</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>eusse cueilli</string>
 		<string>eusses cueilli</string>
 		<string>eût cueilli</string>
@@ -29293,7 +29293,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Présent</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>cueillerais</string>
 		<string>cueillerais</string>
 		<string>cueillerait</string>
@@ -29307,7 +29307,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Passé</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string>aurais cueilli</string>
 		<string>aurais cueilli</string>
 		<string>aurait cueilli</string>
@@ -29321,7 +29321,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Présent</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string></string>
 		<string>cueille</string>
 		<string></string>
@@ -29335,7 +29335,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Passé</string>
-		<string>creuser</string>
+		<string>cueillir</string>
 		<string></string>
 		<string>aie cueilli</string>
 		<string></string>
@@ -31813,13 +31813,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Présent</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouis</string>
-		<string>t&apos;évanouis</string>
-		<string>s&apos;évanouit</string>
+		<string>s'évanouir</string>
+		<string>m'évanouis</string>
+		<string>t'évanouis</string>
+		<string>s'évanouit</string>
 		<string>nous évanouissons</string>
 		<string>vous évanouissez</string>
-		<string>s&apos;évanouissent</string>
+		<string>s'évanouissent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31827,10 +31827,10 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé composé</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me suis évanoui</string>
-		<string>t&apos;es évanoui</string>
-		<string>s&apos;est évanoui</string>
+		<string>t'es évanoui</string>
+		<string>s'est évanoui</string>
 		<string>nous sommes évanouis</string>
 		<string>vous êtes évanouis</string>
 		<string>se sont évanouis</string>
@@ -31841,13 +31841,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Imparfait</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouissais</string>
-		<string>t&apos;évanouissais</string>
-		<string>s&apos;évanouissait</string>
+		<string>s'évanouir</string>
+		<string>m'évanouissais</string>
+		<string>t'évanouissais</string>
+		<string>s'évanouissait</string>
 		<string>nous évanouissions</string>
 		<string>vous évanouissiez</string>
-		<string>s&apos;évanouissaient</string>
+		<string>s'évanouissaient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31855,13 +31855,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;étais évanoui</string>
-		<string>t&apos;étais évanoui</string>
-		<string>s&apos;était évanoui</string>
+		<string>s'évanouir</string>
+		<string>m'étais évanoui</string>
+		<string>t'étais évanoui</string>
+		<string>s'était évanoui</string>
 		<string>nous étions évanouis</string>
 		<string>vous étiez évanouis</string>
-		<string>s&apos;étaient évanouis</string>
+		<string>s'étaient évanouis</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31869,13 +31869,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé simple</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouis</string>
-		<string>t&apos;évanouis</string>
-		<string>s&apos;évanouit</string>
+		<string>s'évanouir</string>
+		<string>m'évanouis</string>
+		<string>t'évanouis</string>
+		<string>s'évanouit</string>
 		<string>nous évanouîmes</string>
 		<string>vous évanouîtes</string>
-		<string>s&apos;évanouirent</string>
+		<string>s'évanouirent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31883,7 +31883,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé antérieur</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me fus évanoui</string>
 		<string>te fus évanoui</string>
 		<string>se fut évanoui</string>
@@ -31897,13 +31897,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur simple</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouirai</string>
-		<string>t&apos;évanouiras</string>
-		<string>s&apos;évanouira</string>
+		<string>s'évanouir</string>
+		<string>m'évanouirai</string>
+		<string>t'évanouiras</string>
+		<string>s'évanouira</string>
 		<string>nous évanouirons</string>
 		<string>vous évanouirez</string>
-		<string>s&apos;évanouiront</string>
+		<string>s'évanouiront</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31911,7 +31911,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur antérieur</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me serai évanoui</string>
 		<string>te seras évanoui</string>
 		<string>se sera évanoui</string>
@@ -31925,13 +31925,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouisse</string>
-		<string>t&apos;évanouisses</string>
-		<string>s&apos;évanouisse</string>
+		<string>s'évanouir</string>
+		<string>m'évanouisse</string>
+		<string>t'évanouisses</string>
+		<string>s'évanouisse</string>
 		<string>nous évanouissions</string>
 		<string>vous évanouissiez</string>
-		<string>s&apos;évanouissent</string>
+		<string>s'évanouissent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31939,7 +31939,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Passé</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me sois évanoui</string>
 		<string>te sois évanoui</string>
 		<string>se soit évanoui</string>
@@ -31953,13 +31953,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Imparfait</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouisse</string>
-		<string>t&apos;évanouisses</string>
-		<string>s&apos;évanouît</string>
+		<string>s'évanouir</string>
+		<string>m'évanouisse</string>
+		<string>t'évanouisses</string>
+		<string>s'évanouît</string>
 		<string>nous évanouissions</string>
 		<string>vous évanouissiez</string>
-		<string>s&apos;évanouissent</string>
+		<string>s'évanouissent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31967,7 +31967,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me fusse évanoui</string>
 		<string>te fusses évanoui</string>
 		<string>se fût évanoui</string>
@@ -31981,13 +31981,13 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Présent</string>
-		<string>s&apos;évanouir</string>
-		<string>m&apos;évanouirais</string>
-		<string>t&apos;évanouirais</string>
-		<string>s&apos;évanouirait</string>
+		<string>s'évanouir</string>
+		<string>m'évanouirais</string>
+		<string>t'évanouirais</string>
+		<string>s'évanouirait</string>
 		<string>nous évanouirions</string>
 		<string>vous évanouiriez</string>
-		<string>s&apos;évanouiraient</string>
+		<string>s'évanouiraient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31995,7 +31995,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Passé</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string>me serais évanoui</string>
 		<string>te serais évanoui</string>
 		<string>se serait évanoui</string>
@@ -32009,7 +32009,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Présent</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string></string>
 		<string>évanouis-toi</string>
 		<string></string>
@@ -32023,7 +32023,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Passé</string>
-		<string>s&apos;évanouir</string>
+		<string>s'évanouir</string>
 		<string></string>
 		<string>-</string>
 		<string></string>
@@ -34277,13 +34277,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Présent</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasie</string>
-		<string>t&apos;extasies</string>
-		<string>s&apos;extasie</string>
+		<string>s'extasier</string>
+		<string>m'extasie</string>
+		<string>t'extasies</string>
+		<string>s'extasie</string>
 		<string>nous extasions</string>
 		<string>vous extasiez</string>
-		<string>s&apos;extasient</string>
+		<string>s'extasient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34291,10 +34291,10 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé composé</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me suis extasié</string>
-		<string>t&apos;es extasié</string>
-		<string>s&apos;est extasié</string>
+		<string>t'es extasié</string>
+		<string>s'est extasié</string>
 		<string>nous sommes extasiés</string>
 		<string>vous êtes extasiés</string>
 		<string>se sont extasiés</string>
@@ -34305,13 +34305,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Imparfait</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasiais</string>
-		<string>t&apos;extasiais</string>
-		<string>s&apos;extasiait</string>
+		<string>s'extasier</string>
+		<string>m'extasiais</string>
+		<string>t'extasiais</string>
+		<string>s'extasiait</string>
 		<string>nous extasiions</string>
 		<string>vous extasiiez</string>
-		<string>s&apos;extasiaient</string>
+		<string>s'extasiaient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34319,13 +34319,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;étais extasié</string>
-		<string>t&apos;étais extasié</string>
-		<string>s&apos;était extasié</string>
+		<string>s'extasier</string>
+		<string>m'étais extasié</string>
+		<string>t'étais extasié</string>
+		<string>s'était extasié</string>
 		<string>nous étions extasiés</string>
 		<string>vous étiez extasiés</string>
-		<string>s&apos;étaient extasiés</string>
+		<string>s'étaient extasiés</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34333,13 +34333,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé simple</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasiai</string>
-		<string>t&apos;extasias</string>
-		<string>s&apos;extasia</string>
+		<string>s'extasier</string>
+		<string>m'extasiai</string>
+		<string>t'extasias</string>
+		<string>s'extasia</string>
 		<string>nous extasiâmes</string>
 		<string>vous extasiâtes</string>
-		<string>s&apos;extasièrent</string>
+		<string>s'extasièrent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34347,7 +34347,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé antérieur</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me fus extasié</string>
 		<string>te fus extasié</string>
 		<string>se fut extasié</string>
@@ -34361,13 +34361,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur simple</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasierai</string>
-		<string>t&apos;extasieras</string>
-		<string>s&apos;extasiera</string>
+		<string>s'extasier</string>
+		<string>m'extasierai</string>
+		<string>t'extasieras</string>
+		<string>s'extasiera</string>
 		<string>nous extasierons</string>
 		<string>vous extasierez</string>
-		<string>s&apos;extasieront</string>
+		<string>s'extasieront</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34375,7 +34375,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur antérieur</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me serai extasié</string>
 		<string>te seras extasié</string>
 		<string>se sera extasié</string>
@@ -34389,13 +34389,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasie</string>
-		<string>t&apos;extasies</string>
-		<string>s&apos;extasie</string>
+		<string>s'extasier</string>
+		<string>m'extasie</string>
+		<string>t'extasies</string>
+		<string>s'extasie</string>
 		<string>nous extasiions</string>
 		<string>vous extasiiez</string>
-		<string>s&apos;extasient</string>
+		<string>s'extasient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34403,7 +34403,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Passé</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me sois extasié</string>
 		<string>te sois extasié</string>
 		<string>se soit extasié</string>
@@ -34417,13 +34417,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Imparfait</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasiasse</string>
-		<string>t&apos;extasiasses</string>
-		<string>s&apos;extasiât</string>
+		<string>s'extasier</string>
+		<string>m'extasiasse</string>
+		<string>t'extasiasses</string>
+		<string>s'extasiât</string>
 		<string>nous extasiassions</string>
 		<string>vous extasiassiez</string>
-		<string>s&apos;extasiassent</string>
+		<string>s'extasiassent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34431,7 +34431,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Plus-que-parfait</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me fusse extasié</string>
 		<string>te fusses extasié</string>
 		<string>se fût extasié</string>
@@ -34445,13 +34445,13 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Présent</string>
-		<string>s&apos;extasier</string>
-		<string>m&apos;extasierais</string>
-		<string>t&apos;extasierais</string>
-		<string>s&apos;extasierait</string>
+		<string>s'extasier</string>
+		<string>m'extasierais</string>
+		<string>t'extasierais</string>
+		<string>s'extasierait</string>
 		<string>nous extasierions</string>
 		<string>vous extasieriez</string>
-		<string>s&apos;extasieraient</string>
+		<string>s'extasieraient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34459,7 +34459,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Passé</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string>me serais extasié</string>
 		<string>te serais extasié</string>
 		<string>se serait extasié</string>
@@ -34473,7 +34473,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Présent</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string></string>
 		<string>extasie-toi</string>
 		<string></string>
@@ -34487,7 +34487,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Passé</string>
-		<string>s&apos;extasier</string>
+		<string>s'extasier</string>
 		<string></string>
 		<string>-</string>
 		<string></string>
@@ -47262,6 +47262,2622 @@
 		<string>ayons tapé</string>
 		<string>ayez tapé</string>
 		<string></string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>sonner</string>
+		<string>sonne</string>
+		<string>sonnes</string>
+		<string>sonne</string>
+		<string>sonnons</string>
+		<string>sonnez</string>
+		<string>sonnent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>sonner</string>
+		<string>ai sonné</string>
+		<string>as sonné</string>
+		<string>a sonné</string>
+		<string>avons sonné</string>
+		<string>avez sonné</string>
+		<string>ont sonné</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>sonner</string>
+		<string>sonnais</string>
+		<string>sonnais</string>
+		<string>sonnait</string>
+		<string>sonnions</string>
+		<string>sonniez</string>
+		<string>sonnaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>sonner</string>
+		<string>avais sonné</string>
+		<string>avais sonné</string>
+		<string>avait sonné</string>
+		<string>avions sonné</string>
+		<string>aviez sonné</string>
+		<string>avaient sonné</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>sonner</string>
+		<string>sonnai</string>
+		<string>sonnas</string>
+		<string>sonna</string>
+		<string>sonnâmes</string>
+		<string>sonnâtes</string>
+		<string>sonnèrent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>sonner</string>
+		<string>eus sonné</string>
+		<string>eus sonné</string>
+		<string>eut sonné</string>
+		<string>eûmes sonné</string>
+		<string>eûtes sonné</string>
+		<string>eurent sonné</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>sonner</string>
+		<string>sonnerai</string>
+		<string>sonneras</string>
+		<string>sonnera</string>
+		<string>sonnerons</string>
+		<string>sonnerez</string>
+		<string>sonneront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>sonner</string>
+		<string>aurai sonné</string>
+		<string>auras sonné</string>
+		<string>aura sonné</string>
+		<string>aurons sonné</string>
+		<string>aurez sonné</string>
+		<string>auront sonné</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>sonner</string>
+		<string>sonne</string>
+		<string>sonnes</string>
+		<string>sonne</string>
+		<string>sonnions</string>
+		<string>sonniez</string>
+		<string>sonnent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>sonner</string>
+		<string>aie sonné</string>
+		<string>aies sonné</string>
+		<string>ait sonné</string>
+		<string>ayons sonné</string>
+		<string>ayez sonné</string>
+		<string>aient sonné</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>sonner</string>
+		<string>sonnasse</string>
+		<string>sonnasses</string>
+		<string>sonnât</string>
+		<string>sonnassions</string>
+		<string>sonnassiez</string>
+		<string>sonnassent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>sonner</string>
+		<string>eusse sonné</string>
+		<string>eusses sonné</string>
+		<string>eût sonné</string>
+		<string>eussions sonné</string>
+		<string>eussiez sonné</string>
+		<string>eussent sonné</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>sonner</string>
+		<string>sonnerais</string>
+		<string>sonnerais</string>
+		<string>sonnerait</string>
+		<string>sonnerions</string>
+		<string>sonneriez</string>
+		<string>sonneraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>sonner</string>
+		<string>aurais sonné</string>
+		<string>aurais sonné</string>
+		<string>aurait sonné</string>
+		<string>aurions sonné</string>
+		<string>auriez sonné</string>
+		<string>auraient sonné</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>sonner</string>
+		<string>sonne</string>
+		<string>sonnons</string>
+		<string>sonnez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>sonner</string>
+		<string>aie sonné</string>
+		<string>ayons sonné</string>
+		<string>ayez sonné</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>mouiller</string>
+		<string>mouille</string>
+		<string>mouilles</string>
+		<string>mouille</string>
+		<string>mouillons</string>
+		<string>mouillez</string>
+		<string>mouillent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>mouiller</string>
+		<string>ai mouillé</string>
+		<string>as mouillé</string>
+		<string>a mouillé</string>
+		<string>avons mouillé</string>
+		<string>avez mouillé</string>
+		<string>ont mouillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>mouiller</string>
+		<string>mouillais</string>
+		<string>mouillais</string>
+		<string>mouillait</string>
+		<string>mouillions</string>
+		<string>mouilliez</string>
+		<string>mouillaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>mouiller</string>
+		<string>avais mouillé</string>
+		<string>avais mouillé</string>
+		<string>avait mouillé</string>
+		<string>avions mouillé</string>
+		<string>aviez mouillé</string>
+		<string>avaient mouillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>mouiller</string>
+		<string>mouillai</string>
+		<string>mouillas</string>
+		<string>mouilla</string>
+		<string>mouillâmes</string>
+		<string>mouillâtes</string>
+		<string>mouillèrent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>mouiller</string>
+		<string>eus mouillé</string>
+		<string>eus mouillé</string>
+		<string>eut mouillé</string>
+		<string>eûmes mouillé</string>
+		<string>eûtes mouillé</string>
+		<string>eurent mouillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>mouiller</string>
+		<string>mouillerai</string>
+		<string>mouilleras</string>
+		<string>mouillera</string>
+		<string>mouillerons</string>
+		<string>mouillerez</string>
+		<string>mouilleront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>mouiller</string>
+		<string>aurai mouillé</string>
+		<string>auras mouillé</string>
+		<string>aura mouillé</string>
+		<string>aurons mouillé</string>
+		<string>aurez mouillé</string>
+		<string>auront mouillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>mouiller</string>
+		<string>mouille</string>
+		<string>mouilles</string>
+		<string>mouille</string>
+		<string>mouillions</string>
+		<string>mouilliez</string>
+		<string>mouillent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>mouiller</string>
+		<string>aie mouillé</string>
+		<string>aies mouillé</string>
+		<string>ait mouillé</string>
+		<string>ayons mouillé</string>
+		<string>ayez mouillé</string>
+		<string>aient mouillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>mouiller</string>
+		<string>mouillasse</string>
+		<string>mouillasses</string>
+		<string>mouillât</string>
+		<string>mouillassions</string>
+		<string>mouillassiez</string>
+		<string>mouillassent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>mouiller</string>
+		<string>eusse mouillé</string>
+		<string>eusses mouillé</string>
+		<string>eût mouillé</string>
+		<string>eussions mouillé</string>
+		<string>eussiez mouillé</string>
+		<string>eussent mouillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>mouiller</string>
+		<string>mouillerais</string>
+		<string>mouillerais</string>
+		<string>mouillerait</string>
+		<string>mouillerions</string>
+		<string>mouilleriez</string>
+		<string>mouilleraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>mouiller</string>
+		<string>aurais mouillé</string>
+		<string>aurais mouillé</string>
+		<string>aurait mouillé</string>
+		<string>aurions mouillé</string>
+		<string>auriez mouillé</string>
+		<string>auraient mouillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>mouiller</string>
+		<string>mouille</string>
+		<string>mouillons</string>
+		<string>mouillez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>mouiller</string>
+		<string>aie mouillé</string>
+		<string>ayons mouillé</string>
+		<string>ayez mouillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>moudre</string>
+		<string>mouds</string>
+		<string>mouds</string>
+		<string>moud</string>
+		<string>moulons</string>
+		<string>moulez</string>
+		<string>moulent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>moudre</string>
+		<string>ai moulu</string>
+		<string>as moulu</string>
+		<string>a moulu</string>
+		<string>avons moulu</string>
+		<string>avez moulu</string>
+		<string>ont moulu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>moudre</string>
+		<string>moulais</string>
+		<string>moulais</string>
+		<string>moulait</string>
+		<string>moulions</string>
+		<string>mouliez</string>
+		<string>moulaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>moudre</string>
+		<string>avais moulu</string>
+		<string>avais moulu</string>
+		<string>avait moulu</string>
+		<string>avions moulu</string>
+		<string>aviez moulu</string>
+		<string>avaient moulu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>moudre</string>
+		<string>moulus</string>
+		<string>moulus</string>
+		<string>moulut</string>
+		<string>moulûmes</string>
+		<string>moulûtes</string>
+		<string>moulurent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>moudre</string>
+		<string>eus moulu</string>
+		<string>eus moulu</string>
+		<string>eut moulu</string>
+		<string>eûmes moulu</string>
+		<string>eûtes moulu</string>
+		<string>eurent moulu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>moudre</string>
+		<string>moudrai</string>
+		<string>moudras</string>
+		<string>moudra</string>
+		<string>moudrons</string>
+		<string>moudrez</string>
+		<string>moudront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>moudre</string>
+		<string>aurai moulu</string>
+		<string>auras moulu</string>
+		<string>aura moulu</string>
+		<string>aurons moulu</string>
+		<string>aurez moulu</string>
+		<string>auront moulu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>moudre</string>
+		<string>moule</string>
+		<string>moules</string>
+		<string>moule</string>
+		<string>moulions</string>
+		<string>mouliez</string>
+		<string>moulent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>moudre</string>
+		<string>aie moulu</string>
+		<string>aies moulu</string>
+		<string>ait moulu</string>
+		<string>ayons moulu</string>
+		<string>ayez moulu</string>
+		<string>aient moulu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>moudre</string>
+		<string>moulusse</string>
+		<string>moulusses</string>
+		<string>moulût</string>
+		<string>moulussions</string>
+		<string>moulussiez</string>
+		<string>moulussent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>moudre</string>
+		<string>eusse moulu</string>
+		<string>eusses moulu</string>
+		<string>eût moulu</string>
+		<string>eussions moulu</string>
+		<string>eussiez moulu</string>
+		<string>eussent moulu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>moudre</string>
+		<string>moudrais</string>
+		<string>moudrais</string>
+		<string>moudrait</string>
+		<string>moudrions</string>
+		<string>moudriez</string>
+		<string>moudraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>moudre</string>
+		<string>aurais moulu</string>
+		<string>aurais moulu</string>
+		<string>aurait moulu</string>
+		<string>aurions moulu</string>
+		<string>auriez moulu</string>
+		<string>auraient moulu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>moudre</string>
+		<string>mouds</string>
+		<string>moulons</string>
+		<string>moulez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>moudre</string>
+		<string>aie moulu</string>
+		<string>ayons moulu</string>
+		<string>ayez moulu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>approcher</string>
+		<string>approche</string>
+		<string>approches</string>
+		<string>approche</string>
+		<string>approchons</string>
+		<string>approchez</string>
+		<string>approchent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>approcher</string>
+		<string>ai approché</string>
+		<string>as approché</string>
+		<string>a approché</string>
+		<string>avons approché</string>
+		<string>avez approché</string>
+		<string>ont approché</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>approcher</string>
+		<string>approchais</string>
+		<string>approchais</string>
+		<string>approchait</string>
+		<string>approchions</string>
+		<string>approchiez</string>
+		<string>approchaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>approcher</string>
+		<string>avais approché</string>
+		<string>avais approché</string>
+		<string>avait approché</string>
+		<string>avions approché</string>
+		<string>aviez approché</string>
+		<string>avaient approché</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>approcher</string>
+		<string>approchai</string>
+		<string>approchas</string>
+		<string>approcha</string>
+		<string>approchâmes</string>
+		<string>approchâtes</string>
+		<string>approchèrent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>approcher</string>
+		<string>eus approché</string>
+		<string>eus approché</string>
+		<string>eut approché</string>
+		<string>eûmes approché</string>
+		<string>eûtes approché</string>
+		<string>eurent approché</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>approcher</string>
+		<string>approcherai</string>
+		<string>approcheras</string>
+		<string>approchera</string>
+		<string>approcherons</string>
+		<string>approcherez</string>
+		<string>approcheront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>approcher</string>
+		<string>aurai approché</string>
+		<string>auras approché</string>
+		<string>aura approché</string>
+		<string>aurons approché</string>
+		<string>aurez approché</string>
+		<string>auront approché</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>approcher</string>
+		<string>approche</string>
+		<string>approches</string>
+		<string>approche</string>
+		<string>approchions</string>
+		<string>approchiez</string>
+		<string>approchent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>approcher</string>
+		<string>aie approché</string>
+		<string>aies approché</string>
+		<string>ait approché</string>
+		<string>ayons approché</string>
+		<string>ayez approché</string>
+		<string>aient approché</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>approcher</string>
+		<string>approchasse</string>
+		<string>approchasses</string>
+		<string>approchât</string>
+		<string>approchassions</string>
+		<string>approchassiez</string>
+		<string>approchassent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>approcher</string>
+		<string>eusse approché</string>
+		<string>eusses approché</string>
+		<string>eût approché</string>
+		<string>eussions approché</string>
+		<string>eussiez approché</string>
+		<string>eussent approché</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>approcher</string>
+		<string>approcherais</string>
+		<string>approcherais</string>
+		<string>approcherait</string>
+		<string>approcherions</string>
+		<string>approcheriez</string>
+		<string>approcheraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>approcher</string>
+		<string>aurais approché</string>
+		<string>aurais approché</string>
+		<string>aurait approché</string>
+		<string>aurions approché</string>
+		<string>auriez approché</string>
+		<string>auraient approché</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>approcher</string>
+		<string>approche</string>
+		<string>approchons</string>
+		<string>approchez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>approcher</string>
+		<string>aie approché</string>
+		<string>ayons approché</string>
+		<string>ayez approché</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>achever</string>
+		<string>achève</string>
+		<string>achèves</string>
+		<string>achève</string>
+		<string>achevons</string>
+		<string>achevez</string>
+		<string>achèvent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>achever</string>
+		<string>ai achevé</string>
+		<string>as achevé</string>
+		<string>a achevé</string>
+		<string>avons achevé</string>
+		<string>avez achevé</string>
+		<string>ont achevé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>achever</string>
+		<string>achevais</string>
+		<string>achevais</string>
+		<string>achevait</string>
+		<string>achevions</string>
+		<string>acheviez</string>
+		<string>achevaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>achever</string>
+		<string>avais achevé</string>
+		<string>avais achevé</string>
+		<string>avait achevé</string>
+		<string>avions achevé</string>
+		<string>aviez achevé</string>
+		<string>avaient achevé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>achever</string>
+		<string>achevai</string>
+		<string>achevas</string>
+		<string>acheva</string>
+		<string>achevâmes</string>
+		<string>achevâtes</string>
+		<string>achevèrent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>achever</string>
+		<string>eus achevé</string>
+		<string>eus achevé</string>
+		<string>eut achevé</string>
+		<string>eûmes achevé</string>
+		<string>eûtes achevé</string>
+		<string>eurent achevé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>achever</string>
+		<string>achèverai</string>
+		<string>achèveras</string>
+		<string>achèvera</string>
+		<string>achèverons</string>
+		<string>achèverez</string>
+		<string>achèveront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>achever</string>
+		<string>aurai achevé</string>
+		<string>auras achevé</string>
+		<string>aura achevé</string>
+		<string>aurons achevé</string>
+		<string>aurez achevé</string>
+		<string>auront achevé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>achever</string>
+		<string>achève</string>
+		<string>achèves</string>
+		<string>achève</string>
+		<string>achevions</string>
+		<string>acheviez</string>
+		<string>achèvent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>achever</string>
+		<string>aie achevé</string>
+		<string>aies achevé</string>
+		<string>ait achevé</string>
+		<string>ayons achevé</string>
+		<string>ayez achevé</string>
+		<string>aient achevé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>achever</string>
+		<string>achevasse</string>
+		<string>achevasses</string>
+		<string>achevât</string>
+		<string>achevassions</string>
+		<string>achevassiez</string>
+		<string>achevassent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>achever</string>
+		<string>eusse achevé</string>
+		<string>eusses achevé</string>
+		<string>eût achevé</string>
+		<string>eussions achevé</string>
+		<string>eussiez achevé</string>
+		<string>eussent achevé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>achever</string>
+		<string>achèverais</string>
+		<string>achèverais</string>
+		<string>achèverait</string>
+		<string>achèverions</string>
+		<string>achèveriez</string>
+		<string>achèveraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>achever</string>
+		<string>aurais achevé</string>
+		<string>aurais achevé</string>
+		<string>aurait achevé</string>
+		<string>aurions achevé</string>
+		<string>auriez achevé</string>
+		<string>auraient achevé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>achever</string>
+		<string>achève</string>
+		<string>achevons</string>
+		<string>achevez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>achever</string>
+		<string>aie achevé</string>
+		<string>ayons achevé</string>
+		<string>ayez achevé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>vider</string>
+		<string>vide</string>
+		<string>vides</string>
+		<string>vide</string>
+		<string>vidons</string>
+		<string>videz</string>
+		<string>vident</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>vider</string>
+		<string>ai vidé</string>
+		<string>as vidé</string>
+		<string>a vidé</string>
+		<string>avons vidé</string>
+		<string>avez vidé</string>
+		<string>ont vidé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>vider</string>
+		<string>vidais</string>
+		<string>vidais</string>
+		<string>vidait</string>
+		<string>vidions</string>
+		<string>vidiez</string>
+		<string>vidaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>vider</string>
+		<string>avais vidé</string>
+		<string>avais vidé</string>
+		<string>avait vidé</string>
+		<string>avions vidé</string>
+		<string>aviez vidé</string>
+		<string>avaient vidé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>vider</string>
+		<string>vidai</string>
+		<string>vidas</string>
+		<string>vida</string>
+		<string>vidâmes</string>
+		<string>vidâtes</string>
+		<string>vidèrent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>vider</string>
+		<string>eus vidé</string>
+		<string>eus vidé</string>
+		<string>eut vidé</string>
+		<string>eûmes vidé</string>
+		<string>eûtes vidé</string>
+		<string>eurent vidé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>vider</string>
+		<string>viderai</string>
+		<string>videras</string>
+		<string>videra</string>
+		<string>viderons</string>
+		<string>viderez</string>
+		<string>videront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>vider</string>
+		<string>aurai vidé</string>
+		<string>auras vidé</string>
+		<string>aura vidé</string>
+		<string>aurons vidé</string>
+		<string>aurez vidé</string>
+		<string>auront vidé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>vider</string>
+		<string>vide</string>
+		<string>vides</string>
+		<string>vide</string>
+		<string>vidions</string>
+		<string>vidiez</string>
+		<string>vident</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>vider</string>
+		<string>aie vidé</string>
+		<string>aies vidé</string>
+		<string>ait vidé</string>
+		<string>ayons vidé</string>
+		<string>ayez vidé</string>
+		<string>aient vidé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>vider</string>
+		<string>vidasse</string>
+		<string>vidasses</string>
+		<string>vidât</string>
+		<string>vidassions</string>
+		<string>vidassiez</string>
+		<string>vidassent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>vider</string>
+		<string>eusse vidé</string>
+		<string>eusses vidé</string>
+		<string>eût vidé</string>
+		<string>eussions vidé</string>
+		<string>eussiez vidé</string>
+		<string>eussent vidé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>vider</string>
+		<string>viderais</string>
+		<string>viderais</string>
+		<string>viderait</string>
+		<string>viderions</string>
+		<string>videriez</string>
+		<string>videraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>vider</string>
+		<string>aurais vidé</string>
+		<string>aurais vidé</string>
+		<string>aurait vidé</string>
+		<string>aurions vidé</string>
+		<string>auriez vidé</string>
+		<string>auraient vidé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>vider</string>
+		<string>vide</string>
+		<string>vidons</string>
+		<string>videz</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>vider</string>
+		<string>aie vidé</string>
+		<string>ayons vidé</string>
+		<string>ayez vidé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>tordre</string>
+		<string>tords</string>
+		<string>tords</string>
+		<string>tord</string>
+		<string>tordons</string>
+		<string>tordez</string>
+		<string>tordent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>tordre</string>
+		<string>ai tordu</string>
+		<string>as tordu</string>
+		<string>a tordu</string>
+		<string>avons tordu</string>
+		<string>avez tordu</string>
+		<string>ont tordu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>tordre</string>
+		<string>tordais</string>
+		<string>tordais</string>
+		<string>tordait</string>
+		<string>tordions</string>
+		<string>tordiez</string>
+		<string>tordaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>tordre</string>
+		<string>avais tordu</string>
+		<string>avais tordu</string>
+		<string>avait tordu</string>
+		<string>avions tordu</string>
+		<string>aviez tordu</string>
+		<string>avaient tordu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>tordre</string>
+		<string>tordis</string>
+		<string>tordis</string>
+		<string>tordit</string>
+		<string>tordîmes</string>
+		<string>tordîtes</string>
+		<string>tordirent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>tordre</string>
+		<string>eus tordu</string>
+		<string>eus tordu</string>
+		<string>eut tordu</string>
+		<string>eûmes tordu</string>
+		<string>eûtes tordu</string>
+		<string>eurent tordu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>tordre</string>
+		<string>tordrai</string>
+		<string>tordras</string>
+		<string>tordra</string>
+		<string>tordrons</string>
+		<string>tordrez</string>
+		<string>tordront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>tordre</string>
+		<string>aurai tordu</string>
+		<string>auras tordu</string>
+		<string>aura tordu</string>
+		<string>aurons tordu</string>
+		<string>aurez tordu</string>
+		<string>auront tordu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>tordre</string>
+		<string>torde</string>
+		<string>tordes</string>
+		<string>torde</string>
+		<string>tordions</string>
+		<string>tordiez</string>
+		<string>tordent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>tordre</string>
+		<string>aie tordu</string>
+		<string>aies tordu</string>
+		<string>ait tordu</string>
+		<string>ayons tordu</string>
+		<string>ayez tordu</string>
+		<string>aient tordu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>tordre</string>
+		<string>tordisse</string>
+		<string>tordisses</string>
+		<string>tordît</string>
+		<string>tordissions</string>
+		<string>tordissiez</string>
+		<string>tordissent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>tordre</string>
+		<string>eusse tordu</string>
+		<string>eusses tordu</string>
+		<string>eût tordu</string>
+		<string>eussions tordu</string>
+		<string>eussiez tordu</string>
+		<string>eussent tordu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>tordre</string>
+		<string>tordrais</string>
+		<string>tordrais</string>
+		<string>tordrait</string>
+		<string>tordrions</string>
+		<string>tordriez</string>
+		<string>tordraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>tordre</string>
+		<string>aurais tordu</string>
+		<string>aurais tordu</string>
+		<string>aurait tordu</string>
+		<string>aurions tordu</string>
+		<string>auriez tordu</string>
+		<string>auraient tordu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>tordre</string>
+		<string>tords</string>
+		<string>tordons</string>
+		<string>tordez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>tordre</string>
+		<string>aie tordu</string>
+		<string>ayons tordu</string>
+		<string>ayez tordu</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>atteindre</string>
+		<string>atteins</string>
+		<string>atteins</string>
+		<string>atteint</string>
+		<string>atteignons</string>
+		<string>atteignez</string>
+		<string>atteignent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>atteindre</string>
+		<string>ai atteint</string>
+		<string>as atteint</string>
+		<string>a atteint</string>
+		<string>avons atteint</string>
+		<string>avez atteint</string>
+		<string>ont atteint</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>atteindre</string>
+		<string>atteignais</string>
+		<string>atteignais</string>
+		<string>atteignait</string>
+		<string>atteignions</string>
+		<string>atteigniez</string>
+		<string>atteignaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>atteindre</string>
+		<string>avais atteint</string>
+		<string>avais atteint</string>
+		<string>avait atteint</string>
+		<string>avions atteint</string>
+		<string>aviez atteint</string>
+		<string>avaient atteint</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>atteindre</string>
+		<string>atteignis</string>
+		<string>atteignis</string>
+		<string>atteignit</string>
+		<string>atteignîmes</string>
+		<string>atteignîtes</string>
+		<string>atteignirent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>atteindre</string>
+		<string>eus atteint</string>
+		<string>eus atteint</string>
+		<string>eut atteint</string>
+		<string>eûmes atteint</string>
+		<string>eûtes atteint</string>
+		<string>eurent atteint</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>atteindre</string>
+		<string>atteindrai</string>
+		<string>atteindras</string>
+		<string>atteindra</string>
+		<string>atteindrons</string>
+		<string>atteindrez</string>
+		<string>atteindront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>atteindre</string>
+		<string>aurai atteint</string>
+		<string>auras atteint</string>
+		<string>aura atteint</string>
+		<string>aurons atteint</string>
+		<string>aurez atteint</string>
+		<string>auront atteint</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>atteindre</string>
+		<string>atteigne</string>
+		<string>atteignes</string>
+		<string>atteigne</string>
+		<string>atteignions</string>
+		<string>atteigniez</string>
+		<string>atteignent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>atteindre</string>
+		<string>aie atteint</string>
+		<string>aies atteint</string>
+		<string>ait atteint</string>
+		<string>ayons atteint</string>
+		<string>ayez atteint</string>
+		<string>aient atteint</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>atteindre</string>
+		<string>atteignisse</string>
+		<string>atteignisses</string>
+		<string>atteignît</string>
+		<string>atteignissions</string>
+		<string>atteignissiez</string>
+		<string>atteignissent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>atteindre</string>
+		<string>eusse atteint</string>
+		<string>eusses atteint</string>
+		<string>eût atteint</string>
+		<string>eussions atteint</string>
+		<string>eussiez atteint</string>
+		<string>eussent atteint</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>atteindre</string>
+		<string>atteindrais</string>
+		<string>atteindrais</string>
+		<string>atteindrait</string>
+		<string>atteindrions</string>
+		<string>atteindriez</string>
+		<string>atteindraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>atteindre</string>
+		<string>aurais atteint</string>
+		<string>aurais atteint</string>
+		<string>aurait atteint</string>
+		<string>aurions atteint</string>
+		<string>auriez atteint</string>
+		<string>auraient atteint</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>atteindre</string>
+		<string>atteins</string>
+		<string>atteignons</string>
+		<string>atteignez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>atteindre</string>
+		<string>aie atteint</string>
+		<string>ayons atteint</string>
+		<string>ayez atteint</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>nettoyer</string>
+		<string>nettoie</string>
+		<string>nettoies</string>
+		<string>nettoie</string>
+		<string>nettoyons</string>
+		<string>nettoyez</string>
+		<string>nettoient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>nettoyer</string>
+		<string>ai nettoyé</string>
+		<string>as nettoyé</string>
+		<string>a nettoyé</string>
+		<string>avons nettoyé</string>
+		<string>avez nettoyé</string>
+		<string>ont nettoyé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>nettoyer</string>
+		<string>nettoyais</string>
+		<string>nettoyais</string>
+		<string>nettoyait</string>
+		<string>nettoyions</string>
+		<string>nettoyiez</string>
+		<string>nettoyaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>nettoyer</string>
+		<string>avais nettoyé</string>
+		<string>avais nettoyé</string>
+		<string>avait nettoyé</string>
+		<string>avions nettoyé</string>
+		<string>aviez nettoyé</string>
+		<string>avaient nettoyé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>nettoyer</string>
+		<string>nettoyai</string>
+		<string>nettoyas</string>
+		<string>nettoya</string>
+		<string>nettoyâmes</string>
+		<string>nettoyâtes</string>
+		<string>nettoyèrent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>nettoyer</string>
+		<string>eus nettoyé</string>
+		<string>eus nettoyé</string>
+		<string>eut nettoyé</string>
+		<string>eûmes nettoyé</string>
+		<string>eûtes nettoyé</string>
+		<string>eurent nettoyé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>nettoyer</string>
+		<string>nettoierai</string>
+		<string>nettoieras</string>
+		<string>nettoiera</string>
+		<string>nettoierons</string>
+		<string>nettoierez</string>
+		<string>nettoieront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>nettoyer</string>
+		<string>aurai nettoyé</string>
+		<string>auras nettoyé</string>
+		<string>aura nettoyé</string>
+		<string>aurons nettoyé</string>
+		<string>aurez nettoyé</string>
+		<string>auront nettoyé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>nettoyer</string>
+		<string>nettoie</string>
+		<string>nettoies</string>
+		<string>nettoie</string>
+		<string>nettoyions</string>
+		<string>nettoyiez</string>
+		<string>nettoient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>nettoyer</string>
+		<string>aie nettoyé</string>
+		<string>aies nettoyé</string>
+		<string>ait nettoyé</string>
+		<string>ayons nettoyé</string>
+		<string>ayez nettoyé</string>
+		<string>aient nettoyé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>nettoyer</string>
+		<string>nettoyasse</string>
+		<string>nettoyasses</string>
+		<string>nettoyât</string>
+		<string>nettoyassions</string>
+		<string>nettoyassiez</string>
+		<string>nettoyassent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>nettoyer</string>
+		<string>eusse nettoyé</string>
+		<string>eusses nettoyé</string>
+		<string>eût nettoyé</string>
+		<string>eussions nettoyé</string>
+		<string>eussiez nettoyé</string>
+		<string>eussent nettoyé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>nettoyer</string>
+		<string>nettoierais</string>
+		<string>nettoierais</string>
+		<string>nettoierait</string>
+		<string>nettoierions</string>
+		<string>nettoieriez</string>
+		<string>nettoieraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>nettoyer</string>
+		<string>aurais nettoyé</string>
+		<string>aurais nettoyé</string>
+		<string>aurait nettoyé</string>
+		<string>aurions nettoyé</string>
+		<string>auriez nettoyé</string>
+		<string>auraient nettoyé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>nettoyer</string>
+		<string>nettoie</string>
+		<string>nettoyons</string>
+		<string>nettoyez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>nettoyer</string>
+		<string>aie nettoyé</string>
+		<string>ayons nettoyé</string>
+		<string>ayez nettoyé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>réviser</string>
+		<string>révise</string>
+		<string>révises</string>
+		<string>révise</string>
+		<string>révisons</string>
+		<string>révisez</string>
+		<string>révisent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>réviser</string>
+		<string>ai révisé</string>
+		<string>as révisé</string>
+		<string>a révisé</string>
+		<string>avons révisé</string>
+		<string>avez révisé</string>
+		<string>ont révisé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>réviser</string>
+		<string>révisais</string>
+		<string>révisais</string>
+		<string>révisait</string>
+		<string>révisions</string>
+		<string>révisiez</string>
+		<string>révisaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>réviser</string>
+		<string>avais révisé</string>
+		<string>avais révisé</string>
+		<string>avait révisé</string>
+		<string>avions révisé</string>
+		<string>aviez révisé</string>
+		<string>avaient révisé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>réviser</string>
+		<string>révisai</string>
+		<string>révisas</string>
+		<string>révisa</string>
+		<string>révisâmes</string>
+		<string>révisâtes</string>
+		<string>révisèrent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>réviser</string>
+		<string>eus révisé</string>
+		<string>eus révisé</string>
+		<string>eut révisé</string>
+		<string>eûmes révisé</string>
+		<string>eûtes révisé</string>
+		<string>eurent révisé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>réviser</string>
+		<string>réviserai</string>
+		<string>réviseras</string>
+		<string>révisera</string>
+		<string>réviserons</string>
+		<string>réviserez</string>
+		<string>réviseront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>réviser</string>
+		<string>aurai révisé</string>
+		<string>auras révisé</string>
+		<string>aura révisé</string>
+		<string>aurons révisé</string>
+		<string>aurez révisé</string>
+		<string>auront révisé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>réviser</string>
+		<string>révise</string>
+		<string>révises</string>
+		<string>révise</string>
+		<string>révisions</string>
+		<string>révisiez</string>
+		<string>révisent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>réviser</string>
+		<string>aie révisé</string>
+		<string>aies révisé</string>
+		<string>ait révisé</string>
+		<string>ayons révisé</string>
+		<string>ayez révisé</string>
+		<string>aient révisé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>réviser</string>
+		<string>révisasse</string>
+		<string>révisasses</string>
+		<string>révisât</string>
+		<string>révisassions</string>
+		<string>révisassiez</string>
+		<string>révisassent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>réviser</string>
+		<string>eusse révisé</string>
+		<string>eusses révisé</string>
+		<string>eût révisé</string>
+		<string>eussions révisé</string>
+		<string>eussiez révisé</string>
+		<string>eussent révisé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>réviser</string>
+		<string>réviserais</string>
+		<string>réviserais</string>
+		<string>réviserait</string>
+		<string>réviserions</string>
+		<string>réviseriez</string>
+		<string>réviseraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>réviser</string>
+		<string>aurais révisé</string>
+		<string>aurais révisé</string>
+		<string>aurait révisé</string>
+		<string>aurions révisé</string>
+		<string>auriez révisé</string>
+		<string>auraient révisé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>réviser</string>
+		<string>révise</string>
+		<string>révisons</string>
+		<string>révisez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>réviser</string>
+		<string>aie révisé</string>
+		<string>ayons révisé</string>
+		<string>ayez révisé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>contrôler</string>
+		<string>contrôle</string>
+		<string>contrôles</string>
+		<string>contrôle</string>
+		<string>contrôlons</string>
+		<string>contrôlez</string>
+		<string>contrôlent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>contrôler</string>
+		<string>ai contrôlé</string>
+		<string>as contrôlé</string>
+		<string>a contrôlé</string>
+		<string>avons contrôlé</string>
+		<string>avez contrôlé</string>
+		<string>ont contrôlé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>contrôler</string>
+		<string>contrôlais</string>
+		<string>contrôlais</string>
+		<string>contrôlait</string>
+		<string>contrôlions</string>
+		<string>contrôliez</string>
+		<string>contrôlaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>contrôler</string>
+		<string>avais contrôlé</string>
+		<string>avais contrôlé</string>
+		<string>avait contrôlé</string>
+		<string>avions contrôlé</string>
+		<string>aviez contrôlé</string>
+		<string>avaient contrôlé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>contrôler</string>
+		<string>contrôlai</string>
+		<string>contrôlas</string>
+		<string>contrôla</string>
+		<string>contrôlâmes</string>
+		<string>contrôlâtes</string>
+		<string>contrôlèrent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>contrôler</string>
+		<string>eus contrôlé</string>
+		<string>eus contrôlé</string>
+		<string>eut contrôlé</string>
+		<string>eûmes contrôlé</string>
+		<string>eûtes contrôlé</string>
+		<string>eurent contrôlé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>contrôler</string>
+		<string>contrôlerai</string>
+		<string>contrôleras</string>
+		<string>contrôlera</string>
+		<string>contrôlerons</string>
+		<string>contrôlerez</string>
+		<string>contrôleront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>contrôler</string>
+		<string>aurai contrôlé</string>
+		<string>auras contrôlé</string>
+		<string>aura contrôlé</string>
+		<string>aurons contrôlé</string>
+		<string>aurez contrôlé</string>
+		<string>auront contrôlé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>contrôler</string>
+		<string>contrôle</string>
+		<string>contrôles</string>
+		<string>contrôle</string>
+		<string>contrôlions</string>
+		<string>contrôliez</string>
+		<string>contrôlent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>contrôler</string>
+		<string>aie contrôlé</string>
+		<string>aies contrôlé</string>
+		<string>ait contrôlé</string>
+		<string>ayons contrôlé</string>
+		<string>ayez contrôlé</string>
+		<string>aient contrôlé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>contrôler</string>
+		<string>contrôlasse</string>
+		<string>contrôlasses</string>
+		<string>contrôlât</string>
+		<string>contrôlassions</string>
+		<string>contrôlassiez</string>
+		<string>contrôlassent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>contrôler</string>
+		<string>eusse contrôlé</string>
+		<string>eusses contrôlé</string>
+		<string>eût contrôlé</string>
+		<string>eussions contrôlé</string>
+		<string>eussiez contrôlé</string>
+		<string>eussent contrôlé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>contrôler</string>
+		<string>contrôlerais</string>
+		<string>contrôlerais</string>
+		<string>contrôlerait</string>
+		<string>contrôlerions</string>
+		<string>contrôleriez</string>
+		<string>contrôleraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>contrôler</string>
+		<string>aurais contrôlé</string>
+		<string>aurais contrôlé</string>
+		<string>aurait contrôlé</string>
+		<string>aurions contrôlé</string>
+		<string>auriez contrôlé</string>
+		<string>auraient contrôlé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>contrôler</string>
+		<string>contrôle</string>
+		<string>contrôlons</string>
+		<string>contrôlez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>contrôler</string>
+		<string>aie contrôlé</string>
+		<string>ayons contrôlé</string>
+		<string>ayez contrôlé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Présent</string>
+		<string>écarquiller</string>
+		<string>écarquille</string>
+		<string>écarquilles</string>
+		<string>écarquille</string>
+		<string>écarquillons</string>
+		<string>écarquillez</string>
+		<string>écarquillent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé composé</string>
+		<string>écarquiller</string>
+		<string>ai écarquillé</string>
+		<string>as écarquillé</string>
+		<string>a écarquillé</string>
+		<string>avons écarquillé</string>
+		<string>avez écarquillé</string>
+		<string>ont écarquillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Imparfait</string>
+		<string>écarquiller</string>
+		<string>écarquillais</string>
+		<string>écarquillais</string>
+		<string>écarquillait</string>
+		<string>écarquillions</string>
+		<string>écarquilliez</string>
+		<string>écarquillaient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Plus-que-parfait</string>
+		<string>écarquiller</string>
+		<string>avais écarquillé</string>
+		<string>avais écarquillé</string>
+		<string>avait écarquillé</string>
+		<string>avions écarquillé</string>
+		<string>aviez écarquillé</string>
+		<string>avaient écarquillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé simple</string>
+		<string>écarquiller</string>
+		<string>écarquillai</string>
+		<string>écarquillas</string>
+		<string>écarquilla</string>
+		<string>écarquillâmes</string>
+		<string>écarquillâtes</string>
+		<string>écarquillèrent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Passé antérieur</string>
+		<string>écarquiller</string>
+		<string>eus écarquillé</string>
+		<string>eus écarquillé</string>
+		<string>eut écarquillé</string>
+		<string>eûmes écarquillé</string>
+		<string>eûtes écarquillé</string>
+		<string>eurent écarquillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur simple</string>
+		<string>écarquiller</string>
+		<string>écarquillerai</string>
+		<string>écarquilleras</string>
+		<string>écarquillera</string>
+		<string>écarquillerons</string>
+		<string>écarquillerez</string>
+		<string>écarquilleront</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>indicatif</string>
+		<string>Futur antérieur</string>
+		<string>écarquiller</string>
+		<string>aurai écarquillé</string>
+		<string>auras écarquillé</string>
+		<string>aura écarquillé</string>
+		<string>aurons écarquillé</string>
+		<string>aurez écarquillé</string>
+		<string>auront écarquillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Présent</string>
+		<string>écarquiller</string>
+		<string>écarquille</string>
+		<string>écarquilles</string>
+		<string>écarquille</string>
+		<string>écarquillions</string>
+		<string>écarquilliez</string>
+		<string>écarquillent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Passé</string>
+		<string>écarquiller</string>
+		<string>aie écarquillé</string>
+		<string>aies écarquillé</string>
+		<string>ait écarquillé</string>
+		<string>ayons écarquillé</string>
+		<string>ayez écarquillé</string>
+		<string>aient écarquillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Imparfait</string>
+		<string>écarquiller</string>
+		<string>écarquillasse</string>
+		<string>écarquillasses</string>
+		<string>écarquillât</string>
+		<string>écarquillassions</string>
+		<string>écarquillassiez</string>
+		<string>écarquillassent</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>subjonctif</string>
+		<string>Plus-que-parfait</string>
+		<string>écarquiller</string>
+		<string>eusse écarquillé</string>
+		<string>eusses écarquillé</string>
+		<string>eût écarquillé</string>
+		<string>eussions écarquillé</string>
+		<string>eussiez écarquillé</string>
+		<string>eussent écarquillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Présent</string>
+		<string>écarquiller</string>
+		<string>écarquillerais</string>
+		<string>écarquillerais</string>
+		<string>écarquillerait</string>
+		<string>écarquillerions</string>
+		<string>écarquilleriez</string>
+		<string>écarquilleraient</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>conditionnel</string>
+		<string>Passé</string>
+		<string>écarquiller</string>
+		<string>aurais écarquillé</string>
+		<string>aurais écarquillé</string>
+		<string>aurait écarquillé</string>
+		<string>aurions écarquillé</string>
+		<string>auriez écarquillé</string>
+		<string>auraient écarquillé</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Présent</string>
+		<string>écarquiller</string>
+		<string>écarquille</string>
+		<string>écarquillons</string>
+		<string>écarquillez</string>
+		<string>0</string>
+		<string>0</string>
+		<string>0</string>
+	</array>
+	<array>
+		<string>impératif</string>
+		<string>Passé</string>
+		<string>écarquiller</string>
+		<string>aie écarquillé</string>
+		<string>ayons écarquillé</string>
+		<string>ayez écarquillé</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>

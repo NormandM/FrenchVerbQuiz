@@ -36,5 +36,7 @@
 	<string>1:627012670038:ios:e1445d148ab92e6c</string>
 	<key>DATABASE_URL</key>
 	<string>https://frenchverbs-90398.firebaseio.com</string>
+	<key>ADMOB_APP_ID</key>
+	<string>ca-app-pub-1437510869244180~9424669007</string>
 </dict>
 </plist>

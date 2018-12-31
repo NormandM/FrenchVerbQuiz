@@ -254,6 +254,8 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         progressInt = 0.0
         progress = 0.0
         goodResponse = 0
+        aideCount = 0
+        badRep = 0
         barreProgression.progress = 0.0
         reponse.text = ""
         indexChoisi = 0
@@ -277,7 +279,6 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
                 tempsEtMode = choixTempsEtMode.2
             }
             let verbeTrie = VerbeTrie(allInfoList: allInfoList, n: indexDesVerbes[indexChoisi])
-            print("n: \(indexDesVerbes)")
             let personneVerbe = PersonneTrie(verbeTrie: verbeTrie)
             verbeFinal = verbeTrie.verbe
             modeFinal = verbeTrie.mode
@@ -349,9 +350,7 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
                 }
                 
             }
-            
             dataController.saveContext()
-            
         }else{
             badRep = badRep + 1
             didSave = false
@@ -438,7 +437,7 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
     func questionInitialisation() {
         switch difficulté {
         case .FACILE:
-            ChoixFacileVerbeConjugue.verbeConjugue(arrayVerbe: arrayVerbe, infinitif: verbeFinal, tempsDuVerbe: tempsFinal, modeDuverbe: modeFinal, verbHintButton: verbHintButton, hintMenuAction: hintMenuActiondAppear )
+            ChoixFacileVerbeConjugue.verbeConjugue(arrayVerbe: arrayVerbe, infinitif: verbeFinal, tempsDuVerbe: tempsFinal, modeDuverbe: modeFinal, verbHintButton: verbHintButton, hintMenuAction: hintMenuActiondAppear, reponseBonne: reponseBonne )
         default:
             break
         }

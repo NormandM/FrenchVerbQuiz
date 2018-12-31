@@ -14,6 +14,9 @@
 		8E020A791DFDE8FE0075B180 /* StatistiqueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E020A781DFDE8FE0075B180 /* StatistiqueTableViewController.swift */; };
 		8E1155B21F7C41E400DB78AF /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1155B11F7C41E400DB78AF /* LogoViewController.swift */; };
 		8E1155B51F7D7E0D00DB78AF /* Acoustic Trio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E1155B41F7D7E0D00DB78AF /* Acoustic Trio.wav */; };
+		8E130B6C21D80C2D0072885C /* DictAvoirEtre.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E130B6B21D80C2D0072885C /* DictAvoirEtre.plist */; };
+		8E130B6E21D824F30072885C /* Auxiliere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E130B6D21D824F30072885C /* Auxiliere.swift */; };
+		8E130B8821D9872A0072885C /* frenchVerbsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E130B8721D9872A0072885C /* frenchVerbsList.plist */; };
 		8E1741EC21BED25C005DE317 /* FontsAndConstraintsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1741EB21BED25C005DE317 /* FontsAndConstraintsOptions.swift */; };
 		8E1741F021C5D541005DE317 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1741EF21C5D541005DE317 /* QuizViewController.swift */; };
 		8E23527C1F755CAF00C39936 /* TempsVerbesChoisisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E23527B1F755CAF00C39936 /* TempsVerbesChoisisViewController.swift */; };
@@ -36,22 +39,20 @@
 		8E91EADD1DF1CA1E008F39A9 /* French_Verbs_QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EADC1DF1CA1E008F39A9 /* French_Verbs_QuizTests.swift */; };
 		8E91EAE81DF1CA1E008F39A9 /* French_Verbs_QuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAE71DF1CA1E008F39A9 /* French_Verbs_QuizUITests.swift */; };
 		8E91EAF81DF1D047008F39A9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAF71DF1D047008F39A9 /* OptionsViewController.swift */; };
-		8E91EAFC1DF1D43A008F39A9 /* frenchVerbsListancien.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E91EAFB1DF1D43A008F39A9 /* frenchVerbsListancien.plist */; };
 		8E91EAFE1DF1D88A008F39A9 /* DataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAFD1DF1D88A008F39A9 /* DataStructure.swift */; };
 		8E9482621F5B265200D1F68F /* SpecificVerbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */; };
 		8EA41EFE219E1643004D4D42 /* ChoixTempsEtMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA41EFD219E1643004D4D42 /* ChoixTempsEtMode.swift */; };
 		8EA41F00219F6DE0004D4D42 /* ContextuelQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA41EFF219F6DE0004D4D42 /* ContextuelQuizViewController.swift */; };
 		8EA41F0521A0A584004D4D42 /* ConjugaisonContextuel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EA41F0421A0A584004D4D42 /* ConjugaisonContextuel.plist */; };
-		8EB91F1D1FACE72500F18F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EB91F1C1FACE72500F18F3E /* GoogleService-Info.plist */; };
 		8EB91F1F1FACE73A00F18F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EB91F1E1FACE73A00F18F3E /* GoogleService-Info.plist */; };
 		8EB91F211FACE74B00F18F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EB91F201FACE74B00F18F3E /* GoogleService-Info.plist */; };
 		8EBCA0A721D040770029D94F /* StatistiqueViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBCA0A621D040770029D94F /* StatistiqueViewCell.swift */; };
+		8EBCA0AB21D2D8790029D94F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EBCA0AA21D2D8790029D94F /* GoogleService-Info.plist */; };
+		8EBCA0C121D41F830029D94F /* PieChartSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBCA0C021D41F830029D94F /* PieChartSetUp.swift */; };
 		8EC812FF1F6C70D50052F901 /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC812FE1F6C70D50052F901 /* RandomNumberGenerator.swift */; };
 		8EC813021F717E590052F901 /* SelectionQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC813011F717E590052F901 /* SelectionQuestion.swift */; };
 		8EC813041F71C2220052F901 /* QuestionFinale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC813031F71C2220052F901 /* QuestionFinale.swift */; };
 		8ECB6F1F21CD77AC00E60DE3 /* UnwindSegueChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECB6F1E21CD77AC00E60DE3 /* UnwindSegueChoice.swift */; };
-		8EDC41AA21A8B92800EE41D2 /* frenchVerbsListAncien2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EDC41A921A8B92800EE41D2 /* frenchVerbsListAncien2.plist */; };
-		8EDC41ED21A9E4FB00EE41D2 /* frenchVerbsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EDC41EC21A9E4FA00EE41D2 /* frenchVerbsList.plist */; };
 		8EDC423621AB5BB500EE41D2 /* FrenchToEnglish.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EDC423521AB5BB400EE41D2 /* FrenchToEnglish.plist */; };
 		8EDC423A21AC906100EE41D2 /* DifficultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC423921AC906100EE41D2 /* DifficultyLevel.swift */; };
 		8EDC423E21AF124D00EE41D2 /* ChoixFacileVerbeConjugue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC423D21AF124D00EE41D2 /* ChoixFacileVerbeConjugue.swift */; };
@@ -90,6 +91,9 @@
 		8E020A781DFDE8FE0075B180 /* StatistiqueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatistiqueTableViewController.swift; sourceTree = "<group>"; };
 		8E1155B11F7C41E400DB78AF /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 		8E1155B41F7D7E0D00DB78AF /* Acoustic Trio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Acoustic Trio.wav"; sourceTree = "<group>"; };
+		8E130B6B21D80C2D0072885C /* DictAvoirEtre.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DictAvoirEtre.plist; sourceTree = "<group>"; };
+		8E130B6D21D824F30072885C /* Auxiliere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auxiliere.swift; sourceTree = "<group>"; };
+		8E130B8721D9872A0072885C /* frenchVerbsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frenchVerbsList.plist; sourceTree = "<group>"; };
 		8E1741EB21BED25C005DE317 /* FontsAndConstraintsOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsAndConstraintsOptions.swift; sourceTree = "<group>"; };
 		8E1741EF21C5D541005DE317 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		8E23527B1F755CAF00C39936 /* TempsVerbesChoisisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempsVerbesChoisisViewController.swift; sourceTree = "<group>"; };
@@ -118,22 +122,20 @@
 		8E91EAE71DF1CA1E008F39A9 /* French_Verbs_QuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = French_Verbs_QuizUITests.swift; sourceTree = "<group>"; };
 		8E91EAE91DF1CA1E008F39A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E91EAF71DF1D047008F39A9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
-		8E91EAFB1DF1D43A008F39A9 /* frenchVerbsListancien.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frenchVerbsListancien.plist; sourceTree = "<group>"; };
 		8E91EAFD1DF1D88A008F39A9 /* DataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructure.swift; sourceTree = "<group>"; };
 		8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificVerbViewController.swift; sourceTree = "<group>"; };
 		8EA41EFD219E1643004D4D42 /* ChoixTempsEtMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoixTempsEtMode.swift; sourceTree = "<group>"; };
 		8EA41EFF219F6DE0004D4D42 /* ContextuelQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextuelQuizViewController.swift; sourceTree = "<group>"; };
 		8EA41F0421A0A584004D4D42 /* ConjugaisonContextuel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConjugaisonContextuel.plist; sourceTree = "<group>"; };
-		8EB91F1C1FACE72500F18F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EB91F1E1FACE73A00F18F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EB91F201FACE74B00F18F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EBCA0A621D040770029D94F /* StatistiqueViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatistiqueViewCell.swift; sourceTree = "<group>"; };
+		8EBCA0AA21D2D8790029D94F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8EBCA0C021D41F830029D94F /* PieChartSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartSetUp.swift; sourceTree = "<group>"; };
 		8EC812FE1F6C70D50052F901 /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
 		8EC813011F717E590052F901 /* SelectionQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionQuestion.swift; sourceTree = "<group>"; };
 		8EC813031F71C2220052F901 /* QuestionFinale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionFinale.swift; sourceTree = "<group>"; };
 		8ECB6F1E21CD77AC00E60DE3 /* UnwindSegueChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwindSegueChoice.swift; sourceTree = "<group>"; };
-		8EDC41A921A8B92800EE41D2 /* frenchVerbsListAncien2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frenchVerbsListAncien2.plist; sourceTree = "<group>"; };
-		8EDC41EC21A9E4FA00EE41D2 /* frenchVerbsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frenchVerbsList.plist; sourceTree = "<group>"; };
 		8EDC423521AB5BB400EE41D2 /* FrenchToEnglish.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FrenchToEnglish.plist; sourceTree = "<group>"; };
 		8EDC423921AC906100EE41D2 /* DifficultyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevel.swift; sourceTree = "<group>"; };
 		8EDC423D21AF124D00EE41D2 /* ChoixFacileVerbeConjugue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoixFacileVerbeConjugue.swift; sourceTree = "<group>"; };
@@ -219,10 +221,9 @@
 				8E91EACB1DF1CA1E008F39A9 /* Main.storyboard */,
 				8E91EAC71DF1CA1E008F39A9 /* AppDelegate.swift */,
 				8EA41F0421A0A584004D4D42 /* ConjugaisonContextuel.plist */,
-				8EDC41EC21A9E4FA00EE41D2 /* frenchVerbsList.plist */,
-				8EDC41A921A8B92800EE41D2 /* frenchVerbsListAncien2.plist */,
+				8E130B8721D9872A0072885C /* frenchVerbsList.plist */,
+				8E130B6B21D80C2D0072885C /* DictAvoirEtre.plist */,
 				8EDC423521AB5BB400EE41D2 /* FrenchToEnglish.plist */,
-				8E91EAFB1DF1D43A008F39A9 /* frenchVerbsListancien.plist */,
 				8EA41F02219F6EBA004D4D42 /* IntroductionControllers */,
 				8EA41F01219F6E1C004D4D42 /* ListeDeverbes */,
 				8EC813001F717E140052F901 /* Quiz Controller */,
@@ -238,7 +239,7 @@
 				8E020A741DFDCBF90075B180 /* ItemVerbe+CoreDataClass.swift */,
 				8E91EAD01DF1CA1E008F39A9 /* LaunchScreen.storyboard */,
 				8EC812FE1F6C70D50052F901 /* RandomNumberGenerator.swift */,
-				8EB91F1C1FACE72500F18F3E /* GoogleService-Info.plist */,
+				8EBCA0AA21D2D8790029D94F /* GoogleService-Info.plist */,
 				8E91EAD31DF1CA1E008F39A9 /* Info.plist */,
 			);
 			path = "French Verbs Quiz";
@@ -294,6 +295,7 @@
 				8E89C97321B8694A005998D3 /* TextFieldProperties.swift */,
 				8E89C97921BD6B70005998D3 /* ChoixDeTempsViewController.swift */,
 				8ECB6F1E21CD77AC00E60DE3 /* UnwindSegueChoice.swift */,
+				8E130B6D21D824F30072885C /* Auxiliere.swift */,
 			);
 			name = ContextuelQuiz;
 			sourceTree = "<group>";
@@ -303,6 +305,7 @@
 			children = (
 				8E020A781DFDE8FE0075B180 /* StatistiqueTableViewController.swift */,
 				8EBCA0A621D040770029D94F /* StatistiqueViewCell.swift */,
+				8EBCA0C021D41F830029D94F /* PieChartSetUp.swift */,
 			);
 			name = StatistiqueView;
 			sourceTree = "<group>";
@@ -454,18 +457,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EDC41AA21A8B92800EE41D2 /* frenchVerbsListAncien2.plist in Resources */,
 				8EA41F0521A0A584004D4D42 /* ConjugaisonContextuel.plist in Resources */,
 				8E7FC9721DFB4299005C397B /* Error Warning.wav in Resources */,
-				8EB91F1D1FACE72500F18F3E /* GoogleService-Info.plist in Resources */,
 				8E91EAD21DF1CA1E008F39A9 /* LaunchScreen.storyboard in Resources */,
 				8E7FC9741DFB42A0005C397B /* Incoming Text 01.wav in Resources */,
 				8EDC423621AB5BB500EE41D2 /* FrenchToEnglish.plist in Resources */,
-				8EDC41ED21A9E4FB00EE41D2 /* frenchVerbsList.plist in Resources */,
 				8E91EACF1DF1CA1E008F39A9 /* Assets.xcassets in Resources */,
+				8E130B6C21D80C2D0072885C /* DictAvoirEtre.plist in Resources */,
+				8E130B8821D9872A0072885C /* frenchVerbsList.plist in Resources */,
+				8EBCA0AB21D2D8790029D94F /* GoogleService-Info.plist in Resources */,
 				8E91EACD1DF1CA1E008F39A9 /* Main.storyboard in Resources */,
 				8E1155B51F7D7E0D00DB78AF /* Acoustic Trio.wav in Resources */,
-				8E91EAFC1DF1D43A008F39A9 /* frenchVerbsListancien.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC813021F717E590052F901 /* SelectionQuestion.swift in Sources */,
+				8E130B6E21D824F30072885C /* Auxiliere.swift in Sources */,
 				8E91EAFE1DF1D88A008F39A9 /* DataStructure.swift in Sources */,
 				8E020A791DFDE8FE0075B180 /* StatistiqueTableViewController.swift in Sources */,
 				8EDC423A21AC906100EE41D2 /* DifficultyLevel.swift in Sources */,
@@ -613,6 +616,7 @@
 				8E91EAC81DF1CA1E008F39A9 /* AppDelegate.swift in Sources */,
 				8E517D8D1DF471EA00EA5087 /* QuizOptionsController.swift in Sources */,
 				8E7124E8219DE35100A027FF /* ContextuelQuizOptionController.swift in Sources */,
+				8EBCA0C121D41F830029D94F /* PieChartSetUp.swift in Sources */,
 				8E020A671DFC8DCB0075B180 /* VerbesFrancais.xcdatamodeld in Sources */,
 				8ECB6F1F21CD77AC00E60DE3 /* UnwindSegueChoice.swift in Sources */,
 				8E91EAF81DF1D047008F39A9 /* OptionsViewController.swift in Sources */,
