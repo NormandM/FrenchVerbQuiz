@@ -28,6 +28,7 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
     @IBOutlet weak var verbResponseButton: UIButton!
     @IBOutlet weak var personneResponse: UILabel!
     @IBOutlet weak var wrongAnswerCorrection: UILabel!
+
     
     var textFieldIsActivated = false
     var tempsEtMode = [[String]]()
@@ -54,8 +55,6 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
     var verbeFinal: String = ""
     var modeFinal: String = ""
     var tempsFinal: String = ""
-    var showWindow = false
-    var fenetre = UserDefaults.standard.bool(forKey: "fenetre")
     var testCompltete = UserDefaults.standard.bool(forKey: "testCompltete")
     let dataController = DataController.sharedInstance
     var difficulté = DifficultyLevel.DIFFICILE
@@ -67,13 +66,13 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         request.sortDescriptors = [sortDescriptor]
         return request
     }()
-    lazy var adBannerView: GADBannerView = {
-        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        adBannerView.adUnitID = "ca-app-pub-1437510869244180/7683732997"
-        adBannerView.delegate = self
-        adBannerView.rootViewController = self
-        return adBannerView
-    }()
+//    lazy var adBannerView: GADBannerView = {
+//        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+//        adBannerView.adUnitID = "ca-app-pub-1437510869244180/7683732997"
+//        adBannerView.delegate = self
+//        adBannerView.rootViewController = self
+//        return adBannerView
+//    }()
     
     var items: [ItemVerbe] = []
     
@@ -81,7 +80,7 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         super.viewDidLoad()
         personneResponse.isHidden = true
         testCompltete = false
-        self.title = "Répondez à la question."
+        
         barreProgression.progress = 0.0
         selectionQuestion()
         do {
@@ -98,16 +97,17 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        self.title = "Conjuguez le verbe."
         let fonts = FontsAndConstraintsOptions()
-        mode.font = fonts.largeBoldFont
-        temps.font = fonts.largeBoldFont
+        verbe.font = fonts.largeBoldFont
+        mode.font = fonts.largeFont
+        temps.font = fonts.largeFont
         wrongAnswerCorrection.font = fonts.normalFont
         wrongAnswerCorrection.isHidden = true
         suggestionButton.titleLabel?.font = fonts.smallItaliqueBoldFont
         tempsChoisiButton.titleLabel?.font = fonts.smallFont
         traductionAnglaiseButton.titleLabel?.font = fonts.smallFont
         reponse.font = fonts.normalFont
-        verbe.font = fonts.largeItaliqueBoldFont
         personne.font = fonts.smallBoldFont
         personneResponse.font = fonts.smallBoldFont
         uneAutreQuestionButton.titleLabel!.font = fonts.normalFont
@@ -163,16 +163,18 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         UIView.commitAnimations()
     }
     @objc func textFieldShouldReturn(_ reponse: UITextField) -> Bool {
-        reponse.resignFirstResponder()
+        evaluationReponse()
         personneResponse.isHidden = true
         personne.isHidden = true
-        evaluationReponse()
         specificQuiz()
+        reponse.resignFirstResponder()
         checkButton.isEnabled = false
         checkButton.setTitleColor(UIColor.gray, for: .disabled)
-        reponse.isEnabled = false
         suggestionButton.isEnabled = false
         suggestionButton.backgroundColor = UIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
+        reponse.isHidden = true
+        verbResponseButton.isHidden = false
+        checkButton.isHidden = true
         return true
     }
     @IBAction func suggestionButtonWasPressed(_ sender: UIButton) {
@@ -264,9 +266,6 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         personneResponse.isHidden = true
         personne.isHidden = false
         selectionQuestion()
-        if fenetre == false {
-            showWindow = true
-        }
     }
     
     func selectionQuestion(){
@@ -291,7 +290,6 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
             personne.text = questionFinale[1]
             personneResponse.text = questionFinale[1]
             totalProgress = Double(allInfoList.count)
-            
         }else{
             let selection = Selection()
             totalProgress = 10

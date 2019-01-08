@@ -25,9 +25,7 @@ class ChoixFacileVerbeConjugue {
         }
         if verbeChoisiEtConjugue == [] {
             infinitifMutate = infinitifMutate.removingReflexivePronom()
-            print("infinitifMutate: \(infinitifMutate)")
         }
-        
         var mutateReponseBonne = reponseBonne
         hintMenuAction()
         for verb in arrayVerbe{
@@ -48,28 +46,36 @@ class ChoixFacileVerbeConjugue {
             auxiliereArray.append(verbeChoisiEtConjugue[n].components(separatedBy: .whitespaces).first!)
         }
         let terminaison = mutateReponseBonne.detectFeminin(participe: participe)
-        verbeChoisiEtConjugue[0] = verbeChoisiEtConjugue[0] + terminaison.0
-        verbeChoisiEtConjugue[1] = verbeChoisiEtConjugue[1] + terminaison.1
-        verbeChoisiEtConjugue[2] = verbeChoisiEtConjugue[2] + terminaison.2
-        verbeChoisiEtConjugue[3] = verbeChoisiEtConjugue[3] + terminaison.3
-        verbeChoisiEtConjugue[4] = verbeChoisiEtConjugue[4] + terminaison.4
-        verbeChoisiEtConjugue[5] = verbeChoisiEtConjugue[5] + terminaison.5
+        let nbVerbe = verbeChoisiEtConjugue[0].components(separatedBy: .whitespaces)
+        if nbVerbe.count >= 2{
+            verbeChoisiEtConjugue[0] = auxiliereArray[0] + " " + participe + terminaison.0
+            verbeChoisiEtConjugue[1] = auxiliereArray[1] + " " +  participe + terminaison.1
+            verbeChoisiEtConjugue[2] = auxiliereArray[2] + " " +  participe + terminaison.2
+            verbeChoisiEtConjugue[3] = auxiliereArray[3] + " " +  participe + terminaison.3
+            verbeChoisiEtConjugue[4] = auxiliereArray[4] + " " +  participe + terminaison.4
+            verbeChoisiEtConjugue[5] = auxiliereArray[5] + " " +  participe + terminaison.5
+            
+        }
         if(infinitif.caseInsensitiveCompare(infinitifMutate) != .orderedSame){
+            let participeHolder = participe
             if participe.premiereLettreIsVoyelle() || auxiliereArray[0].premiereLettreIsVoyelle(){
                 verbeChoisiEtConjugue[0] = "m'\(verbeChoisiEtConjugue[0])"
             }else{
                 verbeChoisiEtConjugue[0] = "me \(verbeChoisiEtConjugue[0])"
             }
+            participe = participeHolder
             if participe.premiereLettreIsVoyelle() || auxiliereArray[1].premiereLettreIsVoyelle(){
                 verbeChoisiEtConjugue[1] = "t'\(verbeChoisiEtConjugue[1])"
             }else{
                 verbeChoisiEtConjugue[1] = "te \(verbeChoisiEtConjugue[1])"
             }
+            participe = participeHolder
             if participe.premiereLettreIsVoyelle() || auxiliereArray[2].premiereLettreIsVoyelle(){
                 verbeChoisiEtConjugue[2] = "s'\(verbeChoisiEtConjugue[2])"
             }else{
                 verbeChoisiEtConjugue[2] = "se \(verbeChoisiEtConjugue[2])"
             }
+            participe = participeHolder
             if participe.premiereLettreIsVoyelle() || auxiliereArray[5].premiereLettreIsVoyelle(){
                 verbeChoisiEtConjugue[5] = "s'\(verbeChoisiEtConjugue[5])"
             }else{
@@ -89,7 +95,6 @@ class ChoixFacileVerbeConjugue {
 
         verbeChoisiEtConjugue = verbeChoisiEtConjugue.filter {$0 != ""}
         verbeChoisiEtConjugue = Array(Set(verbeChoisiEtConjugue))
-        //verbeChoisiEtConjugue.shuffle()
         let noItem = verbeChoisiEtConjugue.count
         switch noItem {
         case 1:
@@ -153,7 +158,6 @@ extension String {
             let arrayVerb = self.components(separatedBy: " ")
             if arrayVerb[0] == "me" || arrayVerb[0] == "te" || arrayVerb[0] == "se" || arrayVerb[0] == "nous" || arrayVerb[0] == "vous"{
                 self = arrayVerb.dropFirst().joined()
-                print(self)
             }
             return self
         }
@@ -176,7 +180,6 @@ extension String {
                 verbArray = Array(self.components(separatedBy: .whitespaces).dropFirst())
                  verbeMutated = verbArray.last!
             }
-            
         }else{
             verbArray = self.components(separatedBy: .whitespaces)
              verbeMutated = verbArray.last!
@@ -220,24 +223,19 @@ extension String {
 
 class AuxiliereAvoirToEtre {
     class func auxiliereFromAvoirToEtre(reponseBonne: String, verbeChoisiEtConjugue: [String]) -> [String]{
-        print("0: \(verbeChoisiEtConjugue)")
         var mutateReponseBonne = reponseBonne
         var verbeChoisi = [String]()
         var auxiliereEtre = [String]()
         var isNotPassiveVerb = Bool()
         mutateReponseBonne = mutateReponseBonne.removingReflexivePronom()
-        print(mutateReponseBonne)
         let auxiliereReponseBonne = mutateReponseBonne.components(separatedBy: .whitespaces).first!
         let participe = verbeChoisiEtConjugue[0].components(separatedBy: .whitespaces).last!
         var verbeAComparerArray = verbeChoisiEtConjugue
         for n in 0...5 {
             var verbeAcomparer = verbeAComparerArray[n].removingReflexivePronom()
             verbeAcomparer = verbeAcomparer.components(separatedBy: .whitespaces).first!
-            print(verbeAcomparer)
-            print(auxiliereReponseBonne)
             if (verbeAcomparer.caseInsensitiveCompare(auxiliereReponseBonne) == .orderedSame) {
                 isNotPassiveVerb = true
-                print(isNotPassiveVerb)
             }
         }
         if isNotPassiveVerb == false {
@@ -253,10 +251,8 @@ class AuxiliereAvoirToEtre {
             verbeChoisi.append(auxiliereEtre[3] + " " + participe)
             verbeChoisi.append(auxiliereEtre[4] + " " + participe)
             verbeChoisi.append(auxiliereEtre[5] + " " + participe)
-            print("1: \(verbeChoisi)")
         }else{
             verbeChoisi = verbeChoisiEtConjugue
-            print(verbeChoisi)
         }
         return verbeChoisi
     }

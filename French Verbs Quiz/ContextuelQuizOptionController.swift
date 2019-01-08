@@ -39,8 +39,11 @@ class ContextuelQuizOptionController: UITableViewController {
                 listeVerbes.append(array[2])
             }
         }
-        self.title = "Choisissez les temps"
         
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Choisissez les temps"
     }
     // MARK: - Table view data source
     

@@ -7,26 +7,34 @@
 //
 
 import UIKit
-
+import StoreKit
 class OptionsViewController: UIViewController {
     @IBOutlet weak var listeDesVerbes: UILabel!
     @IBOutlet weak var quizDeBase: UILabel!
     @IBOutlet weak var quizContextuel: UILabel!
     @IBOutlet weak var statistiques: UILabel!
-    
+    let currentCount = UserDefaults.standard.integer(forKey: "launchCount")
     
     var arrayVerbe: [[String]] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Choisissez une option"
+        if currentCount >= 10 {
+            if #available(iOS 10.3, *) {
+                SKStoreReviewController.requestReview()
+                UserDefaults.standard.set(0, forKey: "launchCount")
+            }
+        }
+        
         if let plistPath = Bundle.main.path(forResource: "frenchVerbsList", ofType: "plist"),
             let verbArray = NSArray(contentsOfFile: plistPath){
             arrayVerbe = verbArray as! [[String]]
         }
-        self.navigationItem.setHidesBackButton(true, animated:true)
-
+        
+        
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.title = "Choisissez une option"
+        self.navigationItem.setHidesBackButton(true, animated:true)
         let fonts = FontsAndConstraintsOptions()
         listeDesVerbes.font = fonts.smallItaliqueBoldFont
         quizDeBase.font = fonts.smallItaliqueBoldFont

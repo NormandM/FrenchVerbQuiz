@@ -53,10 +53,10 @@ struct FontsAndConstraintsOptions {
             largeItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 22.0)!
         }else if surfaceScreen > 200000 && surfaceScreen < 304600 {
             screenType = .iPhone6
-            small = UIFont(name: "HelveticaNeue",size: 13.0)!
-            smallBold = UIFont(name: "HelveticaNeue-Bold",size: 13.0)!
-            smallItalique = UIFont(name: "HelveticaNeue-Italic",size: 13.0)!
-            smallItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 13.0)!
+            small = UIFont(name: "HelveticaNeue",size: 12.0)!
+            smallBold = UIFont(name: "HelveticaNeue-Bold",size: 12.0)!
+            smallItalique = UIFont(name: "HelveticaNeue-Italic",size: 12.0)!
+            smallItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 12.0)!
             normal = UIFont(name: "HelveticaNeue",size: 18.0)!
             normalBold = UIFont(name: "HelveticaNeue-Bold",size: 18.0)!
             normalItalique = UIFont(name: "HelveticaNeue-Italic",size: 18.0)!
@@ -67,10 +67,10 @@ struct FontsAndConstraintsOptions {
             largeItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 24.0)!
         }else if surfaceScreen > 304600 && surfaceScreen < 700000 {
             screenType = .iPhone8Plus
-            small = UIFont(name: "HelveticaNeue",size: 14.0)!
-            smallBold = UIFont(name: "HelveticaNeue-Bold",size: 14.0)!
-            smallItalique = UIFont(name: "HelveticaNeue-Italic",size: 14.0)!
-            smallItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 16.0)!
+            small = UIFont(name: "HelveticaNeue",size: 13.0)!
+            smallBold = UIFont(name: "HelveticaNeue-Bold",size: 13.0)!
+            smallItalique = UIFont(name: "HelveticaNeue-Italic",size: 13.0)!
+            smallItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 13.0)!
             normal = UIFont(name: "HelveticaNeue",size: 20.0)!
             normalBold = UIFont(name: "HelveticaNeue-Bold",size: 20.0)!
             normalItalique = UIFont(name: "HelveticaNeue-Italic",size: 20.0)!
@@ -90,7 +90,7 @@ struct FontsAndConstraintsOptions {
             normalItalique = UIFont(name: "HelveticaNeue-Italic",size: 24.0)!
             normalItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 24.0)!
             large = UIFont(name: "HelveticaNeue",size: 30.0)!
-            largeBold = UIFont(name: "HelveticaNeue-Bold",size: 21.0)!
+            largeBold = UIFont(name: "HelveticaNeue-Bold",size: 30.0)!
             largeItalique = UIFont(name: "HelveticaNeue-Italic",size: 30.0)!
             largeItaliqueBold = UIFont(name: "HelveticaNeue-BoldItalic",size: 30.0)!
         }else if surfaceScreen > 800000 && surfaceScreen < 1000000{
@@ -136,34 +136,6 @@ struct FontsAndConstraintsOptions {
         largeItaliqueBoldFont = largeItaliqueBold
         screenDeviceDimension = screenType
     }
-    
-    
-//    let iPhone5Font: UIFont
-//    let iPhone5FontBoldFont: UIFont
-//    let iPhone5FontItalicFont: UIFont
-//    let iPhone5FontItalicBoldFont: UIFont
-//    let iPhone6Font: UIFont
-//    let iPhone6FontBoldFont: UIFont
-//    let iPhone6FontItalicFont: UIFont
-//    let iPhone6FontItalicBoldFont: UIFont
-//    let iPhonePlusFont: UIFont
-//    let iPhonePlusBoldFont: UIFont
-//    let iPhonePlusItalicFont: UIFont
-//    let iPhonePlusItalicBoldFont: UIFont
-//    let iPad9Font: UIFont
-//    let iPad9BoldFont: UIFont
-//    let iPad9ItalicFont: UIFont
-//    let iPad9ItalicBoldFont: UIFont
-//    let iPad10Font: UIFont
-//    let iPad10BoldFont: UIFont
-//    let iPad10ItalicFont: UIFont
-//    let iPad10ItalicBoldFont: UIFont
-//    let iPad12Font: UIFont
-//    let iPad12BoldFont: UIFont
-//    let iPad12ItalicFont: UIFont
-//    let iPad12ItalicBoldFont: UIFont
-    
-    
 }
 extension FontsAndConstraintsOptions {
     func device() -> ScreenDimension.RawValue {
@@ -178,4 +150,3 @@ extension FontsAndConstraintsOptions {
         return deviceType
     }
 }
-//smallFont: UIFont, smallBoldFont: UIFont, smallItaliqueFont: UIFont, smallItaliqueBoldFont: UIFont, normalFont: UIFont, normalBoldFont: UIFont, normalItaliqueFont: UIFont, normalItaliqueBoldFont: UIFont, largeFont: UIFont, largeBoldFont: UIFont, largeItaliqueFont: UIFont, largeItaliqueBoldFont: UIFont)

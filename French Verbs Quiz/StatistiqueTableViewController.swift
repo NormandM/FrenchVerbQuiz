@@ -65,11 +65,12 @@ class StatistiqueTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Statistiques du Quiz"
+        
         populateData()
  
      }
     override func viewDidAppear(_ animated: Bool) {
+        self.title = "Statistiques du Quiz"
         remiseAZeroButton.layer.cornerRadius = remiseAZeroButton.frame.height / 2.0
         remiseAZeroButton.titleLabel?.font = fonts.normalBoldFont
     }

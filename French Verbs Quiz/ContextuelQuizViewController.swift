@@ -62,6 +62,7 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     override func viewDidLoad() {
         super.viewDidLoad()
         barreProgression.progress = 0.0
+       
         if let plistPath = Bundle.main.path(forResource: "ConjugaisonContextuel", ofType: "plist"),
             let arrayNS = NSArray(contentsOfFile: plistPath){
             sentenceArray = arrayNS as! [[String]]
@@ -84,7 +85,7 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     }
     override func viewWillAppear(_ animated: Bool) {
         let fonts = FontsAndConstraintsOptions()
-        
+        self.title = "Conjuguez le verbe."
         modeLabel.font = fonts.largeBoldFont
         tempsLabel.font = fonts.largeBoldFont
         suggestionButton.titleLabel?.font = fonts.smallItaliqueBoldFont
@@ -147,7 +148,9 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
         suggestionButton.isEnabled = false
         suggestionButton.backgroundColor = UIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
         verbTextField.isHidden = true
-        verbResponseButton.isHidden = false
+        suggestionButton.isEnabled = false
+        suggestionButton.backgroundColor = UIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
+        verbResponseButton.isHidden = true
         checkButton.isHidden = true
         return true
     }

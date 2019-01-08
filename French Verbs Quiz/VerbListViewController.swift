@@ -27,7 +27,7 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // testing with comment
-        self.title = "Choisissez le verbe"
+        
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
@@ -43,6 +43,9 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         listeVerbe = listeVerbe.sorted(by: alpha)
 
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Choisissez le verbe"
     }
     // Setting up the searchBar active: Ttrue/False
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {

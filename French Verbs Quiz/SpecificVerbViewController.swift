@@ -126,7 +126,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         for mode in modeEtTemps {
             
             if mode.contains("impératif"){
-                if verbesChoisi.contains("pouvoir") || verbesChoisi.contains("vouloir") || verbesChoisi.contains("devoir") || verbesChoisi.contains("falloir") || verbesChoisi.contains("pleuvoir") || verbesChoisi.contains("valoir") || (verbesChoisi.contains("s'extasier") && mode[0] == "Passé") || (verbesChoisi.contains("s'absenter") && mode[0] == "Passé") || verbesChoisi.contains("neiger") || (verbesChoisi.contains("s'évanouir") && mode[0] == "Passé"){
+                if verbesChoisi.contains("pouvoir") || verbesChoisi.contains("devoir") || verbesChoisi.contains("falloir") || verbesChoisi.contains("pleuvoir") || verbesChoisi.contains("valoir") || (verbesChoisi.contains("s'extasier") && mode[0] == "Passé") || (verbesChoisi.contains("s'absenter") && mode[0] == "Passé") || verbesChoisi.contains("neiger") || (verbesChoisi.contains("s'évanouir") && mode[0] == "Passé"){
                     showAlertPasDImperatif()
                     okForSegue = false
                 }
@@ -156,7 +156,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     }
     func showAlertPasDImperatif() {
         
-        let alertController = UIAlertController(title: "Il n'y a pas d'impératif pour ces verbes:", message: "pouvoir, vouloir, devoir, falloir, pleuvoir, valoir, neiger, s'extasier(au passé), s'absenter(au passé), s'évanouir(au passé). Faites un autre choix", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Il n'y a pas d'impératif pour ces verbes:", message: "pouvoir, devoir, falloir, pleuvoir, valoir, neiger, s'extasier(au passé), s'absenter(au passé), s'évanouir(au passé). Faites un autre choix", preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
         

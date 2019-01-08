@@ -13,6 +13,7 @@ class FinalVerbeViewController: UIViewController {
     var selectionVerbe = ["", "", ""]
     var noItem: Int = 0
     
+    @IBOutlet weak var backgrounColorView: UIView!
     @IBOutlet weak var infinitif: UILabel!
     @IBOutlet weak var mode: UILabel!
     @IBOutlet weak var temps: UILabel!
@@ -28,15 +29,13 @@ class FinalVerbeViewController: UIViewController {
     @IBOutlet weak var fourth: UILabel!
     @IBOutlet weak var fifth: UILabel!
     @IBOutlet weak var sixth: UILabel!
-    @IBOutlet weak var masterConstraint: NSLayoutConstraint!
     let screenSize: CGRect = UIScreen.main.bounds
     let fonts = FontsAndConstraintsOptions()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Verbe conjugué"
-        masterConstraint.constant = 0.08 * screenSize.height
+        
         var n = 0
         for verb in arrayVerbe{
             if verb[0] == selectionVerbe[1].lowercased() && verb[1] == selectionVerbe[2] && verb[2] == selectionVerbe[0]{
@@ -79,24 +78,24 @@ class FinalVerbeViewController: UIViewController {
         infinitif.font = fonts.largeBoldFont
         mode.font = fonts.largeFont
         temps.font = fonts.largeFont
-        premier.font = fonts.normalItaliqueBoldFont
-        deuxieme.font = fonts.normalItaliqueBoldFont
-        troisieme.font = fonts.normalItaliqueBoldFont
-        quatrieme.font = fonts.normalItaliqueBoldFont
-        cinquieme.font = fonts.normalItaliqueBoldFont
-        sixieme.font = fonts.normalItaliqueBoldFont
-        first.font = fonts.normalFont
-        second.font = fonts.normalFont
-        third.font = fonts.normalFont
-        fourth.font = fonts.normalFont
-        fifth.font = fonts.normalFont
-        sixth.font = fonts.normalFont
+        premier.font = fonts.smallItaliqueBoldFont
+        deuxieme.font = fonts.smallItaliqueBoldFont
+        troisieme.font = fonts.smallItaliqueBoldFont
+        quatrieme.font = fonts.smallItaliqueBoldFont
+        cinquieme.font = fonts.smallItaliqueBoldFont
+        sixieme.font = fonts.smallItaliqueBoldFont
+        first.font = fonts.smallFont
+        second.font = fonts.smallFont
+        third.font = fonts.smallFont
+        fourth.font = fonts.smallFont
+        fifth.font = fonts.smallFont
+        sixth.font = fonts.smallFont
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Verbe conjugué"
+        backgrounColorView.layer.cornerRadius = 50
     }
     
 

@@ -23,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.font: fontsAndConstraints.largeBoldFont, NSAttributedStringKey.foregroundColor:UIColor.white]
         FirebaseApp.configure()
         GADMobileAds.configure(withApplicationID: "ca-app-pub-1437510869244180/7683732997")
+        // get current number of times app has been launched
+        let currentCount = UserDefaults.standard.integer(forKey: "launchCount")
+        // increment received number by one
+        UserDefaults.standard.set(currentCount+1, forKey:"launchCount")
+        UserDefaults.standard.synchronize()
         return true
     }
 

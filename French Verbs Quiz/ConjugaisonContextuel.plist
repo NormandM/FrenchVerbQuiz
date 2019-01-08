@@ -1853,7 +1853,7 @@
 	<array>
 		<string>Présent</string>
 		<string>conditionnel</string>
-		<string>A ta place je m</string>
+		<string>A ta place je m&apos;</string>
 		<string>excuserais</string>
 		<string>excuser</string>
 		<string>très vite.</string>
@@ -2102,7 +2102,7 @@
 		<string>Présent</string>
 		<string>conditionnel</string>
 		<string>Toi, tu</string>
-		<string> t&apos;évanouirais</string>
+		<string>t&apos;évanouirais</string>
 		<string>s&apos;évanouir</string>
 		<string>à la vue d&apos;un serpent ?</string>
 	</array>
@@ -2272,7 +2272,7 @@
 		<string>Tu</string>
 		<string>aurais voulu</string>
 		<string>vouloir</string>
-		<string>te faire soigner par ta mère,n&apos;est -ce pas ?</string>
+		<string>te faire soigner par ta mère, n&apos;est -ce pas ?</string>
 	</array>
 	<array>
 		<string>Passé</string>
@@ -2320,7 +2320,7 @@
 		<string>Elle</string>
 		<string>aurait pu</string>
 		<string>pouvoir</string>
-		<string>venir !.</string>
+		<string>venir !</string>
 	</array>
 	<array>
 		<string>Passé</string>
@@ -2654,8 +2654,8 @@
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Afin d&apos;éviter toute tricherie, les éducateurs souhaitaient que les élèves</string>
-		<string>assissent</string>
-		<string>s&apos; asseoir</string>
+		<string>s&apos;assissent</string>
+		<string>s&apos;asseoir</string>
 		<string>un par table.</string>
 	</array>
 	<array>
@@ -2742,31 +2742,31 @@
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Que je</string>
-		<string>Mangeasse</string>
-		<string>Manger</string>
+		<string>mangeasse</string>
+		<string>manger</string>
 		<string>mon pain.</string>
 	</array>
 	<array>
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Que les hommes</string>
-		<string>Fabriquassent</string>
-		<string>Fabriquer</string>
+		<string>fabriquassent</string>
+		<string>fabriquer</string>
 		<string>leurs propres outils de travail.</string>
 	</array>
 	<array>
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Que vous</string>
-		<string>Chassassiez</string>
-		<string>Chasser</string>
+		<string>chassassiez</string>
+		<string>chasser</string>
 		<string>le gibier.</string>
 	</array>
 	<array>
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Que sa mère</string>
-		<string>Embrassât</string>
+		<string>embrassât</string>
 		<string>embrasser</string>
 		<string>le petit Alain.</string>
 	</array>
@@ -2774,15 +2774,15 @@
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Que tu</string>
-		<string>Peignisses</string>
-		<string>Peindre</string>
+		<string>peignisses</string>
+		<string>peindre</string>
 		<string>la toile.</string>
 	</array>
 	<array>
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Que nous</string>
-		<string>Moulussions</string>
+		<string>moulussions</string>
 		<string>moudre</string>
 		<string> le mil.</string>
 	</array>
@@ -2790,7 +2790,7 @@
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Qu&apos;elle</string>
-		<string>Vînt</string>
+		<string>vînt</string>
 		<string>venir</string>
 		<string>à la maison.</string>
 	</array>
@@ -2798,7 +2798,7 @@
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Que les étudiants</string>
-		<string>Réussissent</string>
+		<string>réussissent</string>
 		<string>réussir</string>
 		<string>à leurs examens.</string>
 	</array>
@@ -2806,7 +2806,7 @@
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Que nous</string>
-		<string>Éteignissions</string>
+		<string>éteignissions</string>
 		<string>éteindre</string>
 		<string> les lampes.</string>
 	</array>
@@ -2814,8 +2814,8 @@
 		<string>Imparfait</string>
 		<string>subjonctif</string>
 		<string>Qu&apos;il</string>
-		<string>Dormît</string>
-		<string>Dormir</string>
+		<string>dormît</string>
+		<string>dormir</string>
 		<string>à la belle étoile.</string>
 	</array>
 	<array>
@@ -3065,14 +3065,6 @@
 		<string>ayez choisi</string>
 		<string>choisir</string>
 		<string>votre cadeau.</string>
-	</array>
-	<array>
-		<string>Passé</string>
-		<string>subjonctif</string>
-		<string>À moins qu&apos;elle</string>
-		<string>ait descendu</string>
-		<string>descendre</string>
-		<string>la télévision, on ne pourra pas jouer aux jeux vidéo.</string>
 	</array>
 	<array>
 		<string>Passé</string>

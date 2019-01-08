@@ -435,5 +435,13 @@
 	<string>to reach</string>
 	<key>cueillir</key>
 	<string>to gather</string>
+	<key>écarquiller</key>
+	<string>to widen</string>
+	<key>contrôler</key>
+	<string>to control</string>
+	<key>réviser</key>
+	<string>to revise</string>
+	<key>nettoyer</key>
+	<string>to clean</string>
 </dict>
 </plist>

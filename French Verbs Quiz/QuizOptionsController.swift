@@ -38,8 +38,11 @@ class QuizOptionsController: UITableViewController {
                 listeVerbes.append(array[2])
             }
         }
-        self.title = "Choisissez les temps"
+        
 
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Choisissez les temps"
     }
 
 
@@ -134,7 +137,7 @@ class QuizOptionsController: UITableViewController {
         }
     }
     func showAlert () {
-        let alertController = UIAlertController(title: "If faut choisir au moins un temps de verbe.", message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "If faut choisir au moins un temps de verbe.", message: nil, preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
         
