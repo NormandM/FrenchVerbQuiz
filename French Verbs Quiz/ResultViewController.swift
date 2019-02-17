@@ -17,7 +17,6 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var termineButton: UIButton!
     @IBOutlet weak var scoreChart: PieChartView!
-    var testCompltete = UserDefaults.standard.bool(forKey: "testCompltete")
     var totalProgress: Double = 0
     var goodResponse: Double = 0
     var badResponse = Double()
@@ -26,13 +25,12 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testCompltete = true
-        UserDefaults.standard.set(self.testCompltete, forKey: "testCompltete")
-        resultat.text = "\(goodResponse + aideCount)/\(totalProgress)"
+        goodResponse = Double(UserDefaults.standard.integer(forKey: "thisQuizGoodAnswer"))
+        aideCount = Double(UserDefaults.standard.integer(forKey: "thisQuizHintAnswer"))
+        badResponse = Double(UserDefaults.standard.integer(forKey: "thisQuizBadAnswer"))
+        resultat.text = "\(Int(goodResponse + aideCount))/\(Int(totalProgress))"
         let result = Double(goodResponse + aideCount)/Double(totalProgress)
         let resultPercent = String(round(result*100)) + " %"
-        
-        // Do any additional setup after loading the view.
         if result == 1.0{
             message.text = "Parfait! "
         }else if result < 1 && Double(result) >= 0.75 {
@@ -53,12 +51,6 @@ class ResultViewController: UIViewController {
         setupChart()
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "unwindToQuizController" {
-            let controller = segue.destination as! QuizViewController
-            controller.testCompltete = testCompltete
-        }
-    }
     func setupChart() {
         let entrieBon = goodResponse
         let entrieMal = badResponse

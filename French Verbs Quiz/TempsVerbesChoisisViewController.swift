@@ -15,7 +15,6 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
     @IBOutlet weak var lesTemps: UILabel!
     @IBOutlet weak var lesVerbes: UILabel!
     @IBOutlet weak var termineButton: UIButton!
-    
     let sectionHeaderTableTemps: String = ""
     let sectionHeaderTableVerbes: String = ""
     var tempsEtMode = [[String]]()
@@ -38,39 +37,37 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
         }else{
             verbeInfinitiFinal = verbeInfinitif
         }
-
-        
         for temp in tempsEtMode {
             if mode.contains(temp[1]){
             }else{
                 mode.append(temp[1])
             }
         }
+        print(mode)
         for _ in mode{
             var tempsInd = [String]()
             var tempSubj = [String]()
             var tempCond = [String]()
             var tempsImp = [String]()
             for temp in tempsEtMode{
-                if temp[1] == "indicatif"{
+                if temp[1].lowercased() == "indicatif"{
                     tempsInd.append(temp[0])
-                }else if temp[1] == "subjonctif"{
+                }else if temp[1].lowercased() == "subjonctif"{
                     tempSubj.append(temp[0])
-                }else if temp[1] == "conditionnel"{
+                }else if temp[1].lowercased() == "conditionnel"{
                     tempCond.append(temp[0])
-                }else if temp[1] == "impératif"{
+                }else if temp[1].lowercased() == "impératif"{
                     tempsImp.append(temp[0])
                 }
             }
-            
             temps = [tempsInd, tempSubj, tempCond, tempsImp]
+            print(temps)
             var n = 0
             for temp in temps {
                 if temp == [] {temps.remove(at: n); n = n - 1}
                 n = n + 1
             }
         }
-
     }
     override func viewWillAppear(_ animated: Bool) {
         titleLabel.font = fonts.largeBoldFont
@@ -81,8 +78,6 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
         termineButton.layer.cornerRadius = termineButton.frame.height / 2.0
         termineButton.titleLabel?.font = fonts.normalBoldFont
     }
-
-    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         var header: String = ""
         if tableView == self.tableViewTemps {
@@ -102,9 +97,7 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
         header.textLabel!.textColor = UIColor.white //make the text white
         header.textLabel?.font = fonts.normalBoldFont
         header.alpha = 1.0 //make the header transparent
-        
     }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count:Int?
         if tableView == self.tableViewTemps {
@@ -125,30 +118,21 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
         }
         return count!
     }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell?
- 
         if tableView == self.tableViewTemps {
             cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
             cell?.textLabel!.text = temps[indexPath.section][indexPath.row]
-            
         }
-        
         if tableView == self.tableViewVerbes {
             cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath)
             cell?.textLabel!.text = verbeInfinitiFinal[indexPath.row]
-            
         }
         cell!.textLabel?.textColor = UIColor.black
         cell!.textLabel?.font =  fonts.normalItaliqueBoldFont
         return (cell)!
     }
-
-
     @IBAction func termine(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-
 }

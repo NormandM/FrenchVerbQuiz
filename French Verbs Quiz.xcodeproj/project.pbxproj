@@ -42,6 +42,16 @@
 		8E91EAF81DF1D047008F39A9 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAF71DF1D047008F39A9 /* OptionsViewController.swift */; };
 		8E91EAFE1DF1D88A008F39A9 /* DataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E91EAFD1DF1D88A008F39A9 /* DataStructure.swift */; };
 		8E9482621F5B265200D1F68F /* SpecificVerbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */; };
+		8EA209AC221499EC00DDCA09 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209AB221499EB00DDCA09 /* CoreDataHandler.swift */; };
+		8EA209AE2214D3C200DDCA09 /* VerbInfinitif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209AD2214D3C200DDCA09 /* VerbInfinitif.swift */; };
+		8EA209B02214D52200DDCA09 /* ModeAndTempStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209AF2214D52100DDCA09 /* ModeAndTempStruct.swift */; };
+		8EA209B22214D72000DDCA09 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209B12214D72000DDCA09 /* Verb.swift */; };
+		8EA209B42214D7C500DDCA09 /* ChoixDuPronom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209B32214D7C500DDCA09 /* ChoixDuPronom.swift */; };
+		8EA209B62214D7EC00DDCA09 /* ChosenVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209B52214D7EC00DDCA09 /* ChosenVerb.swift */; };
+		8EA209B82215ED5E00DDCA09 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209B72215ED5E00DDCA09 /* QuizQuestion.swift */; };
+		8EA209BA2215ED8100DDCA09 /* SelectVerbsForQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209B92215ED8100DDCA09 /* SelectVerbsForQuiz.swift */; };
+		8EA209BC2215F03300DDCA09 /* SoundResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209BB2215F03300DDCA09 /* SoundResponse.swift */; };
+		8EA209BE2215F04700DDCA09 /* ResponseEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209BD2215F04600DDCA09 /* ResponseEvaluation.swift */; };
 		8EA41EFE219E1643004D4D42 /* ChoixTempsEtMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA41EFD219E1643004D4D42 /* ChoixTempsEtMode.swift */; };
 		8EA41F00219F6DE0004D4D42 /* ContextuelQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA41EFF219F6DE0004D4D42 /* ContextuelQuizViewController.swift */; };
 		8EA41F0521A0A584004D4D42 /* ConjugaisonContextuel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EA41F0421A0A584004D4D42 /* ConjugaisonContextuel.plist */; };
@@ -126,6 +136,16 @@
 		8E91EAF71DF1D047008F39A9 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		8E91EAFD1DF1D88A008F39A9 /* DataStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructure.swift; sourceTree = "<group>"; };
 		8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificVerbViewController.swift; sourceTree = "<group>"; };
+		8EA209AB221499EB00DDCA09 /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
+		8EA209AD2214D3C200DDCA09 /* VerbInfinitif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbInfinitif.swift; sourceTree = "<group>"; };
+		8EA209AF2214D52100DDCA09 /* ModeAndTempStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeAndTempStruct.swift; sourceTree = "<group>"; };
+		8EA209B12214D72000DDCA09 /* Verb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
+		8EA209B32214D7C500DDCA09 /* ChoixDuPronom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoixDuPronom.swift; sourceTree = "<group>"; };
+		8EA209B52214D7EC00DDCA09 /* ChosenVerb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChosenVerb.swift; sourceTree = "<group>"; };
+		8EA209B72215ED5E00DDCA09 /* QuizQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		8EA209B92215ED8100DDCA09 /* SelectVerbsForQuiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectVerbsForQuiz.swift; sourceTree = "<group>"; };
+		8EA209BB2215F03300DDCA09 /* SoundResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundResponse.swift; sourceTree = "<group>"; };
+		8EA209BD2215F04600DDCA09 /* ResponseEvaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseEvaluation.swift; sourceTree = "<group>"; };
 		8EA41EFD219E1643004D4D42 /* ChoixTempsEtMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoixTempsEtMode.swift; sourceTree = "<group>"; };
 		8EA41EFF219F6DE0004D4D42 /* ContextuelQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextuelQuizViewController.swift; sourceTree = "<group>"; };
 		8EA41F0421A0A584004D4D42 /* ConjugaisonContextuel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConjugaisonContextuel.plist; sourceTree = "<group>"; };
@@ -233,6 +253,7 @@
 				8EA41F03219F6FB2004D4D42 /* ContextuelQuiz */,
 				8EBCA0A321D03F3E0029D94F /* StatistiqueView */,
 				8E1741EB21BED25C005DE317 /* FontsAndConstraintsOptions.swift */,
+				8EA209AB221499EB00DDCA09 /* CoreDataHandler.swift */,
 				8E6949D321BDC26800D6C3B2 /* ScreenDimension.swift */,
 				8E91EACE1DF1CA1E008F39A9 /* Assets.xcassets */,
 				8E7FC9701DFB421E005C397B /* sound */,
@@ -274,6 +295,11 @@
 				8E517D861DF1F63E00EA5087 /* VerbListViewController.swift */,
 				8E517D881DF2631E00EA5087 /* tempsDeVerbeTableViewController.swift */,
 				8E517D8A1DF3513300EA5087 /* FinalVerbeViewController.swift */,
+				8EA209AD2214D3C200DDCA09 /* VerbInfinitif.swift */,
+				8EA209AF2214D52100DDCA09 /* ModeAndTempStruct.swift */,
+				8EA209B12214D72000DDCA09 /* Verb.swift */,
+				8EA209B52214D7EC00DDCA09 /* ChosenVerb.swift */,
+				8EA209B32214D7C500DDCA09 /* ChoixDuPronom.swift */,
 			);
 			name = ListeDeverbes;
 			sourceTree = "<group>";
@@ -317,10 +343,14 @@
 			isa = PBXGroup;
 			children = (
 				8E517D8C1DF471EA00EA5087 /* QuizOptionsController.swift */,
+				8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */,
 				8E1741EF21C5D541005DE317 /* QuizViewController.swift */,
 				8E7FC96E1DFB03D3005C397B /* ResultViewController.swift */,
+				8EA209B72215ED5E00DDCA09 /* QuizQuestion.swift */,
+				8EA209B92215ED8100DDCA09 /* SelectVerbsForQuiz.swift */,
+				8EA209BB2215F03300DDCA09 /* SoundResponse.swift */,
+				8EA209BD2215F04600DDCA09 /* ResponseEvaluation.swift */,
 				8EC813011F717E590052F901 /* SelectionQuestion.swift */,
-				8E9482611F5B265200D1F68F /* SpecificVerbViewController.swift */,
 				8EC813031F71C2220052F901 /* QuestionFinale.swift */,
 				8E23527B1F755CAF00C39936 /* TempsVerbesChoisisViewController.swift */,
 				8E5EE06B1F7AF61400CC9869 /* FrenchEnglish.swift */,
@@ -372,7 +402,6 @@
 				8E91EAD41DF1CA1E008F39A9 /* Sources */,
 				8E91EAD51DF1CA1E008F39A9 /* Frameworks */,
 				8E91EAD61DF1CA1E008F39A9 /* Resources */,
-				45E0E774229EADB6E6DBD7AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -530,26 +559,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		45E0E774229EADB6E6DBD7AA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-French Verbs QuizTests/Pods-French Verbs QuizTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-French Verbs QuizTests/Pods-French Verbs QuizTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		98968515D175EFF317BAB311 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -576,14 +585,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-French Verbs Quiz/Pods-French Verbs Quiz-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -599,17 +604,22 @@
 			files = (
 				8EC813021F717E590052F901 /* SelectionQuestion.swift in Sources */,
 				8E130B6E21D824F30072885C /* Auxiliere.swift in Sources */,
+				8EA209B62214D7EC00DDCA09 /* ChosenVerb.swift in Sources */,
 				8E91EAFE1DF1D88A008F39A9 /* DataStructure.swift in Sources */,
 				8E020A791DFDE8FE0075B180 /* StatistiqueTableViewController.swift in Sources */,
 				8EDC423A21AC906100EE41D2 /* DifficultyLevel.swift in Sources */,
 				8EDC423E21AF124D00EE41D2 /* ChoixFacileVerbeConjugue.swift in Sources */,
 				8EA41EFE219E1643004D4D42 /* ChoixTempsEtMode.swift in Sources */,
 				8E89C97A21BD6B70005998D3 /* ChoixDeTempsViewController.swift in Sources */,
+				8EA209B42214D7C500DDCA09 /* ChoixDuPronom.swift in Sources */,
 				8EC812FF1F6C70D50052F901 /* RandomNumberGenerator.swift in Sources */,
 				8E6949D421BDC26800D6C3B2 /* ScreenDimension.swift in Sources */,
 				8E23527C1F755CAF00C39936 /* TempsVerbesChoisisViewController.swift in Sources */,
+				8EA209BA2215ED8100DDCA09 /* SelectVerbsForQuiz.swift in Sources */,
 				8E020A761DFDCBF90075B180 /* ItemVerbe+CoreDataClass.swift in Sources */,
 				8E517D871DF1F63E00EA5087 /* VerbListViewController.swift in Sources */,
+				8EA209AE2214D3C200DDCA09 /* VerbInfinitif.swift in Sources */,
+				8EA209BC2215F03300DDCA09 /* SoundResponse.swift in Sources */,
 				8EA41F00219F6DE0004D4D42 /* ContextuelQuizViewController.swift in Sources */,
 				8E1155B21F7C41E400DB78AF /* LogoViewController.swift in Sources */,
 				8E1741EC21BED25C005DE317 /* FontsAndConstraintsOptions.swift in Sources */,
@@ -618,18 +628,23 @@
 				8E517D891DF2631E00EA5087 /* tempsDeVerbeTableViewController.swift in Sources */,
 				8EC813041F71C2220052F901 /* QuestionFinale.swift in Sources */,
 				8E91EAC81DF1CA1E008F39A9 /* AppDelegate.swift in Sources */,
+				8EA209AC221499EC00DDCA09 /* CoreDataHandler.swift in Sources */,
 				8E517D8D1DF471EA00EA5087 /* QuizOptionsController.swift in Sources */,
 				8E7124E8219DE35100A027FF /* ContextuelQuizOptionController.swift in Sources */,
 				8EBCA0C121D41F830029D94F /* PieChartSetUp.swift in Sources */,
 				8E020A671DFC8DCB0075B180 /* VerbesFrancais.xcdatamodeld in Sources */,
 				8ECB6F1F21CD77AC00E60DE3 /* UnwindSegueChoice.swift in Sources */,
 				8E91EAF81DF1D047008F39A9 /* OptionsViewController.swift in Sources */,
+				8EA209B82215ED5E00DDCA09 /* QuizQuestion.swift in Sources */,
 				8E89C97421B8694A005998D3 /* TextFieldProperties.swift in Sources */,
+				8EA209B22214D72000DDCA09 /* Verb.swift in Sources */,
 				8E7FC96F1DFB03D3005C397B /* ResultViewController.swift in Sources */,
 				8E9482621F5B265200D1F68F /* SpecificVerbViewController.swift in Sources */,
 				8E1741F021C5D541005DE317 /* QuizViewController.swift in Sources */,
 				8E5EE06C1F7AF61400CC9869 /* FrenchEnglish.swift in Sources */,
+				8EA209B02214D52200DDCA09 /* ModeAndTempStruct.swift in Sources */,
 				8EDC424021AF160B00EE41D2 /* Sentence.swift in Sources */,
+				8EA209BE2215F04700DDCA09 /* ResponseEvaluation.swift in Sources */,
 				8E020A771DFDCBF90075B180 /* ItemVerbe+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -810,13 +825,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = X6D769Z7F4;
 				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/nanopb\"",
-					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
-					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks/frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "French Verbs Quiz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "NM.French-Verbs-Quiz";
@@ -835,13 +844,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = X6D769Z7F4;
 				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$PODS_CONFIGURATION_BUILD_DIR/nanopb\"",
-					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
-					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
-					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/Frameworks/frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "French Verbs Quiz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "NM.French-Verbs-Quiz";

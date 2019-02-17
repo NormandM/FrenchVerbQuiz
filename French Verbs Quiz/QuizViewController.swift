@@ -9,9 +9,9 @@
 import UIKit
 import AudioToolbox
 import CoreData
-import GoogleMobileAds
 
-class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate,  GADBannerViewDelegate  {
+
+class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
     @IBOutlet weak var autreQuestionLabel: UIButton!
     @IBOutlet weak var verbe: UILabel!
     @IBOutlet weak var mode: UILabel!
@@ -28,66 +28,36 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
     @IBOutlet weak var verbResponseButton: UIButton!
     @IBOutlet weak var personneResponse: UILabel!
     @IBOutlet weak var wrongAnswerCorrection: UILabel!
-
-    
-    var textFieldIsActivated = false
-    var tempsEtMode = [[String]]()
-    var listeVerbe: [String] = []
-    var arrayVerbe: [[String]] = []
-    var arraySelection: [String] = []
-    var verbeInfinitif: [String] = []
-    var allInfoList: [[String]] = []
-    var indexChoisi: Int = 0
-    var indexDesVerbes: [Int] = []
-    var noPersonne: Int = 0
-    var noItem: Int = 0
-    var choixPersonne: String = ""
-    var reponseBonne: String = ""
-    var progress: Float = 0.0
-    var progressInt: Float = 0.0
-    var goodResponse = Double()
-    var badRep = Double()
-    var aideCount = Double()
-    var totalProgress: Double = 0
-    var soundURL: NSURL?
-    var soundID:SystemSoundID = 0
-    var didSave: Bool = false
-    var verbeFinal: String = ""
-    var modeFinal: String = ""
-    var tempsFinal: String = ""
-    var testCompltete = UserDefaults.standard.bool(forKey: "testCompltete")
-    let dataController = DataController.sharedInstance
+    lazy var quizQuestion = QuizQuestion(verbSelectionRandom: verbSelectionRandom, index: index)
     var difficulté = DifficultyLevel.DIFFICILE
+    var textFieldIsActivated = false
+    var arrayVerb = [[String]]()
+    var verbInfinitif = [String]()
+    var arraySelectionTempsEtMode = [[String]]()
+    var index = Int()
+    var verbSelectionRandom = [[String]]()
+    var conjugatedVerb = String()
     var rightHintWasSelected = false
-    let managedObjectContext = DataController.sharedInstance.managedObjectContext
-    lazy var fetchRequest: NSFetchRequest<NSFetchRequestResult> = {
-        let request  = NSFetchRequest<NSFetchRequestResult>(entityName: ItemVerbe.identifier)
-        let sortDescriptor = NSSortDescriptor(key: "verbeInfinitif", ascending: true)
-        request.sortDescriptors = [sortDescriptor]
-        return request
-    }()
-//    lazy var adBannerView: GADBannerView = {
-//        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-//        adBannerView.adUnitID = "ca-app-pub-1437510869244180/7683732997"
-//        adBannerView.delegate = self
-//        adBannerView.rootViewController = self
-//        return adBannerView
-//    }()
-    
-    var items: [ItemVerbe] = []
-    
+    var verbCountInQuiz  = Int()
+    var progressInt = Int()
+    var listeVerbe = [String]()
+    var userRespone = String()
     override func viewDidLoad() {
         super.viewDidLoad()
-        personneResponse.isHidden = true
-        testCompltete = false
-        
-        barreProgression.progress = 0.0
-        selectionQuestion()
-        do {
-            items = try managedObjectContext.fetch(fetchRequest) as! [ItemVerbe]
-        }catch let error as NSError {
-            print("Error fetching Item objects: \(error.localizedDescription), \(error.userInfo)")
+        let selectVerbArray = SelectVerb(arrayVerb: arrayVerb, tempsEtMode: arraySelectionTempsEtMode, verbInfinitif: verbInfinitif)
+        verbSelectionRandom = selectVerbArray.verbSelectionRandom
+        for array in arrayVerb{
+            if !listeVerbe.contains(array[2]){
+                listeVerbe.append(array[2])
+            }
         }
+        barreProgression.progress = 0.0
+        if selectVerbArray.verbInfinitif == ["Tous les verbes"]{
+            verbCountInQuiz = 10
+        }else{
+            verbCountInQuiz = verbSelectionRandom.count
+        }
+        setQuestion()
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillChange), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillChange), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
@@ -95,7 +65,6 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
-
     override func viewWillAppear(_ animated: Bool) {
         self.title = "Conjuguez le verbe."
         let fonts = FontsAndConstraintsOptions()
@@ -118,40 +87,57 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         }
         TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: reponse, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondAppear)
         verbResponseButton.isEnabled = false
-        
     }
     override func viewDidAppear(_ animated: Bool) {
+        traductionAnglaiseButton.layer.cornerRadius = traductionAnglaiseButton.frame.height/2
         tempsChoisiButton.layer.cornerRadius = tempsChoisiButton.frame.height/2
         verbResponseButton.layer.cornerRadius = verbResponseButton.frame.height / 2.0
         uneAutreQuestionButton.layer.cornerRadius = uneAutreQuestionButton.frame.height / 2.0
         suggestionButton.layer.cornerRadius = suggestionButton.frame.height / 2.0
-        traductionAnglaiseButton.layer.cornerRadius = traductionAnglaiseButton.frame.height / 2.0
         verbHintButton.forEach {(eachButton) in
             eachButton.layer.cornerRadius = eachButton.frame.height / 2.0
         }
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        UserDefaults.standard.set(0, forKey: "thisQuizHintAnswer")
+        UserDefaults.standard.set(0, forKey: "thisQuizGoodAnswer")
+        UserDefaults.standard.set(0, forKey: "thisQuizBadAnswer")
     }
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         tempsChoisiButton.layer.cornerRadius = tempsChoisiButton.frame.height/2
-        verbResponseButton.layer.cornerRadius = verbResponseButton.frame.height / 2.0
         uneAutreQuestionButton.layer.cornerRadius = uneAutreQuestionButton.frame.height / 2.0
         suggestionButton.layer.cornerRadius = suggestionButton.frame.height / 2.0
-        traductionAnglaiseButton.layer.cornerRadius = traductionAnglaiseButton.frame.height / 2.0
-        verbHintButton.forEach {(eachButton) in
-            eachButton.layer.cornerRadius = eachButton.frame.height / 2.0
-        }
+        uneAutreQuestionButton.setNeedsLayout()
     }
     @objc func keyBoardWillChange(notification: Notification) {
         let distanceFromTextField = view.frame.size.height - (reponse.frame.size.height + reponse.frame.origin.y)
         guard let keyBoardRec = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
             return
         }
-        if notification.name == Notification.Name.UIKeyboardWillShow && !textFieldIsActivated{
+        if notification.name == NSNotification.Name.UIKeyboardWillShow && !textFieldIsActivated{
             textFieldIsActivated = true
             animateViewMoving(true, moveValue: keyBoardRec.height - distanceFromTextField + 5)
-        }else if notification.name == Notification.Name.UIKeyboardWillHide{
+        }else if notification.name == NSNotification.Name.UIKeyboardWillHide{
             textFieldIsActivated = false
             animateViewMoving(true, moveValue: distanceFromTextField - keyBoardRec.height - 5)
         }
+    }
+    func setQuestion() {
+        quizQuestion = QuizQuestion(verbSelectionRandom: verbSelectionRandom, index: index)
+        let choixDuPronom = ChoixDuPronom(mode: quizQuestion.mode, temps: quizQuestion.temp, infinitif: quizQuestion.infinitif, personne: quizQuestion.person, conjugatedVerb: quizQuestion.conjugatedVerb)
+        personneResponse.isHidden = true
+        index = quizQuestion.indexIncrement
+        verbe.text = quizQuestion.infinitif.capitalizingFirstLetter()
+        mode.text = quizQuestion.mode.capitalizingFirstLetter()
+        temps.text = quizQuestion.temp.capitalizingFirstLetter()
+        personne.text = choixDuPronom.pronom
+        personneResponse.text = choixDuPronom.pronom
+        conjugatedVerb = quizQuestion.conjugatedVerb
+    }
+    @objc func textFieldShouldReturn(_ reponse: UITextField) -> Bool {
+        userRespone = reponse.text!
+        afterUserResponse()
+        return true
     }
     func animateViewMoving (_ up:Bool, moveValue :CGFloat){
         let movementDuration:TimeInterval = 0.3
@@ -162,20 +148,78 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
         UIView.commitAnimations()
     }
-    @objc func textFieldShouldReturn(_ reponse: UITextField) -> Bool {
-        evaluationReponse()
+    func questionInitialisation() {
+        switch difficulté {
+        case .FACILE:
+            ChoixFacileVerbeConjugue.verbeConjugue(arrayVerbe: arrayVerb, infinitif:  quizQuestion.infinitif, tempsDuVerbe: quizQuestion.temp, modeDuverbe:quizQuestion.mode, verbHintButton: verbHintButton, hintMenuAction: hintMenuActiondAppear, reponseBonne: conjugatedVerb)
+        default:
+            break
+        }
+    }
+    func hintMenuActiondissapear() {
+        verbHintButton.forEach { (eachButton) in
+            UIView.animate(withDuration: 0.4, animations: {
+                eachButton.isHidden = true
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    func hintMenuActiondAppear() {
+        verbHintButton.forEach { (eachButton) in
+            UIView.animate(withDuration: 0.4, animations: {
+                eachButton.isHidden = false
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showResult" {
+            let wichQuiz = UnwindSegueChoice.toQuizViewController
+            let controller = segue.destination as! ResultViewController
+            controller.totalProgress = Double(verbCountInQuiz)
+            controller.wichQuiz = wichQuiz
+        }
+        if segue.identifier == "showTempsVerbesChoisis" {
+            let controller = segue.destination as! TempsVerbesChoisisViewController
+            print(arraySelectionTempsEtMode)
+            print(verbInfinitif)
+            print(listeVerbe)
+            controller.tempsEtMode = arraySelectionTempsEtMode
+            controller.verbeInfinitif = verbInfinitif
+            controller.listeVerbe = listeVerbe
+        }
+    }
+    @IBAction func unwindToQuizController(segue: UIStoryboardSegue) {
+        autreQuestionLabel.isEnabled = true
+        UserDefaults.standard.set(0, forKey: "thisQuizGoodAnswer")
+        UserDefaults.standard.set(0, forKey: "thisQuizHintAnswer")
+        UserDefaults.standard.set(0, forKey: "thisQuizBadAnswer")
+        barreProgression.progress = 0.0
+        progressInt = 0
+        reponse.text = ""
+        index = 0
+        difficulté = .DIFFICILE
+        TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: reponse, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondissapear)
         personneResponse.isHidden = true
-        personne.isHidden = true
-        specificQuiz()
-        reponse.resignFirstResponder()
-        checkButton.isEnabled = false
-        checkButton.setTitleColor(UIColor.gray, for: .disabled)
-        suggestionButton.isEnabled = false
-        suggestionButton.backgroundColor = UIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
-        reponse.isHidden = true
-        verbResponseButton.isHidden = false
-        checkButton.isHidden = true
-        return true
+        personne.isHidden = false
+        
+    }
+    
+    @IBAction func autreQuestionPushed(_ sender: UIButton) {
+        setQuestion()
+        personne.isHidden = false
+        reponse.isHidden = false
+        wrongAnswerCorrection.isHidden = true
+        personneResponse.isHidden = true
+        checkButton.isEnabled = true
+        reponse.isEnabled = true
+        reponse.textColor = UIColor.black
+        reponse.text = ""
+        verbResponseButton.setTitle("Choisir le verbe", for: .disabled)
+        difficulté = .DIFFICILE
+        rightHintWasSelected = false
+        TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: reponse, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondAppear)
     }
     @IBAction func suggestionButtonWasPressed(_ sender: UIButton) {
         difficulté = .FACILE
@@ -187,11 +231,8 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         suggestionButton.backgroundColor = UIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
     }
     @IBAction func checkButton(_ sender: UIButton) {
-        evaluationReponse()
-        personneResponse.isHidden = true
-        personne.isHidden = true
-        specificQuiz()
-        reponse.resignFirstResponder()
+        userRespone = reponse.text!
+        afterUserResponse()
         checkButton.isEnabled = false
         checkButton.setTitleColor(UIColor.gray, for: .disabled)
         suggestionButton.isEnabled = false
@@ -201,216 +242,60 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         checkButton.isHidden = true
     }
     @IBAction func verbHintPressed(_ sender: UIButton) {
-        
-        personne.isHidden = true
-        personneResponse.isHidden = true
-        if reponseBonne.lowercased() == sender.titleLabel?.text?.lowercased() {
+        userRespone = (sender.titleLabel?.text?.lowercased())!
+        if conjugatedVerb.lowercased() == sender.titleLabel?.text?.lowercased() {
             rightHintWasSelected = true
         }else{
             rightHintWasSelected = false
         }
-        evaluationReponse()
-        specificQuiz()
+        afterUserResponse()
         hintMenuActiondissapear()
     }
-    @IBAction func uneAutreQuestionButtonPushed(_ sender: UIButton) {
-        personne.isHidden = false
-        wrongAnswerCorrection.isHidden = true
-        personneResponse.isHidden = true
-        checkButton.isEnabled = true
-        reponse.isEnabled = true
-        reponse.textColor = UIColor.black
-        reponse.text = ""
-        verbResponseButton.setTitle("Choisir le verbe", for: .disabled)
-        selectionQuestion()
-        difficulté = .DIFFICILE
-        rightHintWasSelected = false
-        TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: reponse, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondAppear)
+    @IBAction func traductionButtonPushed(_ sender: UIButton) {
+        showAlert()
     }
-
-
-    
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showResult" {
-            let wichQuiz = UnwindSegueChoice.toQuizViewController
-            let controller = segue.destination as! ResultViewController
-            controller.goodResponse = goodResponse
-            controller.badResponse = badRep
-            controller.aideCount = aideCount
-            controller.totalProgress = totalProgress
-            controller.wichQuiz = wichQuiz
-        }
-        if segue.identifier == "showTempsVerbesChoisis" {
-            let controller = segue.destination as! TempsVerbesChoisisViewController
-            controller.tempsEtMode = tempsEtMode
-            controller.verbeInfinitif = verbeInfinitif
-            controller.listeVerbe = listeVerbe
-            
-        }
-    
-    }
-    @IBAction func unwindToLast(segue: UIStoryboardSegue) {
-        autreQuestionLabel.isEnabled = true
-        progressInt = 0.0
-        progress = 0.0
-        goodResponse = 0
-        aideCount = 0
-        badRep = 0
-        barreProgression.progress = 0.0
-        reponse.text = ""
-        indexChoisi = 0
-        difficulté = .DIFFICILE
-        TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: reponse, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondissapear)
-        personneResponse.isHidden = true
-        personne.isHidden = false
-        selectionQuestion()
-    }
-    
-    func selectionQuestion(){
-        if verbeInfinitif != ["Tous les verbes"] {
-            if allInfoList.count == 0{
-                let selection = Selection()
-                let choixTempsEtMode = selection.questionSpecifique(arraySelection: arraySelection, arrayVerbe: arrayVerbe, verbeInfinitif: verbeInfinitif)
-                allInfoList = choixTempsEtMode.0
-                indexDesVerbes = choixTempsEtMode.1
-                tempsEtMode = choixTempsEtMode.2
-            }
-            let verbeTrie = VerbeTrie(allInfoList: allInfoList, n: indexDesVerbes[indexChoisi])
-            let personneVerbe = PersonneTrie(verbeTrie: verbeTrie)
-            verbeFinal = verbeTrie.verbe
-            modeFinal = verbeTrie.mode
-            tempsFinal = verbeTrie.temps
-            noPersonne = Int(verbeTrie.personne)!
-            reponseBonne = verbeTrie.verbeConjugue
-            let question = Question()
-            let questionFinale = question.finaleSpecifique(noPersonne: noPersonne, personneVerbe: personneVerbe)
-            choixPersonne = questionFinale[0]
-            personne.text = questionFinale[1]
-            personneResponse.text = questionFinale[1]
-            totalProgress = Double(allInfoList.count)
-        }else{
-            let selection = Selection()
-            totalProgress = 10
-            let choixTempsEtMode = selection.questionAleatoire(arraySelection: arraySelection, arrayVerbe: arrayVerbe)
-            let leChoixTempsEtMode = choixTempsEtMode.0
-            tempsEtMode = choixTempsEtMode.1
-            verbeFinal = (leChoixTempsEtMode[0] as? String)!
-            modeFinal = (leChoixTempsEtMode[1] as? String)!.lowercased()
-            tempsFinal = (leChoixTempsEtMode[2] as? String)!
-            choixPersonne = leChoixTempsEtMode[3] as! String
-            personne.text = leChoixTempsEtMode[4] as? String
-            personneResponse.text = leChoixTempsEtMode[4] as? String
-            reponseBonne = leChoixTempsEtMode[5] as! String
-        }
-        
-        let helper = Helper()
-        verbe.text = helper.capitalize(word: verbeFinal)
-        mode.text = helper.capitalize(word: modeFinal)
-        temps.text = helper.capitalize(word: tempsFinal)
-    }
-    func evaluationReponse(){
-        if reponse.text == reponseBonne || rightHintWasSelected{
-            if rightHintWasSelected {
-                aideCount = aideCount + 1
-            }else{
-                goodResponse = goodResponse + 1
-            }
-            
-            let filePath = Bundle.main.path(forResource: "Incoming Text 01", ofType: "wav")
+    func afterUserResponse() {
+        let reponseEvaluation = ResponseEvaluation.evaluate(modeVerb: quizQuestion.mode, tempsVerb:  quizQuestion.temp, infinitif: quizQuestion.infinitif, userResponse: userRespone, rightAnswer: conjugatedVerb, rightHintWasSelected: rightHintWasSelected)
+        let pronom = personne.text!
+        let correctionResponse = "\(pronom) \(conjugatedVerb)"
+        switch reponseEvaluation {
+        case .good:
+            SoundResponse.goodSound()
+            wrongAnswerCorrection.isHidden = false
+            wrongAnswerCorrection.textColor = UIColor.black
+            wrongAnswerCorrection.text = correctionResponse
             verbResponseButton.setTitle("Bravo!", for: .disabled)
-            soundURL = NSURL(fileURLWithPath: filePath!)
-            AudioServicesCreateSystemSoundID(soundURL!, &soundID)
-            AudioServicesPlaySystemSound(soundID)
-            didSave = false
-            for item in items {
-                if item.tempsVerbe == temps.text && item.modeVerbe == mode.text && item.verbeInfinitif == verbe.text{
-                    if rightHintWasSelected {
-                        item.bonneReponseTemps = item.bonneReponseTemps + 1
-                        
-                    }else{
-                        item.bonneReponse = item.bonneReponse + 1
-                    }
-                    didSave = true
-                }
-            }
-            if didSave == false {
-                let itemVerbe = NSEntityDescription.insertNewObject(forEntityName: "ItemVerbe", into: dataController.managedObjectContext) as! ItemVerbe
-                itemVerbe.verbeInfinitif = verbeFinal
-                itemVerbe.tempsVerbe = tempsFinal
-                itemVerbe.modeVerbe = modeFinal
-                if rightHintWasSelected {
-                    itemVerbe.bonneReponseTemps = itemVerbe.bonneReponseTemps + 1
-                    
-                }else{
-                    itemVerbe.bonneReponse = itemVerbe.bonneReponse + 1
-                }
-                
-            }
-            dataController.saveContext()
-        }else{
-            badRep = badRep + 1
-            didSave = false
-            for item in items {
-                if item.tempsVerbe == temps.text && item.modeVerbe == mode.text && item.verbeInfinitif == verbe.text{
-                    item.mauvaiseReponse = item.mauvaiseReponse + 1
-                    didSave = true
-                }
-            }
-            if didSave == false {
-                let itemVerbe = NSEntityDescription.insertNewObject(forEntityName: "ItemVerbe", into: dataController.managedObjectContext) as! ItemVerbe
-                itemVerbe.verbeInfinitif = verbeFinal
-                itemVerbe.tempsVerbe = tempsFinal
-                itemVerbe.modeVerbe = modeFinal
-                itemVerbe.mauvaiseReponse = itemVerbe.mauvaiseReponse + 1
-            }
-            dataController.saveContext()
-            var badResponse = String()
-            if let personne = personne.text {
-                badResponse = "\(personne) \(reponseBonne)"
-            }
+        case .help:
+            SoundResponse.goodSound()
+            wrongAnswerCorrection.isHidden = false
+            wrongAnswerCorrection.textColor = UIColor.black
+            wrongAnswerCorrection.text = correctionResponse
+            verbResponseButton.setTitle("Bravo!", for: .disabled)
+        case .bad:
+            SoundResponse.badSound()
             verbResponseButton.setTitle("Désolé...", for: .disabled)
             wrongAnswerCorrection.isHidden = false
-            wrongAnswerCorrection.text = badResponse
-            let filePath = Bundle.main.path(forResource: "Error Warning", ofType: "wav")
-            soundURL = NSURL(fileURLWithPath: filePath!)
-            AudioServicesCreateSystemSoundID(soundURL!, &soundID)
-            AudioServicesPlaySystemSound(soundID)
+            wrongAnswerCorrection.textColor = UIColor.red
+            wrongAnswerCorrection.text = correctionResponse
         }
-        progressClaculation()
-        if progressInt == Float(totalProgress) {
+        reponse.resignFirstResponder()
+        personneResponse.isHidden = true
+        checkButton.isEnabled = false
+        checkButton.setTitleColor(UIColor.gray, for: .disabled)
+        suggestionButton.isEnabled = false
+        suggestionButton.backgroundColor = UIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
+        reponse.isHidden = true
+        verbResponseButton.isHidden = false
+        checkButton.isHidden = true
+        progressInt = progressInt + 1
+        barreProgression.progress = Float(progressInt)/Float(verbCountInQuiz)
+        if progressInt == verbCountInQuiz {
             let when = DispatchTime.now() + 1.0 // change 2 to desired number of seconds
-            autreQuestionLabel.isEnabled = false
+            uneAutreQuestionButton.isEnabled = false
             DispatchQueue.main.asyncAfter(deadline: when) {
                 self.performSegue(withIdentifier: "showResult", sender: nil)
             }
         }
-    }
-    func hintMenuActiondAppear() {
-        verbHintButton.forEach { (eachButton) in
-            UIView.animate(withDuration: 0.4, animations: {
-                eachButton.isHidden = false
-                self.view.layoutIfNeeded()
-            })
-        }
-    }
-    func hintMenuActiondissapear() {
-        verbHintButton.forEach { (eachButton) in
-            UIView.animate(withDuration: 0.4, animations: {
-                eachButton.isHidden = true
-                self.view.layoutIfNeeded()
-            })
-        }
-    }
-    
-    func progressClaculation() {
-        progressInt = progressInt + 1
-        progress = Float(progressInt)/Float(totalProgress)
-        barreProgression.progress = progress
-    }
-    func specificQuiz() {
-        indexChoisi = indexChoisi + 1
     }
     func showAlert () {
         var englishVerbe = String()
@@ -430,20 +315,6 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate, 
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
-    }
-
-    func questionInitialisation() {
-        switch difficulté {
-        case .FACILE:
-            ChoixFacileVerbeConjugue.verbeConjugue(arrayVerbe: arrayVerbe, infinitif: verbeFinal, tempsDuVerbe: tempsFinal, modeDuverbe: modeFinal, verbHintButton: verbHintButton, hintMenuAction: hintMenuActiondAppear, reponseBonne: reponseBonne )
-        default:
-            break
-        }
-        
-    }
-
-    @IBAction func traductionButtonPushed(_ sender: UIButton) {
-        showAlert()
     }
     
 }

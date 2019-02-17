@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class VerbListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     var randomVerb: Int = 0
     var listeVerbe: [String] = []
@@ -16,33 +15,21 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
     var leTemps: String = ""
     var verbeTotal = ["", "", ""]
     let fontsAndConstraints = FontsAndConstraintsOptions()
-
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    lazy var verbList = VerbInfinitif(arrayVerb: arrayVerbe)
     var searchActive : Bool = false
     var filtered:[String] = []
-
     var arrayVerbe: [[String]] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        // testing with comment
-        
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
-        
-        let i = arrayVerbe.count
-        while randomVerb < i {
-            let allVerbs = VerbeFrancais(verbArray: arrayVerbe, n: randomVerb)
-            listeVerbe.append(allVerbs.verbe)
-            randomVerb = randomVerb + 16
-        }
         func alpha (_ s1: String, s2: String) -> Bool {
             return s1 < s2
         }
-        listeVerbe = listeVerbe.sorted(by: alpha)
-
+        listeVerbe = verbList.verbList.sorted(by: alpha)
     }
     override func viewWillAppear(_ animated: Bool) {
         self.title = "Choisissez le verbe"
@@ -51,19 +38,15 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true;
     }
-    
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchActive = false;
     }
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false;
     }
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false;
     }
-    
     //Filtering with search text
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filtered = listeVerbe.filter({ (text) -> Bool in
@@ -78,24 +61,15 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         self.tableView.reloadData()
     }
-    
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(searchActive) {
             return filtered.count
         }
         return listeVerbe.count;
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")! as UITableViewCell;
         cell.textLabel?.textColor = UIColor.black
@@ -108,11 +82,7 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         return cell;
     }
-  
-
-
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showTempsVerbe"{
             if let indexPath = self.tableView.indexPathForSelectedRow, let verbeChoisi = tableView.cellForRow(at: indexPath)?.textLabel?.text {
@@ -120,13 +90,9 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
                 backItem.title = ""
                 navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
                 let controller = segue.destination as! tempsDeVerbeTableViewController
-                controller.verbeInfinitif = verbeChoisi
+                controller.verbInfinitif = verbeChoisi
                 controller.arrayVerbe = arrayVerbe
-                
             }
         }
     }
-
- 
-
 }

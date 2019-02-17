@@ -9,50 +9,39 @@
 import UIKit
 
 class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-    var randomVerb: Int = 0
-    var arrayFilter: [Any] = []
-    var listeVerbe: [String] = []
-    var listeVerbeAny: [[Any]] = []
-    var verbeInfinitif: String = ""
-    var arrayVerbe: [[String]] = []
-    var arraySelection: [String] = []
-    var verbesChoisi: [String] = []
-    let fontsAndConstraints = FontsAndConstraintsOptions()
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    var arraySelectionTempsEtMode = [[String]]()
+    var listeVerbeAny: [[Any]] = []
+    var arrayFilter: [Any] = []
+    var arraySelection: [String] = []
+    var arrayVerb = [[String]]()
+    var listInfinitif = [String]()
+    var searchActive : Bool = false
+    var filtered:[String] = []
+    var verbesChoisi: [String] = []
+    var listeVerbe: [String] = []
+    var totalProgress: Double = 0
+    lazy var verbList = VerbInfinitif(arrayVerb: arrayVerb)
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Choisir 1 à 10 verbes"
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
-       
+        self.title = "Choisir 1 à 10 verbes"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(showQuiz))
-        let i = arrayVerbe.count
-        while randomVerb < i {
-            let allVerbs = VerbeFrancais(verbArray: arrayVerbe, n: randomVerb)
-            listeVerbe.append(allVerbs.verbe)
-            randomVerb = randomVerb + 16
-        }
         func alpha (_ s1: String, s2: String) -> Bool {
             return s1 < s2
         }
-        listeVerbe = listeVerbe.sorted(by: alpha)
-        
+        listInfinitif = verbList.verbList.sorted(by: alpha)
         var n = 0
-        for verbe in listeVerbe {
-            
+        for verbe in listInfinitif {
             listeVerbeAny.append([verbe, false, n])
-            
             n = n + 1
         }
-
     }
     // Setting up the searchBar active: Ttrue/False
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
         // filter array with string that start with searchText
         self.arrayFilter = listeVerbeAny.filter{
             if let pos = ($0[0] as! String).lowercased().range(of: searchText.lowercased()) {
@@ -62,7 +51,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         }
         tableView.reloadData()
     }
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -76,7 +65,6 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         let lista = self.searchBar.text == "" ? self.listeVerbeAny : self.arrayFilter
         let cellAnyArray = lista[indexPath.row] as! [Any]
         cell.textLabel?.textColor = UIColor.black
-        cell.textLabel?.font =  fontsAndConstraints.normalItaliqueBoldFont
         let cellText = cellAnyArray[0] as! String
         cell.textLabel?.text = cellText
         // check cell based on second field
@@ -89,7 +77,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         
         return cell
     }
-
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         verbesChoisi = []
@@ -99,6 +87,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         // invert the value of checked
         self.listeVerbeAny[id][1] = !(listeVerbeAny[id][1] as! Bool)
         lista = self.searchBar.text == "" ? self.listeVerbeAny : self.arrayFilter
+        
         let cellAnyArray = lista[indexPath.row] as! [Any]
         let cellCheck = cellAnyArray[1] as! Bool
         let cell = tableView.cellForRow(at: indexPath)
@@ -121,10 +110,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var okForSegue = true
-        let selection = Selection()
-        let modeEtTemps = selection.choixTempsEtMode(arraySelection: arraySelection)
-        for mode in modeEtTemps {
-            
+        for mode in arraySelectionTempsEtMode {
             if mode.contains("impératif"){
                 if verbesChoisi.contains("pouvoir") || verbesChoisi.contains("devoir") || verbesChoisi.contains("falloir") || verbesChoisi.contains("pleuvoir") || verbesChoisi.contains("valoir") || (verbesChoisi.contains("s'extasier") && mode[0] == "Passé") || (verbesChoisi.contains("s'absenter") && mode[0] == "Passé") || verbesChoisi.contains("neiger") || (verbesChoisi.contains("s'évanouir") && mode[0] == "Passé"){
                     showAlertPasDImperatif()
@@ -138,10 +124,10 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
                 backItem.title = ""
                 navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
                 let controller = segue.destination as! QuizViewController
-                controller.arrayVerbe = arrayVerbe
-                controller.arraySelection = arraySelection
-                controller.verbeInfinitif = verbesChoisi
-                controller.listeVerbe = listeVerbe
+                controller.arrayVerb = arrayVerb
+                controller.arraySelectionTempsEtMode = arraySelectionTempsEtMode
+                controller.verbInfinitif = verbesChoisi
+                verbesChoisi = []
             }
         }
     }
@@ -149,7 +135,6 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         let alertController = UIAlertController(title: "Choisir au moins 1 verbe et au maximum 10 verbes.", message: nil, preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
-        
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: dismissAlert)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
