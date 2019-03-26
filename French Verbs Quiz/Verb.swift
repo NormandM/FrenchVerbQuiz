@@ -27,7 +27,5 @@ struct Verb {
         fourthPersonVerb = verbArray[n][6]
         fifthPersonVerb = verbArray[n][7]
         sixthPersonVerb = verbArray[n][8]
-        
     }
-    
 }

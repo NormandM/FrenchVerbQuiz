@@ -22,6 +22,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     var verbesChoisi: [String] = []
     var listeVerbe: [String] = []
     var totalProgress: Double = 0
+    let fontsAndConstraints = FontsAndConstraintsOptions()
     lazy var verbList = VerbInfinitif(arrayVerb: arrayVerb)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +31,9 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         searchBar.delegate = self
         self.title = "Choisir 1 à 10 verbes"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(showQuiz))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
         func alpha (_ s1: String, s2: String) -> Bool {
-            return s1 < s2
+            return s1.folding(options: .diacriticInsensitive, locale: .current) < s2.folding(options: .diacriticInsensitive, locale: .current)
         }
         listInfinitif = verbList.verbList.sorted(by: alpha)
         var n = 0
@@ -65,6 +67,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         let lista = self.searchBar.text == "" ? self.listeVerbeAny : self.arrayFilter
         let cellAnyArray = lista[indexPath.row] as! [Any]
         cell.textLabel?.textColor = UIColor.black
+        cell.textLabel?.font =  fontsAndConstraints.normalItaliqueBoldFont
         let cellText = cellAnyArray[0] as! String
         cell.textLabel?.text = cellText
         // check cell based on second field
@@ -74,11 +77,8 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         }else{
             cell.accessoryType = .none
         }
-        
         return cell
     }
-    
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         verbesChoisi = []
         var lista = self.searchBar.text == "" ? self.listeVerbeAny : self.arrayFilter
@@ -111,7 +111,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var okForSegue = true
         for mode in arraySelectionTempsEtMode {
-            if mode.contains("impératif"){
+            if mode.contains("IMPÉRATIF"){
                 if verbesChoisi.contains("pouvoir") || verbesChoisi.contains("devoir") || verbesChoisi.contains("falloir") || verbesChoisi.contains("pleuvoir") || verbesChoisi.contains("valoir") || (verbesChoisi.contains("s'extasier") && mode[0] == "Passé") || (verbesChoisi.contains("s'absenter") && mode[0] == "Passé") || verbesChoisi.contains("neiger") || (verbesChoisi.contains("s'évanouir") && mode[0] == "Passé"){
                     showAlertPasDImperatif()
                     okForSegue = false
@@ -123,6 +123,7 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
                 let backItem = UIBarButtonItem()
                 backItem.title = ""
                 navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+                navigationItem.backBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
                 let controller = segue.destination as! QuizViewController
                 controller.arrayVerb = arrayVerb
                 controller.arraySelectionTempsEtMode = arraySelectionTempsEtMode
@@ -140,11 +141,9 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         present(alertController, animated: true, completion: nil)
     }
     func showAlertPasDImperatif() {
-        
         let alertController = UIAlertController(title: "Il n'y a pas d'impératif pour ces verbes:", message: "pouvoir, devoir, falloir, pleuvoir, valoir, neiger, s'extasier(au passé), s'absenter(au passé), s'évanouir(au passé). Faites un autre choix", preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
-        
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: dismissAlert)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)

@@ -27,7 +27,7 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.dataSource = self
         searchBar.delegate = self
         func alpha (_ s1: String, s2: String) -> Bool {
-            return s1 < s2
+            return s1.folding(options: .diacriticInsensitive, locale: .current) < s2.folding(options: .diacriticInsensitive, locale: .current)
         }
         listeVerbe = verbList.verbList.sorted(by: alpha)
     }
@@ -79,7 +79,6 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
         } else {
             cell.textLabel?.text = listeVerbe[indexPath.row];
         }
-        
         return cell;
     }
     // MARK: - Navigation
@@ -89,6 +88,7 @@ class VerbListViewController: UIViewController, UITableViewDataSource, UITableVi
                 let backItem = UIBarButtonItem()
                 backItem.title = ""
                 navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+                navigationItem.backBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
                 let controller = segue.destination as! tempsDeVerbeTableViewController
                 controller.verbInfinitif = verbeChoisi
                 controller.arrayVerbe = arrayVerbe

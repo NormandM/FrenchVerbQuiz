@@ -50,7 +50,6 @@ class ResultViewController: UIViewController {
         termineButton.layer.cornerRadius = termineButton.frame.height/2
         setupChart()
     }
-
     func setupChart() {
         let entrieBon = goodResponse
         let entrieMal = badResponse

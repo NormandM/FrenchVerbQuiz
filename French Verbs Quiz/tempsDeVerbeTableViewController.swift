@@ -20,12 +20,17 @@ class tempsDeVerbeTableViewController: UITableViewController {
         header.contentView.backgroundColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
         header.textLabel!.textColor = UIColor.white //make the text white
         header.alpha = 1.0 //make the header transparent
-        print()
+        header.textLabel?.font = fontsAndConstraints.normalBoldFont
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Choisissez le temps"
      }
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+    }
+
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
@@ -51,18 +56,15 @@ class tempsDeVerbeTableViewController: UITableViewController {
                 let backItem = UIBarButtonItem()
                 backItem.title = ""
                 navigationItem.backBarButtonItem = backItem
+                navigationItem.backBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
                 let temp = temps[indexPath.section][indexPath.row]
                 let mode = modes[indexPath.section]
                 let controller = segue.destination as! FinalVerbeViewController
                 controller.verbInfinitif = verbInfinitif
                 controller.modeVerb = mode
                 controller.temp = temp
-                print(verbInfinitif)
-                print("mode: \(mode)")
-                print(temp)
             }
         }
     }
-
 
 }

@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreData
-
 @objc(ItemVerbe)
 public class ItemVerbe: NSManagedObject {
     static let identifier = "ItemVerbe"

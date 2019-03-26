@@ -26,7 +26,6 @@ class CoreDataHandler: NSObject {
         managedObject.setValue(modeVerbe, forKey: "modeVerbe")
         managedObject.setValue(tempsVerbe, forKey: "tempsVerbe")
         managedObject.setValue(verbeInfinitif, forKey: "verbeInfinitif")
-
         do {
             try context.save()
             return true

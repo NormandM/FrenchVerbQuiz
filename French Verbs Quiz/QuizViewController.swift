@@ -58,12 +58,12 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
             verbCountInQuiz = verbSelectionRandom.count
         }
         setQuestion()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillChange), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillChange), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillChange), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillChange), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     deinit {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
         self.title = "Conjuguez le verbe."
@@ -104,6 +104,7 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
         UserDefaults.standard.set(0, forKey: "thisQuizBadAnswer")
     }
     override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        traductionAnglaiseButton.layer.cornerRadius = traductionAnglaiseButton.frame.height/2
         tempsChoisiButton.layer.cornerRadius = tempsChoisiButton.frame.height/2
         uneAutreQuestionButton.layer.cornerRadius = uneAutreQuestionButton.frame.height / 2.0
         suggestionButton.layer.cornerRadius = suggestionButton.frame.height / 2.0
@@ -111,18 +112,19 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
     }
     @objc func keyBoardWillChange(notification: Notification) {
         let distanceFromTextField = view.frame.size.height - (reponse.frame.size.height + reponse.frame.origin.y)
-        guard let keyBoardRec = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
+        guard let keyBoardRec = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
             return
         }
-        if notification.name == NSNotification.Name.UIKeyboardWillShow && !textFieldIsActivated{
+        if notification.name == UIResponder.keyboardWillShowNotification && !textFieldIsActivated{
             textFieldIsActivated = true
             animateViewMoving(true, moveValue: keyBoardRec.height - distanceFromTextField + 5)
-        }else if notification.name == NSNotification.Name.UIKeyboardWillHide{
+        }else if notification.name == UIResponder.keyboardWillHideNotification{
             textFieldIsActivated = false
             animateViewMoving(true, moveValue: distanceFromTextField - keyBoardRec.height - 5)
         }
     }
     func setQuestion() {
+       
         quizQuestion = QuizQuestion(verbSelectionRandom: verbSelectionRandom, index: index)
         let choixDuPronom = ChoixDuPronom(mode: quizQuestion.mode, temps: quizQuestion.temp, infinitif: quizQuestion.infinitif, personne: quizQuestion.person, conjugatedVerb: quizQuestion.conjugatedVerb)
         personneResponse.isHidden = true
@@ -177,14 +179,12 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
         if segue.identifier == "showResult" {
             let wichQuiz = UnwindSegueChoice.toQuizViewController
             let controller = segue.destination as! ResultViewController
+            navigationItem.backBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
             controller.totalProgress = Double(verbCountInQuiz)
             controller.wichQuiz = wichQuiz
         }
         if segue.identifier == "showTempsVerbesChoisis" {
             let controller = segue.destination as! TempsVerbesChoisisViewController
-            print(arraySelectionTempsEtMode)
-            print(verbInfinitif)
-            print(listeVerbe)
             controller.tempsEtMode = arraySelectionTempsEtMode
             controller.verbeInfinitif = verbInfinitif
             controller.listeVerbe = listeVerbe
@@ -203,9 +203,7 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
         TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: reponse, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondissapear)
         personneResponse.isHidden = true
         personne.isHidden = false
-        
     }
-    
     @IBAction func autreQuestionPushed(_ sender: UIButton) {
         setQuestion()
         personne.isHidden = false
@@ -280,6 +278,7 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
         }
         reponse.resignFirstResponder()
         personneResponse.isHidden = true
+        personne.isHidden = true
         checkButton.isEnabled = false
         checkButton.setTitleColor(UIColor.gray, for: .disabled)
         suggestionButton.isEnabled = false

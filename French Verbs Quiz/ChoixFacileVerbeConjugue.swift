@@ -39,7 +39,6 @@ class ChoixFacileVerbeConjugue {
                 break
             }
         }
-        
         verbeChoisiEtConjugue = AuxiliereAvoirToEtre.auxiliereFromAvoirToEtre(reponseBonne: reponseBonne, verbeChoisiEtConjugue: verbeChoisiEtConjugue)
         var participe = verbeChoisiEtConjugue[0].components(separatedBy: .whitespaces).last!
         for n in 0...5{

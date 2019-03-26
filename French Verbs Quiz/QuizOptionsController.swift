@@ -24,7 +24,6 @@ class QuizOptionsController: UITableViewController {
         let request  = NSFetchRequest<NSFetchRequestResult>(entityName: ItemVerbe.identifier)
         return request
     }()
-
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView //recast your view as a UITableViewHeaderFooterView
         header.contentView.backgroundColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
@@ -34,22 +33,9 @@ class QuizOptionsController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         self.title = "Choisissez les temps"
-        var items: [ItemVerbe]?
-        do {
-            items = try managedObjectContext.fetch(fetchRequest) as? [ItemVerbe]
-        }catch let error as NSError {
-            print("Error fetching Item objects: \(error.localizedDescription), \(error.userInfo)")
-        }
-        print(items!.count)
-        for item in items! {
-            print(item.modeVerbe!)
-            print(item.tempsVerbe!)
-            print(item.bonneReponseTemps)
-            print(item.bonneReponse)
-            print(item.mauvaiseReponse)
-        }
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
     }
-    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return modes[section]
@@ -57,11 +43,9 @@ class QuizOptionsController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return modes.count
     }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return temps[section].count
     }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel!.text = temps[indexPath.section][indexPath.row]
@@ -91,7 +75,7 @@ class QuizOptionsController: UITableViewController {
             if let text = cell2.textLabel?.text{
                 textArray = [text, modes[indexPath.section]]
             }
-            if let n = arraySelectionTempsEtMode.index(of: textArray){
+            if let n = arraySelectionTempsEtMode.firstIndex(of: textArray){
                 arraySelectionTempsEtMode.remove(at: n)
             }
         }
@@ -111,6 +95,7 @@ class QuizOptionsController: UITableViewController {
             let backItem = UIBarButtonItem()
             backItem.title = ""
             navigationItem.backBarButtonItem = backItem
+            navigationItem.backBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
             let controller = segue.destination as! QuizViewController
             controller.arrayVerb = arrayVerb
             controller.arraySelectionTempsEtMode = arraySelectionTempsEtMode
@@ -121,6 +106,7 @@ class QuizOptionsController: UITableViewController {
             let backItem = UIBarButtonItem()
             backItem.title = ""
             navigationItem.backBarButtonItem = backItem
+            navigationItem.backBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
             let controller = segue.destination as! SpecificVerbViewController
             controller.arraySelectionTempsEtMode = arraySelectionTempsEtMode
             controller.arrayVerb = arrayVerb

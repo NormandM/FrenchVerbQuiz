@@ -23,7 +23,11 @@ class SelectVerb {
                 let tempAndMode = [tempMode[0], tempMode[1].lowercased()]
                 if verbInfinitif == ["Tous les verbes"] {
                     if tempAndMode == arrayTempsEtMode {
-                        verbSelection.append(array)
+                        if tempMode[1] == "IMPÉRATIF" && (array[2] == "pleuvoir" ||   array[2] == "pouvoir"  || array[2] == "devoir" || array[2] == "falloir" || array[2] == "valoir" || array[2] == "s'extasier" || array[2] == "s'absenter" || array[2] == "neiger" || array[2] == "s'évanouir"){
+                            
+                        }else{
+                            verbSelection.append(array)
+                        }
                     }
                 }else{
                     for verbInfinitif in verbInfinitif {
@@ -33,6 +37,7 @@ class SelectVerb {
                     }
                 }
             }
+           
         }
         for verbs in verbSelection {
             if verbs[0] == "impératif"{

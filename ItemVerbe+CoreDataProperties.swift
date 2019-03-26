@@ -11,11 +11,9 @@ import CoreData
 
 
 extension ItemVerbe {
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ItemVerbe> {
         return NSFetchRequest<ItemVerbe>(entityName: "ItemVerbe");
     }
-
     @NSManaged public var bonneReponse: Int32
     @NSManaged public var mauvaiseReponse: Int32
     @NSManaged public var tempsVerbe: String?

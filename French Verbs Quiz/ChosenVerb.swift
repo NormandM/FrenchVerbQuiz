@@ -25,10 +25,7 @@ class ChosenVerb {
         }
         arrayVerb = arrayVerbTransit
         var n = 0
-  
-        
         for array in arrayVerb {
-            print(infinitif)
             if (array[0].caseInsensitiveCompare(mode) == .orderedSame) && (array[1].caseInsensitiveCompare(temp) == .orderedSame) && (array[2].caseInsensitiveCompare(infinitif) == .orderedSame) {
                 break
             }

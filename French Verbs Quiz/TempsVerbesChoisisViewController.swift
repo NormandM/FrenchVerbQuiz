@@ -43,7 +43,6 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
                 mode.append(temp[1])
             }
         }
-        print(mode)
         for _ in mode{
             var tempsInd = [String]()
             var tempSubj = [String]()
@@ -61,7 +60,6 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
                 }
             }
             temps = [tempsInd, tempSubj, tempCond, tempsImp]
-            print(temps)
             var n = 0
             for temp in temps {
                 if temp == [] {temps.remove(at: n); n = n - 1}
@@ -86,7 +84,7 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
         if tableView == self.tableViewVerbes{
             header = "Infinitif"
         }
-        tableView.sectionHeaderHeight = UITableViewAutomaticDimension;
+        tableView.sectionHeaderHeight = UITableView.automaticDimension;
         tableView.estimatedSectionHeaderHeight = 25
         return header
     }
@@ -98,6 +96,7 @@ class TempsVerbesChoisisViewController: UIViewController, UITableViewDataSource,
         header.textLabel?.font = fonts.normalBoldFont
         header.alpha = 1.0 //make the header transparent
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count:Int?
         if tableView == self.tableViewTemps {

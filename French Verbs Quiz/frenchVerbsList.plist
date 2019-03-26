@@ -11039,10 +11039,10 @@
 		<string>Présent</string>
 		<string>pleuvoir</string>
 		<string></string>
-		<string>n'existe pas</string>
+		<string>-</string>
 		<string></string>
-		<string>n'existe pas</string>
-		<string>n'existe pas</string>
+		<string>-</string>
+		<string>-</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -11193,10 +11193,10 @@
 		<string>Passé</string>
 		<string>pleuvoir</string>
 		<string></string>
-		<string>n'existe pas</string>
+		<string>-</string>
 		<string></string>
-		<string>n'existe pas</string>
-		<string>n'existe pas</string>
+		<string>-</string>
+		<string>-</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -11487,10 +11487,10 @@
 		<string>Présent</string>
 		<string>valoir</string>
 		<string></string>
-		<string>n'existe pas</string>
+		<string>-</string>
 		<string></string>
-		<string>n'existe pas</string>
-		<string>n'existe pas</string>
+		<string>-</string>
+		<string>-</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -11641,10 +11641,10 @@
 		<string>Passé</string>
 		<string>valoir</string>
 		<string></string>
-		<string>aie valu</string>
+		<string>-</string>
 		<string></string>
-		<string>ayons valu</string>
-		<string>ayez valu</string>
+		<string>-</string>
+		<string>-</string>
 		<string></string>
 		<string>0</string>
 		<string>0</string>
@@ -25317,13 +25317,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Présent</string>
-		<string>s'absenter</string>
-		<string>m'absente</string>
-		<string>t'absentes</string>
-		<string>s'absente</string>
+		<string>s&apos;absenter</string>
+		<string>m&apos;absente</string>
+		<string>t&apos;absentes</string>
+		<string>s&apos;absente</string>
 		<string>nous absentons</string>
 		<string>vous absentez</string>
-		<string>s'absentent</string>
+		<string>s&apos;absentent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25331,10 +25331,10 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé composé</string>
-		<string>s'absenter</string>
+		<string>s&apos;absenter</string>
 		<string>me suis absenté</string>
-		<string>t'es absenté</string>
-		<string>s'est absenté</string>
+		<string>t&apos;es absenté</string>
+		<string>s&apos;est absenté</string>
 		<string>nous sommes absentés</string>
 		<string>vous êtes absentés</string>
 		<string>se sont absentés</string>
@@ -25345,13 +25345,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Imparfait</string>
-		<string>s'absenter</string>
-		<string>m'absentais</string>
-		<string>t'absentais</string>
-		<string>s'absentait</string>
+		<string>s&apos;absenter</string>
+		<string>m&apos;absentais</string>
+		<string>t&apos;absentais</string>
+		<string>s&apos;absentait</string>
 		<string>nous absentions</string>
 		<string>vous absentiez</string>
-		<string>s'absentaient</string>
+		<string>s&apos;absentaient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25359,13 +25359,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Plus-que-parfait</string>
-		<string>s'absenter</string>
-		<string>m'étais absenté</string>
-		<string>t'étais absenté</string>
-		<string>s'était absenté</string>
+		<string>s&apos;absenter</string>
+		<string>m&apos;étais absenté</string>
+		<string>t&apos;étais absenté</string>
+		<string>s&apos;était absenté</string>
 		<string>nous étions absentés</string>
 		<string>vous étiez absentés</string>
-		<string>s'étaient absentés</string>
+		<string>s&apos;étaient absentés</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25373,13 +25373,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé simple</string>
-		<string>s'absenter</string>
-		<string>m'absentai</string>
-		<string>t'absentas</string>
-		<string>s'absenta</string>
+		<string>s&apos;absenter</string>
+		<string>m&apos;absentai</string>
+		<string>t&apos;absentas</string>
+		<string>s&apos;absenta</string>
 		<string>nous absentâmes</string>
 		<string>vous absentâtes</string>
-		<string>s'absentèrent</string>
+		<string>s&apos;absentèrent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25387,7 +25387,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé antérieur</string>
-		<string>s'absenter</string>
+		<string>s&apos;absenter</string>
 		<string>me fus absenté</string>
 		<string>te fus absenté</string>
 		<string>se fut absenté</string>
@@ -25401,13 +25401,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur simple</string>
-		<string>s'absenter</string>
-		<string>m'absenterai</string>
-		<string>t'absenteras</string>
-		<string>s'absentera</string>
+		<string>s&apos;absenter</string>
+		<string>m&apos;absenterai</string>
+		<string>t&apos;absenteras</string>
+		<string>s&apos;absentera</string>
 		<string>nous absenterons</string>
 		<string>vous absenterez</string>
-		<string>s'absenteront</string>
+		<string>s&apos;absenteront</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25415,7 +25415,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur antérieur</string>
-		<string>s'absenter</string>
+		<string>s&apos;absenter</string>
 		<string>me serai absenté</string>
 		<string>te seras absenté</string>
 		<string>se sera absenté</string>
@@ -25429,13 +25429,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>s'absenter</string>
-		<string>m'absente</string>
-		<string>t'absentes</string>
-		<string>s'absente</string>
+		<string>s&apos;absenter</string>
+		<string>m&apos;absente</string>
+		<string>t&apos;absentes</string>
+		<string>s&apos;absente</string>
 		<string>nous absentions</string>
 		<string>vous absentiez</string>
-		<string>s'absentent</string>
+		<string>s&apos;absentent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25443,7 +25443,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Passé</string>
-		<string>s'absenter</string>
+		<string>s&apos;absenter</string>
 		<string>me sois absenté</string>
 		<string>te sois absenté</string>
 		<string>se soit absenté</string>
@@ -25457,13 +25457,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Imparfait</string>
-		<string>s'absenter</string>
-		<string>m'absentasse</string>
-		<string>t'absentasses</string>
-		<string>s'absentât</string>
+		<string>s&apos;absenter</string>
+		<string>m&apos;absentasse</string>
+		<string>t&apos;absentasses</string>
+		<string>s&apos;absentât</string>
 		<string>nous absentassions</string>
 		<string>vous absentassiez</string>
-		<string>s'absentassent</string>
+		<string>s&apos;absentassent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25471,7 +25471,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Plus-que-parfait</string>
-		<string>s'absenter</string>
+		<string>s&apos;absenter</string>
 		<string>me fusse absenté</string>
 		<string>te fusses absenté</string>
 		<string>se fût absenté</string>
@@ -25485,13 +25485,13 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Présent</string>
-		<string>s'absenter</string>
-		<string>m'absenterais</string>
-		<string>t'absenterais</string>
-		<string>s'absenterait</string>
+		<string>s&apos;absenter</string>
+		<string>m&apos;absenterais</string>
+		<string>t&apos;absenterais</string>
+		<string>s&apos;absenterait</string>
 		<string>nous absenterions</string>
 		<string>vous absenteriez</string>
-		<string>s'absenteraient</string>
+		<string>s&apos;absenteraient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -25499,7 +25499,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Passé</string>
-		<string>s'absenter</string>
+		<string>s&apos;absenter</string>
 		<string>me serais absenté</string>
 		<string>te serais absenté</string>
 		<string>se serait absenté</string>
@@ -25513,7 +25513,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Présent</string>
-		<string>s'absenter</string>
+		<string>s&apos;absenter</string>
 		<string></string>
 		<string>absente-toi</string>
 		<string></string>
@@ -25527,7 +25527,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Passé</string>
-		<string>s'absenter</string>
+		<string>s&apos;absenter</string>
 		<string></string>
 		<string>-</string>
 		<string></string>
@@ -31813,13 +31813,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Présent</string>
-		<string>s'évanouir</string>
-		<string>m'évanouis</string>
-		<string>t'évanouis</string>
-		<string>s'évanouit</string>
+		<string>s&apos;évanouir</string>
+		<string>m&apos;évanouis</string>
+		<string>t&apos;évanouis</string>
+		<string>s&apos;évanouit</string>
 		<string>nous évanouissons</string>
 		<string>vous évanouissez</string>
-		<string>s'évanouissent</string>
+		<string>s&apos;évanouissent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31827,10 +31827,10 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé composé</string>
-		<string>s'évanouir</string>
+		<string>s&apos;évanouir</string>
 		<string>me suis évanoui</string>
-		<string>t'es évanoui</string>
-		<string>s'est évanoui</string>
+		<string>t&apos;es évanoui</string>
+		<string>s&apos;est évanoui</string>
 		<string>nous sommes évanouis</string>
 		<string>vous êtes évanouis</string>
 		<string>se sont évanouis</string>
@@ -31841,13 +31841,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Imparfait</string>
-		<string>s'évanouir</string>
-		<string>m'évanouissais</string>
-		<string>t'évanouissais</string>
-		<string>s'évanouissait</string>
+		<string>s&apos;évanouir</string>
+		<string>m&apos;évanouissais</string>
+		<string>t&apos;évanouissais</string>
+		<string>s&apos;évanouissait</string>
 		<string>nous évanouissions</string>
 		<string>vous évanouissiez</string>
-		<string>s'évanouissaient</string>
+		<string>s&apos;évanouissaient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31855,13 +31855,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Plus-que-parfait</string>
-		<string>s'évanouir</string>
-		<string>m'étais évanoui</string>
-		<string>t'étais évanoui</string>
-		<string>s'était évanoui</string>
+		<string>s&apos;évanouir</string>
+		<string>m&apos;étais évanoui</string>
+		<string>t&apos;étais évanoui</string>
+		<string>s&apos;était évanoui</string>
 		<string>nous étions évanouis</string>
 		<string>vous étiez évanouis</string>
-		<string>s'étaient évanouis</string>
+		<string>s&apos;étaient évanouis</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31869,13 +31869,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé simple</string>
-		<string>s'évanouir</string>
-		<string>m'évanouis</string>
-		<string>t'évanouis</string>
-		<string>s'évanouit</string>
+		<string>s&apos;évanouir</string>
+		<string>m&apos;évanouis</string>
+		<string>t&apos;évanouis</string>
+		<string>s&apos;évanouit</string>
 		<string>nous évanouîmes</string>
 		<string>vous évanouîtes</string>
-		<string>s'évanouirent</string>
+		<string>s&apos;évanouirent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31883,7 +31883,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé antérieur</string>
-		<string>s'évanouir</string>
+		<string>s&apos;évanouir</string>
 		<string>me fus évanoui</string>
 		<string>te fus évanoui</string>
 		<string>se fut évanoui</string>
@@ -31897,13 +31897,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur simple</string>
-		<string>s'évanouir</string>
-		<string>m'évanouirai</string>
-		<string>t'évanouiras</string>
-		<string>s'évanouira</string>
+		<string>s&apos;évanouir</string>
+		<string>m&apos;évanouirai</string>
+		<string>t&apos;évanouiras</string>
+		<string>s&apos;évanouira</string>
 		<string>nous évanouirons</string>
 		<string>vous évanouirez</string>
-		<string>s'évanouiront</string>
+		<string>s&apos;évanouiront</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31911,7 +31911,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur antérieur</string>
-		<string>s'évanouir</string>
+		<string>s&apos;évanouir</string>
 		<string>me serai évanoui</string>
 		<string>te seras évanoui</string>
 		<string>se sera évanoui</string>
@@ -31925,13 +31925,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>s'évanouir</string>
-		<string>m'évanouisse</string>
-		<string>t'évanouisses</string>
-		<string>s'évanouisse</string>
+		<string>s&apos;évanouir</string>
+		<string>m&apos;évanouisse</string>
+		<string>t&apos;évanouisses</string>
+		<string>s&apos;évanouisse</string>
 		<string>nous évanouissions</string>
 		<string>vous évanouissiez</string>
-		<string>s'évanouissent</string>
+		<string>s&apos;évanouissent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31939,7 +31939,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Passé</string>
-		<string>s'évanouir</string>
+		<string>s&apos;évanouir</string>
 		<string>me sois évanoui</string>
 		<string>te sois évanoui</string>
 		<string>se soit évanoui</string>
@@ -31953,13 +31953,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Imparfait</string>
-		<string>s'évanouir</string>
-		<string>m'évanouisse</string>
-		<string>t'évanouisses</string>
-		<string>s'évanouît</string>
+		<string>s&apos;évanouir</string>
+		<string>m&apos;évanouisse</string>
+		<string>t&apos;évanouisses</string>
+		<string>s&apos;évanouît</string>
 		<string>nous évanouissions</string>
 		<string>vous évanouissiez</string>
-		<string>s'évanouissent</string>
+		<string>s&apos;évanouissent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31967,7 +31967,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Plus-que-parfait</string>
-		<string>s'évanouir</string>
+		<string>s&apos;évanouir</string>
 		<string>me fusse évanoui</string>
 		<string>te fusses évanoui</string>
 		<string>se fût évanoui</string>
@@ -31981,13 +31981,13 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Présent</string>
-		<string>s'évanouir</string>
-		<string>m'évanouirais</string>
-		<string>t'évanouirais</string>
-		<string>s'évanouirait</string>
+		<string>s&apos;évanouir</string>
+		<string>m&apos;évanouirais</string>
+		<string>t&apos;évanouirais</string>
+		<string>s&apos;évanouirait</string>
 		<string>nous évanouirions</string>
 		<string>vous évanouiriez</string>
-		<string>s'évanouiraient</string>
+		<string>s&apos;évanouiraient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -31995,7 +31995,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Passé</string>
-		<string>s'évanouir</string>
+		<string>s&apos;évanouir</string>
 		<string>me serais évanoui</string>
 		<string>te serais évanoui</string>
 		<string>se serait évanoui</string>
@@ -32009,7 +32009,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Présent</string>
-		<string>s'évanouir</string>
+		<string>s&apos;évanouir</string>
 		<string></string>
 		<string>évanouis-toi</string>
 		<string></string>
@@ -32023,7 +32023,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Passé</string>
-		<string>s'évanouir</string>
+		<string>s&apos;évanouir</string>
 		<string></string>
 		<string>-</string>
 		<string></string>
@@ -34277,13 +34277,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Présent</string>
-		<string>s'extasier</string>
-		<string>m'extasie</string>
-		<string>t'extasies</string>
-		<string>s'extasie</string>
+		<string>s&apos;extasier</string>
+		<string>m&apos;extasie</string>
+		<string>t&apos;extasies</string>
+		<string>s&apos;extasie</string>
 		<string>nous extasions</string>
 		<string>vous extasiez</string>
-		<string>s'extasient</string>
+		<string>s&apos;extasient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34291,10 +34291,10 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé composé</string>
-		<string>s'extasier</string>
+		<string>s&apos;extasier</string>
 		<string>me suis extasié</string>
-		<string>t'es extasié</string>
-		<string>s'est extasié</string>
+		<string>t&apos;es extasié</string>
+		<string>s&apos;est extasié</string>
 		<string>nous sommes extasiés</string>
 		<string>vous êtes extasiés</string>
 		<string>se sont extasiés</string>
@@ -34305,13 +34305,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Imparfait</string>
-		<string>s'extasier</string>
-		<string>m'extasiais</string>
-		<string>t'extasiais</string>
-		<string>s'extasiait</string>
+		<string>s&apos;extasier</string>
+		<string>m&apos;extasiais</string>
+		<string>t&apos;extasiais</string>
+		<string>s&apos;extasiait</string>
 		<string>nous extasiions</string>
 		<string>vous extasiiez</string>
-		<string>s'extasiaient</string>
+		<string>s&apos;extasiaient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34319,13 +34319,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Plus-que-parfait</string>
-		<string>s'extasier</string>
-		<string>m'étais extasié</string>
-		<string>t'étais extasié</string>
-		<string>s'était extasié</string>
+		<string>s&apos;extasier</string>
+		<string>m&apos;étais extasié</string>
+		<string>t&apos;étais extasié</string>
+		<string>s&apos;était extasié</string>
 		<string>nous étions extasiés</string>
 		<string>vous étiez extasiés</string>
-		<string>s'étaient extasiés</string>
+		<string>s&apos;étaient extasiés</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34333,13 +34333,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé simple</string>
-		<string>s'extasier</string>
-		<string>m'extasiai</string>
-		<string>t'extasias</string>
-		<string>s'extasia</string>
+		<string>s&apos;extasier</string>
+		<string>m&apos;extasiai</string>
+		<string>t&apos;extasias</string>
+		<string>s&apos;extasia</string>
 		<string>nous extasiâmes</string>
 		<string>vous extasiâtes</string>
-		<string>s'extasièrent</string>
+		<string>s&apos;extasièrent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34347,7 +34347,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Passé antérieur</string>
-		<string>s'extasier</string>
+		<string>s&apos;extasier</string>
 		<string>me fus extasié</string>
 		<string>te fus extasié</string>
 		<string>se fut extasié</string>
@@ -34361,13 +34361,13 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur simple</string>
-		<string>s'extasier</string>
-		<string>m'extasierai</string>
-		<string>t'extasieras</string>
-		<string>s'extasiera</string>
+		<string>s&apos;extasier</string>
+		<string>m&apos;extasierai</string>
+		<string>t&apos;extasieras</string>
+		<string>s&apos;extasiera</string>
 		<string>nous extasierons</string>
 		<string>vous extasierez</string>
-		<string>s'extasieront</string>
+		<string>s&apos;extasieront</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34375,7 +34375,7 @@
 	<array>
 		<string>indicatif</string>
 		<string>Futur antérieur</string>
-		<string>s'extasier</string>
+		<string>s&apos;extasier</string>
 		<string>me serai extasié</string>
 		<string>te seras extasié</string>
 		<string>se sera extasié</string>
@@ -34389,13 +34389,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Présent</string>
-		<string>s'extasier</string>
-		<string>m'extasie</string>
-		<string>t'extasies</string>
-		<string>s'extasie</string>
+		<string>s&apos;extasier</string>
+		<string>m&apos;extasie</string>
+		<string>t&apos;extasies</string>
+		<string>s&apos;extasie</string>
 		<string>nous extasiions</string>
 		<string>vous extasiiez</string>
-		<string>s'extasient</string>
+		<string>s&apos;extasient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34403,7 +34403,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Passé</string>
-		<string>s'extasier</string>
+		<string>s&apos;extasier</string>
 		<string>me sois extasié</string>
 		<string>te sois extasié</string>
 		<string>se soit extasié</string>
@@ -34417,13 +34417,13 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Imparfait</string>
-		<string>s'extasier</string>
-		<string>m'extasiasse</string>
-		<string>t'extasiasses</string>
-		<string>s'extasiât</string>
+		<string>s&apos;extasier</string>
+		<string>m&apos;extasiasse</string>
+		<string>t&apos;extasiasses</string>
+		<string>s&apos;extasiât</string>
 		<string>nous extasiassions</string>
 		<string>vous extasiassiez</string>
-		<string>s'extasiassent</string>
+		<string>s&apos;extasiassent</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34431,7 +34431,7 @@
 	<array>
 		<string>subjonctif</string>
 		<string>Plus-que-parfait</string>
-		<string>s'extasier</string>
+		<string>s&apos;extasier</string>
 		<string>me fusse extasié</string>
 		<string>te fusses extasié</string>
 		<string>se fût extasié</string>
@@ -34445,13 +34445,13 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Présent</string>
-		<string>s'extasier</string>
-		<string>m'extasierais</string>
-		<string>t'extasierais</string>
-		<string>s'extasierait</string>
+		<string>s&apos;extasier</string>
+		<string>m&apos;extasierais</string>
+		<string>t&apos;extasierais</string>
+		<string>s&apos;extasierait</string>
 		<string>nous extasierions</string>
 		<string>vous extasieriez</string>
-		<string>s'extasieraient</string>
+		<string>s&apos;extasieraient</string>
 		<string>0</string>
 		<string>0</string>
 		<string>0</string>
@@ -34459,7 +34459,7 @@
 	<array>
 		<string>conditionnel</string>
 		<string>Passé</string>
-		<string>s'extasier</string>
+		<string>s&apos;extasier</string>
 		<string>me serais extasié</string>
 		<string>te serais extasié</string>
 		<string>se serait extasié</string>
@@ -34473,7 +34473,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Présent</string>
-		<string>s'extasier</string>
+		<string>s&apos;extasier</string>
 		<string></string>
 		<string>extasie-toi</string>
 		<string></string>
@@ -34487,7 +34487,7 @@
 	<array>
 		<string>impératif</string>
 		<string>Passé</string>
-		<string>s'extasier</string>
+		<string>s&apos;extasier</string>
 		<string></string>
 		<string>-</string>
 		<string></string>
