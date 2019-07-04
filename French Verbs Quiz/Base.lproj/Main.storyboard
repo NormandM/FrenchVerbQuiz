@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yP1-37-GjF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yP1-37-GjF">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1464,7 +1464,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BKI-QV-7gL">
                                 <rect key="frame" x="170.33333333333334" y="125" width="73.333333333333343" height="73.666666666666686"/>
-                                <color key="backgroundColor" red="0.1058823529" green="0.37254901959999998" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Traduction">
@@ -1591,11 +1591,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ListesDesVerbesNew" width="144" height="240"/>
-        <image name="Normand martin Logo" width="115.19999694824219" height="115.19999694824219"/>
-        <image name="Quiz ContextuelNew" width="144" height="240"/>
-        <image name="QuizDeBaseNew" width="144" height="240"/>
-        <image name="StatistiquesNew" width="178.08000183105469" height="186.24000549316406"/>
+        <image name="ListesDesVerbesNew" width="300" height="500"/>
+        <image name="Normand martin Logo" width="480" height="480"/>
+        <image name="Quiz ContextuelNew" width="300" height="500"/>
+        <image name="QuizDeBaseNew" width="300" height="500"/>
+        <image name="StatistiquesNew" width="371" height="388"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Mem-Wf-v32"/>
