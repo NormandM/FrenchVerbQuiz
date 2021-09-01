@@ -32,9 +32,9 @@ struct PieChartSetUp {
         pieChartView.isUserInteractionEnabled = false
         pieChartView.legend.enabled = true
         let legend = pieChartView.legend
-        let lengendEntry1 = LegendEntry(label: "Bon", form: .default, formSize: .nan, formLineWidth: .leastNonzeroMagnitude, formLineDashPhase: .leastNormalMagnitude, formLineDashLengths: nil, formColor: cBon)
-        let lengendEntry2 = LegendEntry(label: "Erroné", form: .default, formSize: .nan, formLineWidth: .leastNormalMagnitude, formLineDashPhase: .leastNormalMagnitude, formLineDashLengths: nil, formColor: cMal)
-        let lengendEntry3 = LegendEntry(label: "Avec l'aide", form: .default, formSize: .nan, formLineWidth: .leastNormalMagnitude, formLineDashPhase: .leastNormalMagnitude, formLineDashLengths: nil, formColor: cAide)
+        let lengendEntry1 = LegendEntry(label: "Bon".localized, form: .default, formSize: .nan, formLineWidth: .leastNonzeroMagnitude, formLineDashPhase: .leastNormalMagnitude, formLineDashLengths: nil, formColor: cBon)
+        let lengendEntry2 = LegendEntry(label: "Erroné".localized, form: .default, formSize: .nan, formLineWidth: .leastNormalMagnitude, formLineDashPhase: .leastNormalMagnitude, formLineDashLengths: nil, formColor: cMal)
+        let lengendEntry3 = LegendEntry(label: "Avec l'aide".localized, form: .default, formSize: .nan, formLineWidth: .leastNormalMagnitude, formLineDashPhase: .leastNormalMagnitude, formLineDashLengths: nil, formColor: cAide)
         let legengEntry4 = LegendEntry(label: "", form: .default, formSize: .nan, formLineWidth: .leastNormalMagnitude, formLineDashPhase: .leastNormalMagnitude, formLineDashLengths: nil, formColor: cTrnasparent)
         legend.horizontalAlignment = .center
         var entries : [PieChartDataEntry] = Array()

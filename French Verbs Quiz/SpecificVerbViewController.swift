@@ -29,8 +29,8 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
-        self.title = "Choisir 1 à 10 verbes"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(showQuiz))
+        self.title = "Choisir 1 à 10 verbes".localized
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "OK".localized, style: .plain, target: self, action: #selector(showQuiz))
         navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
         func alpha (_ s1: String, s2: String) -> Bool {
             return s1.folding(options: .diacriticInsensitive, locale: .current) < s2.folding(options: .diacriticInsensitive, locale: .current)
@@ -133,18 +133,18 @@ class SpecificVerbViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     func showAlert () {
-        let alertController = UIAlertController(title: "Choisir au moins 1 verbe et au maximum 10 verbes.", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Choisir au moins 1 verbe et au maximum 10 verbes.".localized, message: nil, preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
-        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: dismissAlert)
+        let okAction = UIAlertAction(title: "OK".localized, style: .cancel, handler: dismissAlert)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
     func showAlertPasDImperatif() {
-        let alertController = UIAlertController(title: "Il n'y a pas d'impératif pour ces verbes:", message: "pouvoir, devoir, falloir, pleuvoir, valoir, neiger, s'extasier(au passé), s'absenter(au passé), s'évanouir(au passé). Faites un autre choix", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Il n'y a pas d'impératif pour ces verbes:".localized, message: "pouvoir, devoir, falloir, pleuvoir, valoir, neiger, s'extasier(au passé), s'absenter(au passé), s'évanouir(au passé). Faites un autre choix".localized, preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
-        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: dismissAlert)
+        let okAction = UIAlertAction(title: "OK".localized, style: .cancel, handler: dismissAlert)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }

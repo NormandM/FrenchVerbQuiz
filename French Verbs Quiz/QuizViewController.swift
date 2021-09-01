@@ -28,6 +28,12 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
     @IBOutlet weak var verbResponseButton: UIButton!
     @IBOutlet weak var personneResponse: UILabel!
     @IBOutlet weak var wrongAnswerCorrection: UILabel!
+    
+    @IBOutlet weak var verbeVerticalConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tempChoisiConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tempConstraint: NSLayoutConstraint!
+    @IBOutlet weak var modeConstraint: NSLayoutConstraint!
+    @IBOutlet weak var traductionButtonConstraint: NSLayoutConstraint!
     lazy var quizQuestion = QuizQuestion(verbSelectionRandom: verbSelectionRandom, index: index)
     var difficulté = DifficultyLevel.DIFFICILE
     var textFieldIsActivated = false
@@ -42,6 +48,23 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
     var progressInt = Int()
     var listeVerbe = [String]()
     var userRespone = String()
+    var soundPlayer: SoundPlayer?
+    var soundState = ""{
+        didSet{
+            if #available(iOS 13.0, *) {
+                
+                navigationItem.rightBarButtonItems = [UIBarButtonItem(
+                    image: UIImage(systemName: soundState),
+                    style: .plain,
+                    target: self,
+                    action: #selector(soundOnOff)
+                )]
+            } else {
+                // Fallback on earlier versions
+            }
+            navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let selectVerbArray = SelectVerb(arrayVerb: arrayVerb, tempsEtMode: arraySelectionTempsEtMode, verbInfinitif: verbInfinitif)
@@ -66,7 +89,7 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "Conjuguez le verbe."
+        self.title = "Conjuguez le verbe".localized
         let fonts = FontsAndConstraintsOptions()
         verbe.font = fonts.largeBoldFont
         mode.font = fonts.largeFont
@@ -87,6 +110,9 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
         }
         TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: reponse, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondAppear)
         verbResponseButton.isEnabled = false
+        if let soundStateTrans = UserDefaults.standard.string(forKey: "soundState"){
+            soundState = soundStateTrans
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         traductionAnglaiseButton.layer.cornerRadius = traductionAnglaiseButton.frame.height/2
@@ -116,11 +142,13 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
             return
         }
         if notification.name == UIResponder.keyboardWillShowNotification && !textFieldIsActivated{
-            textFieldIsActivated = true
-            animateViewMoving(true, moveValue: keyBoardRec.height - distanceFromTextField + 5)
-        }else if notification.name == UIResponder.keyboardWillHideNotification{
+            let moveValue = keyBoardRec.height - distanceFromTextField + 5
+            animateViewMoving(true, moveValue: moveValue)
+            if moveValue > 100 {tempsChoisiButton.isHidden = true}
+        }else if notification.name == UIResponder.keyboardWillHideNotification {
             textFieldIsActivated = false
-            animateViewMoving(true, moveValue: distanceFromTextField - keyBoardRec.height - 5)
+            animateViewMoving(false, moveValue: distanceFromTextField - keyBoardRec.height - 5)
+            tempsChoisiButton.isHidden = false
         }
     }
     func setQuestion() {
@@ -147,7 +175,26 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
         UIView.beginAnimations( "animateView", context: nil)
         UIView.setAnimationBeginsFromCurrentState(true)
         UIView.setAnimationDuration(movementDuration )
-        self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
+        if !textFieldIsActivated {
+            let newRatio = movement/view.frame.height
+            if up{
+                self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
+                verbeVerticalConstraint.constant = -newRatio * view.frame.height
+                traductionButtonConstraint.constant = -newRatio * view.frame.height
+                modeConstraint.constant = -newRatio * view.frame.height
+                tempConstraint.constant = -newRatio * view.frame.height
+                tempChoisiConstraint.constant = -newRatio * view.frame.height
+                textFieldIsActivated = true
+            }else{
+                self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: -movement)
+                verbeVerticalConstraint.constant = 0.27
+                traductionButtonConstraint.constant = 0.44
+                modeConstraint.constant = 0.65
+                tempConstraint.constant = 0.74
+                tempChoisiConstraint.constant = 0.92
+                textFieldIsActivated = false
+            }
+        }
         UIView.commitAnimations()
     }
     func questionInitialisation() {
@@ -214,7 +261,7 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
         reponse.isEnabled = true
         reponse.textColor = UIColor.black
         reponse.text = ""
-        verbResponseButton.setTitle("Choisir le verbe", for: .disabled)
+        verbResponseButton.setTitle("Choisir le verbe".localized, for: .disabled)
         difficulté = .DIFFICILE
         rightHintWasSelected = false
         TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: reponse, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondAppear)
@@ -252,26 +299,30 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
     @IBAction func traductionButtonPushed(_ sender: UIButton) {
         showAlert()
     }
+    @objc func soundOnOff() {
+        soundState = SoundOption.soundOnOff()
+    }
     func afterUserResponse() {
+        soundPlayer = SoundPlayer()
         let reponseEvaluation = ResponseEvaluation.evaluate(modeVerb: quizQuestion.mode, tempsVerb:  quizQuestion.temp, infinitif: quizQuestion.infinitif, userResponse: userRespone, rightAnswer: conjugatedVerb, rightHintWasSelected: rightHintWasSelected)
         let pronom = personne.text!
         let correctionResponse = "\(pronom) \(conjugatedVerb)"
         switch reponseEvaluation {
         case .good:
-            SoundResponse.goodSound()
+            soundPlayer?.playSound(soundName: "chime_clickbell_octave_up", type: "mp3", soundState: soundState)
             wrongAnswerCorrection.isHidden = false
             wrongAnswerCorrection.textColor = UIColor.black
             wrongAnswerCorrection.text = correctionResponse
-            verbResponseButton.setTitle("Bravo!", for: .disabled)
+            verbResponseButton.setTitle("Bravo!".localized, for: .disabled)
         case .help:
-            SoundResponse.goodSound()
+            soundPlayer?.playSound(soundName: "chime_clickbell_octave_up", type: "mp3", soundState: soundState)
             wrongAnswerCorrection.isHidden = false
             wrongAnswerCorrection.textColor = UIColor.black
             wrongAnswerCorrection.text = correctionResponse
-            verbResponseButton.setTitle("Bravo!", for: .disabled)
+            verbResponseButton.setTitle("Bravo!".localized, for: .disabled)
         case .bad:
-            SoundResponse.badSound()
-            verbResponseButton.setTitle("Désolé...", for: .disabled)
+            soundPlayer?.playSound(soundName: "etc_error_drum", type: "mp3", soundState: soundState)
+            verbResponseButton.setTitle("Désolé...".localized, for: .disabled)
             wrongAnswerCorrection.isHidden = false
             wrongAnswerCorrection.textColor = UIColor.red
             wrongAnswerCorrection.text = correctionResponse
@@ -306,12 +357,12 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
             englishVerbe = english
             verbeFinal = verbeTexte
         }else{
-            englishVerbe = "La traduction n'est pas disponible"
+            englishVerbe = "La traduction n'est pas disponible".localized
         }
         let alertController = UIAlertController(title: "\(verbeFinal):  \(englishVerbe)", message: nil, preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = temps.frame
-        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "OK".localized, style: .cancel, handler: nil)
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }

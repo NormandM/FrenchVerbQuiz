@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  French Verbs Quiz
+
+  Created by Normand Martin on 2021-08-24.
+  Copyright © 2021 Normand Martin. All rights reserved.
+*/
+"Choisissez une option" = "Choisissez une option";
+"Choisissez le verbe" = "Choisissez le verbe";
+"Choisissez le temps" = "Choisissez le temps";
+"Verbe conjugué" = "Verbe conjugué";
+"Choisissez les temps" = "Choisissez les temps";
+"Il faut choisir au moins un temps de verbe." = "Il faut choisir au moins un temps de verbe.";
+"OK" = "OK";
+"Verbes Français Quiz" = "Verbes Français Quiz";
+"Tous les verbes" = "Tous les verbes";
+"Spécifier les Verbes" = "Spécifier les Verbes";
+"Choisir 1 à 10 verbes" = "Choisir 1 à 10 verbes";
+"Choisir au moins 1 verbe et au maximum 10 verbes." = "Choisir au moins 1 verbe et au maximum 10 verbes.";
+"Il n'y a pas d'impératif pour ces verbes:" = "Il n'y a pas d'impératif pour ces verbes:";
+"pouvoir, devoir, falloir, pleuvoir, valoir, neiger, s'extasier(au passé), s'absenter(au passé), s'évanouir(au passé). Faites un autre choix" = "pouvoir, devoir, falloir, pleuvoir, valoir, neiger, s'extasier(au passé), s'absenter(au passé), s'évanouir(au passé). Faites un autre choix";
+"Choisir le verbe" = "Choisir le verbe";
+"Bravo!" = "Bravo!";
+"Désolé..." = "Désolé...";
+"La traduction n'est pas disponible" = "La traduction n'est pas disponible";
+"Parfait! " = "Parfait! ";
+"%@ Très bien!" = "%@ Très bien!";
+"%@ Pas Mal!" = "%@ Pas Mal!";
+"%@ Essayez à nouveau!" = "%@ Essayez à nouveau!";
+"Vos choix pour le Quiz" = "Vos choix pour le Quiz";
+"Conjuguer le verbe" = "Conjuguer le verbe";
+"Bon" = "Bon";
+"Erroné" = "Erroné";
+"Bon: %@" = "Bon: %@";
+"Avec l'aide: %@" = "Avec l'aide: %@";
+"Erroné: %@" = "Erroné: %@";
+"Résultat:\n%@" = "Résultat:\n%@";
+"Statistiques du Quiz" = "Statistiques du Quiz";
+"Nombre de verbes étudiés\npour ce temps %d" = "Nombre de verbes étudiés\npour ce temps %d";
+"Cliquez sur le graphique pour plus d'informations" = "Cliquez sur le graphique pour plus d'informations";

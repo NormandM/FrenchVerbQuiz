@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  French Verbs Quiz
+
+  Created by Normand Martin on 2021-08-24.
+  Copyright © 2021 Normand Martin. All rights reserved.
+*/
+"Choisissez une option" = "Elija una opción";
+"Choisissez le verbe" = "Elige el verbo";
+"Choisissez le temps" = "Escoja el tiempo verbal";
+"Verbe conjugué" = "Verbo conjugado";
+"Choisissez les temps" = "Escoja los tiempos";
+"Il faut choisir au moins un temps de verbe" = "Elija por lo menos un tiempo verbal";
+"OK" = "Listo";
+"Verbes Français Quiz" = "Verbos Francés Quiz";
+"Tous les verbes" = "Todos los verbos";
+"Spécifier les Verbes" = "Elige los verbos";
+"Choisir 1 à 10 verbes" = "Escoger 1 a 10 verbos";
+"Choisir au moins 1 verbe et au maximum 10 verbes." = "Elija al menos 1 verbo pero no más de 10";
+"Il n'y a pas d'impératif pour ces verbes:" = "No hay ningún imperativo para este verbo:";
+"pouvoir, devoir, falloir, pleuvoir, valoir, neiger, s'extasier(au passé), s'absenter(au passé), s'évanouir(au passé). Faites un autre choix" = "pouvoir, devoir, falloir, pleuvoir, valoir, neiger, s'extasier(au passé), s'absenter(au passé), s'évanouir(au passé). Haga otra selección";
+"Choisir le verbe" = "Elige el verbo";
+"Bravo!" = "¡Excelente!";
+"Désolé..." = "Incorrecto";
+"La traduction n'est pas disponible" = "La traducción no está disponible.";
+"Parfait! " = "¡Perfecto!";
+"%@ Très bien!" = "%@ ¡Excelente!";
+"%@ Pas Mal!" = "%@ ¡Muy Bien!";
+"%@ Essayez à nouveau!" = "%@ ¡Inténtelo de nuevo!";
+"Vos choix pour le Quiz" = "Su selección para la prueba";
+"Conjuguer le verbe" = "Conjugar el verbo";
+"Bon" = "Correcto";
+"Erroné" = "Incorrecto";
+"Avec l'aide" = "Con ayuda";
+"Bon: %@" = "Correcto: %@";
+"Avec l'aide: %@" = "Con ayuda: %@";
+"Erroné: %@" = "Incorrecto: %@";
+"Résultat:\n%@" = "Resultado:\n%@";
+"Statistiques du Quiz" = "Resultados por cada tiempo";
+"Nombre de verbes étudiés\npour ce temps %d" = "Número de verbos estudiados\npor este tiempo %d";
+"Cliquez sur le graphique pour plus d'informations" = "Haga clic en el gráfico para ver más detalles";
+"Conjuguez le verbe" = "Conjugar el verbo";
+"Vos choix pour le Quiz" = "Su selección para la prueba";
+"Temps choisis" = "Tiempos elegidos";

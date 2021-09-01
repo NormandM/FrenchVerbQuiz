@@ -16,7 +16,7 @@ struct TextFieldProperties {
                 eachButton.isHidden = false
             }
             verbResponseButton.isHidden = false
-            verbResponseButton.setTitle("Choisir le verbe", for: .disabled)
+            verbResponseButton.setTitle("Choisir le verbe".localized, for: .disabled)
             verbTextField.isHidden = true
             checkButton.isHidden = true
             suggestionButton.isHidden = true

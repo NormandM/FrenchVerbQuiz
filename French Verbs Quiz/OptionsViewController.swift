@@ -15,6 +15,8 @@ class OptionsViewController: UIViewController {
     @IBOutlet weak var statistiques: UILabel!
     let currentCount = UserDefaults.standard.integer(forKey: "launchCount")
     var arrayVerbe: [[String]] = []
+    var soundState = UserDefaults.standard.string(forKey: "soundState")
+    var listeVerbe: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDefaults.standard.set(0, forKey: "thisQuizHintAnswer")
@@ -29,10 +31,23 @@ class OptionsViewController: UIViewController {
         if let plistPath = Bundle.main.path(forResource: "frenchVerbsList", ofType: "plist"),
             let verbArray = NSArray(contentsOfFile: plistPath){
             arrayVerbe = verbArray as! [[String]]
+            for verb in arrayVerbe {
+                if !listeVerbe.contains(verb[2]){
+                    listeVerbe.append(verb[2])
+                }
+            }
+            func alpha (_ s1: String, s2: String) -> Bool {
+                return s1.folding(options: .diacriticInsensitive, locale: .current) < s2.folding(options: .diacriticInsensitive, locale: .current)
+            }
+            listeVerbe = listeVerbe.sorted(by: alpha)
+        }
+        if !soundStateInitialized(soundState: "soundState"){
+            soundState = "speaker.slash"
+            UserDefaults.standard.setValue(soundState, forKey: "soundState")
         }
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "Choisissez une option"
+        self.title = "Choisissez une option".localized
         self.navigationItem.setHidesBackButton(true, animated:true)
         let fonts = FontsAndConstraintsOptions()
         listeDesVerbes.font = fonts.smallItaliqueBoldFont
@@ -45,6 +60,7 @@ class OptionsViewController: UIViewController {
         if segue.identifier == "showVerbList"{
             let controller = segue.destination as! VerbListViewController
             controller.arrayVerbe = arrayVerbe
+            controller.listeVerbe = listeVerbe
         }else if segue.identifier == "showQuizOption"{
             let controller = segue.destination as! QuizOptionsController
             controller.arrayVerb = arrayVerbe
@@ -52,9 +68,16 @@ class OptionsViewController: UIViewController {
             let controller = segue.destination as! ContextuelQuizOptionController
             controller.arrayVerb = arrayVerbe
         }
+        else if segue.identifier == "showStatistics"{
+            let controller = segue.destination as! StatistiqueTableViewController
+                controller.listeVerbe = listeVerbe
+        }
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
         navigationItem.backBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
+    }
+    func soundStateInitialized(soundState: String) -> Bool {
+        return UserDefaults.standard.object(forKey: soundState) != nil
     }
 }

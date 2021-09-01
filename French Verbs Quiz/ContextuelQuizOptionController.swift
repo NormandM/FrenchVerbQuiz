@@ -24,9 +24,10 @@ class ContextuelQuizOptionController: UITableViewController {
         header.textLabel!.textColor = UIColor.white //make the text white
         header.textLabel?.font = fontsAndConstraints.normalBoldFont
         header.alpha = 1.0 //make the header transparent
+        
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "Choisissez les temps"
+        self.title = "Choisissez les temps".localized
     }
     
     // MARK: - Table view data source
@@ -96,7 +97,7 @@ class ContextuelQuizOptionController: UITableViewController {
         }
     }
     func showAlert () {
-        let alertController = UIAlertController(title: "If faut choisir au moins un temps de verbe.", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Il faut choisir au moins un temps de verbe".localized, message: nil, preferredStyle: .alert)
         alertController.popoverPresentationController?.sourceView = self.view
         alertController.popoverPresentationController?.sourceRect = tableView.rectForHeader(inSection: 1)
         

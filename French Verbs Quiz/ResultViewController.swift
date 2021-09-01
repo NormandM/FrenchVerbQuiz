@@ -32,13 +32,16 @@ class ResultViewController: UIViewController {
         let result = Double(goodResponse + aideCount)/Double(totalProgress)
         let resultPercent = String(round(result*100)) + " %"
         if result == 1.0{
-            message.text = "Parfait! "
+            message.text = "Parfait! ".localized
         }else if result < 1 && Double(result) >= 0.75 {
-            message.text = "\(resultPercent) Très bien!"
+            let formatedString = "%@ Très bien!".localized
+            message.text = String(format: formatedString, resultPercent)
         }else if Double(result) >= 0.6 && Double(result) < 0.75 {
-            message.text = "\(resultPercent) Pas Mal!"
+            let formatedString = "%@ Pas Mal!".localized
+            message.text = String(format: formatedString, resultPercent)
         }else if result >= 0 && Double(result) < 0.6 {
-            message.text = "\(resultPercent) Essayez à nouveau!"
+            let formatedString = "%@ Essayez à nouveau!".localized
+            message.text = String(format: formatedString, resultPercent)
         }
     }
     override func viewDidAppear(_ animated: Bool) {

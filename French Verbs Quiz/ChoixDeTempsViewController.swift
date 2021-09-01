@@ -21,8 +21,8 @@ class ChoixDeTempsViewController: UIViewController, UITableViewDataSource, UITab
     let fonts = FontsAndConstraintsOptions()
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = "Vos choix pour le Quiz"
-        lesTempsLabel.text = "Temps choisis"
+        titleLabel.text = "Vos choix pour le Quiz".localized
+        lesTempsLabel.text = "Temps choisis".localized
         titleLabel.backgroundColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
         lesTempsLabel.textColor = UIColor.white
         lesTempsLabel.backgroundColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)

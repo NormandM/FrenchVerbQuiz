@@ -59,6 +59,7 @@ class FinalVerbeViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.title = "Verbe conjugué".localized
         backgrounColorView.layer.cornerRadius = 50
         infinitif.font = fonts.largeBoldFont
         mode.font = fonts.largeFont
