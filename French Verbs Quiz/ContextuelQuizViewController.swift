@@ -11,6 +11,7 @@ import AudioToolbox
 import CoreData
 
 class ContextuelQuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
+    let notificationCenter = NotificationCenter.default
     @IBOutlet weak var modeLabel: UILabel!
     @IBOutlet weak var tempsLabel: UILabel!
     @IBOutlet weak var tempsEtverbesChoisiButton: UIButton!
@@ -27,7 +28,7 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     @IBOutlet weak var tempsChoisiConstraint: NSLayoutConstraint!
     @IBOutlet weak var sentenceConstraint: NSLayoutConstraint!
     
-    
+    var reponseEvaluation = QuizResult.bad
     var soundURL: NSURL?
     var soundID:SystemSoundID = 0
     var textFieldIsActivated = false
@@ -44,22 +45,6 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     var progressInt = Int()
     var soundPlayer: SoundPlayer?
     
-    var soundState = ""{
-        didSet{
-            if #available(iOS 13.0, *) {
-                
-                navigationItem.rightBarButtonItems = [UIBarButtonItem(
-                    image: UIImage(systemName: soundState),
-                    style: .plain,
-                    target: self,
-                    action: #selector(soundOnOff)
-                )]
-            } else {
-                // Fallback on earlier versions
-            }
-            navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 27/255, green: 96/255, blue: 94/255, alpha: 1.0)
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         barreProgression.progress = 0.0
@@ -76,6 +61,9 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
         }
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillChange), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillChange), name: UIResponder.keyboardWillHideNotification, object: nil)
+        selectedSentences.shuffle()
+        let voiceStopped = Notification.Name("voiceStopped")
+        notificationCenter.addObserver(self,selector: #selector(voiceDidTerminate),name: voiceStopped,object: nil)
         selectedSentences.shuffle()
     }
     deinit {
@@ -100,9 +88,6 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
         TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: verbTextField, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondAppear)
         choiceOfSentence()
         verbResponseButton.isEnabled = false
-        if let soundStateTrans = UserDefaults.standard.string(forKey: "soundState"){
-            soundState = soundStateTrans
-        }
 
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -126,11 +111,9 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
         uneAutreQuestionButton.setNeedsLayout()
     }
     func animateViewMoving (_ up:Bool, moveValue :CGFloat){
-        let movementDuration:TimeInterval = 0.3
+        
         let movement:CGFloat = ( up ? -moveValue : moveValue)
-        UIView.beginAnimations( "animateView", context: nil)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        UIView.setAnimationDuration(movementDuration )
+
         let newRatio = movement/view.frame.height
         if up{
             self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
@@ -145,7 +128,6 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
             tempsChoisiConstraint.constant = 0.6
             textFieldIsActivated = false
         }
-        UIView.commitAnimations()
     }
     @objc func keyBoardWillChange(notification: Notification) {
         let distanceFromTextField = view.frame.size.height - (verbTextField.frame.size.height + verbTextField.frame.origin.y)
@@ -238,26 +220,26 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
             break
         }
     }
-    @objc func soundOnOff() {
-        soundState = SoundOption.soundOnOff()
-    }
+
     func afterUserResponse() {
         soundPlayer = SoundPlayer()
         sentences = Sentences(selectedSentences: selectedSentences, indexSentence: indexSentence)
         let mode = sentences.modeDuverbe
         let temps = sentences.tempsDuVerbe
-        let reponseEvaluation = ResponseEvaluation.evaluate(modeVerb: mode, tempsVerb:  temps, infinitif: sentences.infinitif, userResponse: userRespone, rightAnswer: sentences.reponseBonne, rightHintWasSelected: rightHintWasSelected)
+        reponseEvaluation = ResponseEvaluation.evaluate(modeVerb: mode, tempsVerb:  temps, infinitif: sentences.infinitif, userResponse: userRespone, rightAnswer: sentences.reponseBonne, rightHintWasSelected: rightHintWasSelected)
         sentenceLabel.textColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
         switch reponseEvaluation {
         case .good, .help:
-            soundPlayer?.playSound(soundName: "chime_clickbell_octave_up", type: "mp3", soundState: soundState)
             sentenceLabel.attributedText = sentences.attributeBonneReponse
             verbResponseButton.setTitle("Bon".localized, for: .disabled)
-           
+            Speak.text(text: sentenceLabel.text!)
+            sentenceLabel.clickLabel()
         case .bad:
-            soundPlayer?.playSound(soundName: "etc_error_drum", type: "mp3", soundState: soundState)
+            soundPlayer?.playSound(soundName: "etc_error_drum", type: "mp3")
             verbResponseButton.setTitle("Erroné".localized, for: .disabled)
-            sentenceLabel.attributedText = sentences.attributeMauvaiseReponse        }
+            sentenceLabel.attributedText = sentences.attributeMauvaiseReponse
+            sentenceLabel.clickLabel()
+        }
         verbTextField.resignFirstResponder()
         checkButton.isEnabled = false
         checkButton.setTitleColor(UIColor.gray, for: .disabled)
@@ -320,6 +302,17 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
         suggestionButton.isEnabled = false
         questionInitialisation()
         suggestionButton.backgroundColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
+    }
+    @objc func voiceDidTerminate(_ notification: NSNotification){
+        sentences = Sentences(selectedSentences: selectedSentences, indexSentence: indexSentence)
+        sentenceLabel.textColor = UIColor(red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0)
+        switch reponseEvaluation {
+        case .good, .help:
+            sentenceLabel.attributedText = sentences.attributeBonneReponse
+
+        case .bad:
+            sentenceLabel.attributedText = sentences.attributeMauvaiseReponse
+        }
     }
 }
 

@@ -31,7 +31,12 @@ struct Sentences {
         attributeQuestion = NSMutableAttributedString.init(string: sentenceQuestion)
         attributeQuestion.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(displayP3Red: 178/255, green: 208/255, blue: 198/255, alpha: 1.0) , range: range)
         string_to_color = reponseBonne
-        let sentenceBonneReponse = selectedSentences[indexSentence][2] + " " + reponseBonne + " " + selectedSentences[indexSentence][5]
+        var sentenceBonneReponse =  String()
+        if selectedSentences[indexSentence][2].last == "'"{
+            sentenceBonneReponse = selectedSentences[indexSentence][2] + reponseBonne.trimmingCharacters(in: .whitespaces) + " " + selectedSentences[indexSentence][5]
+        }else{
+            sentenceBonneReponse = selectedSentences[indexSentence][2] + " " + reponseBonne + " " + selectedSentences[indexSentence][5]
+        }
         range = (sentenceBonneReponse as NSString).range(of: string_to_color)
         attributeBonneReponse = NSMutableAttributedString.init(string: sentenceBonneReponse)
         attributeBonneReponse.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.black , range: range)
