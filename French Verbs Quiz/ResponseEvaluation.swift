@@ -39,7 +39,7 @@ struct ResponseEvaluation {
             itemVerbe = itemVerbArray!.first
         }
         let itemVerbeUpdate = itemVerbe as NSManagedObject
-        if  itemVerbe.modeVerbe?.caseInsensitiveCompare(modeVerb) == .orderedSame &&  itemVerbe.tempsVerbe?.caseInsensitiveCompare(tempsVerb) == .orderedSame && userResponse.caseInsensitiveCompare(rightAnswer) == .orderedSame{
+        if  itemVerbe.modeVerbe?.caseInsensitiveCompare(modeVerb) == .orderedSame &&  itemVerbe.tempsVerbe?.caseInsensitiveCompare(tempsVerb) == .orderedSame && userResponse.removeWhiteSpace().caseInsensitiveCompare(rightAnswer.removeWhiteSpace()) == .orderedSame{
             if rightHintWasSelected {
                 itemVerbe.bonneReponseTemps = itemVerbe.bonneReponseTemps + 1
                 itemVerbeUpdate.setValue(itemVerbe.bonneReponseTemps, forKey: "bonneReponseTemps")

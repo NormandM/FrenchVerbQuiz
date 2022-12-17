@@ -28,6 +28,8 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     @IBOutlet weak var tempsChoisiConstraint: NSLayoutConstraint!
     @IBOutlet weak var sentenceConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var wrondResponseCorrectionLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     var reponseEvaluation = QuizResult.bad
     var soundURL: NSURL?
     var soundID:SystemSoundID = 0
@@ -72,6 +74,8 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
     }
     override func viewWillAppear(_ animated: Bool) {
         let fonts = FontsAndConstraintsOptions()
+        errorLabel.isHidden = true
+        wrondResponseCorrectionLabel.isHidden = true
         self.title = "Conjuguer le verbe".localized
         modeLabel.font = fonts.largeBoldFont
         tempsLabel.font = fonts.largeBoldFont
@@ -239,6 +243,15 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
             verbResponseButton.setTitle("Erroné".localized, for: .disabled)
             sentenceLabel.attributedText = sentences.attributeMauvaiseReponse
             sentenceLabel.clickLabel()
+            errorLabel.isHidden = false
+            wrondResponseCorrectionLabel.isHidden = false
+            attributeSettingForAnswer(label: errorLabel, systemName: "x.circle.fill", color: .red, text: " Erroné:".localized)
+            errorLabel.textColor = .black
+            let fonts = FontsAndConstraintsOptions()
+            errorLabel.font = fonts.normalFont
+            wrondResponseCorrectionLabel.font = fonts.normalFont
+            wrondResponseCorrectionLabel.text = userRespone
+            wrondResponseCorrectionLabel.textColor = .red
         }
         verbTextField.resignFirstResponder()
         checkButton.isEnabled = false
@@ -258,6 +271,8 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
         }
     }
     func selectionAutreQuestion() {
+        errorLabel.isHidden = true
+        wrondResponseCorrectionLabel.isHidden = true
         sentenceLabel.textColor = UIColor.black
         checkButton.isEnabled = true
         verbTextField.isEnabled = true
@@ -269,6 +284,16 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
         rightHintWasSelected = false
         TextFieldProperties.initiate(verbHintButton: verbHintButton, verbResponseButton: verbResponseButton, checkButton: checkButton, verbTextField: verbTextField, difficulté: difficulté, suggestionButton: suggestionButton, hintMenuAction: hintMenuActiondAppear)
         choiceOfSentence()
+    }
+    func attributeSettingForAnswer(label: UILabel, systemName: String, color: UIColor, text: String) {
+        let attachment = NSTextAttachment()
+        let config = UIImage.SymbolConfiguration(scale: .large)
+        attachment.image = UIImage(systemName: systemName, withConfiguration: config)?.withTintColor(color)
+        let imageString = NSMutableAttributedString(attachment: attachment)
+        let textString = NSAttributedString(string: text)
+        imageString.append(textString)
+        label.attributedText = imageString
+        label.sizeToFit()
     }
     // MARK: Buttons
     @IBAction func uneAutreQuestionButtonPushed(_ sender: UIButton) {
@@ -287,6 +312,7 @@ class ContextuelQuizViewController: UIViewController, NSFetchedResultsController
         checkButton.isHidden = true
     }
     @IBAction func verbHintPressed(_ sender: UIButton) {
+        userRespone = (sender.titleLabel?.text?.lowercased())!
         if reponseBonne.lowercased() == sender.titleLabel?.text?.lowercased() {
             userRespone = (sender.titleLabel?.text?.lowercased())!
             rightHintWasSelected = true

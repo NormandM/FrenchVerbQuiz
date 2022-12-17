@@ -61,6 +61,7 @@
 		8EA209BE2215F04700DDCA09 /* ResponseEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209BD2215F04600DDCA09 /* ResponseEvaluation.swift */; };
 		8EA209C0221A215300DDCA09 /* FetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA209BF221A215300DDCA09 /* FetchRequest.swift */; };
 		8EA41F0521A0A584004D4D42 /* ConjugaisonContextuel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EA41F0421A0A584004D4D42 /* ConjugaisonContextuel.plist */; };
+		8EA80B712947D0E000B45DF4 /* ExtensionRemovingWhitaSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA80B702947D0E000B45DF4 /* ExtensionRemovingWhitaSpace.swift */; };
 		8EB91F1F1FACE73A00F18F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EB91F1E1FACE73A00F18F3E /* GoogleService-Info.plist */; };
 		8EB91F211FACE74B00F18F3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EB91F201FACE74B00F18F3E /* GoogleService-Info.plist */; };
 		8EBCA0A721D040770029D94F /* StatistiqueViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBCA0A621D040770029D94F /* StatistiqueViewCell.swift */; };
@@ -190,6 +191,7 @@
 		8EA209BD2215F04600DDCA09 /* ResponseEvaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseEvaluation.swift; sourceTree = "<group>"; };
 		8EA209BF221A215300DDCA09 /* FetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRequest.swift; sourceTree = "<group>"; };
 		8EA41F0421A0A584004D4D42 /* ConjugaisonContextuel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConjugaisonContextuel.plist; sourceTree = "<group>"; };
+		8EA80B702947D0E000B45DF4 /* ExtensionRemovingWhitaSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionRemovingWhitaSpace.swift; sourceTree = "<group>"; };
 		8EB91F1E1FACE73A00F18F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EB91F201FACE74B00F18F3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8EBCA0A621D040770029D94F /* StatistiqueViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatistiqueViewCell.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				8EA209BB2215F03300DDCA09 /* SoundResponse.swift */,
 				8EA209BD2215F04600DDCA09 /* ResponseEvaluation.swift */,
 				8E5EE06B1F7AF61400CC9869 /* FrenchEnglish.swift */,
+				8EA80B702947D0E000B45DF4 /* ExtensionRemovingWhitaSpace.swift */,
 			);
 			name = "Quiz Controller";
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 				8E517D8B1DF3513300EA5087 /* FinalVerbeViewController.swift in Sources */,
 				8E517D891DF2631E00EA5087 /* tempsDeVerbeTableViewController.swift in Sources */,
 				8E91EAC81DF1CA1E008F39A9 /* AppDelegate.swift in Sources */,
+				8EA80B712947D0E000B45DF4 /* ExtensionRemovingWhitaSpace.swift in Sources */,
 				8EA209AC221499EC00DDCA09 /* CoreDataHandler.swift in Sources */,
 				8EE9ABA426D4255A00E1747C /* FirstStatTableViewCell.swift in Sources */,
 				8E517D8D1DF471EA00EA5087 /* QuizOptionsController.swift in Sources */,
@@ -936,7 +940,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=iphoneos*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "NM.French-Verbs-Quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -958,7 +962,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=iphoneos*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "NM.French-Verbs-Quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

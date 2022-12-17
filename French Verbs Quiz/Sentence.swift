@@ -41,7 +41,7 @@ struct Sentences {
         attributeBonneReponse = NSMutableAttributedString.init(string: sentenceBonneReponse)
         attributeBonneReponse.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.black , range: range)
         attributeMauvaiseReponse = NSMutableAttributedString.init(string: sentenceBonneReponse)
-        attributeMauvaiseReponse.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(displayP3Red: 218/255, green: 69/255, blue: 49/255, alpha: 1.0) , range: range)
+        attributeMauvaiseReponse.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(red: 27/255, green: 95/255, blue: 94/255, alpha: 1.0), range: range)
         
     }
 }

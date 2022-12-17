@@ -30,6 +30,9 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
     @IBOutlet weak var personneResponse: UILabel!
     @IBOutlet weak var wrongAnswerCorrection: UILabel!
     
+    @IBOutlet weak var correctLabel: UILabel!
+    @IBOutlet weak var incorectLabel: UILabel!
+    @IBOutlet weak var correctAnswerCorrection: UILabel!
     @IBOutlet weak var verbeVerticalConstraint: NSLayoutConstraint!
     @IBOutlet weak var tempChoisiConstraint: NSLayoutConstraint!
     @IBOutlet weak var tempConstraint: NSLayoutConstraint!
@@ -84,6 +87,10 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
         temps.font = fonts.largeFont
         wrongAnswerCorrection.font = fonts.normalFont
         wrongAnswerCorrection.isHidden = true
+        incorectLabel.isHidden = true
+        correctLabel.isHidden = true
+        correctAnswerCorrection.font = fonts.normalFont
+        correctAnswerCorrection.isHidden = true
         suggestionButton.titleLabel?.font = fonts.smallItaliqueBoldFont
         tempsChoisiButton.titleLabel?.font = fonts.smallFont
         traductionAnglaiseButton.titleLabel?.font = fonts.smallFont
@@ -238,6 +245,9 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
         personne.isHidden = false
         reponse.isHidden = false
         wrongAnswerCorrection.isHidden = true
+        incorectLabel.isHidden = true
+        correctLabel.isHidden = true
+        correctAnswerCorrection.isHidden = true
         personneResponse.isHidden = true
         checkButton.isEnabled = true
         reponse.isEnabled = true
@@ -305,9 +315,17 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
             soundPlayer?.playSound(soundName: "etc_error_drum", type: "mp3")
             verbResponseButton.setTitle("Désolé...".localized, for: .disabled)
             wrongAnswerCorrection.isHidden = false
+            incorectLabel.isHidden = false
+            correctLabel.isHidden = false
+            correctAnswerCorrection.isHidden = false
+            attributeSettingForAnswer(label: incorectLabel, systemName: "x.circle.fill", color: .red, text: " Erroné:".localized)
+            wrongAnswerCorrection.text = ("\(pronom) \(userRespone)")
+            correctAnswerCorrection.clickLabel()
+            attributeSettingForAnswer(label: correctLabel, systemName: "checkmark.circle.fill", color: UIColor(red: 27/255, green: 95/255, blue: 94/255, alpha: 1.0), text: " Correct:".localized)
+            correctLabel.textColor = .black
+            correctAnswerCorrection.text = correctionResponse
+            correctAnswerCorrection.textColor = UIColor(red: 27/255, green: 95/255, blue: 94/255, alpha: 1.0)
             wrongAnswerCorrection.textColor = UIColor.red
-            wrongAnswerCorrection.text = correctionResponse
-            wrongAnswerCorrection.clickLabel()
         }
         reponse.resignFirstResponder()
         personneResponse.isHidden = true
@@ -354,9 +372,20 @@ class QuizViewController: UIViewController, NSFetchedResultsControllerDelegate {
             wrongAnswerCorrection.textColor = .black
         case .help:
             wrongAnswerCorrection.textColor = .black
+            correctAnswerCorrection.textColor = .black
         case .bad:
-            wrongAnswerCorrection.textColor = .red
+            correctAnswerCorrection.textColor = UIColor(red: 27/255, green: 95/255, blue: 94/255, alpha: 1.0)
         }
+    }
+    func attributeSettingForAnswer(label: UILabel, systemName: String, color: UIColor, text: String) {
+        let attachment = NSTextAttachment()
+        let config = UIImage.SymbolConfiguration(scale: .large)
+        attachment.image = UIImage(systemName: systemName, withConfiguration: config)?.withTintColor(color)
+        let imageString = NSMutableAttributedString(attachment: attachment)
+        let textString = NSAttributedString(string: text)
+        imageString.append(textString)
+        label.attributedText = imageString
+        label.sizeToFit()
     }
     
 }
